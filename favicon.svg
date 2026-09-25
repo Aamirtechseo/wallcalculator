@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="10" fill="#0B0F19"/>
+  <!-- Top and Bottom Plates -->
+  <rect x="6" y="8" width="36" height="4" rx="1" fill="#F97316"/>
+  <rect x="6" y="36" width="36" height="4" rx="1" fill="#F97316"/>
+  <!-- Vertical Studs -->
+  <rect x="8" y="12" width="3" height="24" fill="#38BDF8"/>
+  <rect x="18" y="12" width="3" height="24" fill="#38BDF8"/>
+  <rect x="28" y="12" width="3" height="24" fill="#38BDF8"/>
+  <rect x="37" y="12" width="3" height="24" fill="#38BDF8"/>
+  <!-- Diagonal Brace / Ruler Measurement -->
+  <path d="M11 36 L37 12" stroke="#F97316" stroke-width="2" stroke-dasharray="3 2" opacity="0.6"/>
+</svg>

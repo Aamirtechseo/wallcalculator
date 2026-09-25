@@ -1,0 +1,10 @@
+# Python scratch files
+*.pyc
+__pycache__/
+generate_keywords.py
+generate_construction_keywords.py
+*.json
+
+# OS files
+.DS_Store
+Thumbs.db

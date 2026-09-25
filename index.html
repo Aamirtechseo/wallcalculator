@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Wall Calculator | Free Drywall, Stud &amp; Framing Estimator</title>
+  <meta name="title" content="Wall Calculator | Free Drywall, Stud & Framing Estimator">
+  <meta name="description" content="Calculate exact wood studs, drywall sheets, screws, tape, and joint compound with our free interactive wall calculator. Features a real-time 2D framing blueprint and contractor cost takeoff.">
+  <meta name="keywords" content="wall calculator, drywall calculator, stud calculator, framing calculator, 2x4 stud calculator, drywall sheets for wall, wall framing estimator">
+  <link rel="canonical" href="https://wallcalculator.app/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wallcalculator.app/">
+  <meta property="og:title" content="Wall Calculator | Free Drywall, Stud &amp; Framing Estimator">
+  <meta property="og:description" content="Calculate exact wood studs, drywall sheets, screws, tape, and joint compound with our free interactive wall calculator. Real-time 2D framing blueprint & cost takeoff.">
+  <meta property="og:image" content="https://wallcalculator.app/images/wall-calculator-og.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://wallcalculator.app/">
+  <meta name="twitter:title" content="Wall Calculator | Free Drywall, Stud &amp; Framing Estimator">
+  <meta name="twitter:description" content="Calculate exact wood studs, drywall sheets, screws, tape, and joint compound with our free interactive wall calculator. Real-time 2D framing blueprint & cost takeoff.">
+  <meta name="twitter:image" content="https://wallcalculator.app/images/wall-calculator-og.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Google Fonts - Non-Render-Blocking Performance Optimized -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  </noscript>
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- JSON-LD Schema: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Wall Calculator & Framing Estimator",
+    "url": "https://wallcalculator.app/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "description": "Professional construction estimator for calculating wood studs, drywall panels, joint compound, and fasteners with live 2D framing blueprints.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "16-inch and 24-inch On-Center stud spacing",
+      "Top double-plate and sole-plate calculations",
+      "Door and window rough opening framing takeoffs",
+      "4x8 and 4x12 drywall sheet estimates with waste factors",
+      "Real-time dynamic 2D wall blueprint SVG visualization",
+      "Contractor material cost breakdown and printable PDF takeoff"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many studs do I need for a 10-foot wall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a standard 10-foot wall with 16-inch on-center (OC) spacing, you need 9 vertical field studs, plus 3 continuous horizontal studs for the top double plate and bottom sole plate, and 4 extra studs for corners or intersections. That totals approximately 16 studs (accounting for standard 10% job site waste)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should studs be 16 inches or 24 inches on center?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "16 inches on-center (OC) is the universal building standard for exterior load-bearing walls and walls holding heavy cabinetry, tile, or shelving. 24 inches OC is permitted by the International Residential Code (IRC R602) for non-load-bearing interior partition walls and advanced framing (OVE) to save lumber and improve insulation cavity depth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many sheets of drywall do I need for a 12x12 room?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A standard 12x12 foot room with 8-foot ceilings has 384 square feet of wall area and 144 square feet of ceiling area (total 528 sq ft). With standard 4x8 drywall panels (32 sq ft per sheet) and a 10% waste factor, you will need approximately 13 to 14 sheets for the walls, plus 5 sheets for the ceiling, totaling 18 to 19 sheets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should drywall be hung horizontally or vertically on walls?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In residential construction, hanging drywall horizontally is the professional standard. Horizontal hanging creates up to 25% fewer total seam feet, places the tapered edge at a comfortable 48-inch working height for taping, and ties multiple studs together for increased shear wall strength."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much drywall mud and tape do I need per sheet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As a rule of thumb, one standard 4.5-gallon bucket of all-purpose joint compound finishes approximately 8 to 10 sheets of 4x8 drywall (roughly 300 square feet) through 3 coats (embed, fill, and skim). You will need roughly 37 feet of paper joint tape per 4x8 sheet."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WallCalculator.app",
+    "url": "https://wallcalculator.app/",
+    "logo": "https://wallcalculator.app/favicon.svg",
+    "description": "Free contractor-grade framing, drywall, and structural wall calculators."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header-nav">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main Navigation">
+        <a href="/" class="brand-logo" aria-label="WallCalculator.app Home">
+          <svg viewBox="0 0 48 48" width="32" height="32" fill="none">
+            <rect width="48" height="48" rx="10" fill="#0B0F19"/>
+            <rect x="6" y="8" width="36" height="4" rx="1" fill="#F97316"/>
+            <rect x="6" y="36" width="36" height="4" rx="1" fill="#F97316"/>
+            <rect x="8" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="18" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="28" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="37" y="12" width="3" height="24" fill="#38BDF8"/>
+          </svg>
+          <span>Wall<span class="accent">Calculator</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-links" role="list">
+          <li><a href="/" class="active" aria-current="page">Wall Estimator</a></li>
+          <li><a href="#suite-tools">Stud Calculator</a></li>
+          <li><a href="#suite-tools">Drywall Sheets</a></li>
+          <li><a href="#guide-article">Formulas &amp; IRC Codes</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="btn-icon" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+            🌓
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         HERO SECTION / INTERACTIVE CALCULATOR
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Copy & Trust -->
+          <div class="hero-copy">
+            <div class="badge-pill">
+              <span>✓</span> 100% Free · Contractor-Grade · IRC Building Code Compliant
+            </div>
+            
+            <h1 class="hero-title">
+              Wall <span class="accent">Calculator</span>: Studs, Drywall &amp; Framing Estimator
+            </h1>
+            
+            <p class="hero-subtitle">
+              Calculate exact 2x4/2x6 wood studs, drywall panels, joint compound, screws, and tape for any interior or exterior wall project. Features dynamic 2D wall blueprint visualization and instant material cost estimates.
+            </p>
+
+            <div class="trust-badges">
+              <div class="trust-item">
+                <span class="icon">📐</span>
+                <span><strong>Real-Time 2D Blueprint:</strong> Visualizes every vertical stud, plate, and door/window opening.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">🪵</span>
+                <span><strong>IRC R602 Standard:</strong> Calculates double top plates, sole plates, and corner framing.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">⚡</span>
+                <span><strong>Instant Cost Takeoff:</strong> Ready-to-order material totals with customizable unit prices.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Calculator Card -->
+          <div class="calc-wrapper">
+            <div class="calc-card" id="wall-calculator-tool">
+              
+              <!-- Mode Tabs -->
+              <div class="mode-tabs" role="tablist">
+                <button class="mode-btn active" data-mode="both" role="tab" aria-selected="true">All-In-One (Studs &amp; Drywall)</button>
+                <button class="mode-btn" data-mode="studs" role="tab" aria-selected="false">Studs Only</button>
+                <button class="mode-btn" data-mode="drywall" role="tab" aria-selected="false">Drywall Only</button>
+              </div>
+
+              <!-- Wall Dimensions (Length & Height) -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="wall-length">
+                    <span>Wall Length</span>
+                    <span class="unit-helper">Standard 8–40 ft</span>
+                  </label>
+                  <div class="input-with-unit">
+                    <input type="number" id="wall-length" class="form-input" min="1" max="200" step="0.5" value="16">
+                    <span class="unit-tag">FT</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="wall-height">
+                    <span>Wall Height</span>
+                    <span class="unit-helper">Ceiling Height</span>
+                  </label>
+                  <div class="input-with-unit">
+                    <input type="number" id="wall-height" class="form-input" min="4" max="30" step="0.5" value="8">
+                    <span class="unit-tag">FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stud Spacing Pills -->
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <span class="form-label">Stud Spacing (On-Center)</span>
+                <div class="pill-group" role="radiogroup">
+                  <div class="pill-option">
+                    <input type="radio" id="spacing-16" name="stud-spacing" value="16" checked>
+                    <label for="spacing-16" class="pill-label">
+                      <span>16 inches OC</span>
+                      <span class="pill-desc">Standard Residential Code</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="spacing-24" name="stud-spacing" value="24">
+                    <label for="spacing-24" class="pill-label">
+                      <span>24 inches OC</span>
+                      <span class="pill-desc">Non-Bearing / Advanced Framing</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Drywall Sheet Size -->
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <span class="form-label">Drywall Panel Size</span>
+                <div class="pill-group" role="radiogroup">
+                  <div class="pill-option">
+                    <input type="radio" id="sheet-4x8" name="sheet-size" value="4x8" checked>
+                    <label for="sheet-4x8" class="pill-label">
+                      <span>4 × 8 ft Panel</span>
+                      <span class="pill-desc">32 sq ft (Easiest for 1 person)</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="sheet-4x12" name="sheet-size" value="4x12">
+                    <label for="sheet-4x12" class="pill-label">
+                      <span>4 × 12 ft Panel</span>
+                      <span class="pill-desc">48 sq ft (Pro / 25% fewer seams)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rough Openings Deduction Box -->
+              <div class="openings-box">
+                <div class="openings-header">
+                  <span>Rough Openings Deduction</span>
+                  <span style="font-size: 0.75rem; color: var(--text-dim);">Accounts for King/Jack studs</span>
+                </div>
+                <div class="openings-inputs">
+                  <div class="form-group">
+                    <label class="form-label" for="door-count" style="font-size: 0.75rem;">Doors (3'×7')</label>
+                    <input type="number" id="door-count" class="form-input" min="0" max="10" value="1" style="padding: 0.5rem 0.75rem; font-size: 0.95rem;">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="window-count" style="font-size: 0.75rem;">Windows (3'×4')</label>
+                    <input type="number" id="window-count" class="form-input" min="0" max="10" value="1" style="padding: 0.5rem 0.75rem; font-size: 0.95rem;">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Waste Slider -->
+              <div class="slider-container">
+                <div class="slider-header">
+                  <span>Waste &amp; Cutting Allowance</span>
+                  <strong id="waste-val-display" style="color: var(--brand-primary);">10%</strong>
+                </div>
+                <input type="range" id="waste-slider" class="range-slider" min="5" max="25" step="1" value="10">
+              </div>
+
+              <!-- Real-Time 2D Blueprint SVG Visualizer -->
+              <div class="blueprint-wrapper">
+                <div class="blueprint-header">
+                  <span>Framing Blueprint (Top/Bottom Plates &amp; Studs)</span>
+                  <span style="color: #38BDF8;">● Live Vector Preview</span>
+                </div>
+                <svg id="blueprint-svg" viewBox="0 0 600 180"></svg>
+                <div class="blueprint-legend">
+                  <div class="legend-item">
+                    <div class="legend-color" style="background: #F97316;"></div>
+                    <span>Plates &amp; Headers</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color" style="background: #38BDF8;"></div>
+                    <span>Studs &amp; Rough Openings</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Results Dashboard: Material Takeoff -->
+              <div class="results-section">
+                <div class="results-title">
+                  <span>Complete Material Takeoff</span>
+                  <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Includes Plate Lumber &amp; Waste</span>
+                </div>
+
+                <div class="results-grid">
+                  <div class="takeoff-card highlight">
+                    <span class="takeoff-label">Wood Studs</span>
+                    <span class="takeoff-val" id="takeoff-studs">22</span>
+                    <span class="takeoff-sub">Field, plates &amp; corners</span>
+                  </div>
+
+                  <div class="takeoff-card accent">
+                    <span class="takeoff-label">Drywall Sheets</span>
+                    <span class="takeoff-val" id="takeoff-sheets">4</span>
+                    <span class="takeoff-sub">Panels (+10% waste)</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Net Surface Area</span>
+                    <span class="takeoff-val" id="takeoff-area">95 sq ft</span>
+                    <span class="takeoff-sub">Openings deducted</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Drywall Screws</span>
+                    <span class="takeoff-val" id="takeoff-screws">1 lbs</span>
+                    <span class="takeoff-sub">1-1/4" coarse thread</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Joint Compound</span>
+                    <span class="takeoff-val" id="takeoff-mud">5 gal</span>
+                    <span class="takeoff-sub">3 finish coats</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Paper Joint Tape</span>
+                    <span class="takeoff-val" id="takeoff-tape">37 ft</span>
+                    <span class="takeoff-sub">Perimeter &amp; field seams</span>
+                  </div>
+                </div>
+
+                <!-- Estimated Cost Box -->
+                <div class="cost-estimation-box">
+                  <div class="cost-total-display">
+                    <span class="label">Estimated Material Cost</span>
+                    <span class="number" id="total-cost-num">$215</span>
+                  </div>
+                  <button class="btn-toggle-costs" id="btn-toggle-costs">Show Details</button>
+                </div>
+
+                <!-- Cost Breakdown Table (Hidden by default) -->
+                <div class="cost-breakdown-details" id="cost-breakdown-details">
+                  <table class="cost-table">
+                    <tbody id="cost-table-body">
+                      <!-- Filled by JS -->
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Action Buttons (Print / Copy) -->
+                <div class="action-buttons">
+                  <button class="btn-primary" id="btn-print-takeoff">
+                    <span>🖨️</span> Print / Save PDF
+                  </button>
+                  <button class="btn-secondary" id="btn-copy-takeoff">
+                    <span>📋</span> Copy Material List
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         COMPANION TOOLS (TOPICAL CLUSTER SUITE)
+         ========================================================================== -->
+    <section class="suite-section" id="suite-tools" aria-label="Related Construction Tools">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">The Framing &amp; Masonry Suite</span>
+          <h2 class="section-title">Complete Construction Calculator Toolkit</h2>
+          <p class="section-subtitle">
+            Everything professional framing contractors and DIY home builders need for accurate site takeoffs. Free, instant, and mobile-ready on any job site.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool-card" style="border-color: var(--brand-primary);">
+            <div class="tool-card-icon">🪵</div>
+            <h3 class="tool-card-title">Wall Stud Calculator</h3>
+            <p class="tool-card-desc">Calculate exact 2x4 and 2x6 studs needed for interior partition walls, corners, top double-plates, and bottom plates.</p>
+            <span class="tool-card-link">Active on this page →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">🧱</div>
+            <h3 class="tool-card-title">Drywall Sheet Estimator</h3>
+            <p class="tool-card-desc">Determine 4x8 and 4x12 drywall panel quantities for ceilings and walls with door and window cutout deductions.</p>
+            <span class="tool-card-link">Active on this page →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">🪨</div>
+            <h3 class="tool-card-title">Retaining Wall Calculator</h3>
+            <p class="tool-card-desc">Calculate concrete retaining wall blocks, gravel drainage backfill tons, and capstones based on wall height and slope.</p>
+            <span class="tool-card-link">Coming soon →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">🚜</div>
+            <h3 class="tool-card-title">Concrete Slab Calculator</h3>
+            <p class="tool-card-desc">Estimate cubic yards of ready-mix concrete and 60-lb/80-lb pre-mix bags for driveways, patios, and footings.</p>
+            <span class="tool-card-link">Coming soon →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">🏡</div>
+            <h3 class="tool-card-title">Fence Material Calculator</h3>
+            <p class="tool-card-desc">Calculate fence pickets, 4x4 posts, 2x4 stringer rails, and concrete post bags for wood privacy and perimeter fences.</p>
+            <span class="tool-card-link">Coming soon →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">🔨</div>
+            <h3 class="tool-card-title">Deck Joist &amp; Board Calculator</h3>
+            <p class="tool-card-desc">Estimate deck ledger boards, 2x8 joist spacing (12" or 16" OC), composite deck boards, and structural fastener hardware.</p>
+            <span class="tool-card-link">Coming soon →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEMANTIC EDUCATIONAL GUIDE & AEO ARTICLE
+         ========================================================================== -->
+    <article class="article-section" id="guide-article" aria-labelledby="guide-heading">
+      <div class="container">
+        <div class="prose-content">
+          
+          <!-- AEO Direct Answer / Key Takeaways Box (Designed for Google SGE / AI Overviews) -->
+          <div class="aeo-direct-box" role="region" aria-label="Direct Summary for AI and Contractors">
+            <h2 class="aeo-title">
+              <span>⚡</span> Quick Summary: How to Calculate Wall Studs &amp; Drywall
+            </h2>
+            <p class="aeo-text">
+              To calculate wood framing studs for any wall, apply the contractor rule: <strong>One stud for every foot of wall length</strong> plus plate lumber. For a 16-foot wall at 16 inches on-center (OC), you need 13 field studs + 3 continuous plates (double top plate + bottom plate) + 4 corner studs = <strong>20 to 22 studs</strong> (with 10% waste). For drywall, divide total square footage (minus doors and windows) by <strong>32</strong> (for 4×8 panels) or by <strong>48</strong> (for 4×12 panels) and add 10% for cutting waste.
+            </p>
+          </div>
+
+          <h2 id="guide-heading">The Complete Engineering Guide to Wall Framing &amp; Drywall Takeoffs</h2>
+          <p>
+            Accurately estimating materials for a wall construction project requires combining structural lumber sizing, building code compliance (International Residential Code IRC R602), and geometric surface area calculations. Whether you are framing an interior basement partition, a garage addition, or remodeling a living space, ordering the wrong amount of lumber or drywall panels leads to expensive job delays, return delivery fees, and wasted labor.
+          </p>
+
+          <h3>1. Understanding Stud Spacing: 16" OC vs 24" OC</h3>
+          <p>
+            Stud spacing refers to the measurement from the <strong>center of one vertical stud to the center of the next</strong> (On-Center or OC). This spacing determines both structural load capacity and the mounting grid for your drywall panels:
+          </p>
+          <ul>
+            <li><strong>16 Inches On-Center (Universal Standard):</strong> Required by residential building codes for all exterior load-bearing walls, multistory structures, and walls supporting cabinetry, heavy tile backer boards, or drywall less than 1/2" thick. It provides optimal rigidity and eliminates panel deflection.</li>
+            <li><strong>24 Inches On-Center (Advanced / Partition Framing):</strong> Permitted for non-load-bearing interior partition walls and single-story exterior walls engineered under Advanced Framing (Optimum Value Engineering - OVE). It reduces lumber usage by up to 30% and creates larger insulation cavities, but requires 5/8-inch drywall or panels specifically rated for 24" OC spacing to prevent sagging.</li>
+          </ul>
+
+          <div class="formula-card">
+            <h4>Mathematical Formula for Stud Quantities:</h4>
+            <span class="formula-code">Total Studs = ⌈(Wall Length in inches ÷ Spacing in inches)⌉ + 1 (Starter) + Plates + Corners + Openings</span>
+            <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem;">
+              <em>Plate Lumber Rule:</em> Continuous top double-plate (2 layers) + bottom sole plate (1 layer) equals 3 times the linear wall length divided by standard 8-ft or 10-ft lumber lengths.
+            </p>
+          </div>
+
+          <h3>2. Rough Openings: King Studs, Jack Studs &amp; Headers</h3>
+          <p>
+            When a wall contains doors or windows, you cannot simply subtract the opening size from your lumber takeoff. Every rough opening requires specialized structural framing components:
+          </p>
+          <ol>
+            <li><strong>King Studs:</strong> Full-length vertical studs running uninterrupted from the bottom sole plate to the top double plate on both sides of the opening.</li>
+            <li><strong>Jack Studs (Trimmers):</strong> Shortened vertical studs nailed directly inside the king studs that support the weight of the structural header.</li>
+            <li><strong>Header:</strong> A horizontal structural beam (typically doubled 2x6, 2x8, or 2x10 lumber with a 1/2" plywood spacer) spanning across the top of the door or window to distribute overhead roof or floor loads around the opening.</li>
+            <li><strong>Cripple Studs:</strong> Short vertical studs spaced 16" OC located above the header and below the window sill plate.</li>
+          </ol>
+
+          <!-- IRC Building Code Table -->
+          <h3>3. International Residential Code (IRC R602) Spacing Limits</h3>
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Lumber Size</th>
+                  <th>Max Wall Height</th>
+                  <th>Spacing (Bearing Wall)</th>
+                  <th>Spacing (Non-Bearing)</th>
+                  <th>Supported Load</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>2 × 4 inches</strong></td>
+                  <td>10 feet</td>
+                  <td>16 inches OC</td>
+                  <td>24 inches OC</td>
+                  <td>Roof &amp; Ceiling only</td>
+                </tr>
+                <tr>
+                  <td><strong>2 × 4 inches</strong></td>
+                  <td>10 feet</td>
+                  <td>16 inches OC</td>
+                  <td>24 inches OC</td>
+                  <td>One Story + Roof</td>
+                </tr>
+                <tr>
+                  <td><strong>2 × 6 inches</strong></td>
+                  <td>14 feet</td>
+                  <td>16 inches OC</td>
+                  <td>24 inches OC</td>
+                  <td>Two Stories + Roof</td>
+                </tr>
+                <tr>
+                  <td><strong>2 × 6 inches</strong></td>
+                  <td>18 feet</td>
+                  <td>12 inches OC</td>
+                  <td>16 inches OC</td>
+                  <td>High-wind / Heavy load</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>4. Drywall Hanging Strategy: 4x8 vs 4x12 Sheets</h3>
+          <p>
+            Professional drywall finishers always hang boards <strong>horizontally</strong> (perpendicular to the studs) rather than vertically. Horizontal hanging bridges minor framing imperfections, reduces total linear seam length by up to 25%, and places the primary tapered joint at 48 inches—a comfortable waist-height level that makes taping, mudding, and sanding twice as fast.
+          </p>
+          <ul>
+            <li><strong>4 × 8 ft Sheets (32 sq ft):</strong> Weigh approximately 52 lbs for 1/2" thickness. Best for solo DIY builders, tight stairwells, and small residential rooms.</li>
+            <li><strong>4 × 12 ft Sheets (48 sq ft):</strong> Weigh approximately 78 lbs. Used by professional crews on walls 12 feet or longer to eliminate vertical butt joints completely.</li>
+          </ul>
+
+          <!-- FAQ Accordion -->
+          <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How many studs do I need for a 10-foot wall?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  For a 10-foot wall framed at 16 inches on-center, you will need <strong>14 to 16 studs</strong>. The field calculation requires 8 studs spaced 16" apart plus 1 end stud (9 field studs). Adding 3 continuous plate boards (double top plate and bottom sole plate) adds 3 studs, plus 4 extra studs for corner tie-ins and a standard 10% waste buffer.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Should I use 2x4 or 2x6 studs for interior walls?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Standard <strong>2x4 lumber</strong> (actual size 1.5" × 3.5") is standard for nearly all interior partition walls. Use <strong>2x6 lumber</strong> (actual size 1.5" × 5.5") for "wet walls" carrying 3-inch or 4-inch plumbing drain stacks, walls requiring sound insulation batts (STC rating), or tall walls exceeding 10 feet in height.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How much drywall mud is needed for 500 sq ft?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  For 500 square feet of drywall (approximately 16 sheets of 4x8), you will need roughly <strong>two 4.5-gallon buckets</strong> (about 9 gallons total) of all-purpose joint compound. This accounts for taping (embedding coat), filling (second coat), and thin skim finishing (third coat).
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What size screws should I use for 1/2" drywall?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Use <strong>1-1/4 inch Type W coarse-thread drywall screws</strong> for wood stud framing. Screws should be spaced every 12 inches along edges and every 16 inches in the field of the board. For 5/8-inch drywall, use 1-5/8 inch screws. Never use nails, as they loosen over time and create unsightly nail pops.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How do you calculate waste for drywall and studs?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Always add a <strong>10% waste factor</strong> for standard rectangular rooms with 8-foot or 9-foot ceilings. If your room features vaulted ceilings, archways, or numerous small alcoves and soffits, increase your cutting waste factor to <strong>15% to 20%</strong> to prevent running out of material mid-project.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="#suite-tools">Calculators</a>
+        <a href="#guide-article">Building Codes</a>
+        <a href="https://github.com/Aamirtechseo/wallcalculator" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p>© 2026 WallCalculator.app. All rights reserved. Built for professional carpenters, contractors, and DIY builders.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-dim);">
+        Calculations are based on the International Residential Code (IRC) standards. Always verify structural requirements with local building authorities.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Master JavaScript Execution -->
+  <script src="/js/calculator.js"></script>
+</body>
+</html>
