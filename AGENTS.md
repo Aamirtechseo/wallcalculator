@@ -1,7 +1,7 @@
 # On-Page SEO & Content Standard Operating Procedures (SOP)
 ## WallCalculator.app Site-Wide Architecture & Quality Guidelines
 
-This document locks all on-page SEO, typography, heading, and aesthetic rules for `wallcalculator.app`. Every existing and newly created page on this website MUST strictly adhere to these standards.
+This document locks all on-page SEO, typography, heading, visual layout, and interlinking rules for `wallcalculator.app`. Every existing and newly created page on this website MUST strictly adhere to these standards.
 
 ---
 
@@ -72,3 +72,54 @@ This document locks all on-page SEO, typography, heading, and aesthetic rules fo
   * Tab buttons must use responsive spans (`.tab-label-short` on `< 540px`).
   * Takeoff results must arrange in a responsive 2-column grid (`repeat(2, 1fr)`).
   * 2D SVG Blueprint must scale gracefully to `150px` height.
+
+---
+
+### 8. Visual Semantic Layout Architecture (Locked 7-Zone Anatomy)
+Every page on `wallcalculator.app` must strictly follow this visual and structural HTML5 hierarchy:
+
+1. **Header Zone (`<header class="header-nav">`):**
+   * Sticky nav with Brand Logo, desktop navigation links, theme toggle button, and mobile hamburger drawer button (`☰`/`✕`).
+2. **Hero & Interactive Tool Zone (`<section class="hero-section">`):**
+   * Left Column: Trust pill badge, H1 heading, hook-first subtitle, trust checklist bullets.
+   * Right Column: Dedicated interactive calculator card with mode tabs, dimension inputs, spacing pills, and opening inputs.
+3. **Live 2D Blueprint Visualization Zone (`<div class="blueprint-wrapper">`):**
+   * Dynamic CAD SVG visualizer that instantly recalculates and visually renders the structure.
+4. **Results & Cost Takeoff Dashboard (`<div class="results-section">`):**
+   * Material takeoff cards (responsive 2 or 3-column grid), total estimated cost box with toggleable breakdown, and action buttons (Print/PDF & Copy Material List).
+5. **The Framing & Masonry Suite Zone (`<section class="suite-section" id="suite-tools">`):**
+   * Visual companion tools silo cluster featuring razor-sharp vector SVG icons (never raw emojis) with active/coming-soon states.
+6. **Semantic Educational & AEO Article Zone (`<article class="article-section" id="guide-article">`):**
+   * **AEO Direct Answer Box (`.aeo-direct-box`):** Concise snippet designed for Google AI Overviews and Featured Snippets.
+   * Structured H2 & H3 content sections explaining engineering rules, IRC building codes, and practical advice.
+   * **Formula Code Cards (`.formula-card`):** Exact mathematical calculations displayed in monospaced blocks.
+   * **Responsive Comparison Table (`.data-table-wrapper`):** Horizontal scrollable table for building code span limits.
+   * **Conclusion Box (`.conclusion-box`):** Summary with primary keyword and closing takeaway.
+   * **FAQ Accordion (`.faq-list`):** Interactive accordion backed by JSON-LD `FAQPage` schema.
+7. **Footer Zone (`<footer class="site-footer">`):**
+   * Cross-tool navigation links, disclaimer, and copyright.
+
+---
+
+### 9. Anti-Cannibalization Intent & Keyword Mapping Matrix
+To prevent Google from splitting link equity and ranking signals, each URL owns a strictly unique search intent:
+
+| Page URL | Primary Keyword | Search Volume | Keyword Difficulty | Distinct Intent Boundary |
+| :--- | :--- | :--- | :--- | :--- |
+| **`/` (Homepage)** | `Wall Calculator` | High (Broad) | Variable | All-in-one framing + drywall + fasteners + 2D blueprint |
+| **`/wall-stud-calculator.html`** | `Wall Stud Calculator` | 2,400/mo | **12%** | Dedicated stud framing, 16 vs 24 OC, plates, king/jack studs |
+| **`/drywall-calculator.html`** | `Drywall Sheet Calculator` | 8,900+/mo | **18%** | 4x8 vs 4x12 panels, joint compound mud, drywall screws |
+| **`/retaining-wall-calculator.html`** | `Retaining Wall Calculator` | 1,600/mo | **28%** | Concrete retaining blocks, drainage gravel tons, capstones |
+| **`/block-wall-calculator.html`** | `Block Wall Calculator` | 1,000/mo | **14%** | 8x8x16 CMU concrete cinder blocks, mortar bags, core grout |
+
+* **Cannibalization Lock:** The homepage will NEVER target `wall stud calculator` as primary keyword. Child pages will NEVER target `wall calculator` as primary keyword.
+
+---
+
+### 10. Anchor Text Distribution & Internal Linking SOP
+Internal links between pages must follow a calibrated ratio to pass maximum topical authority without triggering algorithmic over-optimization penalties:
+
+* **25% Exact Match:** e.g., `wall stud calculator`, `drywall sheet calculator`
+* **55% Partial Match:** e.g., `calculate wall framing studs`, `interactive drywall sheet estimator`
+* **20% Entity / Contextual:** e.g., `lumber takeoff tool`, `gypsum board calculator`
+* **Zero Generic Anchors:** Words like "click here", "read more", "this tool" are strictly prohibited.
