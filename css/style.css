@@ -535,6 +535,21 @@ a {
   gap: 0.5rem;
 }
 
+.pill-group.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pill-group.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 640px) {
+  .pill-group.cols-3,
+  .pill-group.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .pill-option {
   position: relative;
 }
@@ -611,6 +626,12 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .openings-inputs {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
 
 /* Slider Controls */
@@ -1125,6 +1146,34 @@ a {
   font-size: 1rem;
   line-height: 1.75;
   margin-bottom: 1.25rem;
+}
+
+.prose-content a,
+.article-section a {
+  color: #00F0FF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.prose-content a:hover,
+.article-section a:hover {
+  color: #8B5CF6;
+  text-decoration-thickness: 2.5px;
+}
+
+[data-theme="light"] .prose-content a,
+[data-theme="light"] .article-section a {
+  color: #0284C7;
+  text-decoration-color: rgba(2, 132, 199, 0.45);
+}
+
+[data-theme="light"] .prose-content a:hover,
+[data-theme="light"] .article-section a:hover {
+  color: #0369A1;
+  text-decoration-color: #0369A1;
 }
 
 .prose-content ul, .prose-content ol {

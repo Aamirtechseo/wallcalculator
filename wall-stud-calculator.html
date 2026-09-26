@@ -242,134 +242,127 @@
                 <p style="font-size: 0.85rem; color: var(--text-dim); margin: 0;">Enter wall measurements to calculate studs and lumber requirements.</p>
               </div>
 
-              <!-- Dimensions Input Group -->
-              <div class="input-grid">
-                <div class="input-group">
-                  <label for="stud-wall-length">
+              <!-- Wall Dimensions (Length & Height) -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="stud-wall-length">
                     <span>Wall Length</span>
-                    <span class="label-hint">Feet (ft)</span>
+                    <span class="unit-helper">Standard 8-40 ft</span>
                   </label>
-                  <div class="input-field-wrapper">
-                    <input type="number" id="stud-wall-length" min="1" max="1000" step="0.5" value="16" aria-label="Wall Length in Feet">
-                    <span class="input-unit">FT</span>
+                  <div class="input-with-unit">
+                    <input type="number" id="stud-wall-length" class="form-input" min="1" max="1000" step="0.5" value="16" aria-label="Wall Length in Feet">
+                    <span class="unit-tag">FT</span>
                   </div>
                 </div>
 
-                <div class="input-group">
-                  <label for="stud-wall-height">
+                <div class="form-group">
+                  <label class="form-label" for="stud-wall-height">
                     <span>Wall Height</span>
-                    <span class="label-hint">Ceiling / Stud Length</span>
+                    <span class="unit-helper">Ceiling Height</span>
                   </label>
-                  <div class="input-field-wrapper">
-                    <input type="number" id="stud-wall-height" min="4" max="30" step="0.5" value="8" aria-label="Wall Height in Feet">
-                    <span class="input-unit">FT</span>
+                  <div class="input-with-unit">
+                    <input type="number" id="stud-wall-height" class="form-input" min="4" max="30" step="0.5" value="8" aria-label="Wall Height in Feet">
+                    <span class="unit-tag">FT</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Stud Spacing Selector -->
-              <div class="spacing-group">
-                <label class="group-label">On-Center (OC) Stud Spacing</label>
-                <div class="radio-pill-group" role="radiogroup" aria-label="Stud Spacing Options">
-                  <label class="radio-pill">
-                    <input type="radio" name="stud-spacing" value="12">
-                    <span>12" OC (Heavy)</span>
-                  </label>
-                  <label class="radio-pill">
-                    <input type="radio" name="stud-spacing" value="16" checked>
-                    <span>16" OC (Standard)</span>
-                  </label>
-                  <label class="radio-pill">
-                    <input type="radio" name="stud-spacing" value="24">
-                    <span>24" OC (Partition)</span>
-                  </label>
+              <!-- Stud Spacing Selector (cols-3) -->
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <span class="form-label">Stud Spacing (On-Center)</span>
+                <div class="pill-group cols-3" role="radiogroup" aria-label="Stud Spacing Options">
+                  <div class="pill-option">
+                    <input type="radio" id="spacing-12" name="stud-spacing" value="12">
+                    <label for="spacing-12" class="pill-label">
+                      <span>12" OC</span>
+                      <span class="pill-desc">Heavy / Commercial</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="spacing-16" name="stud-spacing" value="16" checked>
+                    <label for="spacing-16" class="pill-label">
+                      <span>16" OC</span>
+                      <span class="pill-desc">Standard Code</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="spacing-24" name="stud-spacing" value="24">
+                    <label for="spacing-24" class="pill-label">
+                      <span>24" OC</span>
+                      <span class="pill-desc">Partition / OVE</span>
+                    </label>
+                  </div>
                 </div>
               </div>
 
-              <!-- Lumber Size & Wall Type -->
-              <div class="spacing-group">
-                <label class="group-label">Lumber Size &amp; Wall Type</label>
-                <div class="radio-pill-group" role="radiogroup" aria-label="Lumber Dimensions">
-                  <label class="radio-pill">
-                    <input type="radio" name="lumber-size" value="2x4" checked>
-                    <span>2×4 Lumber</span>
-                  </label>
-                  <label class="radio-pill">
-                    <input type="radio" name="lumber-size" value="2x6">
-                    <span>2×6 Lumber</span>
-                  </label>
-                  <label class="radio-pill">
-                    <input type="radio" name="wall-type" value="exterior" checked>
-                    <span>Exterior (3 Plates)</span>
-                  </label>
-                  <label class="radio-pill">
-                    <input type="radio" name="wall-type" value="interior">
-                    <span>Interior Partition</span>
-                  </label>
+              <!-- Lumber Size & Wall Type (cols-4) -->
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <span class="form-label">Lumber Size &amp; Wall Assembly</span>
+                <div class="pill-group cols-4" role="radiogroup" aria-label="Lumber Size and Wall Type">
+                  <div class="pill-option">
+                    <input type="radio" id="lumber-2x4" name="lumber-size" value="2x4" checked>
+                    <label for="lumber-2x4" class="pill-label">
+                      <span>2×4 Wood</span>
+                      <span class="pill-desc">Standard Wall</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="lumber-2x6" name="lumber-size" value="2x6">
+                    <label for="lumber-2x6" class="pill-label">
+                      <span>2×6 Wood</span>
+                      <span class="pill-desc">Exterior / Insulated</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="wall-exterior" name="wall-type" value="exterior" checked>
+                    <label for="wall-exterior" class="pill-label">
+                      <span>Exterior</span>
+                      <span class="pill-desc">3 Plates (Double Top)</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="wall-interior" name="wall-type" value="interior">
+                    <label for="wall-interior" class="pill-label">
+                      <span>Interior</span>
+                      <span class="pill-desc">Partition Wall</span>
+                    </label>
+                  </div>
                 </div>
               </div>
 
-              <!-- Openings & Corner Framing -->
-              <div class="input-grid">
-                <div class="input-group">
-                  <label for="corner-count">
-                    <span>Corners / T-Junctions</span>
-                    <span class="label-hint">3-Stud Corners</span>
-                  </label>
-                  <div class="input-field-wrapper">
-                    <input type="number" id="corner-count" min="0" max="50" step="1" value="2" aria-label="Corner Count">
-                    <span class="input-unit">QTY</span>
-                  </div>
+              <!-- Openings & Corner Framing Box -->
+              <div class="openings-box">
+                <div class="openings-header">
+                  <span>Corners &amp; Rough Openings</span>
+                  <span style="font-size: 0.75rem; color: var(--text-dim);">Accounts for King/Jack studs &amp; T-posts</span>
                 </div>
-
-                <div class="input-group">
-                  <label for="door-count">
-                    <span>Door Openings</span>
-                    <span class="label-hint">King &amp; Jack Studs</span>
-                  </label>
-                  <div class="input-field-wrapper">
-                    <input type="number" id="door-count" min="0" max="20" step="1" value="1" aria-label="Door Openings Count">
-                    <span class="input-unit">QTY</span>
+                <div class="openings-inputs" style="grid-template-columns: repeat(4, 1fr);">
+                  <div class="form-group">
+                    <label class="form-label" for="corner-count" style="font-size: 0.75rem;">Corners</label>
+                    <input type="number" id="corner-count" class="form-input" min="0" max="50" step="1" value="2" style="padding: 0.5rem 0.6rem; font-size: 0.95rem;">
                   </div>
-                </div>
-
-                <div class="input-group">
-                  <label for="window-count">
-                    <span>Window Openings</span>
-                    <span class="label-hint">Headers &amp; Sills</span>
-                  </label>
-                  <div class="input-field-wrapper">
-                    <input type="number" id="window-count" min="0" max="20" step="1" value="1" aria-label="Window Openings Count">
-                    <span class="input-unit">QTY</span>
+                  <div class="form-group">
+                    <label class="form-label" for="door-count" style="font-size: 0.75rem;">Doors</label>
+                    <input type="number" id="door-count" class="form-input" min="0" max="20" step="1" value="1" style="padding: 0.5rem 0.6rem; font-size: 0.95rem;">
                   </div>
-                </div>
-
-                <div class="input-group">
-                  <label for="stud-price-input">
-                    <span>Stud Price ($/ea)</span>
-                    <span class="label-hint">Local Lumber Price</span>
-                  </label>
-                  <div class="input-field-wrapper">
-                    <input type="number" id="stud-price-input" min="1" max="50" step="0.05" value="4.85" aria-label="Price per Stud in USD">
-                    <span class="input-unit">$</span>
+                  <div class="form-group">
+                    <label class="form-label" for="window-count" style="font-size: 0.75rem;">Windows</label>
+                    <input type="number" id="window-count" class="form-input" min="0" max="20" step="1" value="1" style="padding: 0.5rem 0.6rem; font-size: 0.95rem;">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="stud-price-input" style="font-size: 0.75rem;">Price ($/ea)</label>
+                    <input type="number" id="stud-price-input" class="form-input" min="1" max="50" step="0.05" value="4.85" style="padding: 0.5rem 0.6rem; font-size: 0.95rem;">
                   </div>
                 </div>
               </div>
 
               <!-- Waste Factor Slider -->
-              <div class="slider-group">
+              <div class="slider-container">
                 <div class="slider-header">
-                  <label for="waste-slider">Job Site Waste Allowance</label>
-                  <span class="slider-val" id="waste-val-display">10%</span>
+                  <span>Waste &amp; Cutting Allowance</span>
+                  <strong id="waste-val-display" style="color: var(--brand-primary);">10%</strong>
                 </div>
-                <input type="range" id="waste-slider" min="0" max="25" step="1" value="10" aria-label="Lumber Waste Percentage">
-                <div class="slider-ticks">
-                  <span>0%</span>
-                  <span>5% (Exact)</span>
-                  <span>10% (Recommended)</span>
-                  <span>15%</span>
-                  <span>25%</span>
-                </div>
+                <input type="range" id="waste-slider" class="range-slider" min="0" max="25" step="1" value="10" aria-label="Lumber Waste Percentage">
               </div>
 
               <!-- ==============================================================
@@ -377,111 +370,101 @@
                    ============================================================== -->
               <div class="blueprint-wrapper">
                 <div class="blueprint-header">
-                  <div class="blueprint-title">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                      <line x1="3" y1="9" x2="21" y2="9"></line>
-                      <line x1="9" y1="21" x2="9" y2="9"></line>
-                    </svg>
-                    <span>Dynamic 2D Framing CAD Blueprint</span>
+                  <span>Framing Blueprint (Plates &amp; Studs)</span>
+                  <span style="color: #38BDF8;">● Live Vector Preview</span>
+                </div>
+                <svg id="blueprint-svg" viewBox="0 0 550 150" aria-label="Interactive 2D Stud Wall Framing Blueprint"></svg>
+                <div class="blueprint-legend">
+                  <div class="legend-item">
+                    <div class="legend-color" style="background: #F97316;"></div>
+                    <span>Plates &amp; Headers</span>
                   </div>
-                  <div class="blueprint-legend">
-                    <span class="legend-item"><span class="legend-dot" style="background: #F97316;"></span>Plates/Headers</span>
-                    <span class="legend-item"><span class="legend-dot" style="background: #0284C7;"></span>Field Studs</span>
-                    <span class="legend-item"><span class="legend-dot" style="background: #38BDF8;"></span>Trimmers</span>
-                    <span class="legend-item"><span class="legend-dot" style="background: #8B5CF6;"></span>Corners</span>
+                  <div class="legend-item">
+                    <div class="legend-color" style="background: #0284C7;"></div>
+                    <span>Field Studs</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color" style="background: #38BDF8;"></div>
+                    <span>King &amp; Jack Studs</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color" style="background: #8B5CF6;"></div>
+                    <span>Corners</span>
                   </div>
                 </div>
-                <svg id="blueprint-svg" class="blueprint-canvas" viewBox="0 0 550 150" preserveAspectRatio="none" aria-label="Interactive 2D Stud Wall Framing Blueprint"></svg>
               </div>
 
               <!-- ==============================================================
                    ZONE 4: RESULTS & COST TAKEOFF DASHBOARD
                    ============================================================== -->
               <div class="results-section">
-                <div class="takeoff-grid">
-                  <div class="takeoff-card">
+                <div class="results-title">
+                  <span>Lumber Takeoff Summary</span>
+                  <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Includes Plates, Corners &amp; Waste</span>
+                </div>
+
+                <div class="results-grid">
+                  <div class="takeoff-card highlight">
                     <span class="takeoff-label">Total Studs to Order</span>
-                    <div class="takeoff-value" id="takeoff-total-studs">27</div>
+                    <span class="takeoff-val" id="takeoff-total-studs">27</span>
                     <span class="takeoff-sub">Includes 10% Waste Buffer</span>
                   </div>
 
                   <div class="takeoff-card">
                     <span class="takeoff-label">Field Vertical Studs</span>
-                    <div class="takeoff-value" id="takeoff-field-studs">13</div>
+                    <span class="takeoff-val" id="takeoff-field-studs">13</span>
                     <span class="takeoff-sub">16" On-Center Spacing</span>
                   </div>
 
                   <div class="takeoff-card">
                     <span class="takeoff-label">Continuous Plates</span>
-                    <div class="takeoff-value" id="takeoff-plate-studs">6</div>
+                    <span class="takeoff-val" id="takeoff-plate-studs">6</span>
                     <span class="takeoff-sub">Top Double &amp; Bottom Sole</span>
                   </div>
 
                   <div class="takeoff-card">
                     <span class="takeoff-label">Corner &amp; T-Posts</span>
-                    <div class="takeoff-value" id="takeoff-corner-studs">4</div>
-                    <span class="takeoff-sub">3-Stud Corner Tie-Ins</span>
+                    <span class="takeoff-val" id="takeoff-corner-studs">4</span>
+                    <span class="takeoff-sub">3-Stud Corner Assemblies</span>
                   </div>
 
                   <div class="takeoff-card">
                     <span class="takeoff-label">Opening Trimmers</span>
-                    <div class="takeoff-value" id="takeoff-opening-studs">8</div>
+                    <span class="takeoff-val" id="takeoff-opening-studs">8</span>
                     <span class="takeoff-sub">King &amp; Jack Studs</span>
                   </div>
 
-                  <div class="takeoff-card">
+                  <div class="takeoff-card accent">
                     <span class="takeoff-label">16d Framing Nails</span>
-                    <div class="takeoff-value" id="takeoff-framing-nails">3 lbs</div>
+                    <span class="takeoff-val" id="takeoff-framing-nails">3 lbs</span>
                     <span class="takeoff-sub">Common 3-1/2" Nails</span>
                   </div>
                 </div>
 
                 <!-- Total Cost Takeoff -->
-                <div class="cost-summary-box">
-                  <div class="cost-header">
-                    <div>
-                      <span class="cost-title">Estimated Lumber Material Cost</span>
-                      <div class="cost-amount">$<span id="total-cost-num">141.45</span></div>
-                    </div>
-                    <button class="btn-toggle-costs" id="btn-toggle-costs" aria-label="Toggle Detailed Cost Breakdown">
-                      View Details ▼
-                    </button>
+                <div class="cost-estimation-box">
+                  <div class="cost-total-display">
+                    <span class="label">Estimated Lumber Material Cost</span>
+                    <span class="number">$<span id="total-cost-num">141.45</span></span>
                   </div>
+                  <button class="btn-toggle-costs" id="btn-toggle-costs" aria-label="Toggle Detailed Cost Breakdown">Show Details</button>
+                </div>
 
-                  <div class="cost-breakdown-details" id="cost-breakdown-details">
-                    <table class="cost-table">
-                      <thead>
-                        <tr>
-                          <th>Material Item</th>
-                          <th>Quantity</th>
-                          <th>Unit Price</th>
-                          <th>Subtotal</th>
-                        </tr>
-                      </thead>
-                      <tbody id="cost-table-body">
-                        <!-- Populated by JavaScript -->
-                      </tbody>
-                    </table>
-                  </div>
+                <div class="cost-breakdown-details" id="cost-breakdown-details">
+                  <table class="cost-table">
+                    <tbody id="cost-table-body">
+                      <!-- Populated by JavaScript -->
+                    </tbody>
+                  </table>
                 </div>
 
                 <!-- Export & Copy Actions -->
                 <div class="action-buttons">
-                  <button class="btn-action primary" id="btn-print-takeoff">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                      <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-                      <rect x="6" y="14" width="12" height="8"></rect>
-                    </svg>
-                    Print Material Takeoff (PDF)
+                  <button class="btn-primary" id="btn-print-takeoff">
+                    <span>🖨️</span> Print Material Takeoff (PDF)
                   </button>
-                  <button class="btn-action secondary" id="btn-copy-takeoff">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy Material List
+                  <button class="btn-secondary" id="btn-copy-takeoff">
+                    <span>📋</span> Copy Material List
                   </button>
                 </div>
 
@@ -666,7 +649,7 @@
 
           <h3>4. Corner Posts and Partition Wall Intersections</h3>
           <p>
-            Exterior corners and interior wall intersections require specialized framing assemblies so drywall hanging crews have adequate nailing backing on inside corners. Traditional three-stud corners and modern "California corners" (two studs separated by blocking or a drywall clip) require adding <strong>2 extra studs per corner or wall tee-intersection</strong> beyond normal field layout counts. If you are also estimating gypsum panels for your project, consult a dedicated <a href="/drywall-calculator.html" title="Drywall Sheet Calculator">drywall sheet calculator</a> for panel dimensions.
+            Exterior corners and interior wall intersections require specialized framing assemblies so drywall hanging crews have adequate nailing backing on inside corners. Traditional three-stud corners and modern "California corners" (two studs separated by blocking or a drywall clip) require adding <strong>2 extra studs per corner or wall tee-intersection</strong> beyond normal field layout counts. If you are also estimating gypsum panels for your project, consult the all-in-one <a href="/#suite-tools" title="Drywall Sheet Estimator">drywall sheet calculator</a> for panel dimensions.
           </p>
 
           <!-- IRC Building Code Table with Authoritative Outbound Link -->
