@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Wall Stud Calculator - Instant Framing Takeoff</title>
+  <meta name="title" content="Wall Stud Calculator - Instant Framing Takeoff">
+  <meta name="description" content="Estimate 2x4 and 2x6 studs, plates, and rough openings with this free wall stud calculator. Generate accurate framing takeoffs in seconds. Try it now!">
+  <meta name="keywords" content="wall stud calculator, stud calculator, stud wall calculator, 16 on center stud calculator, framing stud calculator, lumber takeoff">
+  <link rel="canonical" href="https://wallcalculator.app/wall-stud-calculator.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wallcalculator.app/wall-stud-calculator.html">
+  <meta property="og:title" content="Wall Stud Calculator - Instant Framing Takeoff">
+  <meta property="og:description" content="Estimate 2x4 and 2x6 studs, plates, and rough openings with this free wall stud calculator. Generate accurate framing takeoffs in seconds. Try it now!">
+  <meta property="og:image" content="https://wallcalculator.app/favicon.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://wallcalculator.app/wall-stud-calculator.html">
+  <meta name="twitter:title" content="Wall Stud Calculator - Instant Framing Takeoff">
+  <meta name="twitter:description" content="Estimate 2x4 and 2x6 studs, plates, and rough openings with this free wall stud calculator. Generate accurate framing takeoffs in seconds. Try it now!">
+  <meta name="twitter:image" content="https://wallcalculator.app/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Google Fonts - Non-Render-Blocking Performance Optimized -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  </noscript>
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- JSON-LD Schema: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Wall Stud Calculator & Framing Estimator",
+    "url": "https://wallcalculator.app/wall-stud-calculator.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "description": "Specialized lumber takeoff tool calculating 2x4 and 2x6 vertical studs, top double-plates, bottom plates, corners, and door/window trimmers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "12-inch, 16-inch, and 24-inch On-Center stud spacing",
+      "Continuous double top plates and bottom sole plates",
+      "Corner posts and partition wall intersection extra studs",
+      "Door and window rough opening king studs and jack studs",
+      "Custom waste factor allowance (0% to 25%)",
+      "Dynamic CAD 2D wall framing SVG visualizer",
+      "Contractor lumber cost takeoff and printable PDF material list"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://wallcalculator.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Wall Stud Calculator",
+        "item": "https://wallcalculator.app/wall-stud-calculator.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many studs are needed for a 12-foot wall at 16 inches OC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a 12-foot wall at 16 inches on-center, you need 10 vertical field studs, plus 5 studs for horizontal plates (a double top plate and single bottom plate), and 4 studs for corner posts. Including a standard 10% waste buffer, you should order 21 studs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the general contractor rule of thumb for calculating wall studs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The traditional contractor rule of thumb is one stud for every linear foot of wall. While this provides a safe rough estimate for ordering, professional takeoffs must account for top double-plates, bottom plates, corners, and window or door headers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do framing walls require a double top plate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "According to IRC Section R602.3, bearing walls require a double top plate to distribute concentrated overhead loads from roof rafters and floor joists that do not align directly above vertical studs, as well as to overlap and tie wall intersections together for structural stability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many extra studs are needed for a door or window opening?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each standard door or window rough opening requires 4 additional studs: two full-height king studs on the outside and two trimmer or jack studs on the inside supporting the structural header, plus short cripple studs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should exterior walls use 2x4 or 2x6 studs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Modern residential energy codes often require 2x6 framing for exterior walls to accommodate thicker R-20 or R-21 fiberglass batt or rockwool insulation. 2x4 framing remains common in mild climate zones and for interior non-load-bearing walls."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WallCalculator.app",
+    "url": "https://wallcalculator.app/",
+    "logo": "https://wallcalculator.app/favicon.svg",
+    "description": "Free contractor-grade framing, drywall, and structural wall calculators."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ZONE 1: SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header-nav">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main Navigation">
+        <a href="/" class="brand-logo" aria-label="WallCalculator.app Home">
+          <svg viewBox="0 0 48 48" width="32" height="32" fill="none">
+            <rect width="48" height="48" rx="10" fill="#0B0F19"/>
+            <rect x="6" y="8" width="36" height="4" rx="1" fill="#F97316"/>
+            <rect x="6" y="36" width="36" height="4" rx="1" fill="#F97316"/>
+            <rect x="8" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="18" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="28" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="37" y="12" width="3" height="24" fill="#38BDF8"/>
+          </svg>
+          <span>Wall<span class="accent">Calculator</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-links" role="list">
+          <li><a href="/">Wall Estimator</a></li>
+          <li><a href="/wall-stud-calculator.html" class="active" aria-current="page">Stud Calculator</a></li>
+          <li><a href="#suite-tools">Drywall Sheets</a></li>
+          <li><a href="#guide-article">Framing Rules &amp; IRC Codes</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="btn-icon" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+            🌓
+          </button>
+          <button class="btn-icon mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu" title="Open Navigation Menu" aria-expanded="false">
+            <span class="hamburger-icon">☰</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         ZONE 2: HERO SECTION & INTERACTIVE CALCULATOR TOOL
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Copy & Trust -->
+          <div class="hero-copy">
+            <div class="badge-pill">
+              <span>✓</span> Contractor-Grade · 12" / 16" / 24" OC · IRC R602 Compliant
+            </div>
+            
+            <h1 class="hero-title">
+              <span class="accent">Wall Stud Calculator</span>: Instant Framing &amp; Lumber Takeoff
+            </h1>
+            
+            <p class="hero-subtitle">
+              Framing errors, warped studs, and inaccurate lumber estimates can cause expensive job delays and budget overruns on any framing project. Whether building an exterior bearing wall, basement partition, or shed, this interactive wall stud calculator calculates exact 2x4 and 2x6 studs, continuous top and bottom plates, corner assemblies, and rough openings with dynamic 2D blueprints.
+            </p>
+
+            <div class="trust-badges">
+              <div class="trust-item">
+                <span class="icon">📐</span>
+                <span><strong>Live 2D Framing CAD:</strong> Dynamic blueprint draws every stud, corner, and header in real time.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">🪵</span>
+                <span><strong>IRC R602 Structural Precision:</strong> Accounts for double top plates, sole plates, and trimmer studs.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">⚡</span>
+                <span><strong>Instant Material Takeoff:</strong> Complete lumber count, 16d nails, and budget cost estimator.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Calculator Card -->
+          <div class="calc-wrapper">
+            <div class="calc-card" id="stud-calculator-tool">
+              
+              <!-- Card Header -->
+              <div style="margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem; color: var(--text-main);">Framing Dimensions &amp; Specifications</h3>
+                <p style="font-size: 0.85rem; color: var(--text-dim); margin: 0;">Enter wall measurements to calculate studs and lumber requirements.</p>
+              </div>
+
+              <!-- Dimensions Input Group -->
+              <div class="input-grid">
+                <div class="input-group">
+                  <label for="stud-wall-length">
+                    <span>Wall Length</span>
+                    <span class="label-hint">Feet (ft)</span>
+                  </label>
+                  <div class="input-field-wrapper">
+                    <input type="number" id="stud-wall-length" min="1" max="1000" step="0.5" value="16" aria-label="Wall Length in Feet">
+                    <span class="input-unit">FT</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="stud-wall-height">
+                    <span>Wall Height</span>
+                    <span class="label-hint">Ceiling / Stud Length</span>
+                  </label>
+                  <div class="input-field-wrapper">
+                    <input type="number" id="stud-wall-height" min="4" max="30" step="0.5" value="8" aria-label="Wall Height in Feet">
+                    <span class="input-unit">FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stud Spacing Selector -->
+              <div class="spacing-group">
+                <label class="group-label">On-Center (OC) Stud Spacing</label>
+                <div class="radio-pill-group" role="radiogroup" aria-label="Stud Spacing Options">
+                  <label class="radio-pill">
+                    <input type="radio" name="stud-spacing" value="12">
+                    <span>12" OC (Heavy)</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="stud-spacing" value="16" checked>
+                    <span>16" OC (Standard)</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="stud-spacing" value="24">
+                    <span>24" OC (Partition)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Lumber Size & Wall Type -->
+              <div class="spacing-group">
+                <label class="group-label">Lumber Size &amp; Wall Type</label>
+                <div class="radio-pill-group" role="radiogroup" aria-label="Lumber Dimensions">
+                  <label class="radio-pill">
+                    <input type="radio" name="lumber-size" value="2x4" checked>
+                    <span>2×4 Lumber</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="lumber-size" value="2x6">
+                    <span>2×6 Lumber</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="wall-type" value="exterior" checked>
+                    <span>Exterior (3 Plates)</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="wall-type" value="interior">
+                    <span>Interior Partition</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Openings & Corner Framing -->
+              <div class="input-grid">
+                <div class="input-group">
+                  <label for="corner-count">
+                    <span>Corners / T-Junctions</span>
+                    <span class="label-hint">3-Stud Corners</span>
+                  </label>
+                  <div class="input-field-wrapper">
+                    <input type="number" id="corner-count" min="0" max="50" step="1" value="2" aria-label="Corner Count">
+                    <span class="input-unit">QTY</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="door-count">
+                    <span>Door Openings</span>
+                    <span class="label-hint">King &amp; Jack Studs</span>
+                  </label>
+                  <div class="input-field-wrapper">
+                    <input type="number" id="door-count" min="0" max="20" step="1" value="1" aria-label="Door Openings Count">
+                    <span class="input-unit">QTY</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="window-count">
+                    <span>Window Openings</span>
+                    <span class="label-hint">Headers &amp; Sills</span>
+                  </label>
+                  <div class="input-field-wrapper">
+                    <input type="number" id="window-count" min="0" max="20" step="1" value="1" aria-label="Window Openings Count">
+                    <span class="input-unit">QTY</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="stud-price-input">
+                    <span>Stud Price ($/ea)</span>
+                    <span class="label-hint">Local Lumber Price</span>
+                  </label>
+                  <div class="input-field-wrapper">
+                    <input type="number" id="stud-price-input" min="1" max="50" step="0.05" value="4.85" aria-label="Price per Stud in USD">
+                    <span class="input-unit">$</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Waste Factor Slider -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <label for="waste-slider">Job Site Waste Allowance</label>
+                  <span class="slider-val" id="waste-val-display">10%</span>
+                </div>
+                <input type="range" id="waste-slider" min="0" max="25" step="1" value="10" aria-label="Lumber Waste Percentage">
+                <div class="slider-ticks">
+                  <span>0%</span>
+                  <span>5% (Exact)</span>
+                  <span>10% (Recommended)</span>
+                  <span>15%</span>
+                  <span>25%</span>
+                </div>
+              </div>
+
+              <!-- ==============================================================
+                   ZONE 3: LIVE 2D BLUEPRINT VISUALIZATION
+                   ============================================================== -->
+              <div class="blueprint-wrapper">
+                <div class="blueprint-header">
+                  <div class="blueprint-title">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                      <line x1="3" y1="9" x2="21" y2="9"></line>
+                      <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                    <span>Dynamic 2D Framing CAD Blueprint</span>
+                  </div>
+                  <div class="blueprint-legend">
+                    <span class="legend-item"><span class="legend-dot" style="background: #F97316;"></span>Plates/Headers</span>
+                    <span class="legend-item"><span class="legend-dot" style="background: #0284C7;"></span>Field Studs</span>
+                    <span class="legend-item"><span class="legend-dot" style="background: #38BDF8;"></span>Trimmers</span>
+                    <span class="legend-item"><span class="legend-dot" style="background: #8B5CF6;"></span>Corners</span>
+                  </div>
+                </div>
+                <svg id="blueprint-svg" class="blueprint-canvas" viewBox="0 0 550 150" preserveAspectRatio="none" aria-label="Interactive 2D Stud Wall Framing Blueprint"></svg>
+              </div>
+
+              <!-- ==============================================================
+                   ZONE 4: RESULTS & COST TAKEOFF DASHBOARD
+                   ============================================================== -->
+              <div class="results-section">
+                <div class="takeoff-grid">
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Total Studs to Order</span>
+                    <div class="takeoff-value" id="takeoff-total-studs">27</div>
+                    <span class="takeoff-sub">Includes 10% Waste Buffer</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Field Vertical Studs</span>
+                    <div class="takeoff-value" id="takeoff-field-studs">13</div>
+                    <span class="takeoff-sub">16" On-Center Spacing</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Continuous Plates</span>
+                    <div class="takeoff-value" id="takeoff-plate-studs">6</div>
+                    <span class="takeoff-sub">Top Double &amp; Bottom Sole</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Corner &amp; T-Posts</span>
+                    <div class="takeoff-value" id="takeoff-corner-studs">4</div>
+                    <span class="takeoff-sub">3-Stud Corner Tie-Ins</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Opening Trimmers</span>
+                    <div class="takeoff-value" id="takeoff-opening-studs">8</div>
+                    <span class="takeoff-sub">King &amp; Jack Studs</span>
+                  </div>
+
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">16d Framing Nails</span>
+                    <div class="takeoff-value" id="takeoff-framing-nails">3 lbs</div>
+                    <span class="takeoff-sub">Common 3-1/2" Nails</span>
+                  </div>
+                </div>
+
+                <!-- Total Cost Takeoff -->
+                <div class="cost-summary-box">
+                  <div class="cost-header">
+                    <div>
+                      <span class="cost-title">Estimated Lumber Material Cost</span>
+                      <div class="cost-amount">$<span id="total-cost-num">141.45</span></div>
+                    </div>
+                    <button class="btn-toggle-costs" id="btn-toggle-costs" aria-label="Toggle Detailed Cost Breakdown">
+                      View Details ▼
+                    </button>
+                  </div>
+
+                  <div class="cost-breakdown-details" id="cost-breakdown-details">
+                    <table class="cost-table">
+                      <thead>
+                        <tr>
+                          <th>Material Item</th>
+                          <th>Quantity</th>
+                          <th>Unit Price</th>
+                          <th>Subtotal</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cost-table-body">
+                        <!-- Populated by JavaScript -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- Export & Copy Actions -->
+                <div class="action-buttons">
+                  <button class="btn-action primary" id="btn-print-takeoff">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                      <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    Print Material Takeoff (PDF)
+                  </button>
+                  <button class="btn-action secondary" id="btn-copy-takeoff">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy Material List
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ZONE 5: THE FRAMING & MASONRY SUITE (TOPICAL CLUSTER)
+         ========================================================================== -->
+    <section class="suite-section" id="suite-tools" aria-label="Related Construction Tools">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">The Framing &amp; Masonry Suite</span>
+          <h2 class="section-title">Complete Construction Calculator Toolkit</h2>
+          <p class="section-subtitle">
+            Specialized takeoff calculators for wood framing, drywall installation, masonry blocks, and concrete foundations. Accurate, instant, and mobile-ready for any construction site.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool-card" style="border-color: var(--brand-accent);">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="3" x2="21" y2="3"></line>
+                <line x1="3" y1="21" x2="21" y2="21"></line>
+                <line x1="6" y1="3" x2="6" y2="21"></line>
+                <line x1="12" y1="3" x2="12" y2="21"></line>
+                <line x1="18" y1="3" x2="18" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Stud Framing Estimator</h3>
+            <p class="tool-card-desc">Calculate exact 2x4 and 2x6 framing studs for interior partitions, exterior walls, corners, and continuous plates.</p>
+            <span class="tool-card-link">Active on this page →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="12" y1="3" x2="12" y2="12"></line>
+                <line x1="12" y1="12" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Drywall Sheet Estimator</h3>
+            <p class="tool-card-desc">Determine 4x8 and 4x12 drywall sheets, joint compound mud buckets, and drywall screws with cutout deductions.</p>
+            <a href="/" class="tool-card-link">Try all-in-one wall calculator →</a>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="1"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="3" y1="15" x2="21" y2="15"></line>
+                <line x1="9" y1="4" x2="9" y2="9"></line>
+                <line x1="15" y1="4" x2="15" y2="9"></line>
+                <line x1="6" y1="9" x2="6" y2="15"></line>
+                <line x1="12" y1="9" x2="12" y2="15"></line>
+                <line x1="18" y1="9" x2="18" y2="15"></line>
+                <line x1="9" y1="15" x2="9" y2="20"></line>
+                <line x1="15" y1="15" x2="15" y2="20"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Retaining Wall Estimator</h3>
+            <p class="tool-card-desc">Calculate retaining wall concrete blocks, gravel drainage backfill tonnage, and capstones based on height and slope.</p>
+            <span class="tool-card-link">Coming soon →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Concrete Slab Calculator</h3>
+            <p class="tool-card-desc">Estimate cubic yards of ready-mix concrete and pre-mix bags for slab footings, garage pads, and patio foundations.</p>
+            <span class="tool-card-link">Coming soon →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6l2-3 2 3v15H4V6z"></path>
+                <path d="M10 6l2-3 2 3v15h-4V6z"></path>
+                <path d="M16 6l2-3 2 3v15h-4V6z"></path>
+                <line x1="2" y1="8" x2="22" y2="8"></line>
+                <line x1="2" y1="16" x2="22" y2="16"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Fence Material Calculator</h3>
+            <p class="tool-card-desc">Calculate privacy fence pickets, 4x4 posts, 2x4 rails, and concrete post mix bags for wood privacy fences.</p>
+            <span class="tool-card-link">Coming soon →</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="4" rx="1"></rect>
+                <rect x="2" y="10" width="20" height="4" rx="1"></rect>
+                <rect x="2" y="17" width="20" height="4" rx="1"></rect>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Deck Joist &amp; Joist Spacing Estimator</h3>
+            <p class="tool-card-desc">Estimate deck ledger boards, 2x8 joist spacing (12" or 16" OC), composite deck boards, and structural fastener hardware.</p>
+            <span class="tool-card-link">Coming soon →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ZONE 6: SEMANTIC EDUCATIONAL GUIDE & AEO ARTICLE
+         ========================================================================== -->
+    <article class="article-section" id="guide-article" aria-labelledby="guide-heading">
+      <div class="container">
+        <div class="prose-content">
+          
+          <!-- AEO Direct Answer / Key Takeaways Box (Designed for Google SGE / AI Overviews) -->
+          <div class="aeo-direct-box" role="region" aria-label="Direct Summary for AI and Framing Carpenters">
+            <h2 class="aeo-title">
+              <span>⚡</span> Quick Summary: How to Calculate Framing Studs &amp; Plates
+            </h2>
+            <p class="aeo-text">
+              To calculate framing studs accurately, start with the rule of thumb: <strong>One stud per linear foot of wall</strong>. For a 16-foot wall framed at 16 inches on-center (OC), you need 13 vertical field studs, plus 6 studs for horizontal plates (a double top plate and single bottom sole plate), 4 studs for corner tie-ins, and 4 studs per door or window opening. Accounting for a standard 10% job site waste factor, order <strong>26 to 27 total studs</strong>.
+            </p>
+          </div>
+
+          <h2 id="guide-heading">How an Interactive Wall Stud Calculator Eliminates Lumber Waste</h2>
+          <p>
+            Accurately estimating lumber for wood framing projects requires understanding structural spacing rules, wall plate requirements, and building code specifications outlined in the International Residential Code. Underestimating studs leads to paused work, extra trips to the lumberyard, and wasted labor hours, while overestimating ties up cash in warped lumber that cannot be returned. Using a dedicated digital estimator bridges the gap between rough architectural plans and practical framing execution.
+          </p>
+
+          <h3>1. Calculating Studs: 16" OC vs 24" OC Framing Rules</h3>
+          <p>
+            On-center (OC) spacing measures the distance from the center of one vertical stud to the center of the next stud. Utilizing an accurate wall stud calculator ensures you order the exact count for your chosen spacing, as on-center layout dictates both load-bearing capacity and the attachment grid for wall sheathing:
+          </p>
+          <ul>
+            <li><strong>16 Inches On-Center (Universal Building Standard):</strong> Mandatory for exterior load-bearing walls supporting upper floors or roof rafters. It provides superior stiffness, eliminates drywall flex, and provides solid backing for kitchen cabinets, heavy shelving, and tile backer boards.</li>
+            <li><strong>24 Inches On-Center (Advanced Framing / Non-Bearing):</strong> Permitted by residential building codes for non-load-bearing interior partition walls and engineered Advanced Framing (Optimum Value Engineering - OVE). It reduces lumber requirements by up to 25% and expands insulation cavity depth, but requires 5/8-inch drywall or sag-resistant panels to avoid surface deflection.</li>
+            <li><strong>12 Inches On-Center (Heavy Commercial &amp; Tile Support):</strong> Utilized behind commercial bathroom walls, heavy stone veneers, or tall walls exceeding 12 feet in height that face extreme wind loads.</li>
+          </ul>
+
+          <div class="formula-card">
+            <h4>Mathematical Formula for Vertical Field Studs:</h4>
+            <span class="formula-code">Field Studs = ⌈(Wall Length in Feet × 12) ÷ OC Spacing in Inches⌉ + 1 (Starter Stud)</span>
+            <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem;">
+              <em>Example:</em> For a 20-foot wall at 16" OC: (20 × 12 ÷ 16) + 1 = 15 field studs.
+            </p>
+          </div>
+
+          <h3>2. Top Double Plates and Bottom Sole Plates</h3>
+          <p>
+            A framing wall consists of far more than vertical members. Horizontal plate lumber runs continuously along the top and bottom of the wall assembly:
+          </p>
+          <ul>
+            <li><strong>Bottom Sole Plate (1 Layer):</strong> Anchored directly to the concrete slab (using pressure-treated lumber and sill sealer) or nailed into the subfloor joists.</li>
+            <li><strong>Double Top Plate (2 Layers):</strong> Standard framing calls for two layers of top plates. The upper plate overlaps the lower plate at corners and partition intersections, locking the entire building perimeter into a rigid structural diaphragm.</li>
+          </ul>
+          <p>
+            To compute plate requirements, multiply the total linear wall length by 3 (for exterior and bearing walls), then divide by standard stud lengths (8 ft or 10 ft) and round up to the next full piece. For complete room takeoffs that include wallboard panels, pair your lumber figures with an <a href="/" title="All-In-One Wall Calculator">all-in-one wall calculator</a>.
+          </p>
+
+          <h3>3. Rough Openings: King Studs, Jack Studs, and Headers</h3>
+          <p>
+            Whenever a wall incorporates a doorway or window opening, studs cannot simply be subtracted. Framing a rough opening requires additional structural members to distribute overhead loads safely:
+          </p>
+          <ol>
+            <li><strong>King Studs:</strong> Full-length vertical studs running uninterrupted from the bottom sole plate to the upper top plate on each side of the opening.</li>
+            <li><strong>Jack Studs (Trimmers):</strong> Shorter vertical studs nailed directly against the inside face of the king studs to support the weight of the structural header beam.</li>
+            <li><strong>Structural Header:</strong> A horizontal beam composed of doubled 2x6, 2x8, or 2x10 lumber with 1/2" plywood spacers spanning across the opening.</li>
+            <li><strong>Cripple Studs:</strong> Short studs placed above the header and below window sills on 16" centers to maintain drywall fastening spacing.</li>
+          </ol>
+
+          <h3>4. Corner Posts and Partition Wall Intersections</h3>
+          <p>
+            Exterior corners and interior wall intersections require specialized framing assemblies so drywall hanging crews have adequate nailing backing on inside corners. Traditional three-stud corners and modern "California corners" (two studs separated by blocking or a drywall clip) require adding <strong>2 extra studs per corner or wall tee-intersection</strong> beyond normal field layout counts. If you are also estimating gypsum panels for your project, consult a dedicated <a href="/drywall-calculator.html" title="Drywall Sheet Calculator">drywall sheet calculator</a> for panel dimensions.
+          </p>
+
+          <!-- IRC Building Code Table with Authoritative Outbound Link -->
+          <h3>5. International Residential Code (IRC R602) Spacing Limits</h3>
+          <p>
+            According to the official <a href="https://codes.iccsafe.org/content/IRC2021P2/chapter-6-wall-construction#IRC2021P2_Pt03_Ch06_SecR602" target="_blank" rel="noopener">International Code Council (ICC) IRC Section R602</a> guidelines, stud dimensions, maximum wall heights, and on-center spacing are governed by load conditions:
+          </p>
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Lumber Size</th>
+                  <th>Maximum Wall Height</th>
+                  <th>Bearing Wall Spacing</th>
+                  <th>Non-Bearing Wall Spacing</th>
+                  <th>Supported Overhead Load</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>2 × 4 inches</strong></td>
+                  <td>10 feet</td>
+                  <td>16 inches OC</td>
+                  <td>24 inches OC</td>
+                  <td>Roof &amp; Ceiling only</td>
+                </tr>
+                <tr>
+                  <td><strong>2 × 4 inches</strong></td>
+                  <td>10 feet</td>
+                  <td>16 inches OC</td>
+                  <td>24 inches OC</td>
+                  <td>One Story + Roof</td>
+                </tr>
+                <tr>
+                  <td><strong>2 × 6 inches</strong></td>
+                  <td>14 feet</td>
+                  <td>16 inches OC</td>
+                  <td>24 inches OC</td>
+                  <td>Two Stories + Roof</td>
+                </tr>
+                <tr>
+                  <td><strong>2 × 6 inches</strong></td>
+                  <td>18 feet</td>
+                  <td>12 inches OC</td>
+                  <td>16 inches OC</td>
+                  <td>Heavy Snow / High Wind Zone</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Conclusion Section -->
+          <section class="conclusion-box" style="margin-top: 3rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h2 style="margin-top: 0; font-size: 1.45rem;">Conclusion: Simplify Framing with a Wall Stud Calculator</h2>
+            <p style="margin-bottom: 0.75rem;">
+              Planning a structural framing buildout with a wall stud calculator guarantees that your material order accounts for continuous horizontal plates, rough openings, and corner backing according to IRC building codes. By verifying exact lumber counts and factoring in cutting waste before purchasing, contractors and home builders save money and keep job site schedules running smoothly.
+            </p>
+          </section>
+
+          <!-- FAQ Accordion -->
+          <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How many studs are needed for a 12-foot wall at 16 inches OC?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  For a 12-foot wall framed at 16 inches on-center, you will need <strong>10 vertical field studs</strong> (144 inches ÷ 16 + 1 starter). Adding 5 studs for continuous top double plates and bottom sole plates, plus 4 corner studs and a 10% waste factor, brings the total lumber order to <strong>21 studs</strong>.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What is the contractor rule of thumb for calculating wall studs?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  The time-tested general contractor rule of thumb is <strong>one stud for every linear foot of wall length</strong>. For example, a 20-foot wall will typically require approximately 20 to 22 studs once field studs, plates, and corners are combined.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Why do framing walls require a double top plate?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Per IRC Section R602.3, bearing walls require a <strong>double top plate</strong> to distribute loads from rafters and floor joists that do not sit directly over vertical studs. The upper plate also laps over adjoining wall corners, tying perpendicular walls into a unified structural shell.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How many extra studs are needed for a door or window opening?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Plan on <strong>4 additional studs per rough opening</strong>. This covers two full-height king studs on the outside of the framing pocket and two shortened jack (trimmer) studs that directly support the header beam, plus scrap lumber for sill plates and cripple studs.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Should exterior walls use 2x4 or 2x6 studs?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Most modern residential building and energy codes specify <strong>2x6 studs</strong> for exterior walls because the deeper 5.5-inch wall cavity accommodates R-20 or R-21 insulation batts. <strong>2x4 studs</strong> remain standard for interior non-bearing partition walls.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- ==========================================================================
+       ZONE 7: SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/wall-stud-calculator.html">Stud Calculator</a>
+        <a href="#suite-tools">Calculators</a>
+        <a href="#guide-article">IRC Framing Codes</a>
+        <a href="https://github.com/Aamirtechseo/wallcalculator" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p>© 2026 WallCalculator.app. All rights reserved. Built for professional framing carpenters, contractors, and DIY builders.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-dim);">
+        Calculations are based on International Residential Code (IRC R602) framing standards. Always verify structural engineering requirements with local municipal building departments.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Dedicated Stud Calculator Engine -->
+  <script src="/js/stud-calculator.js"></script>
+</body>
+</html>
