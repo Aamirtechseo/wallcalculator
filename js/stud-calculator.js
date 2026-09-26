@@ -428,7 +428,7 @@ LUMBER TAKE-OFF LIST:
 - 16d Framing Nails: ${data.framingNailsLbs} lbs
 - Estimated Lumber Cost: $${data.grandTotalCost} USD
 
-Generated on WallCalculator.app/wall-stud-calculator.html
+Generated on WallCalculator.app/wall-stud-calculator
         `.trim();
 
         navigator.clipboard.writeText(summary).then(() => {
