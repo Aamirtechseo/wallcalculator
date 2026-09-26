@@ -3,7 +3,12 @@
 __pycache__/
 generate_keywords.py
 generate_construction_keywords.py
-*.json
+# Scratch JSON files
+scratch*.json
+construction_tool_keywords.json
+curated_calculator_keywords.json
+audit_accessibility.py
+
 
 # OS files
 .DS_Store

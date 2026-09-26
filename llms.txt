@@ -1,0 +1,17 @@
+# WallCalculator
+
+> Interactive 2D wall framing, stud estimation, and drywall takeoff calculator suite for construction professionals, contractors, and DIY builders.
+
+WallCalculator (https://wallcalculator.app/) provides CAD-accurate lumber takeoffs, stud calculations, drywall panel estimation, and dynamic 2D framing visualizers compliant with International Residential Code (IRC R602) building standards.
+
+## Calculators & Tools
+
+- [Wall Calculator](https://wallcalculator.app/): Interactive 2D wall framing visualizer and comprehensive material takeoff calculator estimating 2x4 and 2x6 studs, plates, drywall, and fasteners.
+- [Wall Stud Calculator](https://wallcalculator.app/wall-stud-calculator): Precision wood stud framing calculator with 16" and 24" on-center spacing, top double plates, sole plates, and rough openings.
+- [Drywall Calculator](https://wallcalculator.app/drywall-calculator): 4x8 and 4x12 drywall sheet takeoff, 4.5-gallon joint compound mud estimation, screws, and paper tape rolls.
+
+## Engineering & Construction Standards
+
+- [International Code Council (IRC)](https://codes.iccsafe.org): Section R602 wood wall framing and stud sizing code requirements.
+- [Gypsum Association (GA-216)](https://gypsum.org): Standard specifications for the application and finishing of gypsum panel products.
+- [American Wood Council (AWC)](https://awc.org): Wood frame construction manual and fastener schedules.

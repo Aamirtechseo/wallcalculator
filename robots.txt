@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wallcalculator.app/sitemap.xml
+Agentmap: https://wallcalculator.app/ai-catalog.json
+Agentmap: https://wallcalculator.app/.well-known/ard.json

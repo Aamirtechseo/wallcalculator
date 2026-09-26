@@ -1,0 +1,37 @@
+# WallCalculator Full Context
+
+> Interactive 2D wall framing, stud estimation, and drywall takeoff calculator suite for construction professionals, contractors, and DIY builders.
+
+## Overview
+WallCalculator (https://wallcalculator.app/) is a free, web-based suite of precision construction takeoff calculators and interactive 2D framing blueprint generators. It is designed to help framers, drywalkers, contractors, and home DIYers eliminate lumber waste, adhere to International Residential Code (IRC) engineering rules, and produce itemized material costs.
+
+## Calculators & Takeoff Tools
+
+### 1. Wall Calculator (Comprehensive Takeoff)
+- **URL**: https://wallcalculator.app/
+- **Description**: All-in-one framing and drywall takeoff estimator. Determines exact 2x4 and 2x6 studs, bottom sole plates, top double plates, door/window headers, 4x8 or 4x12 drywall panels, 5-gallon joint compound buckets, screws, and tape rolls with interactive 2D blueprint rendering.
+- **Formulas Used**:
+  - Stud Count = ceil(Wall Length in Inches / Spacing OC) + 1 + Corner Studs + Opening Additions
+  - Plate Count = ceil((Wall Length * 3) / Stud Length)
+  - Drywall Panels = ceil((Wall Gross Area - Openings Area) / Panel Area) * Waste Factor
+
+### 2. Wall Stud Calculator
+- **URL**: https://wallcalculator.app/wall-stud-calculator
+- **Description**: Dedicated framing lumber estimator for 12", 16", and 24" on-center wall framing, partition walls, and load-bearing assemblies. Calculates king studs, jack studs, cripple studs, and bottom/top plates.
+- **Formulas Used**:
+  - King & Jack Studs = 2 King + 2 Jack per standard rough opening
+  - Double Top Plate = 2 continuous rows staggered at joints
+  - Sole Plate = 1 continuous row anchored to subfloor/slab
+
+### 3. Drywall Calculator
+- **URL**: https://wallcalculator.app/drywall-calculator
+- **Description**: Dedicated gypsum board and finishing estimator for 4x8 and 4x12 sheets, joint compound mud (3 coats: tape coat, fill coat, finish coat), 1-1/4" phosphate-coated screws (12" OC field spacing), and paper tape rolls.
+- **Formulas Used**:
+  - Mud Buckets (4.5 gal) = ceil(Total Drywall Sq Ft / 450)
+  - Drywall Screws = ceil(Total Sheets * 32 screws / 300 screws per lb)
+  - Joint Tape = ceil(Total Sheets * 32 linear ft / 500 ft per roll)
+
+## Building Codes & Standards
+- **International Residential Code (IRC)**: Section R602 for wood framing, stud height limits, and top plate splice spacing.
+- **Gypsum Association (GA-216)**: Application and finishing of gypsum board products.
+- **American Wood Council (AWC)**: National Design Specification for wood construction.

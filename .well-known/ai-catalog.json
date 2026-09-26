@@ -1,0 +1,46 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "WallCalculator",
+    "documentationUrl": "https://wallcalculator.app/",
+    "logoUrl": "https://wallcalculator.app/favicon.svg"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:wallcalculator.app:tools:wall-calculator",
+      "displayName": "Wall Calculator & 2D Framing Visualizer",
+      "type": "text/html",
+      "url": "https://wallcalculator.app/",
+      "description": "Calculate framing lumber, 2x4 and 2x6 wall studs, top double plates, sole plates, drywall panels, and fasteners with dynamic 2D CAD blueprint preview.",
+      "representativeQueries": [
+        "calculate studs and drywall for 16 foot wall",
+        "how many 2x4 studs for a 10 foot wall",
+        "estimate wall framing materials and cost"
+      ]
+    },
+    {
+      "identifier": "urn:air:wallcalculator.app:tools:wall-stud-calculator",
+      "displayName": "Wall Stud Calculator",
+      "type": "text/html",
+      "url": "https://wallcalculator.app/wall-stud-calculator",
+      "description": "Calculate exact vertical wood studs, king studs, jack studs, cripple studs, and horizontal plates for 16-inch or 24-inch on-center wall framing.",
+      "representativeQueries": [
+        "wall stud calculator 16 on center",
+        "how many studs do I need for a 20 foot wall",
+        "calculate stud spacing and top plates"
+      ]
+    },
+    {
+      "identifier": "urn:air:wallcalculator.app:tools:drywall-calculator",
+      "displayName": "Drywall Calculator",
+      "type": "text/html",
+      "url": "https://wallcalculator.app/drywall-calculator",
+      "description": "Determine total 4x8 and 4x12 drywall sheets, joint compound buckets, screws, and paper tape rolls required with custom waste percentage.",
+      "representativeQueries": [
+        "how many drywall sheets for a 12x10 room",
+        "calculate 4x8 drywall panels and mud",
+        "drywall sheet and joint compound estimator"
+      ]
+    }
+  ]
+}
