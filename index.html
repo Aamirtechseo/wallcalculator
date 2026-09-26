@@ -163,6 +163,9 @@
           <button class="btn-icon" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
             🌓
           </button>
+          <button class="btn-icon mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu" title="Open Navigation Menu" aria-expanded="false">
+            <span class="hamburger-icon">☰</span>
+          </button>
         </div>
       </nav>
     </div>
@@ -212,9 +215,18 @@
               
               <!-- Mode Tabs -->
               <div class="mode-tabs" role="tablist">
-                <button class="mode-btn active" data-mode="both" role="tab" aria-selected="true">All-In-One (Studs &amp; Drywall)</button>
-                <button class="mode-btn" data-mode="studs" role="tab" aria-selected="false">Studs Only</button>
-                <button class="mode-btn" data-mode="drywall" role="tab" aria-selected="false">Drywall Only</button>
+                <button class="mode-btn active" data-mode="both" role="tab" aria-selected="true">
+                  <span class="tab-label-full">All-In-One (Studs &amp; Drywall)</span>
+                  <span class="tab-label-short">All-In-One</span>
+                </button>
+                <button class="mode-btn" data-mode="studs" role="tab" aria-selected="false">
+                  <span class="tab-label-full">Studs Only</span>
+                  <span class="tab-label-short">Studs</span>
+                </button>
+                <button class="mode-btn" data-mode="drywall" role="tab" aria-selected="false">
+                  <span class="tab-label-full">Drywall Only</span>
+                  <span class="tab-label-short">Drywall</span>
+                </button>
               </div>
 
               <!-- Wall Dimensions (Length & Height) -->

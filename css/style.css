@@ -202,14 +202,19 @@ a {
 }
 
 .nav-links a:hover, .nav-links a.active {
-  color: #00F0FF;
+  color: var(--brand-primary);
   background: rgba(0, 240, 255, 0.08);
+}
+
+[data-theme="light"] .nav-links a:hover, [data-theme="light"] .nav-links a.active {
+  color: #0284C7;
+  background: rgba(2, 132, 199, 0.08);
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .btn-icon {
@@ -224,12 +229,79 @@ a {
   justify-content: center;
   cursor: pointer;
   transition: var(--transition);
+  font-size: 1.05rem;
 }
 
 .btn-icon:hover {
   background: var(--bg-card-hover);
   border-color: var(--brand-primary);
   box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-inner {
+    height: 58px;
+  }
+
+  .brand-logo {
+    font-size: 1.15rem;
+    gap: 0.5rem;
+  }
+
+  .brand-logo svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    padding: 1rem 1.25rem 1.25rem;
+    display: none;
+    z-index: 999;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+    animation: menuSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    padding: 0.75rem 0.85rem;
+    border-radius: var(--radius-sm);
+    display: block;
+    width: 100%;
+  }
+
+  @keyframes menuSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 /* ==========================================================================
@@ -249,9 +321,30 @@ a {
 }
 
 @media (max-width: 992px) {
+  .hero-section {
+    padding: 1.75rem 0 2.5rem;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 1.25rem 0 2rem;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .trust-badges {
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 auto 1.25rem;
+    max-width: 480px;
   }
 }
 
@@ -336,6 +429,14 @@ a {
   border-radius: var(--radius-md);
   margin-bottom: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tab-label-short {
+  display: none;
+}
+
+.tab-label-full {
+  display: inline;
 }
 
 .mode-btn {
@@ -610,7 +711,9 @@ a {
 
 @media (max-width: 640px) {
   .results-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1119,6 +1222,227 @@ a {
 
 [data-theme="light"] .footer-links a:hover {
   color: #0284C7;
+}
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVE ENGINE (PHONES & TABLETS)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-section {
+    padding: 1.25rem 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+    line-height: 1.22;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.925rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  .badge-pill {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.65rem;
+    margin-bottom: 0.85rem;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .suite-section {
+    padding: 2.75rem 0;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .section-head {
+    margin-bottom: 1.75rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .article-section {
+    padding: 2.75rem 0;
+  }
+
+  .prose-content h2 {
+    font-size: 1.45rem;
+    margin: 2rem 0 0.85rem;
+  }
+
+  .prose-content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.65rem;
+  }
+
+  .data-table-wrapper {
+    margin: 1.25rem -0.5rem;
+    padding: 0 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .data-table th, .data-table td {
+    padding: 0.55rem 0.65rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .faq-question {
+    padding: 0.95rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .site-footer {
+    padding: 2.25rem 0;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .calc-card {
+    padding: 1.15rem 0.85rem;
+    border-radius: var(--radius-md);
+  }
+
+  .tab-label-short {
+    display: inline;
+  }
+
+  .tab-label-full {
+    display: none;
+  }
+
+  .mode-tabs {
+    gap: 0.25rem;
+    padding: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .mode-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .form-row-2 {
+    gap: 0.5rem;
+  }
+
+  .form-label {
+    font-size: 0.75rem;
+  }
+
+  .form-input {
+    font-size: 0.95rem;
+    padding: 0.65rem 2.25rem 0.65rem 0.65rem;
+  }
+
+  .unit-tag {
+    right: 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .pill-group {
+    gap: 0.35rem;
+  }
+
+  .pill-label {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.775rem;
+  }
+
+  .pill-desc {
+    font-size: 0.65rem;
+  }
+
+  .openings-inputs {
+    gap: 0.5rem;
+  }
+
+  .blueprint-wrapper {
+    padding: 0.75rem 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  #blueprint-svg {
+    height: 150px;
+  }
+
+  .blueprint-legend {
+    flex-wrap: wrap;
+    gap: 0.5rem 0.85rem;
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+
+  .takeoff-card {
+    padding: 0.65rem 0.5rem;
+  }
+
+  .takeoff-label {
+    font-size: 0.68rem;
+  }
+
+  .takeoff-val {
+    font-size: 1.35rem;
+  }
+
+  .takeoff-sub {
+    font-size: 0.65rem;
+  }
+
+  .cost-estimation-box {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 0.85rem;
+  }
+
+  .cost-total-display {
+    align-items: center;
+  }
+
+  .cost-total-display .number {
+    font-size: 1.65rem;
+  }
+
+  .btn-toggle-costs {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .action-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
 }
 
 /* ==========================================================================

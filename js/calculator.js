@@ -469,6 +469,36 @@ Generated on WallCalculator.app
         }
       });
     });
+
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileMenuBtn && navLinks) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navLinks.classList.toggle('mobile-open');
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenuBtn.innerHTML = isOpen ? '✕' : '☰';
+      });
+
+      // Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-open');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenuBtn.innerHTML = '☰';
+        });
+      });
+
+      // Close when clicking outside
+      document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('mobile-open') && !navLinks.contains(e.target) && e.target !== mobileMenuBtn) {
+          navLinks.classList.remove('mobile-open');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenuBtn.innerHTML = '☰';
+        }
+      });
+    }
   }
 
   // --- INIT ---
