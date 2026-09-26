@@ -8,6 +8,7 @@ scratch*.json
 construction_tool_keywords.json
 curated_calculator_keywords.json
 audit_accessibility.py
+optimize_performance.py
 
 
 # OS files
