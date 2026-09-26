@@ -123,3 +123,17 @@ Internal links between pages must follow a calibrated ratio to pass maximum topi
 * **55% Partial Match:** e.g., `calculate wall framing studs`, `interactive drywall sheet estimator`
 * **20% Entity / Contextual:** e.g., `lumber takeoff tool`, `gypsum board calculator`
 * **Zero Generic Anchors:** Words like "click here", "read more", "this tool" are strictly prohibited.
+
+---
+
+### 11. Authoritative Outbound E-E-A-T Citation Rule (Do-Follow & External Tab)
+Every page on `wallcalculator.app` MUST include **exactly one high-authority, non-competitor outbound reference link**:
+
+* **Link Attributes:** `<a href="..." target="_blank" rel="noopener">` (Strictly **Do-Follow**; never use `nofollow` or `sponsored`).
+* **Open in New Tab:** Must feature `target="_blank"` with `rel="noopener"` so users remain on the calculator tab.
+* **Eligible Authority Domains (Strict Non-Competitor Rule):**
+  * Official building code bodies: International Code Council (`codes.iccsafe.org`)
+  * Engineering & lumber councils: American Wood Council (`awc.org`), US Forest Service (`fs.usda.gov`)
+  * Material industry standards: Gypsum Association (`gypsum.org`), National Concrete Masonry Association (`ncma.org`), The Masonry Society (`masonrysociety.org`)
+* **Strict Prohibition:** NEVER link to competing commercial calculator tools or affiliate blogs (e.g., Calculator.net, Omni Calculator, HomeAdvisor, BobVila).
+* **Placement:** Weave organically into the technical educational guide when referencing building codes, standard span limits, or material specs.
