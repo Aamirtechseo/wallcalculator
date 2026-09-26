@@ -108,7 +108,7 @@ To prevent Google from splitting link equity and ranking signals, each URL owns 
 | :--- | :--- | :--- | :--- | :--- |
 | **`/` (Homepage)** | `Wall Calculator` | High (Broad) | Variable | All-in-one framing + drywall + fasteners + 2D blueprint |
 | **`/wall-stud-calculator`** | `Wall Stud Calculator` | 2,400/mo | **12%** | Dedicated stud framing, 16 vs 24 OC, plates, king/jack studs |
-| **`/drywall-calculator`** | `Drywall Sheet Calculator` | 8,900+/mo | **18%** | 4x8 vs 4x12 panels, joint compound mud, drywall screws |
+| **`/drywall-sheet-calculator`** | `Drywall Sheet Calculator` | 8,900+/mo | **18%** | 4x8 vs 4x12 panels, joint compound mud, drywall screws |
 | **`/retaining-wall-calculator`** | `Retaining Wall Calculator` | 1,600/mo | **28%** | Concrete retaining blocks, drainage gravel tons, capstones |
 | **`/block-wall-calculator`** | `Block Wall Calculator` | 1,000/mo | **14%** | 8x8x16 CMU concrete cinder blocks, mortar bags, core grout |
 
