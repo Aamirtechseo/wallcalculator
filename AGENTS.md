@@ -19,6 +19,7 @@ This document locks all on-page SEO, typography, heading, visual layout, and int
 * **Keyword Placement:** Weave the primary keyword naturally inside the description. **Never start the description with the keyword**.
 * **Forbidden Characters:** **NO em-dashes (`—`) or en-dashes (`–`)**. Use standard hyphens (`-`) or commas (`,`).
 * **Forbidden Words:** **Zero occurrences of the word "our"** (avoid corporate/unnatural phrasing).
+* **CTA Diversity Rule (LOCKED):** **Do NOT use the exact same closing call-to-action (e.g., "Try it free!") across all page descriptions.** The two existing legacy instances are preserved, but all subsequent and upcoming pages MUST use varied, natural, intent-driven closing hooks (e.g., `Estimate material quantities in seconds.`, `Prevent job site waste today.`, `Generate instant project takeoffs.`, `Calculate concrete blocks online.`). Never repeat a single CTA pattern across more than 2 pages to eliminate boilerplate programmatic footprints.
 * **Example:**
   `Generate instant 2D framing blueprints and lumber takeoffs with this free wall calculator. Estimate studs, drywall, and costs in seconds. Try it free!` (150 chars)
 
