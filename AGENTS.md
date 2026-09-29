@@ -20,8 +20,10 @@ This document locks all on-page SEO, typography, heading, visual layout, and int
 * **Forbidden Characters:** **NO em-dashes (`—`) or en-dashes (`–`)**. Use standard hyphens (`-`) or commas (`,`).
 * **Forbidden Words:** **Zero occurrences of the word "our"** (avoid corporate/unnatural phrasing).
 * **CTA Diversity Rule (LOCKED):** **Do NOT use the exact same closing call-to-action (e.g., "Try it free!") across all page descriptions.** The two existing legacy instances are preserved, but all subsequent and upcoming pages MUST use varied, natural, intent-driven closing hooks (e.g., `Estimate material quantities in seconds.`, `Prevent job site waste today.`, `Generate instant project takeoffs.`, `Calculate concrete blocks online.`). Never repeat a single CTA pattern across more than 2 pages to eliminate boilerplate programmatic footprints.
+* **No "Free" Prefix Rule (LOCKED):** **Do NOT use the word "free" before or adjacent to the primary keyword in meta descriptions.** The primary keyword must appear naturally without the word "free" (use related functional modifiers such as `interactive [keyword]`, `online [keyword]`, `dynamic [keyword]`, or just the exact `[keyword]`). Never write `free [keyword]` in meta descriptions.
 * **Example:**
-  `Generate instant 2D framing blueprints and lumber takeoffs with this free wall calculator. Estimate studs, drywall, and costs in seconds. Try it free!` (150 chars)
+  `Calculate 4x8 and 4x12 panels, joint compound mud, and screws with this interactive drywall calculator. Get instant takeoffs and blueprints. Try it now!` (152 chars)
+
 
 ---
 
