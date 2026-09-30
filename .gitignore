@@ -15,6 +15,7 @@ audit_all_pages.py
 verify_deployment.py
 update_og_images.py
 verify_social_tags.py
+verify_new_og.py
 
 
 # OS files
