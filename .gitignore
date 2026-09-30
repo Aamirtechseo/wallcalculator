@@ -14,6 +14,7 @@ build_trust_and_404_pages.py
 audit_all_pages.py
 verify_deployment.py
 update_og_images.py
+verify_social_tags.py
 
 
 # OS files
