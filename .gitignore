@@ -12,6 +12,7 @@ optimize_performance.py
 generate_pages.py
 build_trust_and_404_pages.py
 audit_all_pages.py
+verify_deployment.py
 
 
 # OS files
