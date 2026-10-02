@@ -1202,6 +1202,9 @@ a {
   display: block;
   margin: 0.5rem 0;
   border: 1px solid var(--border-color);
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 
 [data-theme="light"] .formula-code {
@@ -1762,4 +1765,94 @@ a {
     transform: rotate(180deg);
   }
 }
+
+/* ==========================================================================
+   PAGE TITLE & TRUST / LEGAL PAGE RESPONSIVENESS
+   ========================================================================== */
+.page-title {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.page-title .accent {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+}
+
+.calculator-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.prose-content {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.85rem !important;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+  .contact-card {
+    padding: 1.35rem 1.15rem;
+  }
+  .article-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .page-title {
+    font-size: 1.6rem !important;
+    line-height: 1.22;
+  }
+  .contact-card {
+    padding: 1.15rem 0.85rem;
+  }
+  .calculator-links-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+  .form-label span:last-child {
+    font-size: 0.68rem;
+    font-weight: 500;
+    opacity: 0.75;
+  }
+}
+
 
