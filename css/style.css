@@ -1573,3 +1573,193 @@ a {
     color: #000000 !important;
   }
 }
+
+/* ==========================================================================
+   HERO TOC & QUICK NAVIGATION
+   ========================================================================== */
+.hero-toc-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem 1.25rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-md);
+  margin-top: 0.75rem;
+  transition: var(--transition);
+}
+
+[data-theme="light"] .hero-toc-card {
+  background: #FFFFFF;
+  border-color: rgba(15, 23, 42, 0.12);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+.hero-toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-toc-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-primary);
+}
+
+[data-theme="light"] .hero-toc-title {
+  color: #0284C7;
+}
+
+.hero-toc-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  background: var(--bg-input);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+}
+
+.hero-toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero-toc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.hero-toc-link:hover {
+  color: var(--brand-primary);
+  background: rgba(0, 240, 255, 0.08);
+  transform: translateX(3px);
+}
+
+[data-theme="light"] .hero-toc-link:hover {
+  color: #0284C7;
+  background: rgba(2, 132, 199, 0.06);
+}
+
+.hero-toc-link.active {
+  color: var(--brand-primary);
+  background: rgba(0, 240, 255, 0.08);
+  font-weight: 600;
+}
+
+.hero-toc-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand-accent);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.hero-toc-link:hover .hero-toc-bullet,
+.hero-toc-link.active .hero-toc-bullet {
+  background: var(--brand-primary);
+  box-shadow: 0 0 6px var(--brand-primary);
+  transform: scale(1.35);
+}
+
+[data-theme="light"] .hero-toc-bullet {
+  background: #7C3AED;
+}
+
+[data-theme="light"] .hero-toc-link:hover .hero-toc-bullet,
+[data-theme="light"] .hero-toc-link.active .hero-toc-bullet {
+  background: #0284C7;
+  box-shadow: 0 0 6px rgba(2, 132, 199, 0.5);
+}
+
+.hero-toc-toggle {
+  display: none;
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.95rem;
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+[data-theme="light"] .hero-toc-toggle {
+  background: #FFFFFF;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+.hero-toc-toggle .chevron {
+  font-size: 0.8rem;
+  color: var(--brand-primary);
+  transition: transform 0.2s ease;
+}
+
+[data-theme="light"] .hero-toc-toggle .chevron {
+  color: #0284C7;
+}
+
+@media (max-width: 992px) {
+  .hero-toc-card {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-toc-header {
+    display: none;
+  }
+  .hero-toc-toggle {
+    display: flex;
+  }
+  .hero-toc-nav {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.65rem;
+    margin-top: 0.4rem;
+  }
+  [data-theme="light"] .hero-toc-nav {
+    background: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  }
+  .hero-toc-card.open .hero-toc-nav {
+    display: flex;
+    flex-direction: column;
+    animation: menuSlideDown 0.2s ease;
+  }
+  .hero-toc-card.open .hero-toc-toggle .chevron {
+    transform: rotate(180deg);
+  }
+}
+
