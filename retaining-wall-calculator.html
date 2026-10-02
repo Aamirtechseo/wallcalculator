@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Retaining Wall Calculator - Blocks, Gravel &amp; Cost</title>
+  <meta name="title" content="Retaining Wall Calculator - Blocks, Gravel &amp; Cost">
+  <meta name="description" content="Calculate concrete blocks, drainage gravel, capstones, and project cost with this interactive retaining wall calculator. Get accurate material takeoffs instantly.">
+  <meta name="keywords" content="retaining wall calculator, retaining wall block calculator, concrete block retaining wall, retaining wall cost, drainage gravel calculator">
+  <link rel="canonical" href="https://wallcalculator.app/retaining-wall-calculator">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wallcalculator.app/retaining-wall-calculator">
+  <meta property="og:title" content="Retaining Wall Calculator - Blocks, Gravel &amp; Cost">
+  <meta property="og:description" content="Calculate concrete blocks, drainage gravel, capstones, and project cost with this interactive retaining wall calculator. Get accurate material takeoffs instantly.">
+  <meta property="og:image" content="https://wallcalculator.app/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://wallcalculator.app/retaining-wall-calculator">
+  <meta name="twitter:title" content="Retaining Wall Calculator - Blocks, Gravel &amp; Cost">
+  <meta name="twitter:description" content="Calculate concrete blocks, drainage gravel, capstones, and project cost with this interactive retaining wall calculator. Get accurate material takeoffs instantly.">
+  <meta name="twitter:image" content="https://wallcalculator.app/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"></noscript>
+
+  <!-- AI Agent Discovery -->
+  <link rel="alternate" type="application/json" href="/.well-known/ai-catalog.json" title="AI Agent Catalog">
+
+  <!-- JSON-LD: WebApplication -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Retaining Wall Calculator","url":"https://wallcalculator.app/retaining-wall-calculator","applicationCategory":"BusinessApplication","operatingSystem":"All","description":"Calculate 8x8x16 CMU concrete blocks, drainage gravel tons, capstones, mortar bags, and total project cost for any retaining wall project.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["CMU concrete block quantity estimation","Drainage gravel tonnage calculation","Capstone and mortar bag estimates","Live 2D cross-section SVG visualizer","Material cost takeoff with unit pricing","Printable material list for contractors"]}
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wallcalculator.app/"},{"@type":"ListItem","position":2,"name":"Retaining Wall Calculator","item":"https://wallcalculator.app/retaining-wall-calculator"}]}
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to calculate a retaining wall?","acceptedAnswer":{"@type":"Answer","text":"To calculate a retaining wall, multiply wall length by wall height to get the face area in square feet. Divide by 0.89 sq ft (face area of one 8x8x16 CMU block) and add 10% for waste to get block count. Calculate drainage gravel by multiplying wall length x height x drainage width in feet, then multiply by 0.048 to convert cubic feet to tons."}},{"@type":"Question","name":"How much is a 100 ft retaining wall?","acceptedAnswer":{"@type":"Answer","text":"A 100-foot retaining wall costs between $3,000 and $25,000 depending on height and material. For a 4-foot tall CMU block retaining wall at 100 feet long, expect to spend roughly $6,000 to $12,000 for materials and labor, including concrete blocks, drainage gravel, capstones, rebar, and mortar."}},{"@type":"Question","name":"Does a 4 ft retaining wall need drainage?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any retaining wall 4 feet tall or higher requires proper drainage per most building codes. Hydrostatic pressure from water-saturated soil multiplies the lateral force on a retaining wall dramatically. Install a 12-inch wide gravel drainage layer behind the wall with perforated drain pipe at the footing to direct water away from the base."}},{"@type":"Question","name":"What size concrete blocks are used for retaining walls?","acceptedAnswer":{"@type":"Answer","text":"The most common retaining wall block is the 8x8x16-inch CMU (Concrete Masonry Unit), with a face area of approximately 0.89 square feet. Segmental retaining wall blocks like Allan Block or Versa-Lok measure 6 inches tall by 12 to 18 inches long."}},{"@type":"Question","name":"How deep should a retaining wall footer be?","acceptedAnswer":{"@type":"Answer","text":"A retaining wall footing should extend at least 12 inches below finished grade, plus one inch of depth for every foot of wall height above grade. For a 4-foot retaining wall, the footing should sit at least 16 inches below finish grade. In frost-prone regions, footings must go below the frost line, which can be 24 to 48 inches deep."}}]}
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"WallCalculator.app","url":"https://wallcalculator.app/","logo":"https://wallcalculator.app/favicon.svg","description":"Free contractor-grade framing, drywall, and structural wall calculators."}
+  </script>
+
+  <style>
+:root{--brand-primary:#00F0FF;--brand-accent:#8B5CF6;--gradient-cta:linear-gradient(135deg,#00F0FF 0%,#3B82F6 45%,#8B5CF6 100%);--gradient-text:linear-gradient(135deg,#00F0FF 0%,#818CF8 50%,#C084FC 100%);--bg-body:#060714;--bg-surface:#0A0D22;--bg-card:rgba(14,18,41,0.85);--bg-card-hover:rgba(22,28,62,0.9);--bg-input:#090C1E;--border-color:rgba(139,92,246,0.22);--border-focus:#00F0FF;--text-main:#F8FAFC;--text-muted:#94A3B8;--text-dim:#64748B;--blueprint-grid:rgba(0,240,255,0.08);--shadow-lg:0 16px 40px rgba(0,0,0,0.6),0 0 30px rgba(0,240,255,0.15);--radius-sm:8px;--radius-md:12px;--radius-lg:18px;--radius-full:9999px;--transition:all 0.25s cubic-bezier(0.16,1,0.3,1)}
+[data-theme="light"]{--brand-primary:#0284C7;--brand-accent:#7C3AED;--gradient-cta:linear-gradient(135deg,#0284C7 0%,#4F46E5 50%,#7C3AED 100%);--gradient-text:linear-gradient(135deg,#0369A1 0%,#4338CA 50%,#6D28D9 100%);--bg-body:#F8FAFC;--bg-surface:#FFFFFF;--bg-card:#FFFFFF;--bg-card-hover:#F1F5F9;--bg-input:#F8FAFC;--border-color:rgba(15,23,42,0.12);--border-focus:#0284C7;--text-main:#0F172A;--text-muted:#334155;--text-dim:#64748B;--blueprint-grid:rgba(2,132,199,0.08);--shadow-lg:0 12px 32px rgba(15,23,42,0.1)}
+html{scroll-behavior:smooth;scroll-padding-top:72px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background-color:var(--bg-body);color:var(--text-main);line-height:1.6;-webkit-font-smoothing:antialiased;transition:background-color 0.3s ease,color 0.3s ease;overflow-x:hidden}
+body::before{content:'';position:absolute;top:-150px;left:20%;width:500px;height:500px;background:radial-gradient(circle,rgba(139,92,246,0.15) 0%,transparent 70%);pointer-events:none;z-index:0}
+body::after{content:'';position:absolute;top:300px;right:5%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,240,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:0}
+h1,h2,h3,h4{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-weight:700;line-height:1.25;letter-spacing:-0.02em}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1240px;margin:0 auto;padding:0 1.25rem;position:relative;z-index:1}
+/* NAV */
+.header-nav{position:sticky;top:0;z-index:100;background:rgba(6,7,20,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border-color);transition:background 0.3s ease}
+[data-theme="light"] .header-nav{background:rgba(255,255,255,0.85)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand-logo{display:flex;align-items:center;gap:0.75rem;font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800}
+.brand-logo svg{width:32px;height:32px}
+.brand-logo span.accent{background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.925rem;font-weight:500;color:var(--text-muted);transition:var(--transition);padding:0.4rem 0.6rem;border-radius:var(--radius-sm)}
+.nav-links a:hover,.nav-links a.active{color:var(--brand-primary);background:rgba(0,240,255,0.08)}
+[data-theme="light"] .nav-links a:hover,[data-theme="light"] .nav-links a.active{color:#0284C7;background:rgba(2,132,199,0.08)}
+.nav-actions{display:flex;align-items:center;gap:0.5rem}
+.btn-icon{background:var(--bg-card);border:1px solid var(--border-color);color:var(--text-main);width:38px;height:38px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition);font-size:1.05rem}
+.btn-icon:hover{background:var(--bg-card-hover);border-color:var(--brand-primary)}
+.mobile-menu-toggle{display:none}
+@media (max-width:768px){
+  .nav-inner{height:58px}.brand-logo{font-size:1.15rem;gap:0.5rem}.brand-logo svg{width:26px;height:26px}
+  .mobile-menu-toggle{display:flex}
+  .nav-links{position:fixed;top:58px;left:0;right:0;background:var(--bg-surface);border-bottom:1px solid var(--border-color);box-shadow:var(--shadow-lg);flex-direction:column;align-items:stretch;gap:0.35rem;padding:1rem 1.25rem 1.25rem;display:none;z-index:999}
+  .nav-links.mobile-open{display:flex;animation:menuSlideDown 0.22s ease}
+  .nav-links a{font-size:0.95rem;padding:0.75rem 0.85rem;display:block;width:100%}
+  @keyframes menuSlideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+}
+/* HERO */
+.hero-section{padding:3rem 0 4rem;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:2.5rem;align-items:start}
+@media (max-width:992px){.hero-section{padding:1.75rem 0 2.5rem}.hero-grid{grid-template-columns:1fr;gap:1.75rem}}
+@media (max-width:640px){.hero-section{padding:1.25rem 0 2rem}}
+.badge-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(139,92,246,0.15);color:#C084FC;border:1px solid rgba(139,92,246,0.35);padding:0.35rem 0.85rem;border-radius:var(--radius-full);font-size:0.8rem;font-weight:600;margin-bottom:1.25rem}
+[data-theme="light"] .badge-pill{background:rgba(124,58,237,0.08);color:#6D28D9;border-color:rgba(124,58,237,0.28)}
+.hero-title{font-size:2.75rem;margin-bottom:1rem}
+.hero-title .accent{background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-subtitle{font-size:1.05rem;color:var(--text-muted);margin-bottom:1.75rem;line-height:1.65}
+.trust-badges{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
+.trust-item{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.9rem;color:var(--text-muted)}
+.trust-item span.icon{font-size:1.15rem;flex-shrink:0;margin-top:0.1rem}
+/* CALC CARD */
+.calc-card{background:var(--bg-card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow-lg)}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-label{font-size:0.825rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;display:flex;justify-content:space-between}
+.input-with-unit{position:relative;display:flex;align-items:center}
+.form-input{width:100%;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-main);font-size:1.05rem;font-weight:600;padding:0.75rem 2.75rem 0.75rem 0.85rem;border-radius:var(--radius-md);outline:none;transition:var(--transition)}
+.form-input:focus{border-color:var(--border-focus);box-shadow:0 0 0 3px rgba(0,240,255,0.25)}
+.unit-tag{position:absolute;right:0.85rem;font-size:0.825rem;font-weight:700;color:var(--brand-primary);pointer-events:none}
+.pill-group{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem}
+.pill-group.cols-3{grid-template-columns:repeat(3,1fr)}
+.pill-option{position:relative}
+.pill-option input[type="radio"]{position:absolute;opacity:0;cursor:pointer}
+.pill-label{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg-input);border:1px solid var(--border-color);padding:0.6rem 0.5rem;border-radius:var(--radius-md);font-size:0.85rem;font-weight:600;color:var(--text-muted);cursor:pointer;transition:var(--transition);text-align:center}
+.pill-option input[type="radio"]:checked+.pill-label{border-color:#00F0FF;background:rgba(0,240,255,0.1);color:#00F0FF;box-shadow:0 0 12px rgba(0,240,255,0.2)}
+[data-theme="light"] .pill-option input[type="radio"]:checked+.pill-label{border-color:#0284C7;background:rgba(2,132,199,0.08);color:#0284C7}
+.pill-desc{font-size:0.72rem;font-weight:400;color:var(--text-dim);margin-top:0.15rem}
+.openings-box{background:rgba(0,0,0,0.25);border:1px dashed var(--border-color);padding:0.85rem;border-radius:var(--radius-md);margin-bottom:1.25rem}
+[data-theme="light"] .openings-box{background:#F1F5F9;border-color:rgba(15,23,42,0.15)}
+.openings-header{display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-bottom:0.6rem}
+.openings-inputs{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.slider-container{margin-bottom:1.25rem}
+.slider-header{display:flex;justify-content:space-between;font-size:0.825rem;font-weight:600;color:var(--text-muted);margin-bottom:0.35rem}
+.range-slider{width:100%;accent-color:#00F0FF;cursor:pointer}
+/* BLUEPRINT */
+.blueprint-wrapper{background:#04050E;border:1px solid rgba(0,240,255,0.3);border-radius:var(--radius-md);padding:1rem;margin-bottom:1.5rem;overflow:hidden;background-image:linear-gradient(var(--blueprint-grid) 1px,transparent 1px),linear-gradient(90deg,var(--blueprint-grid) 1px,transparent 1px);background-size:20px 20px;box-shadow:inset 0 0 20px rgba(0,240,255,0.05)}
+.blueprint-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#00F0FF;letter-spacing:0.08em}
+#rw-blueprint-svg{width:100%;height:200px;display:block;overflow:visible}
+.blueprint-legend{display:flex;gap:1.25rem;margin-top:0.5rem;font-size:0.725rem;color:#94A3B8;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:0.35rem}
+.legend-color{width:10px;height:10px;border-radius:2px}
+/* RESULTS */
+.results-section{border-top:1px solid var(--border-color);padding-top:1.5rem}
+.results-title{font-size:1rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-bottom:1.25rem}
+@media (max-width:640px){.results-grid{grid-template-columns:repeat(2,1fr);gap:0.5rem}}
+.takeoff-card{background:var(--bg-surface);border:1px solid var(--border-color);padding:0.85rem;border-radius:var(--radius-md);display:flex;flex-direction:column}
+.takeoff-card.highlight{border-color:var(--brand-primary);background:rgba(0,240,255,0.08);box-shadow:0 0 15px rgba(0,240,255,0.15)}
+[data-theme="light"] .takeoff-card.highlight{background:rgba(2,132,199,0.06);border-color:#0284C7}
+.takeoff-card.accent{border-color:var(--brand-accent);background:rgba(139,92,246,0.08);box-shadow:0 0 15px rgba(139,92,246,0.15)}
+[data-theme="light"] .takeoff-card.accent{background:rgba(124,58,237,0.06);border-color:#7C3AED}
+.takeoff-label{font-size:0.75rem;font-weight:600;color:var(--text-dim);text-transform:uppercase}
+.takeoff-val{font-family:'Outfit',sans-serif;font-size:1.65rem;font-weight:800;color:var(--text-main);margin:0.2rem 0}
+.takeoff-sub{font-size:0.72rem;color:var(--text-muted)}
+.cost-estimation-box{background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1rem;margin-bottom:1.25rem;display:flex;justify-content:space-between;align-items:center}
+.cost-total-display{display:flex;flex-direction:column}
+.cost-total-display .label{font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--brand-accent)}
+[data-theme="light"] .cost-total-display .label{color:#6D28D9}
+.cost-total-display .number{font-family:'Outfit',sans-serif;font-size:1.85rem;font-weight:800;color:var(--brand-primary);text-shadow:0 0 15px rgba(0,240,255,0.4)}
+[data-theme="light"] .cost-total-display .number{color:#0284C7;text-shadow:none}
+.btn-toggle-costs{font-size:0.8rem;color:var(--text-muted);background:transparent;border:1px solid var(--border-color);padding:0.35rem 0.75rem;border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition)}
+.btn-toggle-costs:hover{color:#00F0FF;border-color:#00F0FF}
+.cost-breakdown-details{display:none;padding-top:0.85rem;margin-top:0.85rem;border-top:1px dashed var(--border-color)}
+.cost-breakdown-details.open{display:block}
+.cost-table{width:100%;font-size:0.825rem;border-collapse:collapse}
+.cost-table td{padding:0.4rem 0.2rem;color:var(--text-muted)}
+.cost-table td.cost-num{text-align:right;font-weight:600;color:var(--text-main)}
+.action-buttons{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.btn-primary{background:var(--gradient-cta);color:#FFFFFF;border:none;font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:700;padding:0.85rem 1.25rem;border-radius:var(--radius-md);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:var(--transition);box-shadow:0 4px 20px rgba(0,240,255,0.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,240,255,0.45)}
+.btn-secondary{background:rgba(255,255,255,0.05);color:var(--text-main);border:1px solid var(--border-color);font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:700;padding:0.85rem 1.25rem;border-radius:var(--radius-md);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:var(--transition)}
+.btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:var(--brand-primary)}
+[data-theme="light"] .btn-secondary{background:#FFFFFF;color:#0F172A;border-color:rgba(15,23,42,0.15)}
+[data-theme="light"] .btn-secondary:hover{background:#F8FAFC;border-color:#0284C7;color:#0284C7}
+/* TOC + ARTICLE */
+.article-section{padding:4.5rem 0;border-top:1px solid var(--border-color)}
+.article-layout{display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:start}
+@media (max-width:1024px){.article-layout{grid-template-columns:1fr}.toc-sidebar{display:none}}
+.toc-sidebar{position:sticky;top:88px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.25rem;max-height:calc(100vh - 120px);overflow-y:auto}
+[data-theme="light"] .toc-sidebar{background:#FFFFFF;box-shadow:0 2px 8px rgba(15,23,42,0.05)}
+.toc-title{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand-primary);margin-bottom:1rem}
+[data-theme="light"] .toc-title{color:#0284C7}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:0.2rem}
+.toc-list a{font-size:0.85rem;color:var(--text-muted);padding:0.35rem 0.5rem;border-radius:var(--radius-sm);display:block;line-height:1.4;transition:var(--transition);border-left:2px solid transparent}
+.toc-list a:hover,.toc-list a.toc-active{color:var(--brand-primary);background:rgba(0,240,255,0.07);border-left-color:var(--brand-primary)}
+[data-theme="light"] .toc-list a:hover,[data-theme="light"] .toc-list a.toc-active{color:#0284C7;background:rgba(2,132,199,0.06);border-left-color:#0284C7}
+.toc-list .toc-sub{padding-left:1.25rem;font-size:0.8rem}
+.prose-content{max-width:860px}
+.aeo-direct-box{background:rgba(139,92,246,0.1);border-left:4px solid var(--brand-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1.35rem;margin-bottom:2.5rem;border-top:1px solid var(--border-color);border-right:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}
+[data-theme="light"] .aeo-direct-box{background:rgba(2,132,199,0.05);border-left-color:#0284C7}
+.aeo-title{font-size:1.05rem;font-weight:700;color:var(--brand-primary);display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem}
+[data-theme="light"] .aeo-title{color:#0284C7}
+.aeo-text{font-size:0.95rem;line-height:1.7}
+.prose-content h2{font-size:1.85rem;margin:2.5rem 0 1rem;color:var(--text-main)}
+.prose-content h3{font-size:1.35rem;margin:1.75rem 0 0.75rem;color:#C084FC}
+[data-theme="light"] .prose-content h3{color:#4338CA}
+.prose-content p{color:var(--text-muted);font-size:1rem;line-height:1.75;margin-bottom:1.25rem}
+.prose-content a,.article-section a{color:#00F0FF;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px;font-weight:600;transition:var(--transition)}
+.prose-content a:hover,.article-section a:hover{color:#8B5CF6}
+[data-theme="light"] .prose-content a,[data-theme="light"] .article-section a{color:#0284C7}
+[data-theme="light"] .prose-content a:hover,[data-theme="light"] .article-section a:hover{color:#0369A1}
+.prose-content ul,.prose-content ol{color:var(--text-muted);padding-left:1.5rem;margin-bottom:1.5rem;line-height:1.75}
+.formula-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.25rem;margin:1.5rem 0}
+.formula-code{background:var(--bg-input);padding:0.75rem 1rem;border-radius:var(--radius-sm);font-family:'Courier New',Courier,monospace;font-size:0.95rem;color:var(--brand-primary);font-weight:700;display:block;margin:0.5rem 0;border:1px solid var(--border-color)}
+[data-theme="light"] .formula-code{color:#0369A1;background:#E2E8F0}
+.data-table-wrapper{overflow-x:auto;margin:1.75rem 0}
+.data-table{width:100%;border-collapse:collapse;font-size:0.9rem}
+.data-table th,.data-table td{padding:0.75rem 1rem;text-align:left;border-bottom:1px solid var(--border-color)}
+.data-table th{background:var(--bg-input);color:var(--text-main);font-weight:700}
+.data-table td{color:var(--text-muted)}
+.faq-list{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem}
+.faq-item{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;transition:var(--transition)}
+.faq-question{width:100%;background:transparent;border:none;padding:1.15rem 1.25rem;text-align:left;font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text-main);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-icon{font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s ease}
+[data-theme="light"] .faq-icon{color:#0284C7}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s cubic-bezier(0,1,0,1);padding:0 1.25rem;color:var(--text-muted);font-size:0.925rem;line-height:1.7}
+.faq-item.open .faq-answer{max-height:600px;padding-bottom:1.25rem;transition:max-height 0.3s ease-in-out}
+/* SUITE */
+.suite-section{padding:4.5rem 0;border-top:1px solid var(--border-color);background:rgba(6,7,20,0.5)}
+[data-theme="light"] .suite-section{background:#F8FAFC;border-top:1px solid rgba(15,23,42,0.08)}
+.section-head{text-align:center;max-width:650px;margin:0 auto 3rem}
+.section-eyebrow{display:inline-block;color:var(--brand-primary);font-size:0.825rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem}
+[data-theme="light"] .section-eyebrow{color:#0284C7}
+.section-title{font-size:2.15rem;margin-bottom:0.75rem}
+.section-subtitle{color:var(--text-muted);font-size:0.975rem}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.tool-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.5rem;display:flex;flex-direction:column;transition:var(--transition)}
+[data-theme="light"] .tool-card{background:#FFFFFF;border-color:rgba(15,23,42,0.12);box-shadow:0 2px 10px rgba(15,23,42,0.04)}
+.tool-card:hover{transform:translateY(-4px);border-color:var(--brand-primary);box-shadow:0 8px 30px rgba(0,0,0,0.5),0 0 20px rgba(0,240,255,0.2)}
+[data-theme="light"] .tool-card:hover{border-color:#0284C7;box-shadow:0 8px 24px rgba(15,23,42,0.08)}
+.tool-card-icon{width:44px;height:44px;border-radius:var(--radius-md);background:rgba(0,240,255,0.1);color:var(--brand-primary);display:flex;align-items:center;justify-content:center;margin-bottom:1.15rem}
+[data-theme="light"] .tool-card-icon{background:rgba(2,132,199,0.1);color:#0284C7}
+.tool-card-icon svg{width:24px;height:24px}
+.tool-card-title{font-size:1.2rem;margin-bottom:0.5rem;color:var(--text-main)}
+.tool-card-desc{font-size:0.875rem;color:var(--text-muted);margin-bottom:1.25rem;flex-grow:1}
+.tool-card-link{font-size:0.85rem;font-weight:700;color:var(--brand-primary);display:flex;align-items:center;gap:0.35rem}
+[data-theme="light"] .tool-card-link{color:#0284C7}
+/* FOOTER */
+.site-footer{border-top:1px solid var(--border-color);padding:3rem 0;background:var(--bg-body);text-align:center;color:var(--text-dim);font-size:0.85rem}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;margin-bottom:1rem;flex-wrap:wrap}
+.footer-links a:hover{color:var(--brand-primary)}
+[data-theme="light"] .footer-links a:hover{color:#0284C7}
+/* RESPONSIVE */
+@media (max-width:768px){
+  .container{padding:0 1rem}.hero-section{padding:1.25rem 0 2rem}.hero-title{font-size:1.95rem;line-height:1.22;margin-bottom:0.75rem}.hero-subtitle{font-size:0.925rem;margin-bottom:1.25rem}
+  .article-section{padding:2.75rem 0}.prose-content h2{font-size:1.45rem}.prose-content h3{font-size:1.2rem}
+  .suite-section{padding:2.75rem 0}.section-title{font-size:1.7rem}.section-head{margin-bottom:1.75rem}.tools-grid{grid-template-columns:1fr;gap:1rem}
+  .data-table-wrapper{margin:1.25rem -0.5rem;padding:0 0.5rem;overflow-x:auto}.data-table th,.data-table td{padding:0.55rem 0.65rem;font-size:0.8rem;white-space:nowrap}
+}
+@media (max-width:540px){
+  .hero-title{font-size:1.7rem}.calc-card{padding:1.15rem 0.85rem}.form-row-2{gap:0.5rem}
+  .form-input{font-size:0.95rem;padding:0.65rem 2.25rem 0.65rem 0.65rem}.unit-tag{right:0.65rem;font-size:0.75rem}
+  .pill-group{gap:0.35rem}.pill-label{padding:0.5rem 0.25rem;font-size:0.775rem}.pill-desc{font-size:0.65rem}
+  #rw-blueprint-svg{height:150px}.blueprint-legend{font-size:0.7rem;justify-content:center}
+  .takeoff-card{padding:0.65rem 0.5rem}.takeoff-label{font-size:0.68rem}.takeoff-val{font-size:1.35rem}
+  .cost-estimation-box{flex-direction:column;align-items:stretch;text-align:center;gap:0.75rem;padding:0.85rem}
+  .cost-total-display{align-items:center}.cost-total-display .number{font-size:1.65rem}
+  .btn-toggle-costs{width:100%;padding:0.5rem}.action-buttons{grid-template-columns:1fr;gap:0.5rem}
+  .btn-primary,.btn-secondary{padding:0.75rem 1rem;font-size:0.9rem;width:100%}
+}
+@media print{
+  body{background:#FFFFFF !important;color:#000000 !important}
+  .header-nav,.suite-section,.article-section,.site-footer,.action-buttons,.toc-sidebar{display:none !important}
+  .hero-grid{grid-template-columns:1fr !important}.calc-card{border:none !important;box-shadow:none !important;padding:0 !important}
+  .blueprint-wrapper{background:#FFFFFF !important;border:1px solid #000000 !important}.takeoff-card{border:1px solid #CCCCCC !important}
+}
+  </style>
+</head>
+<body>
+
+  <!-- ZONE 1: SITE HEADER -->
+  <header class="header-nav">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main Navigation">
+        <a href="/" class="brand-logo" aria-label="WallCalculator.app Home">
+          <svg viewBox="0 0 48 48" width="32" height="32" fill="none">
+            <rect width="48" height="48" rx="10" fill="#0B0F19"/>
+            <rect x="6" y="8" width="36" height="4" rx="1" fill="#F97316"/>
+            <rect x="6" y="36" width="36" height="4" rx="1" fill="#F97316"/>
+            <rect x="8" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="18" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="28" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="37" y="12" width="3" height="24" fill="#38BDF8"/>
+          </svg>
+          <span>Wall<span class="accent">Calculator</span></span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="/">Wall Estimator</a></li>
+          <li><a href="/wall-stud-calculator">Stud Calculator</a></li>
+          <li><a href="/drywall-calculator">Drywall Sheets</a></li>
+          <li><a href="/retaining-wall-calculator" class="active" aria-current="page">Retaining Wall</a></li>
+          <li><a href="#guide-article">Design Guide</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="btn-icon" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">&#x1F313;</button>
+          <button class="btn-icon mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+            <span id="hamburger-icon">&#9776;</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ZONE 2: HERO & CALCULATOR -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left: Copy & Trust -->
+          <div class="hero-copy">
+            <div class="badge-pill">
+              <span>&#10003;</span> 8x8x16 CMU Blocks &middot; Drainage Gravel &middot; Capstones &middot; NCMA Compliant
+            </div>
+            <h1 class="hero-title">
+              <span class="accent">Retaining Wall Calculator</span>: Blocks, Gravel &amp; Cost Takeoff
+            </h1>
+            <p class="hero-subtitle">
+              Soil pressure, poor drainage, and undersized block counts are the leading causes of retaining wall failure and costly project overruns. Whether building a landscape CMU retaining wall or segmental block system, this interactive retaining wall calculator instantly determines exact block quantities, drainage gravel tonnage, capstones, mortar bags, and total material cost with a live 2D cross-section visualizer.
+            </p>
+            <div class="trust-badges">
+              <div class="trust-item">
+                <span class="icon">&#x1F9F1;</span>
+                <span><strong>CMU Block Precision:</strong> Calculates 8x8x16 standard and segmental blocks including cap row and waste factor.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">&#x1F4A7;</span>
+                <span><strong>Drainage Engineering:</strong> Gravel tonnage and backfill volume calculated per NCMA drainage standards.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">&#x26A1;</span>
+                <span><strong>Instant Cost Takeoff:</strong> Block, gravel, capstone, and mortar costs with editable unit pricing.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">&#x1F4D0;</span>
+                <span><strong>Live 2D Blueprint:</strong> Real-time cross-section SVG diagram updates as you type dimensions.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Calculator Card -->
+          <div>
+            <div class="calc-card" id="retaining-wall-calculator-tool">
+              <div style="margin-bottom:1.25rem;">
+                <h2 style="font-size:1.15rem;margin-bottom:0.25rem;color:var(--text-main);">Wall Dimensions &amp; Material Specifications</h2>
+                <p style="font-size:0.85rem;color:var(--text-dim);margin:0;">Enter wall measurements to calculate blocks, gravel, and materials.</p>
+              </div>
+
+              <!-- Length & Height -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="rw-length"><span>Wall Length</span></label>
+                  <div class="input-with-unit">
+                    <input type="number" id="rw-length" class="form-input" min="1" max="500" step="0.5" value="20" aria-label="Wall length in feet">
+                    <span class="unit-tag">FT</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="rw-height"><span>Wall Height</span></label>
+                  <div class="input-with-unit">
+                    <input type="number" id="rw-height" class="form-input" min="1" max="20" step="0.5" value="4" aria-label="Wall height in feet">
+                    <span class="unit-tag">FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Block Type -->
+              <div class="form-group" style="margin-bottom:1.25rem;">
+                <span class="form-label">Block Type &amp; Size</span>
+                <div class="pill-group cols-3" role="radiogroup" aria-label="Block type selection">
+                  <div class="pill-option">
+                    <input type="radio" id="block-8x8x16" name="rw-block-type" value="8x8x16" checked>
+                    <label for="block-8x8x16" class="pill-label"><span>8x8x16 CMU</span><span class="pill-desc">Standard Block</span></label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="block-6x8x16" name="rw-block-type" value="6x8x16">
+                    <label for="block-6x8x16" class="pill-label"><span>6x8x16 CMU</span><span class="pill-desc">Thin Block</span></label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="block-segmental" name="rw-block-type" value="segmental">
+                    <label for="block-segmental" class="pill-label"><span>Segmental</span><span class="pill-desc">Allan / Versa-Lok</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pricing & Drainage -->
+              <div class="openings-box">
+                <div class="openings-header">
+                  <span>Drainage &amp; Pricing</span>
+                  <span style="font-size:0.75rem;color:var(--text-dim);">Edit for local market rates</span>
+                </div>
+                <div class="openings-inputs" style="grid-template-columns:repeat(2,1fr);">
+                  <div class="form-group">
+                    <label class="form-label" for="rw-drainage-width" style="font-size:0.75rem;">Gravel Depth</label>
+                    <div class="input-with-unit">
+                      <input type="number" id="rw-drainage-width" class="form-input" min="6" max="36" step="1" value="12" style="padding:0.5rem 2.25rem 0.5rem 0.65rem;font-size:0.9rem;" aria-label="Drainage gravel depth in inches">
+                      <span class="unit-tag" style="right:0.5rem;font-size:0.75rem;">IN</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="rw-block-price" style="font-size:0.75rem;">Block Price ($/ea)</label>
+                    <input type="number" id="rw-block-price" class="form-input" min="0.5" max="50" step="0.05" value="2.85" style="padding:0.5rem 0.65rem;font-size:0.9rem;" aria-label="Block price per unit">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="rw-gravel-price" style="font-size:0.75rem;">Gravel ($/ton)</label>
+                    <input type="number" id="rw-gravel-price" class="form-input" min="5" max="200" step="1" value="45" style="padding:0.5rem 0.65rem;font-size:0.9rem;" aria-label="Gravel price per ton">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="rw-cap-price" style="font-size:0.75rem;">Capstone ($/ea)</label>
+                    <input type="number" id="rw-cap-price" class="form-input" min="1" max="100" step="0.5" value="8.50" style="padding:0.5rem 0.65rem;font-size:0.9rem;" aria-label="Capstone price per unit">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Waste Slider -->
+              <div class="slider-container">
+                <div class="slider-header">
+                  <label for="rw-waste-slider" class="form-label" style="margin-bottom:0;cursor:pointer;">Waste &amp; Breakage Allowance</label>
+                  <strong id="rw-waste-display" style="color:var(--brand-primary);">10%</strong>
+                </div>
+                <input type="range" id="rw-waste-slider" class="range-slider" min="0" max="20" step="1" value="10" aria-label="Block waste percentage">
+              </div>
+
+              <!-- ZONE 3: LIVE 2D BLUEPRINT -->
+              <div class="blueprint-wrapper">
+                <div class="blueprint-header">
+                  <span>Wall Cross-Section Blueprint</span>
+                  <span style="color:#38BDF8;">&#9679; Live Vector Preview</span>
+                </div>
+                <svg id="rw-blueprint-svg" viewBox="0 0 560 200" aria-label="Interactive 2D Retaining Wall Cross-Section Blueprint"></svg>
+                <div class="blueprint-legend">
+                  <div class="legend-item"><div class="legend-color" style="background:#8B5CF6;"></div><span>CMU Blocks</span></div>
+                  <div class="legend-item"><div class="legend-color" style="background:#F97316;"></div><span>Capstone Row</span></div>
+                  <div class="legend-item"><div class="legend-color" style="background:#10B981;"></div><span>Drainage Gravel</span></div>
+                  <div class="legend-item"><div class="legend-color" style="background:#94A3B8;"></div><span>Retained Soil</span></div>
+                  <div class="legend-item"><div class="legend-color" style="background:#0284C7;"></div><span>Footing</span></div>
+                </div>
+              </div>
+
+              <!-- ZONE 4: RESULTS DASHBOARD -->
+              <div class="results-section">
+                <div class="results-title">
+                  <span>Material Takeoff Summary</span>
+                  <span style="font-size:0.8rem;color:var(--text-muted);font-weight:500;">Includes Waste Buffer</span>
+                </div>
+                <div class="results-grid">
+                  <div class="takeoff-card highlight">
+                    <span class="takeoff-label">Concrete Blocks</span>
+                    <span class="takeoff-val" id="rw-result-blocks">99</span>
+                    <span class="takeoff-sub" id="rw-block-sub">8x8x16 CMU (incl. 10% waste)</span>
+                  </div>
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Block Courses</span>
+                    <span class="takeoff-val" id="rw-result-courses">6</span>
+                    <span class="takeoff-sub">Rows of block stacked</span>
+                  </div>
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Capstones</span>
+                    <span class="takeoff-val" id="rw-result-capstones">16</span>
+                    <span class="takeoff-sub">Top finish row</span>
+                  </div>
+                  <div class="takeoff-card accent">
+                    <span class="takeoff-label">Drainage Gravel</span>
+                    <span class="takeoff-val" id="rw-result-gravel">3.8 T</span>
+                    <span class="takeoff-sub">Tons (12-in backfill)</span>
+                  </div>
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Mortar Bags</span>
+                    <span class="takeoff-val" id="rw-result-mortar">4</span>
+                    <span class="takeoff-sub">60 lb bags (Type S)</span>
+                  </div>
+                  <div class="takeoff-card">
+                    <span class="takeoff-label">Wall Face Area</span>
+                    <span class="takeoff-val" id="rw-result-area">80 ft&#178;</span>
+                    <span class="takeoff-sub">Length x Height</span>
+                  </div>
+                </div>
+
+                <div class="cost-estimation-box">
+                  <div class="cost-total-display">
+                    <span class="label">Estimated Material Cost</span>
+                    <span class="number" id="rw-total-cost">$649</span>
+                  </div>
+                  <button class="btn-toggle-costs" id="rw-toggle-costs-btn" aria-expanded="false">Show Breakdown</button>
+                </div>
+                <div class="cost-breakdown-details" id="rw-cost-breakdown">
+                  <table class="cost-table">
+                    <tbody>
+                      <tr><td>Concrete Blocks</td><td class="cost-num" id="rw-cost-blocks">$282</td></tr>
+                      <tr><td>Drainage Gravel</td><td class="cost-num" id="rw-cost-gravel">$171</td></tr>
+                      <tr><td>Capstones</td><td class="cost-num" id="rw-cost-capstones">$136</td></tr>
+                      <tr><td>Mortar Bags</td><td class="cost-num" id="rw-cost-mortar">$26</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="action-buttons">
+                  <button class="btn-primary" id="rw-print-btn" onclick="window.print()" aria-label="Print material list">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    Print / PDF
+                  </button>
+                  <button class="btn-secondary" id="rw-copy-btn" aria-label="Copy material list to clipboard">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy List
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONE 5: SUITE TOOLS -->
+    <section class="suite-section" id="suite-tools">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Complete Calculator Suite</span>
+          <h2 class="section-title">The Full Structural Wall Toolkit</h2>
+          <p class="section-subtitle">Every structural and finish wall calculation in one place - framing, drywall, retaining walls, and block walls.</p>
+        </div>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="16" y2="21"/></svg></div>
+            <h3 class="tool-card-title">Wall Framing Calculator</h3>
+            <p class="tool-card-desc">Complete 2D blueprint with studs, drywall panels, and total cost takeoff for any room or addition.</p>
+            <a href="/" class="tool-card-link">Launch wall calculator &#8594;</a>
+          </div>
+          <div class="tool-card">
+            <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 class="tool-card-title">Wall Stud Calculator</h3>
+            <p class="tool-card-desc">Calculate 2x4 and 2x6 studs, plates, corner posts, and rough openings at 16 or 24 OC spacing.</p>
+            <a href="/wall-stud-calculator" class="tool-card-link">Calculate framing studs &#8594;</a>
+          </div>
+          <div class="tool-card">
+            <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+            <h3 class="tool-card-title">Drywall Calculator</h3>
+            <p class="tool-card-desc">Estimate 4x8 and 4x12 drywall sheets and materials with an interactive drywall calculator.</p>
+            <a href="/drywall-calculator" class="tool-card-link">Estimate drywall sheets &#8594;</a>
+          </div>
+          <div class="tool-card" style="border-color:rgba(139,92,246,0.4);">
+            <div class="tool-card-icon" style="background:rgba(139,92,246,0.15);color:#8B5CF6;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 20 7 4 17 4 21 20"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
+            <h3 class="tool-card-title">Block Wall Calculator</h3>
+            <p class="tool-card-desc">Estimate 8x8x16 CMU cinder blocks, mortar bags, and core grout for structural block walls.</p>
+            <a href="/block-wall-calculator" class="tool-card-link" style="color:#8B5CF6;">Block wall estimator &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONE 6: ARTICLE + TOC -->
+    <article class="article-section" id="guide-article">
+      <div class="container">
+        <div class="article-layout">
+
+          <!-- Sticky TOC Sidebar -->
+          <aside class="toc-sidebar" aria-label="Table of Contents">
+            <p class="toc-title">Table of Contents</p>
+            <ul class="toc-list" id="toc-list">
+              <li><a href="#toc-direct-answer">Quick Answer</a></li>
+              <li><a href="#toc-how-to-calculate">How to Calculate</a></li>
+              <li class="toc-sub"><a href="#toc-block-formula">Block Quantity Formula</a></li>
+              <li class="toc-sub"><a href="#toc-gravel-formula">Drainage Gravel Formula</a></li>
+              <li><a href="#toc-block-types">Block Types Compared</a></li>
+              <li><a href="#toc-drainage">Drainage Requirements</a></li>
+              <li><a href="#toc-footing">Footing Depth Rules</a></li>
+              <li><a href="#toc-height-limits">Height Limits &amp; Permits</a></li>
+              <li><a href="#toc-cost-table">Material Cost Table</a></li>
+              <li><a href="#toc-conclusion">Conclusion</a></li>
+              <li><a href="#toc-faq">FAQ</a></li>
+            </ul>
+          </aside>
+
+          <!-- Article Content -->
+          <div class="prose-content">
+
+            <!-- AEO Direct Answer Box -->
+            <div class="aeo-direct-box" id="toc-direct-answer" role="region" aria-label="Direct Answer - Featured Snippet">
+              <h2 class="aeo-title"><span>&#9889;</span> Quick Answer: How to Calculate a Retaining Wall</h2>
+              <p class="aeo-text">
+                To calculate a retaining wall, divide the total wall face area (length x height in sq ft) by the face area of one block (0.89 sq ft for 8x8x16 CMU) and add 10% for waste. For drainage gravel, multiply wall length by wall height by 1 foot depth, then multiply by 0.048 to convert cubic feet to tons. For a 20-foot wall at 4 feet tall: <strong>99 blocks, 3.8 tons of drainage gravel, and 16 capstones</strong> are needed.
+              </p>
+            </div>
+
+            <h2 id="toc-how-to-calculate">How a Retaining Wall Calculator Determines Accurate Block and Gravel Quantities</h2>
+            <p>
+              Gravity retaining walls resist lateral earth pressure through their own mass and friction with the foundation soil. Miscalculating block quantities or omitting drainage gravel leads to wall bulging, tilting, and eventual structural collapse, making accurate material takeoffs a non-negotiable step for any retaining wall project. Whether building a simple landscape garden border or a structural CMU retaining wall to control hillside erosion, an interactive retaining wall calculator prevents costly estimation errors before breaking ground.
+            </p>
+
+            <h3 id="toc-block-formula">1. Calculating Concrete Block Quantity</h3>
+            <p>The standard approach for counting concrete masonry units in a retaining wall starts with the face area, then divides by the face area of one block:</p>
+            <ul>
+              <li><strong>Wall Face Area:</strong> Multiply wall length (ft) by wall height (ft) to get total square footage of exposed face.</li>
+              <li><strong>Block Face Area:</strong> An 8x8x16-inch CMU occupies 0.89 sq ft of face area (8 inches x 16 inches = 128 sq in = 0.89 sq ft).</li>
+              <li><strong>Add Waste Factor:</strong> Add 10% overage to account for cut blocks at ends, corners, and openings.</li>
+            </ul>
+
+            <div class="formula-card" id="toc-block-formula-card">
+              <h4>Retaining Wall Block Quantity Formula:</h4>
+              <span class="formula-code">Blocks = CEILING( (Wall Length x Wall Height) / 0.89 ) x 1.10 (10% Waste)</span>
+              <p style="font-size:0.85rem;color:var(--text-dim);margin-top:0.5rem;margin-bottom:0;">
+                <em>Example:</em> 20 ft long x 4 ft tall = 80 sq ft / 0.89 = 90 blocks x 1.10 = 99 blocks ordered.
+              </p>
+            </div>
+
+            <div class="formula-card" id="toc-gravel-formula">
+              <h4>Drainage Gravel Tonnage Formula:</h4>
+              <span class="formula-code">Gravel (tons) = (Wall Length x Wall Height x Drainage Width in ft) x 0.048</span>
+              <p style="font-size:0.85rem;color:var(--text-dim);margin-top:0.5rem;margin-bottom:0;">
+                <em>Example:</em> 20 ft x 4 ft x 1 ft (12-inch drainage) x 0.048 = 3.84 tons of #57 stone or pea gravel.
+              </p>
+            </div>
+
+            <h3 id="toc-block-types">2. Retaining Wall Block Types Compared</h3>
+            <p>Selecting the right block type affects both structural capacity and material cost. The retaining wall calculator supports the three most common block systems in residential and light commercial construction:</p>
+
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Block Type</th><th>Dimensions</th><th>Face Area</th><th>Approx. Weight</th><th>Best Use Case</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>8x8x16 CMU</strong></td><td>8" H x 16" L x 8" W</td><td>0.89 sq ft</td><td>38 lbs</td><td>Structural gravity walls 2-6 ft</td></tr>
+                  <tr><td><strong>6x8x16 CMU</strong></td><td>6" H x 16" L x 6" W</td><td>0.67 sq ft</td><td>28 lbs</td><td>Lightweight garden borders up to 3 ft</td></tr>
+                  <tr><td><strong>Segmental Block</strong></td><td>6" H x 12-18" L</td><td>0.50 sq ft</td><td>80 lbs avg</td><td>Curved landscape walls, no mortar</td></tr>
+                  <tr><td><strong>Allan Block AB Classic</strong></td><td>6" H x 17.5" L</td><td>0.73 sq ft</td><td>80 lbs</td><td>Engineered segmental systems</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 id="toc-drainage">3. Drainage Requirements: Why Gravel Backfill is Critical</h3>
+            <p>
+              Hydrostatic pressure is the most underestimated destructive force in retaining wall design. When groundwater saturates retained soil and cannot drain freely, pore water pressure multiplies the lateral force pressing against the wall far beyond design loads. According to the <a href="https://www.ncma.org/resource/segmental-retaining-walls/" target="_blank" rel="noopener">National Concrete Masonry Association (NCMA)</a> standard installation guidelines, every concrete block retaining wall requires a minimum 12-inch wide layer of free-draining aggregate placed directly against the back face of the wall from footing to within 12 inches of finish grade.
+            </p>
+            <ul>
+              <li><strong>Drain Pipe at Footing:</strong> Install 4-inch perforated PVC drain pipe at the base of the gravel backfill, sloped at 1% minimum grade to daylight or a drainage sump.</li>
+              <li><strong>Filter Fabric Barrier:</strong> Wrap the gravel drainage zone with non-woven geotextile fabric to prevent fine soil particles from migrating into and clogging the drainage aggregate.</li>
+              <li><strong>Weep Holes:</strong> For mortared CMU walls, install 3/4-inch PVC weep tubes through the bottom course at 4-foot intervals to provide supplemental pressure relief drainage.</li>
+            </ul>
+
+            <h3 id="toc-footing">4. Footing Depth and Foundation Engineering</h3>
+            <p>A properly sized and buried footing is the single most important factor in retaining wall longevity. Without adequate footing depth, freeze-thaw cycles cause frost heaving that lifts and cracks the wall structure within a few seasons:</p>
+            <ol>
+              <li><strong>Minimum Burial Depth Rule:</strong> The base course of any retaining wall must be buried at least one inch per foot of finished wall height above grade. For a 4-foot wall, the first block course starts at least 4 inches below grade.</li>
+              <li><strong>Frost Line Override:</strong> In USDA Hardiness Zones 5 and colder, any retaining wall with a poured concrete footing must have that footing placed below the local frost line, which ranges from 18 to 48 inches depending on location.</li>
+              <li><strong>Footing Width and Thickness:</strong> Poured concrete footings for CMU retaining walls should be at least twice the block width (16 inches wide for 8-inch blocks) and a minimum of 8 inches thick, reinforced with two horizontal No. 4 rebar bars.</li>
+            </ol>
+
+            <h3 id="toc-height-limits">5. Retaining Wall Height Limits and Permit Requirements</h3>
+            <p>Most residential jurisdictions allow retaining walls up to 4 feet tall without requiring an engineered plan or building permit. Walls exceeding 4 feet require engineering review in virtually all U.S. jurisdictions:</p>
+
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Wall Height (above grade)</th><th>Typical Permit Requirement</th><th>Engineering Needed?</th><th>Drainage Required?</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Under 3 ft</strong></td><td>Usually exempt</td><td>No</td><td>Recommended</td></tr>
+                  <tr><td><strong>3 to 4 ft</strong></td><td>Varies by jurisdiction</td><td>Rarely</td><td>Yes - required</td></tr>
+                  <tr><td><strong>4 to 6 ft</strong></td><td>Permit required in most areas</td><td>Often required</td><td>Yes - mandatory</td></tr>
+                  <tr><td><strong>Over 6 ft</strong></td><td>Permit always required</td><td>Always required</td><td>Yes - engineered system</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 id="toc-cost-table">6. Retaining Wall Material Cost Breakdown</h3>
+            <p>Retaining wall material costs vary significantly by region, block type, and project scope. The pricing ranges below reflect typical 2025 U.S. material costs only, excluding labor and permits. The retaining wall calculator above lets you update unit prices to match local supplier quotes:</p>
+
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Material</th><th>Unit</th><th>Low Range</th><th>High Range</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>8x8x16 CMU Block</strong></td><td>per block</td><td>$2.25</td><td>$4.50</td><td>Standard gray block at big-box stores</td></tr>
+                  <tr><td><strong>Segmental Block</strong></td><td>per block</td><td>$4.00</td><td>$12.00</td><td>Allan Block, Versa-Lok, RCP systems</td></tr>
+                  <tr><td><strong>Drainage Gravel (#57)</strong></td><td>per ton</td><td>$35</td><td>$75</td><td>Crushed stone or pea gravel</td></tr>
+                  <tr><td><strong>Capstone Block</strong></td><td>per piece</td><td>$6.00</td><td>$18.00</td><td>Flat cap to finish top course</td></tr>
+                  <tr><td><strong>Type S Mortar (60 lb)</strong></td><td>per bag</td><td>$5.50</td><td>$9.00</td><td>High-lime mortar for masonry joints</td></tr>
+                  <tr><td><strong>Geotextile Fabric</strong></td><td>per sq yd</td><td>$0.50</td><td>$2.00</td><td>Non-woven filter fabric</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Conclusion -->
+            <section class="conclusion-box" id="toc-conclusion" style="margin-top:3rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.5rem;">
+              <h2 style="margin-top:0;font-size:1.45rem;">Conclusion: Build Smarter with a Retaining Wall Calculator</h2>
+              <p style="margin-bottom:0.75rem;">
+                Estimating material quantities and drainage requirements for a retaining wall demands precision. Hydrostatic pressure, frost heave, and soil surcharge loads punish undersized or poorly drained walls quickly. Using an accurate retaining wall calculator to determine exact block counts, drainage gravel tonnage, capstones, and mortar quantities before breaking ground prevents overordering waste and mid-project supply delays. Pair the retaining wall calculator results with proper footing depth, geotextile fabric installation, and perforated drain pipe to build a structure engineered to last for decades. For complete framing takeoffs, the <a href="/">all-in-one wall calculator</a> and <a href="/wall-stud-calculator">wall stud calculator</a> provide complementary lumber estimates for any construction project.
+              </p>
+            </section>
+
+            <!-- FAQ -->
+            <h2 id="toc-faq" style="margin-top:3rem;">Frequently Asked Questions</h2>
+            <div class="faq-list">
+
+              <div class="faq-item">
+                <button class="faq-question"><span>How to calculate a retaining wall?</span><span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>To calculate a retaining wall, multiply the wall length by wall height to get the face area in square feet. Divide by the face area of one block (0.89 sq ft for 8x8x16 CMU) and add 10% for waste to get block count. Calculate drainage gravel by multiplying wall length x height x drainage width in feet, then multiply by 0.048 to convert cubic feet to tons. Add capstones equal to the number of blocks in one horizontal course plus 5% overage.</p></div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question"><span>How much is a 100 ft retaining wall?</span><span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>A 100-foot retaining wall costs approximately $3,000 to $25,000 in materials and labor depending on height and block type. For a 4-foot tall CMU block retaining wall 100 feet long, expect roughly 450 blocks ($1,100), 15 tons of drainage gravel ($675), 80 capstones ($680), plus labor at $25 to $50 per linear foot, bringing total installed costs to $8,000 to $14,000.</p></div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question"><span>How much is a 20 foot retaining wall?</span><span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>A 20-foot retaining wall costs $600 to $3,500 in materials depending on height. At 3 feet tall using 8x8x16 CMU blocks: approximately 80 blocks ($200), 2.4 tons of gravel ($108), 15 capstones ($128), and 8 mortar bags ($56) for a total material cost of roughly $490 to $650. Labor adds $500 to $1,500 more depending on local contractor rates.</p></div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question"><span>Does a 4 ft retaining wall need drainage?</span><span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Yes, any retaining wall 4 feet tall or higher requires drainage per most residential building codes. Hydrostatic pressure from waterlogged soil dramatically increases lateral force on the wall face - wet soil can exert three to five times more pressure than dry soil. At minimum, install a 12-inch wide gravel drainage layer with a perforated drain pipe at the footing level to move water away from the wall base.</p></div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question"><span>What size concrete blocks are used for retaining walls?</span><span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>The most common retaining wall block is the <strong>8x8x16-inch CMU (Concrete Masonry Unit)</strong> with a 0.89 sq ft face area. It weighs 38 to 45 lbs and is standard for engineered gravity and reinforced retaining walls up to 6 feet. Segmental blocks like Allan Block and Versa-Lok measure 6 inches tall by 12 to 18 inches wide and are used for landscape and curved dry-stack retaining walls.</p></div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question"><span>How deep should a retaining wall footer be?</span><span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>A retaining wall footing should be at least 12 inches below finish grade, plus one inch deeper for every foot of wall height above grade. For a 4-foot retaining wall, set the footing at 16 inches below grade. In frost-prone regions (Zone 5 and colder), the footing must extend below the local frost line depth, ranging from 24 to 48 inches, to prevent frost heave from lifting and cracking the wall.</p></div>
+              </div>
+
+            </div>
+
+          </div><!-- end prose-content -->
+        </div><!-- end article-layout -->
+      </div>
+    </article>
+  </main>
+
+  <!-- ZONE 7: FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/wall-stud-calculator">Stud Calculator</a>
+        <a href="/drywall-calculator">Drywall Sheets</a>
+        <a href="/retaining-wall-calculator">Retaining Wall</a>
+        <a href="/#suite-tools">Calculators</a>
+        <a href="https://github.com/Aamirtechseo/wallcalculator" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-links" style="margin-top:0.75rem;font-size:0.825rem;flex-wrap:wrap;">
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+      <p style="margin-top:1.5rem;">&copy; 2026 WallCalculator.app. All rights reserved. Built for professional masonry contractors, landscape engineers, and DIY builders.</p>
+      <p style="margin-top:0.5rem;font-size:0.75rem;color:var(--text-dim);">
+        Retaining wall calculations are based on standard CMU block dimensions and NCMA drainage guidelines. Estimates are for preliminary material planning only. Always consult a licensed structural engineer for walls exceeding 4 feet in height or walls retaining soil adjacent to structures.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    'use strict';
+
+    // Theme
+    var themeBtn = document.getElementById('theme-toggle-btn');
+    var savedTheme = localStorage.getItem('wc-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    if (themeBtn) {
+      themeBtn.textContent = savedTheme === 'dark' ? '\uD83C\uDF13' : '\uD83C\uDF17';
+      themeBtn.addEventListener('click', function() {
+        var cur = document.documentElement.getAttribute('data-theme');
+        var next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('wc-theme', next);
+        themeBtn.textContent = next === 'dark' ? '\uD83C\uDF13' : '\uD83C\uDF17';
+      });
+    }
+
+    // Mobile menu
+    var mobileBtn = document.getElementById('mobile-menu-btn');
+    var navLinks = document.querySelector('.nav-links');
+    if (mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', function() {
+        var open = navLinks.classList.toggle('mobile-open');
+        mobileBtn.setAttribute('aria-expanded', String(open));
+        document.getElementById('hamburger-icon').innerHTML = open ? '&#x2715;' : '&#x2630;';
+      });
+    }
+
+    // Block specs
+    var SPECS = {
+      '8x8x16':    { faceArea: 0.889, heightIn: 8,  lengthIn: 16 },
+      '6x8x16':    { faceArea: 0.667, heightIn: 6,  lengthIn: 16 },
+      'segmental': { faceArea: 0.500, heightIn: 6,  lengthIn: 12 }
+    };
+
+    function getVal(id, def) { return Math.max(0, parseFloat(document.getElementById(id).value) || def); }
+    function getBlockType() { var c = document.querySelector('input[name="rw-block-type"]:checked'); return c ? c.value : '8x8x16'; }
+
+    function calc() {
+      var len = Math.max(1, getVal('rw-length', 20));
+      var ht  = Math.max(1, getVal('rw-height', 4));
+      var drainIn  = Math.max(6, getVal('rw-drainage-width', 12));
+      var bPrc = Math.max(0, getVal('rw-block-price', 2.85));
+      var gPrc = Math.max(0, getVal('rw-gravel-price', 45));
+      var cPrc = Math.max(0, getVal('rw-cap-price', 8.50));
+      var mPrc = 6.50;
+      var waste = parseInt(document.getElementById('rw-waste-slider').value) || 10;
+      var spec  = SPECS[getBlockType()];
+
+      var faceArea = len * ht;
+      var rawBlocks = faceArea / spec.faceArea;
+      var totalBlocks = Math.ceil(rawBlocks * (1 + waste / 100));
+      var courses = Math.ceil((ht * 12) / spec.heightIn);
+      var bpc = Math.ceil((len * 12) / spec.lengthIn);
+      var caps = Math.ceil(bpc * 1.05);
+      var drainFt = drainIn / 12;
+      var gravelCuFt = len * ht * drainFt;
+      var gravelTons = gravelCuFt * 0.048;
+      var mortarBags = Math.ceil(totalBlocks / 28);
+
+      var cBlocks = totalBlocks * bPrc;
+      var cGravel = gravelTons * gPrc;
+      var cCaps   = caps * cPrc;
+      var cMortar = mortarBags * mPrc;
+      var total   = cBlocks + cGravel + cCaps + cMortar;
+
+      document.getElementById('rw-result-blocks').textContent = totalBlocks.toLocaleString();
+      document.getElementById('rw-block-sub').textContent = (getBlockType() === 'segmental' ? 'Segmental Block' : getBlockType() + ' CMU') + ' (incl. ' + waste + '% waste)';
+      document.getElementById('rw-result-courses').textContent = courses;
+      document.getElementById('rw-result-capstones').textContent = caps;
+      document.getElementById('rw-result-gravel').textContent = gravelTons.toFixed(1) + ' T';
+      document.getElementById('rw-result-mortar').textContent = mortarBags;
+      document.getElementById('rw-result-area').textContent = faceArea.toFixed(0) + ' ft\u00B2';
+      document.getElementById('rw-total-cost').textContent = '$' + Math.round(total).toLocaleString();
+      document.getElementById('rw-cost-blocks').textContent = '$' + Math.round(cBlocks).toLocaleString();
+      document.getElementById('rw-cost-gravel').textContent = '$' + Math.round(cGravel).toLocaleString();
+      document.getElementById('rw-cost-capstones').textContent = '$' + Math.round(cCaps).toLocaleString();
+      document.getElementById('rw-cost-mortar').textContent = '$' + Math.round(cMortar).toLocaleString();
+
+      drawBP(len, ht, courses, drainFt, spec, bpc);
+    }
+
+    function drawBP(len, ht, courses, drainFt, spec, bpc) {
+      var svg = document.getElementById('rw-blueprint-svg');
+      if (!svg) return;
+      svg.innerHTML = '';
+      var W=560,H=200,pL=20,pR=24,pT=16,pB=40;
+      var dW=W-pL-pR, dH=H-pT-pB;
+      var footH = Math.round(dH*0.13);
+      var wallH  = dH - footH - 4;
+      var capH   = Math.max(6, Math.round(wallH*0.12));
+      var bH     = wallH - capH;
+      var wallW  = Math.round(dW * 0.65);
+      var drainW = Math.max(28, Math.round(dW * 0.18));
+      var wallX=pL, wallY=pT, footY=pT+wallH;
+      var drainX = wallX + wallW - drainW;
+
+      function el(tag, attrs, txt) {
+        var e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+        Object.keys(attrs).forEach(function(k){ e.setAttribute(k, attrs[k]); });
+        if (txt !== undefined) e.textContent = txt;
+        return e;
+      }
+
+      // Retained soil
+      svg.appendChild(el('rect', {x:wallX, y:wallY, width:wallW-drainW, height:wallH, fill:'rgba(148,163,184,0.1)', stroke:'rgba(148,163,184,0.2)', 'stroke-width':'1'}));
+
+      // CMU courses
+      var bkH = Math.max(4, Math.round(bH / Math.max(1, courses-1)));
+      for (var c=0; c<courses-1; c++) {
+        var by=wallY+capH+c*bkH;
+        var bkActH=Math.min(bkH-1, bH-c*bkH-1);
+        var off=c%2===0?0:8;
+        var visW=wallW-drainW+2;
+        var nBr=Math.ceil(visW/26);
+        for (var b=0; b<nBr; b++) {
+          var bx=wallX+b*26+off;
+          var bw=Math.min(24,visW-b*26);
+          if (bw>4) svg.appendChild(el('rect',{x:bx,y:by,width:bw,height:Math.max(3,bkActH),fill:'rgba(139,92,246,0.28)',stroke:'rgba(139,92,246,0.75)','stroke-width':'0.8',rx:'1'}));
+        }
+      }
+
+      // Capstones
+      var nCap=Math.ceil((wallW-drainW+2)/28);
+      for (var b2=0; b2<nCap; b2++) {
+        var cx2=wallX+b2*28, cw=Math.min(26,(wallW-drainW+2)-b2*28);
+        if (cw>4) svg.appendChild(el('rect',{x:cx2,y:wallY,width:cw,height:capH,fill:'rgba(249,115,22,0.65)',stroke:'#F97316','stroke-width':'1',rx:'1.5'}));
+      }
+
+      // Drainage gravel
+      svg.appendChild(el('rect',{x:drainX,y:wallY,width:drainW,height:wallH,fill:'rgba(16,185,129,0.15)',stroke:'rgba(16,185,129,0.5)','stroke-width':'1','stroke-dasharray':'4,3'}));
+      for (var gx=drainX+4; gx<drainX+drainW-4; gx+=8) {
+        for (var gy=wallY+4; gy<wallY+wallH-4; gy+=7) {
+          svg.appendChild(el('circle',{cx:gx+(gy%2===0?0:4),cy:gy,r:'2',fill:'rgba(16,185,129,0.6)'}));
+        }
+      }
+
+      // Footing
+      svg.appendChild(el('rect',{x:wallX-4,y:footY+2,width:wallW+8,height:footH,fill:'rgba(2,132,199,0.35)',stroke:'#0284C7','stroke-width':'1',rx:'2'}));
+
+      // Drain pipe
+      svg.appendChild(el('circle',{cx:drainX+drainW*0.5,cy:footY+2+footH*0.4,r:'5',fill:'none',stroke:'#00F0FF','stroke-width':'1.5','stroke-dasharray':'3,2'}));
+
+      // Labels
+      function lbl(x,y,t,col){ svg.appendChild(el('text',{x:x,y:y,fill:col||'#94A3B8','font-size':'9','font-family':'Inter,sans-serif','font-weight':'600'},t)); }
+      lbl(wallX+4,wallY+12,'RETAINED SOIL','rgba(248,250,252,0.5)');
+      lbl(drainX+3,wallY+14,'GRAVEL','rgba(16,185,129,0.9)');
+      lbl(wallX+2,wallY+capH+14,'CMU BLOCKS','rgba(167,139,250,0.9)');
+      lbl(wallX,footY+footH*0.65,'CONCRETE FOOTING','#0284C7');
+      lbl(pL+dW*0.25, H-10, len.toFixed(0)+' ft wall length', '#94A3B8');
+    }
+
+    // Bind inputs
+    var inputIds = ['rw-length','rw-height','rw-drainage-width','rw-block-price','rw-gravel-price','rw-cap-price','rw-waste-slider'];
+    inputIds.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) { el.addEventListener('input', calc); el.addEventListener('change', calc); }
+    });
+    document.querySelectorAll('input[name="rw-block-type"]').forEach(function(r){ r.addEventListener('change', calc); });
+
+    // Waste display
+    document.getElementById('rw-waste-slider').addEventListener('input', function() {
+      document.getElementById('rw-waste-display').textContent = this.value + '%';
+    });
+
+    // Cost toggle
+    var toggleBtn = document.getElementById('rw-toggle-costs-btn');
+    var breakdown = document.getElementById('rw-cost-breakdown');
+    if (toggleBtn && breakdown) {
+      toggleBtn.addEventListener('click', function() {
+        var open = breakdown.classList.toggle('open');
+        this.textContent = open ? 'Hide Breakdown' : 'Show Breakdown';
+        this.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    // Copy button
+    var copyBtn = document.getElementById('rw-copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function() {
+        var lines = [
+          'RETAINING WALL MATERIAL LIST - WallCalculator.app',
+          '='.repeat(48),
+          'Wall: ' + document.getElementById('rw-length').value + ' ft x ' + document.getElementById('rw-height').value + ' ft',
+          '-'.repeat(40),
+          'Concrete Blocks:   ' + document.getElementById('rw-result-blocks').textContent,
+          'Block Courses:     ' + document.getElementById('rw-result-courses').textContent + ' rows',
+          'Capstones:         ' + document.getElementById('rw-result-capstones').textContent,
+          'Drainage Gravel:   ' + document.getElementById('rw-result-gravel').textContent,
+          'Mortar Bags:       ' + document.getElementById('rw-result-mortar').textContent,
+          '-'.repeat(40),
+          'Total Est. Cost:   ' + document.getElementById('rw-total-cost').textContent,
+          '',
+          'Generated at wallcalculator.app/retaining-wall-calculator'
+        ].join('\n');
+        navigator.clipboard.writeText(lines).then(function() {
+          var orig = copyBtn.innerHTML;
+          copyBtn.innerHTML = '&#10003; Copied!';
+          setTimeout(function(){ copyBtn.innerHTML = orig; }, 2000);
+        });
+      });
+    }
+
+    // TOC IntersectionObserver
+    var tocLinks = document.querySelectorAll('.toc-list a');
+    if (tocLinks.length && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(function(l){ l.classList.remove('toc-active'); });
+            var a = document.querySelector('.toc-list a[href="#' + entry.target.id + '"]');
+            if (a) a.classList.add('toc-active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+      document.querySelectorAll('[id^="toc-"]').forEach(function(h){ observer.observe(h); });
+    }
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var was = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+        if (!was) item.classList.add('open');
+      });
+    });
+
+    calc();
+  })();
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNPHPE8S2V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VNPHPE8S2V');
+  </script>
+
+</body>
+</html>
