@@ -113,7 +113,7 @@ To prevent Google from splitting link equity and ranking signals, each URL owns 
 | **`/wall-stud-calculator`** | `Wall Stud Calculator` | 2,400/mo | **12%** | Dedicated stud framing, 16 vs 24 OC, plates, king/jack studs | **Published (Sep 30)** |
 | **`/drywall-calculator`** | `Drywall Calculator` | 8,900+/mo | **59%** | 4x8 vs 4x12 panels, joint compound mud, drywall screws | **Published (Sep 30)** |
 | **`/retaining-wall-calculator`** | `Retaining Wall Calculator` | 1,600/mo | **28%** | Concrete retaining blocks, drainage gravel tons, capstones | **Published (Oct 02)** |
-| **`/cinder-block-calculator`** | `Cinder Block Calculator` | **14,800/mo** | **1%** | Standard 8x8x16 CMU cinder blocks, mortar bags, grout cores, rebar | **Locked: October 9, 2026** |
+| **`/cinder-block-calculator`** | `Cinder Block Calculator` | **14,800/mo** | **1%** | Standard 8x8x16 CMU cinder blocks, mortar bags, grout cores, rebar | **Published (Oct 09)** |
 | *`/block-wall-calculator`* | *`Block Wall Calculator`* | 1,900/mo | 6% | *Merged into `/cinder-block-calculator` (Same intent, avoids cannibalization)* | *Covered / Superseded* |
 | **`/deck-calculator`** | `Deck Material Calculator` | 1,300/mo | **27%** | Joist framing, ledger boards, deck boards, footings & hardware | **Locked: October 16, 2026** (+7 days) |
 | **`/concrete-slab-calculator`** | `Concrete Slab Calculator` | High Volume | Low–Med | Concrete volume yards, rebar grid, gravel subbase, pour cost | **Locked: October 23, 2026** (+7 days) |
