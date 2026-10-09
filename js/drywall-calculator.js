@@ -63,7 +63,7 @@
   // --- CALCULATION LOGIC ---
   function calculateDrywall() {
     const lengthFt = Math.max(1, parseFloat(state.roomLength) || 16);
-    const widthFt = Math.max(0, parseFloat(state.roomWidth) || 12);
+    const widthFt = Math.max(0, isNaN(parseFloat(state.roomWidth)) ? 12 : parseFloat(state.roomWidth));
     const heightFt = Math.max(4, parseFloat(state.wallHeight) || 8);
     const wasteFactor = 1 + (state.wastePct / 100);
     const doors = Math.max(0, parseInt(state.doors) || 0);
