@@ -316,8 +316,8 @@
 
   // --- RENDER VISUAL RESULTS SUMMARY DIAGRAM ---
   function renderSummaryDiagram(data) {
-    if (!el.summarySvg) return;
-    const svg = el.summarySvg;
+    const svg = el.summarySvg || document.getElementById('summaryFramingSvg');
+    if (!svg) return;
     svg.innerHTML = '';
     const ns = 'http://www.w3.org/2000/svg';
 
@@ -431,9 +431,10 @@
     }, `${lengthFt}' L × ${heightFt}' H Wall Elevation`));
 
     // Update Summary Caption
-    if (el.summaryCaption) {
+    const captionEl = el.summaryCaption || document.getElementById('summaryFramingCaption');
+    if (captionEl) {
       const openingLabel = hasOpenings ? ', Rough Opening Headers' : '';
-      el.summaryCaption.innerHTML = `<strong>${lengthFt}' × ${heightFt}' Wall Framing:</strong> ${data.totalStuds} Total Studs (${spacingInches}" OC) · Double Top Plate · Bottom Sole Plate${openingLabel}`;
+      captionEl.innerHTML = `<strong>${lengthFt}' × ${heightFt}' Wall Framing:</strong> ${data.totalStuds} Total Studs (${spacingInches}" OC) · Double Top Plate · Bottom Sole Plate${openingLabel}`;
     }
   }
 

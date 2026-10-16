@@ -324,8 +324,8 @@
 
   // --- RENDER COMPACT VISUAL RESULTS SUMMARY DIAGRAM ---
   function renderSummaryDiagram(data) {
-    if (!el.summarySvg) return;
-    const svg = el.summarySvg;
+    const svg = el.summarySvg || document.getElementById('summaryStudSvg');
+    if (!svg) return;
     svg.innerHTML = '';
     const ns = 'http://www.w3.org/2000/svg';
 
@@ -449,10 +449,11 @@
     }, `${lengthFt}' L × ${heightFt}' H (${spacingInches}" OC)`));
 
     // Update Summary Caption
-    if (el.summaryCaption) {
+    const captionEl = el.summaryCaption || document.getElementById('summaryStudCaption');
+    if (captionEl) {
       const cornerNote = state.corners > 0 ? ` · ${state.corners} Corners` : '';
       const openingNote = hasOpenings ? ', Rough Opening Headers' : '';
-      el.summaryCaption.innerHTML = `<strong>${lengthFt}' × ${heightFt}' ${data.lumberSize} Framing:</strong> ${data.totalStuds} Total Studs (${spacingInches}" OC)${cornerNote} · Double Top Plate · Sole Plate${openingNote}`;
+      captionEl.innerHTML = `<strong>${lengthFt}' × ${heightFt}' ${data.lumberSize} Framing:</strong> ${data.totalStuds} Total Studs (${spacingInches}" OC)${cornerNote} · Double Top Plate · Sole Plate${openingNote}`;
     }
   }
 
