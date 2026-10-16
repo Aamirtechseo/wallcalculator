@@ -387,6 +387,14 @@ a{color:inherit;text-decoration:none}
 .footer-col a{font-size:0.875rem;color:var(--text-muted);transition:var(--transition)}
 .footer-col a:hover{color:var(--brand-primary)}
 .footer-bottom{border-top:1px solid var(--border-color);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.825rem;color:var(--text-dim)}
+.back-to-top{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:var(--radius-md,12px);background:var(--bg-card,rgba(14,18,41,0.9));color:var(--brand-primary,#00F0FF);border:1px solid var(--border-color,rgba(139,92,246,0.3));box-shadow:0 4px 16px rgba(0,0,0,0.4),0 0 10px rgba(0,240,255,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:90;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity 0.25s ease,visibility 0.25s ease,transform 0.25s ease,background-color 0.2s,border-color 0.2s;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{background:var(--bg-card-hover,rgba(22,28,62,0.95));border-color:var(--brand-primary,#00F0FF);color:#FFFFFF;box-shadow:0 6px 20px rgba(0,0,0,0.5),0 0 15px rgba(0,240,255,0.3);transform:translateY(-2px)}
+.back-to-top:focus-visible{outline:2px solid var(--brand-primary,#00F0FF);outline-offset:3px}
+[data-theme="light"] .back-to-top{background:#FFFFFF;color:#0284C7;border-color:rgba(15,23,42,0.15);box-shadow:0 4px 12px rgba(15,23,42,0.1)}
+[data-theme="light"] .back-to-top:hover{background:#F8FAFC;border-color:#0284C7;color:#0369A1;box-shadow:0 6px 16px rgba(2,132,199,0.2)}
+@media (max-width:640px){.back-to-top{bottom:1.15rem;right:1.15rem;width:40px;height:40px}}
+@media print{.back-to-top{display:none !important}}
   
 /* HERO TOC */
 .hero-toc-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.15rem 1.25rem;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--shadow-lg);margin-top:1.25rem;transition:var(--transition)}
@@ -1293,7 +1301,7 @@ a{color:inherit;text-decoration:none}
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="brand-logo">
+          <a href="/" class="brand-logo" aria-label="WallCalculator.app Home">
           <svg viewBox="0 0 48 48" width="32" height="32" fill="none">
             <rect width="48" height="48" rx="10" fill="#0B0F19"/>
             <rect x="6" y="8" width="36" height="4" rx="1" fill="#F97316"/>
@@ -1306,6 +1314,8 @@ a{color:inherit;text-decoration:none}
             <span>Wall<span class="accent">Calculator</span></span>
           </a>
           <p>Contractor-grade framing, drywall, masonry block, and concrete slab estimating tools engineered for professional builders, remodelers, and DIY homeowners.</p>
+          <!-- Social Media Placeholder Slot (hidden until used) -->
+          <div class="footer-social-slot" aria-hidden="true" style="display:none;"><!-- Future social media links --></div>
         </div>
 
         <div class="footer-col">
@@ -1335,7 +1345,7 @@ a{color:inherit;text-decoration:none}
           <h4>Legal &amp; About</h4>
           <ul>
             <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Support</a></li>
+            <li><a href="/contact">Contact</a></li>
             <li><a href="/privacy-policy">Privacy Policy</a></li>
             <li><a href="/terms-of-service">Terms of Service</a></li>
             <li><a href="/cookie-policy">Cookie Policy</a></li>
@@ -1351,10 +1361,32 @@ a{color:inherit;text-decoration:none}
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
   <!-- CLIENT-SIDE SCRIPT: CALCULATOR LOGIC, SVG VISUALIZER & UI -->
   <script>
   (function() {
     'use strict';
+
+    // Back to top button
+    var bttBtn = document.getElementById('backToTopBtn');
+    if (bttBtn) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+          bttBtn.classList.add('visible');
+        } else {
+          bttBtn.classList.remove('visible');
+        }
+      }, { passive: true });
+      bttBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     // Theme Toggle
     var themeBtn = document.getElementById('themeToggleBtn');
