@@ -441,7 +441,7 @@ a{color:inherit;text-decoration:none}
   <!-- ZONE 1: HEADER NAV -->
   <header class="header-nav">
     <div class="container">
-      <div class="nav-inner">
+      <nav class="nav-inner" aria-label="Main Navigation">
         <a href="/" class="brand-logo" aria-label="WallCalculator.app Home">
           <svg viewBox="0 0 48 48" width="32" height="32" fill="none">
             <rect width="48" height="48" rx="10" fill="#0B0F19"/>
@@ -455,20 +455,21 @@ a{color:inherit;text-decoration:none}
           <span>Wall<span class="accent">Calculator</span></span>
         </a>
 
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/">Home</a></li>
-          <li><a href="/wall-stud-calculator">Wall Studs</a></li>
-          <li><a href="/drywall-calculator">Drywall</a></li>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="/">Wall Estimator</a></li>
+          <li><a href="/wall-stud-calculator">Stud Calculator</a></li>
+          <li><a href="/drywall-calculator">Drywall Sheets</a></li>
           <li><a href="/retaining-wall-calculator">Retaining Wall</a></li>
           <li><a href="/cinder-block-calculator">Cinder Block</a></li>
-          <li><a href="/concrete-slab-calculator" class="active">Concrete Slab</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
           <button class="btn-icon" id="themeToggleBtn" aria-label="Toggle light or dark theme">&#9788;</button>
           <button class="btn-icon mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle mobile menu">&#9776;</button>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 
@@ -1373,6 +1374,12 @@ a{color:inherit;text-decoration:none}
       mobileBtn.addEventListener('click', function() {
         navLinks.classList.toggle('mobile-open');
         mobileBtn.innerHTML = navLinks.classList.contains('mobile-open') ? '&times;' : '&#9776;';
+      });
+      navLinks.querySelectorAll('a').forEach(function(l) {
+        l.addEventListener('click', function() {
+          navLinks.classList.remove('mobile-open');
+          mobileBtn.innerHTML = '&#9776;';
+        });
       });
     }
 
