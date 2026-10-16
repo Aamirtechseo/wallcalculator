@@ -80,7 +80,24 @@
 .calc-trust-badges{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.15rem;flex-wrap:wrap}
 .calc-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.28);color:var(--brand-primary);padding:0.25rem 0.65rem;border-radius:var(--radius-full, 9999px);font-size:0.75rem;font-weight:700;letter-spacing:0.02em}
 [data-theme="light"] .calc-badge{background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.28);color:#0284C7}
-.calc-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.6)}
+/* VISUAL RESULTS SUMMARY PANEL */
+.visual-summary-panel{background:var(--bg-input);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:0.85rem;margin-bottom:1.15rem;display:flex;flex-direction:column;gap:0.5rem}
+.summary-diagram-wrap{width:100%;display:flex;justify-content:center;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);padding:0.4rem;overflow:hidden}
+.summary-caption{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-align:center;line-height:1.4}
+.summary-caption strong{color:var(--brand-primary)}
+[data-theme="light"] .summary-caption strong{color:#0284C7}
+
+/* WALL ANATOMY DIAGRAM */
+.anatomy-diagram-wrapper{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.25rem;margin:1.75rem 0;overflow:hidden}
+.anatomy-diagram-header{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text-main);margin-bottom:0.85rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+.anatomy-badge{font-size:0.75rem;font-weight:600;color:var(--brand-primary);background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.25);padding:0.2rem 0.6rem;border-radius:var(--radius-full)}
+[data-theme="light"] .anatomy-badge{color:#0284C7;background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.25)}
+.anatomy-diagram-container{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.anatomy-svg{width:100%;min-width:580px;height:auto;display:block}
+.anatomy-label{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;fill:var(--text-main)}
+.anatomy-sublabel{font-family:'Inter',sans-serif;font-size:9.5px;font-weight:500;fill:var(--text-muted)}
+.anatomy-leader{stroke:var(--brand-primary);stroke-width:1.2;stroke-dasharray:3,3}
+[data-theme="light"] .anatomy-leader{stroke:#0284C7}
   </style>
 
   <!-- JSON-LD Schema: WebApplication -->
@@ -492,6 +509,18 @@
                   </div>
                 </div>
 
+                <!-- Visual Results Summary Panel: Labeled Framing Elevation -->
+                <div class="visual-summary-panel" id="visualSummaryPanel">
+                  <div class="summary-diagram-wrap">
+                    <svg id="summaryFramingSvg" viewBox="0 0 340 100" preserveAspectRatio="xMidYMid meet" style="width:100%;max-width:340px;height:100px;">
+                      <!-- Labeled framing elevation diagram rendered live by JS -->
+                    </svg>
+                  </div>
+                  <div class="summary-caption" id="summaryFramingCaption">
+                    <!-- Dynamic summary caption rendered by JS -->
+                  </div>
+                </div>
+
                 <!-- Estimated Cost Box -->
                 <div class="cost-estimation-box">
                   <div class="cost-total-display">
@@ -684,6 +713,93 @@
             <li><strong>Header:</strong> A horizontal structural beam (typically doubled 2x6, 2x8, or 2x10 lumber with a 1/2" plywood spacer) spanning across the top of the door or window to distribute overhead roof or floor loads around the opening.</li>
             <li><strong>Cripple Studs:</strong> Short vertical studs spaced 16" OC located above the header and below the window sill plate.</li>
           </ol>
+
+          <!-- Wall Anatomy Cross-Section Diagram -->
+          <div class="anatomy-diagram-wrapper" role="region" aria-label="Wall Framing Anatomy Diagram">
+            <div class="anatomy-diagram-header">
+              <span>Wall Framing Anatomy: Standard IRC R602 Cross-Section</span>
+              <span class="anatomy-badge">Framing Components</span>
+            </div>
+            <div class="anatomy-diagram-container">
+              <svg class="anatomy-svg" viewBox="0 0 680 270" fill="none" preserveAspectRatio="xMidYMid meet" aria-label="Labeled Wall Framing Anatomy: Top Plate, Bottom Plate, Studs, Header, Cripple Studs">
+                <!-- Background Grid Guide -->
+                <rect x="2" y="2" width="676" height="266" rx="6" fill="rgba(0,240,255,0.02)" stroke="var(--border-color)" stroke-width="1"/>
+
+                <!-- Top Double Plate -->
+                <rect x="140" y="44" width="380" height="7" rx="1" fill="#F97316" stroke="#C2410C" stroke-width="1"/>
+                <rect x="140" y="51" width="380" height="7" rx="1" fill="#EA580C" stroke="#9A3412" stroke-width="1"/>
+                
+                <!-- Bottom Sole Plate -->
+                <rect x="140" y="218" width="380" height="8" rx="1" fill="#EA580C" stroke="#9A3412" stroke-width="1"/>
+
+                <!-- Common Studs (Left Field) -->
+                <rect x="140" y="58" width="9" height="160" fill="#38BDF8" stroke="#0284C7" stroke-width="0.75"/>
+                <rect x="195" y="58" width="8" height="160" fill="#38BDF8" stroke="#0284C7" stroke-width="0.75"/>
+
+                <!-- Common Studs (Right Field) -->
+                <rect x="460" y="58" width="8" height="160" fill="#38BDF8" stroke="#0284C7" stroke-width="0.75"/>
+                <rect x="511" y="58" width="9" height="160" fill="#38BDF8" stroke="#0284C7" stroke-width="0.75"/>
+
+                <!-- King Studs (Flanking Opening) -->
+                <rect x="255" y="58" width="8" height="160" fill="#0284C7" stroke="#0369A1" stroke-width="0.75"/>
+                <rect x="397" y="58" width="8" height="160" fill="#0284C7" stroke="#0369A1" stroke-width="0.75"/>
+
+                <!-- Jack Studs (Trimmers supporting header) -->
+                <rect x="263" y="92" width="8" height="126" fill="#6366F1" stroke="#4F46E5" stroke-width="0.75"/>
+                <rect x="389" y="92" width="8" height="126" fill="#6366F1" stroke="#4F46E5" stroke-width="0.75"/>
+
+                <!-- Header Over Opening -->
+                <rect x="263" y="74" width="134" height="18" rx="1" fill="#F59E0B" stroke="#D97706" stroke-width="1.25"/>
+
+                <!-- Cripple Studs (Spaced above header) -->
+                <rect x="295" y="58" width="8" height="16" fill="#A855F7" stroke="#7C3AED" stroke-width="0.75"/>
+                <rect x="330" y="58" width="8" height="16" fill="#A855F7" stroke="#7C3AED" stroke-width="0.75"/>
+                <rect x="365" y="58" width="8" height="16" fill="#A855F7" stroke="#7C3AED" stroke-width="0.75"/>
+
+                <!-- Rough Opening dashed box -->
+                <rect x="271" y="92" width="118" height="126" fill="rgba(6,7,20,0.5)" stroke="var(--brand-primary)" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="330" y="150" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" fill="var(--brand-primary)">ROUGH OPENING</text>
+                <text x="330" y="165" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.5" font-weight="500" fill="var(--text-muted)">(Door or Window)</text>
+
+                <!-- Leaders & Labels -->
+                <!-- 1. Top Plate Label (Left) -->
+                <line x1="85" y1="48" x2="140" y2="48" class="anatomy-leader"/>
+                <circle cx="140" cy="48" r="2.5" fill="#F97316"/>
+                <text x="80" y="46" text-anchor="end" class="anatomy-label">Top Plate</text>
+                <text x="80" y="58" text-anchor="end" class="anatomy-sublabel">(Double 2x4 Plate)</text>
+
+                <!-- 2. Bottom Plate Label (Left) -->
+                <line x1="85" y1="222" x2="140" y2="222" class="anatomy-leader"/>
+                <circle cx="140" cy="222" r="2.5" fill="#EA580C"/>
+                <text x="80" y="220" text-anchor="end" class="anatomy-label">Bottom Plate</text>
+                <text x="80" y="232" text-anchor="end" class="anatomy-sublabel">(Sole Plate)</text>
+
+                <!-- 3. Studs / Common Studs (Left) -->
+                <line x1="85" y1="138" x2="195" y2="138" class="anatomy-leader"/>
+                <circle cx="195" cy="138" r="2.5" fill="#38BDF8"/>
+                <text x="80" y="136" text-anchor="end" class="anatomy-label">Studs</text>
+                <text x="80" y="148" text-anchor="end" class="anatomy-sublabel">(Common Stud 16" OC)</text>
+
+                <!-- 4. Header Over Opening (Right) -->
+                <polyline points="330,74 330,30 575,30" class="anatomy-leader"/>
+                <circle cx="330" cy="74" r="2.5" fill="#F59E0B"/>
+                <text x="580" y="28" text-anchor="start" class="anatomy-label">Header Over Opening</text>
+                <text x="580" y="40" text-anchor="start" class="anatomy-sublabel">(Doubled Structural Beam)</text>
+
+                <!-- 5. Cripple Studs (Right) -->
+                <polyline points="369,66 430,66 575,66" class="anatomy-leader"/>
+                <circle cx="369" cy="66" r="2.5" fill="#A855F7"/>
+                <text x="580" y="64" text-anchor="start" class="anatomy-label">Cripple Studs</text>
+                <text x="580" y="76" text-anchor="start" class="anatomy-sublabel">(Load Transfer to Header)</text>
+
+                <!-- 6. King & Jack Studs (Right) -->
+                <polyline points="401,150 440,150 575,150" class="anatomy-leader"/>
+                <circle cx="401" cy="150" r="2.5" fill="#0284C7"/>
+                <text x="580" y="148" text-anchor="start" class="anatomy-label">King &amp; Jack Studs</text>
+                <text x="580" y="160" text-anchor="start" class="anatomy-sublabel">(Full King + Trimmer Jack)</text>
+              </svg>
+            </div>
+          </div>
 
           <!-- IRC Building Code Table -->
           <h3 id="toc-irc-codes">3. International Residential Code (IRC R602) Spacing Limits</h3>
