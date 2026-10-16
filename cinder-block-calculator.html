@@ -215,6 +215,11 @@
 .cmu-bond-beam{fill:rgba(249,115,22,0.35);stroke:#F97316;stroke-width:1}
 .cmu-lintel{fill:rgba(168,85,247,0.4);stroke:#A855F7;stroke-width:1.5}
 
+/* VISUAL TRUST BADGES */
+.calc-trust-badges{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.15rem;flex-wrap:wrap}
+.calc-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.28);color:var(--brand-primary);padding:0.25rem 0.65rem;border-radius:var(--radius-full, 9999px);font-size:0.75rem;font-weight:700;letter-spacing:0.02em}
+[data-theme="light"] .calc-badge{background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.28);color:#0284C7}
+.calc-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.6)}
   </style>
 </head>
 <body>
@@ -325,6 +330,12 @@
 
           <!-- Right Column: Interactive Calculator Card -->
           <div class="calc-card" id="calculator">
+            <!-- Visual Trust Badges (Visible without scrolling) -->
+            <div class="calc-trust-badges">
+              <span class="calc-badge"><span class="calc-badge-dot"></span>Free</span>
+              <span class="calc-badge"><span class="calc-badge-dot"></span>No sign-up</span>
+              <span class="calc-badge"><span class="calc-badge-dot"></span>Instant results</span>
+            </div>
             <!-- Mode Tabs -->
             <div class="mode-tabs" role="tablist" aria-label="Input Mode">
               <button class="mode-btn active" id="tab-dims" role="tab" aria-selected="true" type="button">
@@ -1274,15 +1285,22 @@
       });
     });
 
-    // Inputs Event Listeners
+    // Inputs Event Listeners (Live calculation per keystroke)
+    var liveEvents = ['input', 'change', 'keyup'];
     [inLen, inHgt, inCourses, inArea, inDoors, inWindows].forEach(function(el) {
-      el.addEventListener('input', calc);
+      if (el) {
+        liveEvents.forEach(function(evt) {
+          el.addEventListener(evt, calc);
+        });
+      }
     });
 
-    wasteSlider.addEventListener('input', function() {
-      wastePct = parseInt(this.value, 10);
-      wastePrev.textContent = wastePct + '%';
-      calc();
+    ['input', 'change'].forEach(function(evt) {
+      wasteSlider.addEventListener(evt, function() {
+        wastePct = parseInt(this.value, 10);
+        wastePrev.textContent = wastePct + '%';
+        calc();
+      });
     });
 
     // Calculation Engine

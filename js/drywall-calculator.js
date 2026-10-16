@@ -361,24 +361,32 @@
 
   // --- ATTACH EVENT LISTENERS ---
   function attachListeners() {
+    const liveEvents = ['input', 'change', 'keyup'];
+
     if (el.roomLengthInput) {
-      el.roomLengthInput.addEventListener('input', (e) => {
-        state.roomLength = Math.max(1, parseFloat(e.target.value) || 16);
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.roomLengthInput.addEventListener(evt, (e) => {
+          state.roomLength = Math.max(1, parseFloat(e.target.value) || 16);
+          updateUI();
+        });
       });
     }
 
     if (el.roomWidthInput) {
-      el.roomWidthInput.addEventListener('input', (e) => {
-        state.roomWidth = Math.max(0, parseFloat(e.target.value) || 0);
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.roomWidthInput.addEventListener(evt, (e) => {
+          state.roomWidth = Math.max(0, parseFloat(e.target.value) || 0);
+          updateUI();
+        });
       });
     }
 
     if (el.wallHeightInput) {
-      el.wallHeightInput.addEventListener('input', (e) => {
-        state.wallHeight = Math.max(4, parseFloat(e.target.value) || 8);
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.wallHeightInput.addEventListener(evt, (e) => {
+          state.wallHeight = Math.max(4, parseFloat(e.target.value) || 8);
+          updateUI();
+        });
       });
     }
 
@@ -410,31 +418,39 @@
     });
 
     if (el.doorsInput) {
-      el.doorsInput.addEventListener('input', (e) => {
-        state.doors = Math.max(0, parseInt(e.target.value) || 0);
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.doorsInput.addEventListener(evt, (e) => {
+          state.doors = Math.max(0, parseInt(e.target.value) || 0);
+          updateUI();
+        });
       });
     }
 
     if (el.windowsInput) {
-      el.windowsInput.addEventListener('input', (e) => {
-        state.windows = Math.max(0, parseInt(e.target.value) || 0);
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.windowsInput.addEventListener(evt, (e) => {
+          state.windows = Math.max(0, parseInt(e.target.value) || 0);
+          updateUI();
+        });
       });
     }
 
     if (el.sheetPriceInput) {
-      el.sheetPriceInput.addEventListener('input', (e) => {
-        state.pricePerSheet = Math.max(1, parseFloat(e.target.value) || 14.50);
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.sheetPriceInput.addEventListener(evt, (e) => {
+          state.pricePerSheet = Math.max(1, parseFloat(e.target.value) || 14.50);
+          updateUI();
+        });
       });
     }
 
     if (el.wasteSlider && el.wasteValDisplay) {
-      el.wasteSlider.addEventListener('input', (e) => {
-        state.wastePct = parseInt(e.target.value) || 10;
-        el.wasteValDisplay.textContent = `${state.wastePct}%`;
-        updateUI();
+      ['input', 'change'].forEach(evt => {
+        el.wasteSlider.addEventListener(evt, (e) => {
+          state.wastePct = parseInt(e.target.value) || 10;
+          el.wasteValDisplay.textContent = `${state.wastePct}%`;
+          updateUI();
+        });
       });
     }
 

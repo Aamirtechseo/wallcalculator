@@ -76,6 +76,11 @@
   .hero-toc-card.open .hero-toc-nav{display:flex;flex-direction:column;animation:menuSlideDown 0.2s ease}
   .hero-toc-card.open .hero-toc-toggle .chevron{transform:rotate(180deg)}
 }
+/* VISUAL TRUST BADGES */
+.calc-trust-badges{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.15rem;flex-wrap:wrap}
+.calc-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.28);color:var(--brand-primary);padding:0.25rem 0.65rem;border-radius:var(--radius-full, 9999px);font-size:0.75rem;font-weight:700;letter-spacing:0.02em}
+[data-theme="light"] .calc-badge{background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.28);color:#0284C7}
+.calc-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.6)}
   </style>
 
   <!-- JSON-LD Schema: WebApplication -->
@@ -397,6 +402,12 @@
           <!-- Right Column: Interactive Calculator Card -->
           <div class="calc-wrapper">
             <div class="calc-card" id="drywall-calculator-tool">
+              <!-- Visual Trust Badges (Visible without scrolling) -->
+              <div class="calc-trust-badges">
+                <span class="calc-badge"><span class="calc-badge-dot"></span>Free</span>
+                <span class="calc-badge"><span class="calc-badge-dot"></span>No sign-up</span>
+                <span class="calc-badge"><span class="calc-badge-dot"></span>Instant results</span>
+              </div>
               
               <!-- Card Header -->
               <div style="margin-bottom: 1.25rem;">

@@ -283,6 +283,11 @@ a{color:inherit;text-decoration:none}
   .hero-grid{grid-template-columns:1fr !important}.calc-card{border:none !important;box-shadow:none !important;padding:0 !important}
   .blueprint-wrapper{background:#FFFFFF !important;border:1px solid #000000 !important}.takeoff-card{border:1px solid #CCCCCC !important}
 }
+/* VISUAL TRUST BADGES */
+.calc-trust-badges{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.15rem;flex-wrap:wrap}
+.calc-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.28);color:var(--brand-primary);padding:0.25rem 0.65rem;border-radius:var(--radius-full, 9999px);font-size:0.75rem;font-weight:700;letter-spacing:0.02em}
+[data-theme="light"] .calc-badge{background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.28);color:#0284C7}
+.calc-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.6)}
   </style>
 </head>
 <body>
@@ -434,6 +439,12 @@ a{color:inherit;text-decoration:none}
           <!-- Right: Calculator Card -->
           <div>
             <div class="calc-card" id="retaining-wall-calculator-tool">
+              <!-- Visual Trust Badges (Visible without scrolling) -->
+              <div class="calc-trust-badges">
+                <span class="calc-badge"><span class="calc-badge-dot"></span>Free</span>
+                <span class="calc-badge"><span class="calc-badge-dot"></span>No sign-up</span>
+                <span class="calc-badge"><span class="calc-badge-dot"></span>Instant results</span>
+              </div>
               <div style="margin-bottom:1.25rem;">
                 <h2 style="font-size:1.15rem;margin-bottom:0.25rem;color:var(--text-main);">Wall Dimensions &amp; Material Specifications</h2>
                 <p style="font-size:0.85rem;color:var(--text-dim);margin:0;">Enter wall measurements to calculate blocks, gravel, and materials.</p>
@@ -1250,17 +1261,24 @@ a{color:inherit;text-decoration:none}
       lbl(pL+dW*0.25, H-10, len.toFixed(0)+' ft wall length', '#94A3B8');
     }
 
-    // Bind inputs
+    // Bind inputs (Live calculation per keystroke)
     var inputIds = ['rw-length','rw-height','rw-drainage-width','rw-block-price','rw-gravel-price','rw-cap-price','rw-waste-slider'];
+    var liveEvents = ['input', 'change', 'keyup'];
     inputIds.forEach(function(id) {
       var el = document.getElementById(id);
-      if (el) { el.addEventListener('input', calc); el.addEventListener('change', calc); }
+      if (el) {
+        liveEvents.forEach(function(evt) {
+          el.addEventListener(evt, calc);
+        });
+      }
     });
     document.querySelectorAll('input[name="rw-block-type"]').forEach(function(r){ r.addEventListener('change', calc); });
 
     // Waste display
-    document.getElementById('rw-waste-slider').addEventListener('input', function() {
-      document.getElementById('rw-waste-display').textContent = this.value + '%';
+    ['input', 'change'].forEach(function(evt) {
+      document.getElementById('rw-waste-slider').addEventListener(evt, function() {
+        document.getElementById('rw-waste-display').textContent = this.value + '%';
+      });
     });
 
     // Cost toggle

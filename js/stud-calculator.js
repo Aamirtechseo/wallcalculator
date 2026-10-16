@@ -319,18 +319,24 @@
 
   // --- EVENT LISTENERS ---
   function attachListeners() {
-    // Inputs
+    // Inputs: Live calculation on input, change, and keyup (instant redraw per keystroke)
+    const liveEvents = ['input', 'change', 'keyup'];
+
     if (el.wallLengthInput) {
-      el.wallLengthInput.addEventListener('input', (e) => {
-        state.wallLength = parseFloat(e.target.value) || 0;
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.wallLengthInput.addEventListener(evt, (e) => {
+          state.wallLength = parseFloat(e.target.value) || 0;
+          updateUI();
+        });
       });
     }
 
     if (el.wallHeightInput) {
-      el.wallHeightInput.addEventListener('input', (e) => {
-        state.wallHeight = parseFloat(e.target.value) || 0;
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.wallHeightInput.addEventListener(evt, (e) => {
+          state.wallHeight = parseFloat(e.target.value) || 0;
+          updateUI();
+        });
       });
     }
 
@@ -360,38 +366,48 @@
     });
 
     if (el.cornersInput) {
-      el.cornersInput.addEventListener('input', (e) => {
-        state.corners = parseInt(e.target.value, 10) || 0;
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.cornersInput.addEventListener(evt, (e) => {
+          state.corners = parseInt(e.target.value, 10) || 0;
+          updateUI();
+        });
       });
     }
 
     if (el.doorsInput) {
-      el.doorsInput.addEventListener('input', (e) => {
-        state.doors = parseInt(e.target.value, 10) || 0;
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.doorsInput.addEventListener(evt, (e) => {
+          state.doors = parseInt(e.target.value, 10) || 0;
+          updateUI();
+        });
       });
     }
 
     if (el.windowsInput) {
-      el.windowsInput.addEventListener('input', (e) => {
-        state.windows = parseInt(e.target.value, 10) || 0;
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.windowsInput.addEventListener(evt, (e) => {
+          state.windows = parseInt(e.target.value, 10) || 0;
+          updateUI();
+        });
       });
     }
 
     if (el.wasteSlider) {
-      el.wasteSlider.addEventListener('input', (e) => {
-        state.wastePct = parseInt(e.target.value, 10);
-        if (el.wasteValDisplay) el.wasteValDisplay.textContent = state.wastePct + '%';
-        updateUI();
+      ['input', 'change'].forEach(evt => {
+        el.wasteSlider.addEventListener(evt, (e) => {
+          state.wastePct = parseInt(e.target.value, 10);
+          if (el.wasteValDisplay) el.wasteValDisplay.textContent = state.wastePct + '%';
+          updateUI();
+        });
       });
     }
 
     if (el.studPriceInput) {
-      el.studPriceInput.addEventListener('input', (e) => {
-        state.pricePerStud = parseFloat(e.target.value) || 0;
-        updateUI();
+      liveEvents.forEach(evt => {
+        el.studPriceInput.addEventListener(evt, (e) => {
+          state.pricePerStud = parseFloat(e.target.value) || 0;
+          updateUI();
+        });
       });
     }
 
