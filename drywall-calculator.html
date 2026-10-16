@@ -81,6 +81,24 @@
 .calc-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.28);color:var(--brand-primary);padding:0.25rem 0.65rem;border-radius:var(--radius-full, 9999px);font-size:0.75rem;font-weight:700;letter-spacing:0.02em}
 [data-theme="light"] .calc-badge{background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.28);color:#0284C7}
 .calc-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.6)}
+/* VISUAL RESULTS SUMMARY PANEL */
+.visual-summary-panel{background:var(--bg-input);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:0.85rem;margin-bottom:1.15rem;display:flex;flex-direction:column;gap:0.5rem}
+.summary-diagram-wrap{width:100%;display:flex;justify-content:center;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);padding:0.4rem;overflow:hidden}
+.summary-caption{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-align:center;line-height:1.4}
+.summary-caption strong{color:var(--brand-primary)}
+[data-theme="light"] .summary-caption strong{color:#0284C7}
+
+/* SHEET SIZE & THICKNESS COMPARISON DIAGRAM */
+.sheet-size-diagram-wrapper{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.25rem;margin:1.75rem 0;overflow:hidden}
+.sheet-size-diagram-header{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text-main);margin-bottom:0.85rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+.sheet-size-badge{font-size:0.75rem;font-weight:600;color:var(--brand-primary);background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.25);padding:0.2rem 0.6rem;border-radius:var(--radius-full, 9999px)}
+[data-theme="light"] .sheet-size-badge{color:#0284C7;background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.25)}
+.sheet-size-diagram-container{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sheet-size-svg{width:100%;min-width:620px;height:auto;display:block}
+.sheet-size-title{font-family:'Outfit',sans-serif;font-size:11.5px;font-weight:700;fill:var(--text-main)}
+.sheet-size-desc{font-family:'Inter',sans-serif;font-size:9px;font-weight:500;fill:var(--text-muted)}
+.sheet-size-dim{font-family:'Inter',sans-serif;font-size:8.5px;font-weight:700;fill:var(--brand-primary)}
+[data-theme="light"] .sheet-size-dim{fill:#0284C7}
   </style>
 
   <!-- JSON-LD Schema: WebApplication -->
@@ -623,6 +641,18 @@
                   </div>
                 </div>
 
+                <!-- Compact Visual Results Summary: Labeled Drywall Panel Layout Diagram -->
+                <div class="visual-summary-panel" id="visualSummaryPanel">
+                  <div class="summary-diagram-wrap">
+                    <svg id="summaryDrywallSvg" viewBox="0 0 340 100" preserveAspectRatio="xMidYMid meet" style="width:100%;max-width:340px;height:100px;">
+                      <!-- Labeled panel layout elevation rendered live by JS -->
+                    </svg>
+                  </div>
+                  <div class="summary-caption" id="summaryDrywallCaption">
+                    <!-- Dynamic summary caption rendered by JS -->
+                  </div>
+                </div>
+
                 <!-- Estimated Cost Box -->
                 <div class="cost-estimation-box">
                   <div class="cost-total-display">
@@ -883,6 +913,106 @@
           <p>
             Accurately estimating board quantities begins with selecting the correct sheet dimensions and panel thickness for each room condition. Standard sheetrock is manufactured in modular lengths designed to bridge standard 16-inch and 24-inch on-center framing spacing with minimal scrap. Review the dimensional coverage guide below before finalizing order quantities in the drywall calculator:
           </p>
+
+          <!-- Sheet Size and Thickness Comparison Diagram -->
+          <div class="sheet-size-diagram-wrapper">
+            <div class="sheet-size-diagram-header">
+              <span>Drywall Sheet Dimensions &amp; Edge Thickness Comparison</span>
+              <span class="sheet-size-badge">Proportional Scale (GA-216)</span>
+            </div>
+            <div class="sheet-size-diagram-container">
+              <svg viewBox="0 0 660 215" class="sheet-size-svg" aria-label="Drywall Sheet Sizes 4x8 vs 4x10 vs 4x12 and Thickness Cross-Section">
+                <!-- LEFT CONTAINER: SHEET SIZES -->
+                <rect x="10" y="10" width="475" height="195" rx="8" fill="rgba(0,240,255,0.03)" stroke="var(--border-color)" stroke-width="1"/>
+                <text x="25" y="30" class="sheet-size-title">Proportional Sheet Sizing (4-Foot Width)</text>
+                <text x="470" y="30" text-anchor="end" class="sheet-size-dim">14 px / FT Scale</text>
+
+                <!-- SHEET 1: 4x8 FT (32 SQ FT) -->
+                <rect x="25" y="42" width="112" height="56" rx="3" fill="rgba(0,240,255,0.08)" stroke="#00F0FF" stroke-width="1.2"/>
+                <line x1="25" y1="46" x2="137" y2="46" stroke="#00F0FF" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+                <line x1="25" y1="94" x2="137" y2="94" stroke="#00F0FF" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+                <text x="81" y="74" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" fill="var(--text-main)">4 × 8 FT</text>
+                
+                <!-- 4x8 Dimension Line -->
+                <line x1="25" y1="106" x2="137" y2="106" stroke="var(--brand-primary)" stroke-width="1"/>
+                <polygon points="29,104 25,106 29,108" fill="var(--brand-primary)"/>
+                <polygon points="133,104 137,106 133,108" fill="var(--brand-primary)"/>
+                <text x="81" y="117" text-anchor="middle" class="sheet-size-dim">96" (32 sq ft)</text>
+
+                <!-- 4x8 Details -->
+                <text x="25" y="140" class="sheet-size-title" font-size="10">Standard Walls</text>
+                <text x="25" y="156" class="sheet-size-desc">Universal DIY residential size</text>
+                <text x="25" y="170" class="sheet-size-desc">Weight: ~52 lbs (1 person)</text>
+                <text x="25" y="184" class="sheet-size-desc" fill="var(--brand-primary)">Fits standard 8-ft walls</text>
+
+                <!-- SHEET 2: 4x10 FT (40 SQ FT) -->
+                <rect x="152" y="42" width="140" height="56" rx="3" fill="rgba(56,189,248,0.08)" stroke="#38BDF8" stroke-width="1.2"/>
+                <line x1="152" y1="46" x2="292" y2="46" stroke="#38BDF8" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+                <line x1="152" y1="94" x2="292" y2="94" stroke="#38BDF8" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+                <text x="222" y="74" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" fill="var(--text-main)">4 × 10 FT</text>
+
+                <!-- 4x10 Dimension Line -->
+                <line x1="152" y1="106" x2="292" y2="106" stroke="#38BDF8" stroke-width="1"/>
+                <polygon points="156,104 152,106 156,108" fill="#38BDF8"/>
+                <polygon points="288,104 292,106 288,108" fill="#38BDF8"/>
+                <text x="222" y="117" text-anchor="middle" class="sheet-size-dim" fill="#38BDF8">120" (40 sq ft)</text>
+
+                <!-- 4x10 Details -->
+                <text x="152" y="140" class="sheet-size-title" font-size="10">9 to 10 FT Ceilings</text>
+                <text x="152" y="156" class="sheet-size-desc">Tall walls and high ceilings</text>
+                <text x="152" y="170" class="sheet-size-desc">Weight: ~65 lbs (2 people)</text>
+                <text x="152" y="184" class="sheet-size-desc" fill="#38BDF8">Eliminates filler strips</text>
+
+                <!-- SHEET 3: 4x12 FT (48 SQ FT) -->
+                <rect x="307" y="42" width="168" height="56" rx="3" fill="rgba(139,92,246,0.08)" stroke="#8B5CF6" stroke-width="1.2"/>
+                <line x1="307" y1="46" x2="475" y2="46" stroke="#8B5CF6" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+                <line x1="307" y1="94" x2="475" y2="94" stroke="#8B5CF6" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+                <text x="391" y="74" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" fill="var(--text-main)">4 × 12 FT</text>
+
+                <!-- 4x12 Dimension Line -->
+                <line x1="307" y1="106" x2="475" y2="106" stroke="#8B5CF6" stroke-width="1"/>
+                <polygon points="311,104 307,106 311,108" fill="#8B5CF6"/>
+                <polygon points="471,104 475,106 471,108" fill="#8B5CF6"/>
+                <text x="391" y="117" text-anchor="middle" class="sheet-size-dim" fill="#8B5CF6">144" (48 sq ft)</text>
+
+                <!-- 4x12 Details -->
+                <text x="307" y="140" class="sheet-size-title" font-size="10">Expansive Ceilings</text>
+                <text x="307" y="156" class="sheet-size-desc">Commercial &amp; long walls</text>
+                <text x="307" y="170" class="sheet-size-desc">Weight: ~78 lbs (Panel lift)</text>
+                <text x="307" y="184" class="sheet-size-desc" fill="#8B5CF6">25% fewer taped joints</text>
+
+                <!-- RIGHT CONTAINER: EDGE THICKNESS CROSS-SECTION -->
+                <rect x="495" y="10" width="155" height="195" rx="8" fill="rgba(139,92,246,0.03)" stroke="var(--border-color)" stroke-width="1"/>
+                <text x="510" y="30" class="sheet-size-title">Edge Cross-Section</text>
+                <text x="635" y="30" text-anchor="end" class="sheet-size-dim" fill="#A78BFA">Core Depth</text>
+
+                <!-- 1/2" Cross-Section Slab -->
+                <g transform="translate(510, 42)">
+                  <rect x="0" y="0" width="125" height="18" rx="2" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="1"/>
+                  <line x1="0" y1="2" x2="125" y2="2" stroke="#FBBF24" stroke-width="1.5"/>
+                  <line x1="0" y1="16" x2="125" y2="16" stroke="#FBBF24" stroke-width="1.5"/>
+                  <text x="62" y="13" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="var(--text-main)">1/2" Core (12.7 mm)</text>
+                </g>
+                <text x="510" y="74" class="sheet-size-title" font-size="9.5">1/2" Standard Gypsum</text>
+                <text x="510" y="87" class="sheet-size-desc">Residential walls · 16" OC studs</text>
+                <text x="510" y="100" class="sheet-size-desc">Ivory face paper + gray back</text>
+
+                <!-- 5/8" Cross-Section Slab -->
+                <g transform="translate(510, 116)">
+                  <rect x="0" y="0" width="125" height="24" rx="2" fill="rgba(139,92,246,0.18)" stroke="#8B5CF6" stroke-width="1.2"/>
+                  <line x1="0" y1="2" x2="125" y2="2" stroke="#C084FC" stroke-width="1.5"/>
+                  <line x1="0" y1="22" x2="125" y2="22" stroke="#C084FC" stroke-width="1.5"/>
+                  <line x1="20" y1="6" x2="40" y2="18" stroke="#8B5CF6" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+                  <line x1="70" y1="6" x2="90" y2="18" stroke="#8B5CF6" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+                  <text x="62" y="16" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="var(--text-main)">5/8" Core (15.9 mm)</text>
+                </g>
+                <text x="510" y="154" class="sheet-size-title" font-size="9.5">5/8" Type X Fire-Rated</text>
+                <text x="510" y="167" class="sheet-size-desc">Ceilings &amp; fire barriers · 24" OC</text>
+                <text x="510" y="180" class="sheet-size-desc">Glass fiber reinforced core</text>
+                <text x="510" y="194" class="sheet-size-desc" fill="#A78BFA">1-Hour fire barrier rating</text>
+              </svg>
+            </div>
+          </div>
 
           <div class="data-table-wrapper">
             <table class="data-table" aria-label="Drywall Sheet Sizes and Surface Coverage Specifications">

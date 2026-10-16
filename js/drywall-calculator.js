@@ -57,7 +57,11 @@
 
     // Actions
     btnPrint: document.getElementById('btn-print-takeoff'),
-    btnCopy: document.getElementById('btn-copy-takeoff')
+    btnCopy: document.getElementById('btn-copy-takeoff'),
+
+    // Visual Summary Panel
+    summarySvg: document.getElementById('summaryDrywallSvg'),
+    summaryCaption: document.getElementById('summaryDrywallCaption')
   };
 
   // --- CALCULATION LOGIC ---
@@ -357,6 +361,173 @@
     }
 
     renderBlueprint(data);
+    renderSummaryDiagram(data);
+  }
+
+  // --- COMPACT VISUAL RESULTS SUMMARY (PANEL LAYOUT DIAGRAM) ---
+  function renderSummaryDiagram(data) {
+    if (!el.summarySvg) return;
+
+    const svg = el.summarySvg;
+    svg.innerHTML = '';
+    const ns = 'http://www.w3.org/2000/svg';
+
+    function create(name, attrs, text) {
+      const node = document.createElementNS(ns, name);
+      for (const [k, v] of Object.entries(attrs)) {
+        node.setAttribute(k, v);
+      }
+      if (text !== undefined) node.textContent = text;
+      return node;
+    }
+
+    const lengthFt = data.lengthFt;
+    const heightFt = data.heightFt;
+
+    // Available diagram area: 340w x 100h
+    // Keep margins for labels at top and bottom
+    const maxW = 310;
+    const maxH = 50;
+    const scale = Math.min(maxW / lengthFt, maxH / heightFt);
+    const wallW = Math.max(120, Math.min(maxW, lengthFt * scale));
+    const wallH = Math.max(28, Math.min(maxH, heightFt * scale));
+    const wallX = Math.round((340 - wallW) / 2);
+    const wallY = Math.round(20 + (maxH - wallH) / 2);
+
+    // Wall Background
+    svg.appendChild(create('rect', {
+      x: wallX, y: wallY, width: wallW, height: wallH,
+      rx: '2', fill: 'rgba(15, 23, 42, 0.4)',
+      stroke: 'var(--border-color)', 'stroke-width': '1.2'
+    }));
+
+    // Panel sheet dimension (4x8, 4x10, or 4x12)
+    const sheetLengthFt = data.panelSize === '4x10' ? 10 : (data.panelSize === '4x12' ? 12 : 8);
+    const isVert = (data.orientation === 'vertical');
+
+    // Tiling clip path
+    const clipId = 'drywall-wall-clip';
+    let defs = svg.querySelector('defs');
+    if (!defs) {
+      defs = create('defs', {});
+      svg.appendChild(defs);
+    }
+    const clipPath = create('clipPath', { id: clipId });
+    clipPath.appendChild(create('rect', {
+      x: wallX, y: wallY, width: wallW, height: wallH, rx: '2'
+    }));
+    defs.appendChild(clipPath);
+
+    const tiledGroup = create('g', { 'clip-path': `url(#${clipId})` });
+
+    if (isVert) {
+      // Vertical hanging: sheets placed vertically (4ft wide columns)
+      const colWidthPx = (4 / lengthFt) * wallW;
+      const numCols = Math.ceil(lengthFt / 4);
+
+      for (let c = 0; c < numCols; c++) {
+        const cx = wallX + (c * colWidthPx);
+        tiledGroup.appendChild(create('rect', {
+          x: cx, y: wallY, width: colWidthPx, height: wallH,
+          fill: (c % 2 === 0) ? 'rgba(0, 240, 255, 0.08)' : 'rgba(139, 92, 246, 0.08)',
+          stroke: '#00F0FF', 'stroke-width': '0.75', 'stroke-opacity': '0.7'
+        }));
+      }
+    } else {
+      // Horizontal hanging: staggered courses (standard practice)
+      const rowHeightPx = (4 / heightFt) * wallH;
+      const numRows = Math.ceil(heightFt / 4);
+      const sheetLengthPx = (sheetLengthFt / lengthFt) * wallW;
+
+      for (let r = 0; r < numRows; r++) {
+        // Stack from bottom up
+        const ry = wallY + wallH - ((r + 1) * rowHeightPx);
+        // Stagger odd courses by half a sheet length
+        const staggerOffset = (r % 2 === 1) ? (sheetLengthPx * 0.5) : 0;
+        const startX = wallX - staggerOffset;
+        const numSheetsInRow = Math.ceil((wallW + staggerOffset) / sheetLengthPx) + 1;
+
+        for (let s = 0; s < numSheetsInRow; s++) {
+          const sx = startX + (s * sheetLengthPx);
+          tiledGroup.appendChild(create('rect', {
+            x: sx, y: ry, width: sheetLengthPx, height: rowHeightPx,
+            fill: ((r + s) % 2 === 0) ? 'rgba(0, 240, 255, 0.09)' : 'rgba(139, 92, 246, 0.08)',
+            stroke: '#00F0FF', 'stroke-width': '0.75', 'stroke-opacity': '0.75'
+          }));
+          // Add subtle tapered joint line
+          tiledGroup.appendChild(create('line', {
+            x1: sx + 2, y1: ry + rowHeightPx, x2: sx + sheetLengthPx - 2, y2: ry + rowHeightPx,
+            stroke: '#8B5CF6', 'stroke-width': '0.6', opacity: '0.6'
+          }));
+        }
+      }
+    }
+
+    svg.appendChild(tiledGroup);
+
+    // Openings (doors & windows cutouts)
+    if (state.doors > 0 && wallW > 80) {
+      const doorW = Math.min(wallW * 0.22, 30);
+      const doorH = wallH * 0.86;
+      const doorX = wallX + (wallW * 0.22);
+      const doorY = wallY + wallH - doorH;
+
+      svg.appendChild(create('rect', {
+        x: doorX, y: doorY, width: doorW, height: doorH,
+        fill: 'rgba(6, 7, 20, 0.85)', stroke: '#F97316',
+        'stroke-width': '1', 'stroke-dasharray': '2 2'
+      }));
+      svg.appendChild(create('text', {
+        x: doorX + (doorW / 2), y: doorY + (doorH / 2) + 3,
+        fill: '#F97316', 'font-size': '7', 'font-weight': '700',
+        'text-anchor': 'middle', 'font-family': 'Inter, sans-serif'
+      }, 'DOOR'));
+    }
+
+    if (state.windows > 0 && wallW > 120) {
+      const winW = Math.min(wallW * 0.18, 26);
+      const winH = wallH * 0.45;
+      const winX = wallX + (wallW * 0.65);
+      const winY = wallY + (wallH * 0.18);
+
+      svg.appendChild(create('rect', {
+        x: winX, y: winY, width: winW, height: winH,
+        fill: 'rgba(6, 7, 20, 0.85)', stroke: '#38BDF8',
+        'stroke-width': '1', 'stroke-dasharray': '2 2'
+      }));
+      svg.appendChild(create('text', {
+        x: winX + (winW / 2), y: winY + (winH / 2) + 3,
+        fill: '#38BDF8', 'font-size': '7', 'font-weight': '700',
+        'text-anchor': 'middle', 'font-family': 'Inter, sans-serif'
+      }, 'WIN'));
+    }
+
+    // Top Labels
+    svg.appendChild(create('text', {
+      x: wallX, y: 13,
+      fill: 'var(--text-main)', 'font-size': '8', 'font-weight': '700',
+      'font-family': 'Outfit, sans-serif'
+    }, `${lengthFt}' L × ${heightFt}' H (${data.panelSize} ft Sheets)`));
+
+    svg.appendChild(create('text', {
+      x: wallX + wallW, y: 13,
+      fill: 'var(--brand-primary)', 'font-size': '8', 'font-weight': '700',
+      'text-anchor': 'end', 'font-family': 'Inter, sans-serif'
+    }, `${data.totalSheets} Sheets to Order`));
+
+    // Bottom Note (Screws & Joint Compound Mud totals beside it)
+    const botY = Math.min(94, wallY + wallH + 13);
+    svg.appendChild(create('text', {
+      x: 170, y: botY,
+      fill: '#94A3B8', 'font-size': '7.5', 'font-weight': '600',
+      'text-anchor': 'middle', 'font-family': 'Inter, sans-serif'
+    }, `Screws: ${data.drywallScrewsLbs} lbs · Mud: ${data.mudBuckets} Buckets (4.5 gal) · 3 Coats`));
+
+    // Update Summary Caption
+    if (el.summaryCaption) {
+      const scopeNote = data.calcScope === 'walls-ceiling' ? ' (Walls + Ceiling)' : ' (Walls)';
+      el.summaryCaption.innerHTML = `<strong>${lengthFt}' × ${heightFt}' Drywall Layout${scopeNote}:</strong> ${data.totalSheets} Sheets (${data.panelSize} ft) · ${data.drywallScrewsLbs} lbs Screws · ${data.mudBuckets} Buckets Mud (3 Coats)`;
+    }
   }
 
   // --- ATTACH EVENT LISTENERS ---
@@ -549,7 +720,9 @@ Generated on WallCalculator.app/drywall-calculator
     });
 
     window.addEventListener('resize', () => {
-      renderBlueprint(calculateDrywall());
+      const currentData = calculateDrywall();
+      renderBlueprint(currentData);
+      renderSummaryDiagram(currentData);
     });
   }
 
