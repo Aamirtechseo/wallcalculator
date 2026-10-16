@@ -387,7 +387,29 @@ a{color:inherit;text-decoration:none}
 .footer-col a{font-size:0.875rem;color:var(--text-muted);transition:var(--transition)}
 .footer-col a:hover{color:var(--brand-primary)}
 .footer-bottom{border-top:1px solid var(--border-color);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.825rem;color:var(--text-dim)}
-  </style>
+  
+/* HERO TOC */
+.hero-toc-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.15rem 1.25rem;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--shadow-lg);margin-top:1.25rem;transition:var(--transition)}
+[data-theme="light"] .hero-toc-card{background:#FFFFFF;border-color:rgba(15,23,42,0.12);box-shadow:0 4px 16px rgba(15,23,42,0.06)}
+.hero-toc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border-color)}
+.hero-toc-title{display:flex;align-items:center;gap:0.45rem;font-family:'Outfit',sans-serif;font-size:0.825rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand-primary)}
+[data-theme="light"] .hero-toc-title{color:#0284C7}
+.hero-toc-badge{font-size:0.7rem;font-weight:600;color:var(--text-dim);background:var(--bg-input);padding:0.15rem 0.5rem;border-radius:var(--radius-full);border:1px solid var(--border-color)}
+.hero-toc-nav{display:flex;flex-direction:column;gap:0.25rem}
+.hero-toc-link{display:flex;align-items:center;gap:0.5rem;font-size:0.825rem;font-weight:500;color:var(--text-muted);padding:0.35rem 0.55rem;border-radius:var(--radius-sm);transition:var(--transition);text-decoration:none}
+.hero-toc-link:hover{color:var(--brand-primary);background:rgba(0,240,255,0.08);transform:translateX(3px)}
+[data-theme="light"] .hero-toc-link:hover{color:#0284C7;background:rgba(2,132,199,0.08)}
+.hero-toc-bullet{width:6px;height:6px;border-radius:50%;background:var(--brand-accent);flex-shrink:0}
+.hero-toc-toggle{display:none;width:100%;align-items:center;justify-content:space-between;background:none;border:none;padding:0;cursor:pointer;color:inherit;font:inherit}
+@media (max-width:768px){
+  .hero-toc-header{display:none}
+  .hero-toc-toggle{display:flex}
+  .hero-toc-nav{display:none;padding-top:0.75rem;margin-top:0.5rem;border-top:1px solid var(--border-color)}
+  .hero-toc-card.open .hero-toc-nav{display:flex}
+  .hero-toc-card.open .chevron{transform:rotate(180deg)}
+}
+
+</style>
 </head>
 <body>
 
@@ -457,6 +479,59 @@ a{color:inherit;text-decoration:none}
               <span><strong>Reinforcement &amp; Base Takeoffs:</strong> Accounts for subbase gravel depth and rebar grid layout per ACI standards.</span>
             </div>
           </div>
+
+            <!-- Table of Contents & Quick Navigation -->
+            <div class="hero-toc-card" id="hero-toc-card">
+              <button class="hero-toc-toggle" id="heroTocToggle" type="button" aria-expanded="false" aria-label="Toggle Table of Contents">
+                <span class="hero-toc-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+                  Table of Contents: Quick Navigation
+                </span>
+                <span class="chevron">&#9662;</span>
+              </button>
+              <div class="hero-toc-header">
+                <span class="hero-toc-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+                  Table of Contents
+                </span>
+                <span class="hero-toc-badge">Quick Index</span>
+              </div>
+              <nav class="hero-toc-nav" id="heroTocNav" aria-label="Page Table of Contents">
+                <a href="#toc-calculate-volume" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>How to Calculate Concrete Slab Volume</span>
+                </a>
+                <a href="#toc-cost-guide" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>Concrete Slab Cost Guide 2026</span>
+                </a>
+                <a href="#toc-bags-needed" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>How Many Bags of Concrete Do I Need</span>
+                </a>
+                <a href="#toc-thickness-guide" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>Slab Thickness Guide &amp; Code Spans</span>
+                </a>
+                <a href="#toc-slab-footings" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>Slab + Footings for Metal Buildings</span>
+                </a>
+                <a href="#toc-diy-vs-readymix" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>DIY Bags vs Ready-Mix Delivery</span>
+                </a>
+                <a href="#toc-conclusion" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>Conclusion: Pour Accurately</span>
+                </a>
+                <a href="#toc-faqs" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>Frequently Asked Questions (12)</span>
+                </a>
+              </nav>
+            </div>
+
         </div>
 
         <!-- Right Column: Interactive Tool Card -->
@@ -1527,6 +1602,16 @@ a{color:inherit;text-decoration:none}
     if (printBtn) {
       printBtn.addEventListener('click', function() {
         window.print();
+      });
+    }
+
+    
+    // Mobile TOC Toggle
+    var tocToggle = document.getElementById('heroTocToggle');
+    var tocCard = document.getElementById('hero-toc-card');
+    if (tocToggle && tocCard) {
+      tocToggle.addEventListener('click', function() {
+        tocCard.classList.toggle('open');
       });
     }
 
