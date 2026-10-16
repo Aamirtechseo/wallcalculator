@@ -288,6 +288,26 @@ a{color:inherit;text-decoration:none}
 .calc-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.28);color:var(--brand-primary);padding:0.25rem 0.65rem;border-radius:var(--radius-full, 9999px);font-size:0.75rem;font-weight:700;letter-spacing:0.02em}
 [data-theme="light"] .calc-badge{background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.28);color:#0284C7}
 .calc-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.6)}
+
+/* VISUAL RESULTS SUMMARY PANEL */
+.visual-summary-panel{background:var(--bg-input);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:0.85rem;margin-bottom:1.15rem;display:flex;flex-direction:column;gap:0.5rem}
+.summary-diagram-wrap{width:100%;display:flex;justify-content:center;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);padding:0.4rem;overflow:hidden}
+.summary-caption{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-align:center;line-height:1.4}
+.summary-caption strong{color:var(--brand-primary)}
+[data-theme="light"] .summary-caption strong{color:#0284C7}
+
+/* MATERIAL COMPARISON DIAGRAM */
+.material-comparison-wrapper{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.25rem;margin:1.75rem 0;overflow:hidden}
+.material-comparison-header{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text-main);margin-bottom:0.85rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+.material-comparison-badge{font-size:0.75rem;font-weight:600;color:var(--brand-primary);background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.25);padding:0.2rem 0.6rem;border-radius:var(--radius-full, 9999px)}
+[data-theme="light"] .material-comparison-badge{color:#0284C7;background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.25)}
+.material-comparison-container{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.material-comparison-svg{width:100%;min-width:620px;height:auto;display:block}
+.comparison-title{font-family:'Outfit',sans-serif;font-size:11.5px;font-weight:700;fill:var(--text-main)}
+.comparison-desc{font-family:'Inter',sans-serif;font-size:9px;font-weight:500;fill:var(--text-muted)}
+.comparison-dim{font-family:'Inter',sans-serif;font-size:8.5px;font-weight:700;fill:var(--brand-primary)}
+[data-theme="light"] .comparison-dim{fill:#0284C7}
+.comparison-badge-text{font-family:'Inter',sans-serif;font-size:8.5px;font-weight:700}
   </style>
 </head>
 <body>
@@ -577,6 +597,18 @@ a{color:inherit;text-decoration:none}
                     <span class="takeoff-label">Wall Face Area</span>
                     <span class="takeoff-val" id="rw-result-area">80 ft&#178;</span>
                     <span class="takeoff-sub">Length x Height</span>
+                  </div>
+                </div>
+
+                <!-- Compact Visual Results Summary: Labeled Retaining Wall Cross-Section Diagram -->
+                <div class="visual-summary-panel" id="visualSummaryPanel">
+                  <div class="summary-diagram-wrap">
+                    <svg id="summaryRwSvg" viewBox="0 0 340 100" preserveAspectRatio="xMidYMid meet" style="width:100%;max-width:340px;height:100px;">
+                      <!-- Labeled cross-section elevation rendered live by JS -->
+                    </svg>
+                  </div>
+                  <div class="summary-caption" id="summaryRwCaption">
+                    <!-- Dynamic summary caption rendered by JS -->
                   </div>
                 </div>
 
@@ -987,6 +1019,98 @@ a{color:inherit;text-decoration:none}
             <p>
               Homeowners frequently weigh treated landscape timbers against concrete blocks when designing residential grade transitions. Understanding the engineering trade-offs between materials ensures you pick the right system for your landscape:
             </p>
+
+            <!-- Material Comparison Diagram: Wood Timbers vs Concrete Blocks -->
+            <div class="material-comparison-wrapper">
+              <div class="material-comparison-header">
+                <span>Wood Timbers vs Concrete Segmental Blocks: Cross-Section Comparison</span>
+                <span class="material-comparison-badge">Structural Anatomy</span>
+              </div>
+              <div class="material-comparison-container">
+                <svg viewBox="0 0 660 215" class="material-comparison-svg" aria-label="Wood Timber Retaining Wall vs Concrete Block Retaining Wall Cross-Section Comparison">
+                  <!-- LEFT PANEL: WOOD TIMBERS -->
+                  <rect x="10" y="10" width="310" height="195" rx="8" fill="rgba(245,158,11,0.03)" stroke="var(--border-color)" stroke-width="1"/>
+                  <text x="25" y="30" class="comparison-title">Pressure-Treated Wood Timbers</text>
+                  <text x="305" y="30" text-anchor="end" class="comparison-badge-text" fill="#F59E0B">10-20 Yr Lifespan</text>
+
+                  <!-- Ground & Base Trench -->
+                  <rect x="35" y="142" width="120" height="14" rx="2" fill="rgba(2,132,199,0.25)" stroke="#0284C7" stroke-width="0.8"/>
+                  <text x="95" y="152" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7.5" font-weight="600" fill="#38BDF8">Gravel Base Trench</text>
+
+                  <!-- Retained Soil -->
+                  <polygon points="125,50 295,38 295,142 125,142" fill="rgba(148,163,184,0.1)" stroke="rgba(148,163,184,0.25)" stroke-width="0.8"/>
+                  <text x="210" y="85" text-anchor="middle" font-family="'Inter',sans-serif" font-size="8" fill="rgba(248,250,252,0.4)">Retained Soil</text>
+
+                  <!-- Drainage Gravel Column -->
+                  <rect x="82" y="58" width="43" height="84" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.4)" stroke-width="0.8" stroke-dasharray="2 2"/>
+                  <circle cx="103" cy="132" r="4.5" fill="none" stroke="#00F0FF" stroke-width="1.2" stroke-dasharray="2 1"/>
+                  <text x="103" y="95" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7.5" fill="#10B981">Drainage</text>
+
+                  <!-- Timber Stack (6x6 courses) -->
+                  <rect x="55" y="50" width="26" height="16" rx="1" fill="rgba(217,119,6,0.35)" stroke="#D97706" stroke-width="1"/>
+                  <rect x="55" y="67" width="26" height="16" rx="1" fill="rgba(217,119,6,0.35)" stroke="#D97706" stroke-width="1"/>
+                  <rect x="55" y="84" width="26" height="16" rx="1" fill="rgba(217,119,6,0.35)" stroke="#D97706" stroke-width="1"/>
+                  <rect x="55" y="101" width="26" height="16" rx="1" fill="rgba(217,119,6,0.35)" stroke="#D97706" stroke-width="1"/>
+                  <rect x="55" y="118" width="26" height="16" rx="1" fill="rgba(217,119,6,0.35)" stroke="#D97706" stroke-width="1"/>
+
+                  <!-- Deadman Tieback Timber extending into hillside -->
+                  <rect x="81" y="84" width="65" height="16" rx="1" fill="rgba(217,119,6,0.25)" stroke="#D97706" stroke-width="0.8" stroke-dasharray="3 2"/>
+                  <text x="113" y="94" text-anchor="middle" font-family="'Inter',sans-serif" font-size="6.5" font-weight="700" fill="#F59E0B">Deadman</text>
+
+                  <!-- Vertical Rebar Spike Line through timbers -->
+                  <line x1="68" y1="46" x2="68" y2="146" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4 2"/>
+                  <polygon points="66,46 68,40 70,46" fill="#EF4444"/>
+
+                  <!-- Timber Labels -->
+                  <text x="25" y="172" class="comparison-desc"><strong>Material:</strong> 6x6 pressure-treated timbers + 1/2" rebar spikes.</text>
+                  <text x="25" y="187" class="comparison-desc"><strong>Pros/Cons:</strong> Low upfront cost · Rot-prone organic wood.</text>
+                  <text x="25" y="199" class="comparison-dim" fill="#F59E0B">Best for decorative garden beds under 3 ft</text>
+
+                  <!-- RIGHT PANEL: CONCRETE BLOCKS (SRW) -->
+                  <rect x="340" y="10" width="310" height="195" rx="8" fill="rgba(0,240,255,0.03)" stroke="var(--border-color)" stroke-width="1"/>
+                  <text x="355" y="30" class="comparison-title">Segmental Concrete Blocks (SRW)</text>
+                  <text x="635" y="30" text-anchor="end" class="comparison-badge-text" fill="#00F0FF">50-100+ Yr Lifespan</text>
+
+                  <!-- Compacted Leveling Pad -->
+                  <rect x="365" y="142" width="135" height="14" rx="2" fill="rgba(2,132,199,0.35)" stroke="#0284C7" stroke-width="1"/>
+                  <text x="432" y="152" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7.5" font-weight="600" fill="#38BDF8">Crushed Stone Leveling Pad</text>
+
+                  <!-- Retained Soil -->
+                  <polygon points="475,44 635,34 635,142 475,142" fill="rgba(148,163,184,0.1)" stroke="rgba(148,163,184,0.25)" stroke-width="0.8"/>
+                  <text x="555" y="85" text-anchor="middle" font-family="'Inter',sans-serif" font-size="8" fill="rgba(248,250,252,0.4)">Retained Soil</text>
+
+                  <!-- 12" Drainage Gravel Column -->
+                  <rect x="432" y="50" width="44" height="92" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.5)" stroke-width="0.8" stroke-dasharray="2 2"/>
+                  <circle cx="454" cy="132" r="4.5" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="2 1"/>
+                  <text x="454" y="92" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7.5" font-weight="600" fill="#10B981">12" Stone</text>
+
+                  <!-- Geogrid reinforcement layer extending into soil -->
+                  <line x1="400" y1="94" x2="590" y2="94" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="3 2"/>
+                  <text x="535" y="91" text-anchor="middle" font-family="'Inter',sans-serif" font-size="6.5" font-weight="700" fill="#38BDF8">Geogrid Grid</text>
+
+                  <!-- Block Courses with Rear Setback Batter -->
+                  <!-- Capstone -->
+                  <rect x="395" y="42" width="28" height="8" rx="1.5" fill="rgba(249,115,22,0.65)" stroke="#F97316" stroke-width="1"/>
+                  <!-- Courses with 1.5px setback step -->
+                  <rect x="396" y="51" width="25" height="17" rx="1" fill="rgba(139,92,246,0.35)" stroke="#8B5CF6" stroke-width="1"/>
+                  <rect x="394" y="69" width="25" height="17" rx="1" fill="rgba(139,92,246,0.35)" stroke="#8B5CF6" stroke-width="1"/>
+                  <rect x="392" y="87" width="25" height="17" rx="1" fill="rgba(139,92,246,0.35)" stroke="#8B5CF6" stroke-width="1"/>
+                  <rect x="390" y="105" width="25" height="17" rx="1" fill="rgba(139,92,246,0.35)" stroke="#8B5CF6" stroke-width="1"/>
+                  <rect x="388" y="123" width="25" height="17" rx="1" fill="rgba(139,92,246,0.35)" stroke="#8B5CF6" stroke-width="1"/>
+
+                  <!-- Rear Setback Pin/Lip Indicator -->
+                  <line x1="418" y1="51" x2="424" y2="51" stroke="#00F0FF" stroke-width="1.5"/>
+                  <line x1="416" y1="69" x2="422" y2="69" stroke="#00F0FF" stroke-width="1.5"/>
+                  <line x1="414" y1="87" x2="420" y2="87" stroke="#00F0FF" stroke-width="1.5"/>
+
+                  <!-- Block Labels -->
+                  <text x="355" y="172" class="comparison-desc"><strong>Material:</strong> Interlocking dry-stack concrete units + capstone.</text>
+                  <text x="355" y="187" class="comparison-desc"><strong>Pros/Cons:</strong> Zero rot, permanent · Higher initial material cost.</text>
+                  <text x="355" y="199" class="comparison-dim" fill="var(--brand-primary)">Engineered standard for residential walls 3-6 ft</text>
+                </svg>
+              </div>
+            </div>
+
             <p>
               <strong>Pressure-Treated Wood Timbers (6x6 or 4x6):</strong> Wood timber walls offer the lowest upfront material costs and straightforward installation for solo DIYers using a chainsaw, drilling auger, and steel rebar spikes. However, wood is an organic material subject to eventual moisture rot, termite damage, and warping, giving timber walls a limited lifespan of 10 to 20 years. Timbers are best suited for small landscape tiers under 3 to 4 feet in well-drained soils.
             </p>
@@ -1189,6 +1313,138 @@ a{color:inherit;text-decoration:none}
       document.getElementById('rw-cost-mortar').textContent = '$' + Math.round(cMortar).toLocaleString();
 
       drawBP(len, ht, courses, drainFt, spec, bpc);
+      renderSummaryDiagram(len, ht, courses, totalBlocks, caps, gravelTons, drainIn);
+    }
+
+    // --- COMPACT VISUAL RESULTS SUMMARY (CROSS-SECTION DIAGRAM) ---
+    var summaryRwSvg = document.getElementById('summaryRwSvg');
+    var summaryRwCaption = document.getElementById('summaryRwCaption');
+
+    function renderSummaryDiagram(len, ht, courses, totalBlocks, caps, gravelTons, drainIn) {
+      if (!summaryRwSvg) return;
+      summaryRwSvg.innerHTML = '';
+      var ns = 'http://www.w3.org/2000/svg';
+
+      function createEl(tag, attrs, txt) {
+        var el = document.createElementNS(ns, tag);
+        Object.keys(attrs).forEach(function(k) { el.setAttribute(k, attrs[k]); });
+        if (txt !== undefined) el.textContent = txt;
+        return el;
+      }
+
+      var padBottom = 82;
+      var padTop = 22;
+
+      // 1. Gravel Base Layer (compacted trench footing)
+      var baseX = 70;
+      var baseY = padBottom - 2;
+      var baseW = 195;
+      var baseH = 8;
+      summaryRwSvg.appendChild(createEl('rect', {
+        x: baseX, y: baseY, width: baseW, height: baseH,
+        rx: '1.5', fill: 'rgba(2, 132, 199, 0.4)', stroke: '#0284C7', 'stroke-width': '0.8'
+      }));
+      summaryRwSvg.appendChild(createEl('text', {
+        x: baseX + 4, y: baseY + 6.5,
+        fill: '#38BDF8', 'font-size': '6.5', 'font-weight': '700', 'font-family': 'Inter, sans-serif'
+      }, 'Gravel Base Layer'));
+
+      // 2. Retained Soil Fill (sloping background on right)
+      var soilX = 145;
+      summaryRwSvg.appendChild(createEl('polygon', {
+        points: soilX + ',40 280,24 280,' + baseY + ' ' + soilX + ',' + baseY,
+        fill: 'rgba(148, 163, 184, 0.1)', stroke: 'rgba(148, 163, 184, 0.25)', 'stroke-width': '0.8'
+      }));
+      summaryRwSvg.appendChild(createEl('text', {
+        x: 212, y: 55, 'text-anchor': 'middle',
+        fill: 'rgba(248, 250, 252, 0.4)', 'font-size': '7.5', 'font-family': 'Inter, sans-serif'
+      }, 'Retained Soil'));
+
+      // 3. Drainage Zone (gravel column behind block stack)
+      var drainX = 118;
+      var drainW = 32;
+      var drainH = baseY - 26;
+      summaryRwSvg.appendChild(createEl('rect', {
+        x: drainX, y: 26, width: drainW, height: drainH,
+        fill: 'rgba(16, 185, 129, 0.15)', stroke: 'rgba(16, 185, 129, 0.5)',
+        'stroke-width': '0.8', 'stroke-dasharray': '2 2'
+      }));
+      for (var gx = drainX + 4; gx < drainX + drainW - 3; gx += 7) {
+        for (var gy = 32; gy < baseY - 8; gy += 7) {
+          summaryRwSvg.appendChild(createEl('circle', {
+            cx: gx + ((gy % 2 === 0) ? 0 : 3.5), cy: gy, r: '1.5', fill: 'rgba(16, 185, 129, 0.7)'
+          }));
+        }
+      }
+      summaryRwSvg.appendChild(createEl('circle', {
+        cx: drainX + 16, cy: baseY - 6, r: '4.5',
+        fill: 'none', stroke: '#00F0FF', 'stroke-width': '1.2', 'stroke-dasharray': '2 1'
+      }));
+      summaryRwSvg.appendChild(createEl('text', {
+        x: drainX + 16, y: 24, 'text-anchor': 'middle',
+        fill: '#10B981', 'font-size': '6.5', 'font-weight': '700', 'font-family': 'Inter, sans-serif'
+      }, 'Drainage'));
+
+      // 4. Block Courses with Batter/Setback
+      var courseCount = Math.max(2, Math.min(10, courses));
+      var capH = 5;
+      var stackH = baseY - 26 - capH;
+      var courseH = stackH / courseCount;
+      var blockW = 22;
+
+      // Capstone on top
+      var topBlockX = 96 + (courseCount * 1.2);
+      summaryRwSvg.appendChild(createEl('rect', {
+        x: topBlockX - 3, y: 26, width: blockW + 6, height: capH,
+        rx: '1', fill: 'rgba(249, 115, 22, 0.7)', stroke: '#F97316', 'stroke-width': '0.8'
+      }));
+      summaryRwSvg.appendChild(createEl('text', {
+        x: topBlockX + (blockW / 2), y: 24, 'text-anchor': 'middle',
+        fill: '#F97316', 'font-size': '6.5', 'font-weight': '700', 'font-family': 'Inter, sans-serif'
+      }, 'Cap Block'));
+
+      // Stacked block courses
+      for (var c = 0; c < courseCount; c++) {
+        var cy = 26 + capH + (c * courseH);
+        var bx = 96 + ((courseCount - c) * 1.2);
+        summaryRwSvg.appendChild(createEl('rect', {
+          x: bx, y: cy, width: blockW, height: courseH - 0.75,
+          rx: '0.8', fill: 'rgba(139, 92, 246, 0.35)', stroke: '#8B5CF6', 'stroke-width': '0.75'
+        }));
+      }
+
+      // Downhill finished grade line on left
+      var gradeY = baseY - (courseH * 1.2);
+      summaryRwSvg.appendChild(createEl('line', {
+        x1: 45, y1: gradeY, x2: 96 + (courseCount * 1.2), y2: gradeY,
+        stroke: 'rgba(148, 163, 184, 0.7)', 'stroke-width': '1', 'stroke-dasharray': '3 2'
+      }));
+      summaryRwSvg.appendChild(createEl('text', {
+        x: 48, y: gradeY - 3,
+        fill: 'rgba(148, 163, 184, 0.75)', 'font-size': '6.5', 'font-family': 'Inter, sans-serif'
+      }, 'Grade'));
+
+      // 5. Top & Bottom Labels
+      summaryRwSvg.appendChild(createEl('text', {
+        x: 14, y: 13,
+        fill: 'var(--text-main)', 'font-size': '8', 'font-weight': '700', 'font-family': 'Outfit, sans-serif'
+      }, Math.round(len) + "' L × " + ht.toFixed(1) + "' H Wall (" + courses + " Courses)"));
+
+      summaryRwSvg.appendChild(createEl('text', {
+        x: 326, y: 13,
+        fill: 'var(--brand-primary)', 'font-size': '8', 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'Inter, sans-serif'
+      }, totalBlocks + ' Blocks · ' + gravelTons.toFixed(1) + ' T Gravel'));
+
+      // Bottom Note
+      summaryRwSvg.appendChild(createEl('text', {
+        x: 170, y: 95, 'text-anchor': 'middle',
+        fill: '#94A3B8', 'font-size': '7.5', 'font-weight': '600', 'font-family': 'Inter, sans-serif'
+      }, 'Gravel Base · ' + drainIn + '" Drainage Zone · ' + caps + ' Capstones'));
+
+      // 6. Summary Caption
+      if (summaryRwCaption) {
+        summaryRwCaption.innerHTML = '<strong>' + Math.round(len) + "' × " + ht.toFixed(1) + "' Retaining Cross-Section:</strong> " + totalBlocks + ' Blocks (' + courses + ' Courses) · ' + caps + ' Capstones · ' + gravelTons.toFixed(1) + ' Tons Gravel (' + drainIn + '" Backfill)';
+      }
     }
 
     function drawBP(len, ht, courses, drainFt, spec, bpc) {
@@ -1361,6 +1617,8 @@ a{color:inherit;text-decoration:none}
         });
       });
     }
+
+    window.addEventListener('resize', calc);
 
     calc();
   })();
