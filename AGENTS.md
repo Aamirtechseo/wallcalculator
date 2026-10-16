@@ -118,6 +118,7 @@ To prevent Google from splitting link equity and ranking signals, each URL owns 
 | **`/deck-calculator`** | `Deck Material Calculator` | 1,300/mo | **27%** | Joist framing, ledger boards, deck boards, footings & hardware | **Locked: October 23, 2026** (+7 days) |
 
 * **Clean URLs Lock:** All URLs and canonical tags must be extensionless (e.g. `/cinder-block-calculator`, never `.html`).
+* **Strictly No-Trailing-Slash Lock (LOCKED):** All internal links, companion cards, header navigation, and canonical tags MUST omit the trailing slash (e.g. `https://wallcalculator.app/concrete-slab-calculator`, NEVER with a trailing slash `/`).
 * **Cannibalization Lock:** The homepage will NEVER target `wall stud calculator` as primary keyword. Child pages will NEVER target `wall calculator` as primary keyword. `/cinder-block-calculator` covers both cinder block and block wall queries in a single authoritative page.
 
 ---
