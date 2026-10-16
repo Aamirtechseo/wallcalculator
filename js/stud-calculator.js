@@ -40,6 +40,8 @@
     wasteValDisplay: document.getElementById('waste-val-display'),
     studPriceInput: document.getElementById('stud-price-input'),
     svgBlueprint: document.getElementById('blueprint-svg'),
+    summarySvg: document.getElementById('summaryStudSvg'),
+    summaryCaption: document.getElementById('summaryStudCaption'),
 
     // Outputs
     valTotalStuds: document.getElementById('takeoff-total-studs'),
@@ -315,6 +317,143 @@
     }
 
     renderBlueprint(data);
+
+    // Render Compact Visual Results Summary
+    renderSummaryDiagram(data);
+  }
+
+  // --- RENDER COMPACT VISUAL RESULTS SUMMARY DIAGRAM ---
+  function renderSummaryDiagram(data) {
+    if (!el.summarySvg) return;
+    const svg = el.summarySvg;
+    svg.innerHTML = '';
+    const ns = 'http://www.w3.org/2000/svg';
+
+    const W = 340, H = 100;
+    const padX = 14, padY = 16;
+    const wallW = W - (padX * 2);
+    const wallH = H - (padY * 2);
+    const wallX = padX;
+    const wallY = padY;
+
+    const create = (tag, attrs, text) => {
+      const elem = document.createElementNS(ns, tag);
+      Object.keys(attrs).forEach(k => elem.setAttribute(k, attrs[k]));
+      if (text) elem.textContent = text;
+      return elem;
+    };
+
+    // Double Top Plate
+    svg.appendChild(create('rect', {
+      x: wallX, y: wallY, width: wallW, height: 3.5,
+      fill: '#F97316', rx: '0.5'
+    }));
+    svg.appendChild(create('rect', {
+      x: wallX, y: wallY + 4, width: wallW, height: 3.5,
+      fill: '#EA580C', rx: '0.5'
+    }));
+
+    // Top Plate Label
+    svg.appendChild(create('text', {
+      x: wallX + 4, y: wallY - 4,
+      fill: '#F97316', 'font-size': '7.5', 'font-weight': '700', 'font-family': 'Inter, sans-serif'
+    }, 'Top Plate (Double)'));
+
+    // Bottom Sole Plate
+    const botY = wallY + wallH - 5;
+    svg.appendChild(create('rect', {
+      x: wallX, y: botY, width: wallW, height: 4.5,
+      fill: '#EA580C', rx: '0.5'
+    }));
+
+    // Bottom Plate Label
+    svg.appendChild(create('text', {
+      x: wallX + 4, y: botY + 12,
+      fill: '#EA580C', 'font-size': '7.5', 'font-weight': '700', 'font-family': 'Inter, sans-serif'
+    }, 'Bottom Sole Plate'));
+
+    // Studs calculation across wall width
+    const spacingInches = data.spacingInches || state.studSpacing || 16;
+    const lengthFt = data.lengthFt || 16;
+    const heightFt = data.heightFt || 8;
+    const studHeight = botY - (wallY + 8);
+    const studTopY = wallY + 8;
+
+    const approxStudCols = Math.max(4, Math.min(26, Math.round((lengthFt * 12) / spacingInches) + 1));
+    const stepX = wallW / (approxStudCols - 1);
+
+    for (let i = 0; i < approxStudCols; i++) {
+      const sx = wallX + (i * stepX);
+      const isCorner = (i === 0 || i === approxStudCols - 1);
+      svg.appendChild(create('rect', {
+        x: Math.min(wallX + wallW - 2.5, Math.max(wallX, sx - 1.25)),
+        y: studTopY,
+        width: isCorner ? 3.5 : 2.5,
+        height: studHeight,
+        fill: isCorner ? '#8B5CF6' : '#0284C7',
+        opacity: '0.85'
+      }));
+    }
+
+    // Corners indicators if corners > 0
+    if (state.corners > 0) {
+      svg.appendChild(create('circle', {
+        cx: wallX + 2, cy: studTopY + 10, r: '2.5', fill: '#8B5CF6'
+      }));
+      svg.appendChild(create('circle', {
+        cx: wallX + wallW - 2, cy: studTopY + 10, r: '2.5', fill: '#8B5CF6'
+      }));
+    }
+
+    // Openings & Header (if openings entered)
+    const hasOpenings = (state.doors > 0 || state.windows > 0);
+    if (hasOpenings) {
+      const openW = Math.min(wallW * 0.3, 56);
+      const openX = wallX + (wallW * 0.42);
+      const openH = state.doors > 0 ? studHeight : (studHeight * 0.6);
+      const openY = state.doors > 0 ? studTopY : (studTopY + (studHeight * 0.25));
+
+      // Opening dashed cutout
+      svg.appendChild(create('rect', {
+        x: openX, y: openY, width: openW, height: openH,
+        fill: 'rgba(6, 7, 20, 0.75)', stroke: '#38BDF8',
+        'stroke-width': '1', 'stroke-dasharray': '2,2'
+      }));
+
+      // Structural Header above opening
+      const headerH = 6;
+      svg.appendChild(create('rect', {
+        x: openX - 2, y: openY, width: openW + 4, height: headerH,
+        fill: '#F59E0B', stroke: '#D97706', 'stroke-width': '0.75'
+      }));
+
+      // Header Label
+      svg.appendChild(create('text', {
+        x: openX + (openW / 2), y: openY - 2.5,
+        fill: '#F59E0B', 'font-size': '7.5', 'font-weight': '700',
+        'text-anchor': 'middle', 'font-family': 'Inter, sans-serif'
+      }, 'Header'));
+    }
+
+    // Stud count & 2x4 / 2x6 lumber note
+    svg.appendChild(create('text', {
+      x: wallX + wallW - 4, y: wallY - 4,
+      fill: 'var(--brand-primary)', 'font-size': '8', 'font-weight': '700',
+      'text-anchor': 'end', 'font-family': 'Inter, sans-serif'
+    }, `${data.totalStuds} Studs (${data.lumberSize} Lumber)`));
+
+    svg.appendChild(create('text', {
+      x: wallX + wallW - 4, y: botY + 12,
+      fill: '#94A3B8', 'font-size': '7.5', 'font-weight': '600',
+      'text-anchor': 'end', 'font-family': 'Inter, sans-serif'
+    }, `${lengthFt}' L × ${heightFt}' H (${spacingInches}" OC)`));
+
+    // Update Summary Caption
+    if (el.summaryCaption) {
+      const cornerNote = state.corners > 0 ? ` · ${state.corners} Corners` : '';
+      const openingNote = hasOpenings ? ', Rough Opening Headers' : '';
+      el.summaryCaption.innerHTML = `<strong>${lengthFt}' × ${heightFt}' ${data.lumberSize} Framing:</strong> ${data.totalStuds} Total Studs (${spacingInches}" OC)${cornerNote} · Double Top Plate · Sole Plate${openingNote}`;
+    }
   }
 
   // --- EVENT LISTENERS ---
