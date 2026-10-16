@@ -41,6 +41,43 @@
         "calculate 4x8 drywall panels and mud",
         "drywall sheet and joint compound estimator"
       ]
+    },
+    {
+      "identifier": "urn:air:wallcalculator.app:tools:retaining-wall-calculator",
+      "displayName": "Retaining Wall Calculator",
+      "type": "text/html",
+      "url": "https://wallcalculator.app/retaining-wall-calculator",
+      "description": "Calculate 8x8x16 CMU concrete blocks, drainage gravel tons, capstones, and total project cost for retaining walls.",
+      "representativeQueries": [
+        "how many blocks for a retaining wall",
+        "calculate retaining wall blocks and gravel",
+        "retaining wall cost estimator"
+      ]
+    },
+    {
+      "identifier": "urn:air:wallcalculator.app:tools:cinder-block-calculator",
+      "displayName": "Cinder Block Calculator",
+      "type": "text/html",
+      "url": "https://wallcalculator.app/cinder-block-calculator",
+      "description": "Calculate 8x8x16 CMU cinder blocks, mortar bags, and core grout for structural walls and foundation stem walls.",
+      "representativeQueries": [
+        "how many cinder blocks do I need",
+        "cinder block wall calculator",
+        "CMU block and mortar estimator"
+      ]
+    },
+    {
+      "identifier": "urn:air:wallcalculator.app:tools:concrete-slab-calculator",
+      "displayName": "Concrete Slab Calculator",
+      "type": "text/html",
+      "url": "https://wallcalculator.app/concrete-slab-calculator",
+      "description": "Calculate concrete slab volume in cubic yards, cubic feet, and cubic meters, plus 40 lb, 60 lb, and 80 lb bag counts and ready-mix delivery cost.",
+      "representativeQueries": [
+        "how to calculate a concrete slab",
+        "how many bags of concrete for a 12x12 slab",
+        "how much concrete do I need for a 10x10 slab",
+        "concrete slab volume and yardage calculator"
+      ]
     }
   ]
 }
