@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Deck Material Calculator - Boards, Joists, Footings & Cost</title>
+  <meta name="title" content="Deck Material Calculator - Boards, Joists, Footings & Cost">
+  <meta name="description" content="Count boards, joists, posts and footing concrete bags with this free deck material calculator, plus railing, stairs and 2026 material cost ranges.">
+  <meta name="keywords" content="deck material calculator, free deck calculator, deck lumber calculator, wood deck material calculator, composite deck material calculator, deck material calculator square feet">
+  <link rel="canonical" href="https://wallcalculator.app/deck-calculator">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wallcalculator.app/deck-calculator">
+  <meta property="og:title" content="Deck Material Calculator - Boards, Joists, Footings & Cost">
+  <meta property="og:description" content="Count boards, joists, posts and footing concrete bags with this free deck material calculator, plus railing, stairs and 2026 material cost ranges.">
+  <meta property="og:image" content="https://wallcalculator.app/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://wallcalculator.app/deck-calculator">
+  <meta name="twitter:title" content="Deck Material Calculator - Boards, Joists, Footings & Cost">
+  <meta name="twitter:description" content="Count boards, joists, posts and footing concrete bags with this free deck material calculator, plus railing, stairs and 2026 material cost ranges.">
+  <meta name="twitter:image" content="https://wallcalculator.app/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"></noscript>
+
+  <!-- AI Agent Discovery -->
+  <link rel="alternate" type="application/json" href="/.well-known/ai-catalog.json" title="AI Agent Catalog">
+
+  <!-- JSON-LD: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Deck Material Calculator",
+    "url": "https://wallcalculator.app/deck-calculator",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "description": "Calculate deck boards, framing joists, support beams, footing concrete bags, railing, stairs, and 2026 project material costs.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Deck surface board count and linear footage estimation",
+      "Joist framing calculation at 12, 16, and 24 inches on-center",
+      "Support post, beam, and footing concrete bag takeoffs",
+      "Railing linear feet and stair stringer geometry calculation",
+      "Live 2D top-down framing blueprint visualizer",
+      "Material split results summary and 2026 cost estimates"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://wallcalculator.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Deck Material Calculator",
+        "item": "https://wallcalculator.app/deck-calculator"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much is material for a 20x20 deck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Materials for a 20x20 foot deck (400 square feet) range from $4,800 to $7,200 for standard pressure-treated wood ($12 to $18 per square foot). Cedar lumber materials cost $7,200 to $11,200, while composite decking materials average $11,200 to $18,000 including framing, fasteners, footings, and railings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to calculate deck sheet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate deck surface boards by dividing the total deck area by the effective board width in feet (nominal board width plus gap). For 5.5-inch boards with a 0.25-inch gap (5.75 inches or 0.4792 feet), multiply deck square footage by 2.087 to get total linear feet, then divide by standard board lengths (12, 16, or 20 feet) and add a 10 percent waste buffer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate how much decking I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Determine total deck area by multiplying length by width. Divide the square footage by the coverage width of your selected board plus spacing gap. Convert the result into linear feet of decking, divide by your chosen lumber length, and add 10 percent for trimming, end squaring, and defect cuts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should a 12x24 deck cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 12x24 foot deck (288 square feet) costs between $3,450 and $5,200 for DIY pressure-treated materials. Professional turnkey installation ranges from $7,200 to $14,400 for pressure-treated wood ($25 to $50 per square foot) and $10,000 to $23,000 for composite decking ($35 to $80 per square foot)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to calculate deck material?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate deck materials across four main systems: foundation (footings and concrete bags), framing (ledger, rim joists, field joists, and support beams), decking surface (linear feet of boards plus fasteners), and accessories (perimeter railing posts, balusters, and stair stringers). Using an interactive deck material calculator simplifies these interconnected calculations instantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much will a 12x12 deck cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 12x12 foot deck (144 square feet) costs roughly $1,750 to $2,600 for DIY pressure-treated lumber and hardware. Turnkey contractor installation runs between $3,500 and $8,000 for pressure-treated wood, or $5,000 to $11,500 for composite decking depending on height, railing choice, and site grading."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of a 12x16 deck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 12x16 foot deck (192 square feet) costs approximately $2,870 in DIY materials for pressure-treated lumber, framing, fasteners, concrete, and railing. Professional turnkey construction averages $7,070 (ranging from $4,800 to $9,600 for wood, or $6,700 to $15,300 for composite)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What materials are needed to build a 12x12 deck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A standard 12x12 foot deck attached to a house requires: 1 ledger board (2x8x12), 1 outer rim joist (2x8x12), 2 side rims (2x8x12), 10 field joists (2x8x12 at 16 inches on-center), 2 beam boards (2x10x12), 3 support posts (4x4 or 6x6), 3 concrete footings with 18 bags of 60 lb concrete, 23 deck boards (5/4x6x16 with 10 percent waste), structural lag screws, joist hangers, and approximately 660 deck screws."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many boards do I need for a 12x16 deck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a 12x16 foot deck (192 square feet) using standard 5.5-inch boards with a 0.25-inch gap running the 12-foot length, you need 401 linear feet of decking. When ordering 16-foot boards, this requires 26 boards before waste and 29 boards with a standard 10 percent waste buffer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should joist spacing be 12, 16 or 24 inches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use 16 inches on-center for standard perpendicular wood decking and most residential composite planks. Use 12 inches on-center if installing deck boards diagonally (45 degrees), using thinner composite boards, or building for commercial loads. Reserve 24 inches on-center strictly for heavy 2x6 wood decking installed perpendicularly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How deep should deck footings be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deck footings must extend at least 12 inches below the local frost depth established by municipal building codes to prevent frost heave. In warm southern climates, footings are typically 12 to 18 inches deep, while northern regions require depths of 36 to 48 inches or more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a permit to build a deck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most jurisdictions require a building permit if the deck is attached to the house, exceeds 200 square feet in area, or is elevated more than 30 inches above grade. Freestanding ground-level platforms under 200 square feet and under 30 inches high are frequently exempt, but property setbacks and zoning rules still apply."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WallCalculator.app",
+    "url": "https://wallcalculator.app/",
+    "logo": "https://wallcalculator.app/favicon.svg",
+    "description": "Contractor-grade framing, drywall, masonry block, concrete slab, and deck material estimating tools."
+  }
+  </script>
+
+  <style>
+:root{--brand-primary:#00F0FF;--brand-accent:#8B5CF6;--gradient-cta:linear-gradient(135deg,#00F0FF 0%,#3B82F6 45%,#8B5CF6 100%);--gradient-text:linear-gradient(135deg,#00F0FF 0%,#818CF8 50%,#C084FC 100%);--bg-body:#060714;--bg-surface:#0A0D22;--bg-card:rgba(14,18,41,0.85);--bg-card-hover:rgba(22,28,62,0.9);--bg-input:#090C1E;--border-color:rgba(139,92,246,0.22);--border-focus:#00F0FF;--text-main:#F8FAFC;--text-muted:#94A3B8;--text-dim:#64748B;--blueprint-grid:rgba(0,240,255,0.08);--shadow-lg:0 16px 40px rgba(0,0,0,0.6),0 0 30px rgba(0,240,255,0.15);--radius-sm:8px;--radius-md:12px;--radius-lg:18px;--radius-full:9999px;--transition:all 0.25s cubic-bezier(0.16,1,0.3,1)}
+[data-theme="light"]{--brand-primary:#0284C7;--brand-accent:#7C3AED;--gradient-cta:linear-gradient(135deg,#0284C7 0%,#4F46E5 50%,#7C3AED 100%);--gradient-text:linear-gradient(135deg,#0369A1 0%,#4338CA 50%,#6D28D9 100%);--bg-body:#F8FAFC;--bg-surface:#FFFFFF;--bg-card:#FFFFFF;--bg-card-hover:#F1F5F9;--bg-input:#F8FAFC;--border-color:rgba(15,23,42,0.12);--border-focus:#0284C7;--text-main:#0F172A;--text-muted:#334155;--text-dim:#64748B;--blueprint-grid:rgba(2,132,199,0.08);--shadow-lg:0 12px 32px rgba(15,23,42,0.1)}
+html{scroll-behavior:smooth;scroll-padding-top:72px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background-color:var(--bg-body);color:var(--text-main);line-height:1.6;-webkit-font-smoothing:antialiased;transition:background-color 0.3s ease,color 0.3s ease;overflow-x:hidden}
+body::before{content:'';position:absolute;top:-150px;left:20%;width:500px;height:500px;background:radial-gradient(circle,rgba(139,92,246,0.15) 0%,transparent 70%);pointer-events:none;z-index:0}
+body::after{content:'';position:absolute;top:300px;right:5%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,240,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:0}
+h1,h2,h3,h4{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-weight:700;line-height:1.25;letter-spacing:-0.02em}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1240px;margin:0 auto;padding:0 1.25rem;position:relative;z-index:1}
+
+/* NAV */
+.header-nav{position:sticky;top:0;z-index:100;background:rgba(6,7,20,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border-color);transition:background 0.3s ease}
+[data-theme="light"] .header-nav{background:rgba(255,255,255,0.85)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand-logo{display:flex;align-items:center;gap:0.75rem;font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800}
+.brand-logo svg{width:32px;height:32px}
+.brand-logo span.accent{background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.925rem;font-weight:500;color:var(--text-muted);transition:var(--transition);padding:0.4rem 0.6rem;border-radius:var(--radius-sm)}
+.nav-links a:hover,.nav-links a.active{color:var(--brand-primary);background:rgba(0,240,255,0.08)}
+[data-theme="light"] .nav-links a:hover,[data-theme="light"] .nav-links a.active{color:#0284C7;background:rgba(2,132,199,0.08)}
+.nav-actions{display:flex;align-items:center;gap:0.5rem}
+.btn-icon{background:var(--bg-card);border:1px solid var(--border-color);color:var(--text-main);width:38px;height:38px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition);font-size:1.05rem}
+.btn-icon:hover{background:var(--bg-card-hover);border-color:var(--brand-primary)}
+.mobile-menu-toggle{display:none}
+@media (max-width:768px){
+  .nav-inner{height:58px}.brand-logo{font-size:1.15rem;gap:0.5rem}.brand-logo svg{width:26px;height:26px}
+  .mobile-menu-toggle{display:flex}
+  .nav-links{position:fixed;top:58px;left:0;right:0;background:var(--bg-surface);border-bottom:1px solid var(--border-color);box-shadow:var(--shadow-lg);flex-direction:column;align-items:stretch;gap:0.35rem;padding:1rem 1.25rem 1.25rem;display:none;z-index:999}
+  .nav-links.mobile-open{display:flex;animation:menuSlideDown 0.22s ease}
+  .nav-links a{font-size:0.95rem;padding:0.75rem 0.85rem;display:block;width:100%}
+  @keyframes menuSlideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+}
+
+/* HERO */
+.hero-section{padding:3rem 0 4rem;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:2.5rem;align-items:start}
+@media (max-width:992px){.hero-section{padding:1.75rem 0 2.5rem}.hero-grid{grid-template-columns:1fr;gap:1.75rem}}
+@media (max-width:640px){.hero-section{padding:1.25rem 0 2rem}}
+.badge-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(139,92,246,0.15);color:#C084FC;border:1px solid rgba(139,92,246,0.35);padding:0.35rem 0.85rem;border-radius:var(--radius-full);font-size:0.8rem;font-weight:600;margin-bottom:1.25rem}
+[data-theme="light"] .badge-pill{background:rgba(124,58,237,0.08);color:#6D28D9;border-color:rgba(124,58,237,0.28)}
+.hero-title{font-size:2.75rem;margin-bottom:1rem}
+.hero-title .accent{background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-subtitle{font-size:1.05rem;color:var(--text-muted);margin-bottom:1.75rem;line-height:1.65}
+.trust-badges{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
+.trust-item{display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;color:var(--text-muted)}
+.trust-item span.icon{font-size:1.15rem}
+
+/* CALCULATOR CARD */
+.calc-card{background:var(--bg-card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow-lg);position:relative}
+.calc-trust-badges{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.15rem;flex-wrap:wrap}
+.calc-badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.28);color:var(--brand-primary);padding:0.25rem 0.65rem;border-radius:var(--radius-full);font-size:0.75rem;font-weight:700;letter-spacing:0.02em}
+[data-theme="light"] .calc-badge{background:rgba(2,132,199,0.08);border-color:rgba(2,132,199,0.28);color:#0284C7}
+.calc-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.6)}
+
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.15rem}
+.form-row-3{display:grid;grid-template-columns:repeat(3,1fr);gap:0.85rem;margin-bottom:1.15rem}
+@media (max-width:640px){.form-row-2,.form-row-3{grid-template-columns:1fr;gap:0.75rem}}
+.form-group{display:flex;flex-direction:column;gap:0.35rem}
+.form-label{font-size:0.825rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;display:flex;justify-content:space-between}
+.input-with-unit{position:relative;display:flex;align-items:center}
+.form-input,.form-select{width:100%;background:var(--bg-input);border:1px solid var(--border-color);color:var(--text-main);font-size:1.05rem;font-weight:600;padding:0.75rem 2.5rem 0.75rem 0.85rem;border-radius:var(--radius-md);outline:none;transition:var(--transition);font-family:inherit}
+.form-select{padding-right:1rem;cursor:pointer}
+.form-input:focus,.form-select:focus{border-color:var(--border-focus);box-shadow:0 0 0 3px rgba(0,240,255,0.25)}
+[data-theme="light"] .form-input:focus,[data-theme="light"] .form-select:focus{box-shadow:0 0 0 3px rgba(2,132,199,0.2)}
+.unit-tag{position:absolute;right:0.85rem;font-size:0.825rem;font-weight:700;color:var(--brand-primary);pointer-events:none}
+[data-theme="light"] .unit-tag{color:#0284C7}
+
+/* 2D VISUALIZER */
+.blueprint-wrapper{background:#04050E;border:1px solid rgba(0,240,255,0.3);border-radius:var(--radius-md);padding:1rem;margin:1.25rem 0;position:relative;overflow:hidden;background-image:linear-gradient(var(--blueprint-grid) 1px,transparent 1px),linear-gradient(90deg,var(--blueprint-grid) 1px,transparent 1px);background-size:20px 20px;box-shadow:inset 0 0 20px rgba(0,240,255,0.05)}
+.blueprint-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#00F0FF;letter-spacing:0.08em}
+[data-theme="light"] .blueprint-header{color:#0284C7}
+#blueprintSvg{width:100%;height:180px;display:block;overflow:visible}
+.blueprint-legend{display:flex;gap:1rem;margin-top:0.5rem;font-size:0.725rem;color:var(--text-muted);flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:0.35rem}
+.legend-color{width:10px;height:10px;border-radius:2px}
+
+/* RESULTS DASHBOARD */
+.results-section{border-top:1px solid var(--border-color);padding-top:1.5rem;margin-top:1.25rem}
+.results-title{font-size:1.05rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-bottom:1.25rem}
+@media (max-width:680px){.results-grid{grid-template-columns:repeat(2,1fr);gap:0.5rem}}
+.takeoff-card{background:var(--bg-surface);border:1px solid var(--border-color);padding:0.85rem;border-radius:var(--radius-md);display:flex;flex-direction:column}
+.takeoff-card.highlight{border-color:var(--brand-primary);background:rgba(0,240,255,0.08)}
+[data-theme="light"] .takeoff-card.highlight{background:rgba(2,132,199,0.06);border-color:#0284C7}
+.takeoff-card.accent{border-color:var(--brand-accent);background:rgba(139,92,246,0.08)}
+[data-theme="light"] .takeoff-card.accent{background:rgba(124,58,237,0.06);border-color:#7C3AED}
+.takeoff-label{font-size:0.75rem;font-weight:600;color:var(--text-dim);text-transform:uppercase}
+.takeoff-val{font-family:'Outfit',sans-serif;font-size:1.65rem;font-weight:800;color:var(--text-main);margin:0.2rem 0}
+.takeoff-sub{font-size:0.72rem;color:var(--text-muted)}
+
+/* COST BOX */
+.cost-estimation-box{background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1rem;margin-bottom:1.25rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem}
+[data-theme="light"] .cost-estimation-box{background:#FFFFFF}
+.cost-total-display{display:flex;flex-direction:column}
+.cost-total-display .label{font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--brand-accent)}
+[data-theme="light"] .cost-total-display .label{color:#6D28D9}
+.cost-total-display .number{font-family:'Outfit',sans-serif;font-size:1.75rem;font-weight:800;color:var(--brand-primary)}
+[data-theme="light"] .cost-total-display .number{color:#0284C7}
+.btn-toggle-costs{font-size:0.8rem;color:var(--text-muted);background:transparent;border:1px solid var(--border-color);padding:0.35rem 0.75rem;border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition)}
+.btn-toggle-costs:hover{color:var(--brand-primary);border-color:var(--brand-primary)}
+.cost-breakdown-details{display:none;width:100%;padding-top:0.85rem;margin-top:0.85rem;border-top:1px dashed var(--border-color)}
+.cost-breakdown-details.open{display:block}
+.cost-table{width:100%;font-size:0.825rem;border-collapse:collapse}
+.cost-table td{padding:0.4rem 0.2rem;color:var(--text-muted)}
+.cost-table td.cost-num{text-align:right;font-weight:600;color:var(--text-main)}
+
+/* ACTION BUTTONS */
+.action-buttons{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.25rem}
+.btn-primary{background:var(--gradient-cta);color:#FFFFFF;border:none;font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:700;padding:0.85rem 1.25rem;border-radius:var(--radius-md);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:var(--transition);box-shadow:0 4px 20px rgba(0,240,255,0.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,240,255,0.45)}
+.btn-secondary{background:rgba(255,255,255,0.05);color:var(--text-main);border:1px solid var(--border-color);font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:700;padding:0.85rem 1.25rem;border-radius:var(--radius-md);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:var(--transition)}
+.btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:var(--brand-primary)}
+[data-theme="light"] .btn-secondary{background:#FFFFFF;border-color:rgba(15,23,42,0.15)}
+
+/* RESULTS DISCLAIMER NOTE */
+.results-note{font-size:0.8rem;color:var(--text-dim);line-height:1.5;background:rgba(139,92,246,0.06);border:1px solid var(--border-color);padding:0.75rem 1rem;border-radius:var(--radius-md);margin-bottom:1.25rem}
+
+/* VISUAL RESULTS SUMMARY PANEL */
+.visual-summary-panel{background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.15rem;margin-top:1.25rem}
+[data-theme="light"] .visual-summary-panel{background:#FFFFFF}
+.summary-title{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--brand-primary);margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between}
+[data-theme="light"] .summary-title{color:#0284C7}
+.split-bar-container{margin-bottom:1rem}
+.split-bar{height:16px;border-radius:var(--radius-full);overflow:hidden;display:flex;background:var(--bg-input);border:1px solid var(--border-color)}
+.split-seg-decking{background:#00F0FF;height:100%;transition:width 0.3s ease}
+.split-seg-framing{background:#8B5CF6;height:100%;transition:width 0.3s ease}
+.split-seg-concrete{background:#F59E0B;height:100%;transition:width 0.3s ease}
+.split-legend{display:flex;justify-content:space-between;margin-top:0.4rem;font-size:0.75rem;color:var(--text-muted);flex-wrap:wrap;gap:0.5rem}
+.summary-callouts{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:0.75rem;padding-top:0.75rem;border-top:1px dashed var(--border-color)}
+@media (max-width:540px){.summary-callouts{grid-template-columns:1fr}}
+.callout-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0.4rem;background:var(--bg-input);border-radius:var(--radius-sm);border:1px solid var(--border-color)}
+.callout-val{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:800;color:var(--brand-primary)}
+[data-theme="light"] .callout-val{color:#0284C7}
+.callout-lbl{font-size:0.7rem;color:var(--text-dim);text-transform:uppercase;font-weight:600}
+
+/* HERO TOC */
+.hero-toc-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.15rem 1.25rem;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--shadow-lg);margin-top:1.25rem;transition:var(--transition)}
+[data-theme="light"] .hero-toc-card{background:#FFFFFF;border-color:rgba(15,23,42,0.12);box-shadow:0 4px 16px rgba(15,23,42,0.06)}
+.hero-toc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border-color)}
+.hero-toc-title{display:flex;align-items:center;gap:0.45rem;font-family:'Outfit',sans-serif;font-size:0.825rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand-primary)}
+[data-theme="light"] .hero-toc-title{color:#0284C7}
+.hero-toc-badge{font-size:0.7rem;font-weight:600;color:var(--text-dim);background:var(--bg-input);padding:0.15rem 0.5rem;border-radius:var(--radius-full);border:1px solid var(--border-color)}
+.hero-toc-nav{display:flex;flex-direction:column;gap:0.25rem}
+.hero-toc-link{display:flex;align-items:center;gap:0.5rem;font-size:0.825rem;font-weight:500;color:var(--text-muted);padding:0.35rem 0.55rem;border-radius:var(--radius-sm);transition:var(--transition);text-decoration:none}
+.hero-toc-link:hover{color:var(--brand-primary);background:rgba(0,240,255,0.08);transform:translateX(3px)}
+[data-theme="light"] .hero-toc-link:hover{color:#0284C7;background:rgba(2,132,199,0.08)}
+.hero-toc-bullet{width:6px;height:6px;border-radius:50%;background:var(--brand-accent);flex-shrink:0}
+.hero-toc-toggle{display:none;width:100%;align-items:center;justify-content:space-between;background:none;border:none;padding:0;cursor:pointer;color:inherit;font:inherit}
+@media (max-width:768px){
+  .hero-toc-header{display:none}
+  .hero-toc-toggle{display:flex;font-weight:700;font-size:0.85rem;color:var(--brand-primary);padding:0.25rem 0}
+  .hero-toc-nav{display:none;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border-color)}
+  .hero-toc-card.open .hero-toc-nav{display:flex}
+}
+
+/* SUITE SECTION */
+.suite-section{padding:4rem 0;background:rgba(6,7,20,0.6);border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}
+[data-theme="light"] .suite-section{background:#F8FAFC;border-color:rgba(15,23,42,0.08)}
+.section-head{text-align:center;max-width:650px;margin:0 auto 2.5rem}
+.section-eyebrow{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--brand-primary);margin-bottom:0.5rem;display:inline-block}
+[data-theme="light"] .section-eyebrow{color:#0284C7}
+.section-title{font-size:2rem;margin-bottom:0.75rem}
+.section-subtitle{font-size:0.95rem;color:var(--text-muted)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.tool-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.5rem;display:flex;flex-direction:column;transition:var(--transition);text-decoration:none}
+[data-theme="light"] .tool-card{background:#FFFFFF;border-color:rgba(15,23,42,0.12)}
+.tool-card:hover{transform:translateY(-4px);border-color:var(--brand-primary);box-shadow:0 8px 30px rgba(0,0,0,0.4)}
+.tool-card-icon{width:44px;height:44px;border-radius:var(--radius-md);background:rgba(0,240,255,0.1);color:var(--brand-primary);display:flex;align-items:center;justify-content:center;margin-bottom:1.15rem}
+[data-theme="light"] .tool-card-icon{background:rgba(2,132,199,0.1);color:#0284C7}
+.tool-card-icon svg{width:24px;height:24px}
+.tool-card-title{font-size:1.15rem;margin-bottom:0.5rem;color:var(--text-main)}
+.tool-card-desc{font-size:0.875rem;color:var(--text-muted);margin-bottom:1.25rem;flex-grow:1}
+.tool-card-link{font-size:0.85rem;font-weight:700;color:var(--brand-primary);display:flex;align-items:center;gap:0.35rem}
+[data-theme="light"] .tool-card-link{color:#0284C7}
+
+/* ARTICLE PROSE */
+.article-section{padding:4.5rem 0}
+.prose-content{max-width:860px;margin:0 auto}
+.aeo-direct-box{background:rgba(139,92,246,0.1);border-left:4px solid var(--brand-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1.35rem;margin-bottom:2.5rem;border-top:1px solid var(--border-color);border-right:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}
+[data-theme="light"] .aeo-direct-box{background:rgba(2,132,199,0.05);border-left-color:#0284C7}
+.aeo-title{font-size:1.05rem;font-weight:700;color:var(--brand-primary);display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem}
+[data-theme="light"] .aeo-title{color:#0284C7}
+.aeo-text{font-size:0.95rem;line-height:1.7}
+.prose-content h2{font-size:1.85rem;margin:2.75rem 0 1rem;color:var(--text-main)}
+.prose-content h3{font-size:1.35rem;margin:1.75rem 0 0.75rem;color:#C084FC}
+[data-theme="light"] .prose-content h3{color:#4338CA}
+.prose-content p{color:var(--text-muted);font-size:1rem;line-height:1.75;margin-bottom:1.25rem}
+.prose-content a{color:#00F0FF;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+[data-theme="light"] .prose-content a{color:#0284C7}
+.prose-content ul,.prose-content ol{color:var(--text-muted);padding-left:1.5rem;margin-bottom:1.5rem;line-height:1.75}
+.formula-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.25rem;margin:1.5rem 0}
+.formula-code{background:var(--bg-input);padding:0.75rem 1rem;border-radius:var(--radius-sm);font-family:'Courier New',monospace;font-size:0.95rem;color:var(--brand-primary);font-weight:700;display:block;margin:0.5rem 0;border:1px solid var(--border-color);overflow-x:auto}
+[data-theme="light"] .formula-code{color:#0369A1;background:#E2E8F0}
+.data-table-wrapper{overflow-x:auto;margin:1.75rem 0;border:1px solid var(--border-color);border-radius:var(--radius-md)}
+.data-table{width:100%;border-collapse:collapse;font-size:0.9rem}
+.data-table th,.data-table td{padding:0.75rem 1rem;text-align:left;border-bottom:1px solid var(--border-color)}
+.data-table th{background:var(--bg-input);color:var(--text-main);font-weight:700}
+.data-table td{color:var(--text-muted)}
+.conclusion-box{background:rgba(0,240,255,0.05);border:1px solid rgba(0,240,255,0.25);border-radius:var(--radius-md);padding:1.75rem;margin:2.5rem 0}
+[data-theme="light"] .conclusion-box{background:rgba(2,132,199,0.05);border-color:rgba(2,132,199,0.2)}
+
+/* FAQ ACCORDION */
+.faq-list{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem}
+.faq-item{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;transition:var(--transition)}
+.faq-question{width:100%;background:transparent;border:none;padding:1.15rem 1.25rem;text-align:left;font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text-main);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-icon{font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s ease}
+[data-theme="light"] .faq-icon{color:#0284C7}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s cubic-bezier(0.16,1,0.3,1);background:var(--bg-input)}
+.faq-answer p{padding:1.25rem 1.5rem;margin:0;font-size:0.975rem;line-height:1.7;color:var(--text-muted)}
+
+/* STATIC SVG DIAGRAM */
+.diagram-container{margin:2rem 0;border:1px solid var(--border-color);border-radius:var(--radius-md);background:var(--bg-surface);padding:1.25rem;overflow-x:auto}
+[data-theme="light"] .diagram-container{background:#FFFFFF}
+
+/* FOOTER */
+.site-footer{background:#04050D;border-top:1px solid var(--border-color);padding:3.5rem 0 2rem;margin-top:4rem}
+[data-theme="light"] .site-footer{background:#F1F5F9;border-top-color:rgba(15,23,42,0.12)}
+.footer-grid{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:2.5rem;margin-bottom:2.5rem}
+@media (max-width:850px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media (max-width:520px){.footer-grid{grid-template-columns:1fr;gap:1.5rem}}
+.footer-brand p{font-size:0.875rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.6}
+.footer-col h4{font-size:0.95rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-main);margin-bottom:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;padding:0;margin:0}
+.footer-col a{font-size:0.875rem;color:var(--text-muted);transition:var(--transition);text-decoration:none}
+.footer-col a:hover{color:var(--brand-primary)}
+.footer-bottom{border-top:1px solid var(--border-color);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.825rem;color:var(--text-dim)}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:var(--radius-md);background:var(--bg-card);color:var(--brand-primary);border:1px solid var(--border-color);box-shadow:0 4px 16px rgba(0,0,0,0.4),0 0 10px rgba(0,240,255,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:90;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity 0.25s ease,visibility 0.25s ease,transform 0.25s ease;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{background:var(--bg-card-hover);border-color:var(--brand-primary);color:#FFFFFF;transform:translateY(-2px)}
+.back-to-top:focus-visible{outline:2px solid var(--brand-primary);outline-offset:3px}
+[data-theme="light"] .back-to-top{background:#FFFFFF;color:#0284C7;border-color:rgba(15,23,42,0.15);box-shadow:0 4px 12px rgba(15,23,42,0.1)}
+[data-theme="light"] .back-to-top:hover{background:#F8FAFC;border-color:#0284C7;color:#0369A1}
+@media (max-width:640px){.back-to-top{bottom:1.15rem;right:1.15rem;width:40px;height:40px}}
+@media print{.back-to-top{display:none !important}}
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ZONE 1: HEADER NAVIGATION (UNIFIED)
+       ========================================================================== -->
+  <header class="header-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="brand-logo" aria-label="WallCalculator.app Home">
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="10" fill="#0B0F19"/>
+            <rect x="6" y="8" width="36" height="4" rx="1" fill="#F97316"/>
+            <rect x="6" y="36" width="36" height="4" rx="1" fill="#F97316"/>
+            <rect x="8" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="18" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="28" y="12" width="3" height="24" fill="#38BDF8"/>
+            <rect x="37" y="12" width="3" height="24" fill="#38BDF8"/>
+          </svg>
+          <span>Wall<span class="accent">Calculator</span></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Wall Estimator</a></li>
+          <li><a href="/wall-stud-calculator">Stud Calculator</a></li>
+          <li><a href="/drywall-calculator">Drywall Sheets</a></li>
+          <li><a href="/retaining-wall-calculator">Retaining Wall</a></li>
+          <li><a href="/cinder-block-calculator">Cinder Block</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="btn-icon" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button class="btn-icon mobile-menu-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       ZONE 2: HERO & INTERACTIVE DECK CALCULATOR
+       ========================================================================== -->
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Copy & Trust & TOC -->
+          <div class="hero-copy">
+            <div class="badge-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>IRC Building Code R507 Compliant Framing &amp; Takeoffs</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="accent">Deck Material Calculator</span>: Boards, Framing, Footings and Cost in One Takeoff
+            </h1>
+
+            <p class="hero-subtitle">
+              Framing errors, over-ordering expensive composite planks, and underestimating concrete footings can quickly derail outdoor living budgets. Whether building a freestanding patio deck or a ledger-attached residential platform, this interactive deck material calculator determines exact surface boards, field joists, support beams, post footings, fasteners, and complete 2026 cost ranges with real-time framing blueprints.
+            </p>
+
+            <div class="trust-badges">
+              <div class="trust-item">
+                <span class="icon">&#10003;</span>
+                <span><strong>IRC R507 Prescriptive Rules:</strong> Standard joist spacing for 12, 16, and 24 inches on-center.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">&#10003;</span>
+                <span><strong>Complete Hardware Takeoff:</strong> Face screws, hidden clips, joist hangers, and post base brackets.</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">&#10003;</span>
+                <span><strong>Foundation Concrete Estimation:</strong> Exact volume and 60-lb/80-lb pre-mix bag yields per footing.</span>
+              </div>
+            </div>
+
+            <!-- Quick Table of Contents Card -->
+            <div class="hero-toc-card" id="heroTocCard">
+              <div class="hero-toc-header">
+                <div class="hero-toc-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg>
+                  <span>Guide Navigation</span>
+                </div>
+                <span class="hero-toc-badge">Quick Index</span>
+              </div>
+              <button class="hero-toc-toggle" id="heroTocToggle" type="button" aria-expanded="false">
+                <span>Table of Contents</span>
+                <span class="icon">&#9662;</span>
+              </button>
+              <nav class="hero-toc-nav">
+                <a href="#toc-calculate-boards" class="hero-toc-link"><span class="hero-toc-bullet"></span>1. How to Calculate Decking Boards</a>
+                <a href="#toc-joist-estimates" class="hero-toc-link"><span class="hero-toc-bullet"></span>2. Joists, Beams, Posts &amp; Footings</a>
+                <a href="#toc-cost-guide" class="hero-toc-link"><span class="hero-toc-bullet"></span>3. Deck Cost Guide 2026</a>
+                <a href="#toc-materials" class="hero-toc-link"><span class="hero-toc-bullet"></span>4. Decking Material Comparison</a>
+                <a href="#toc-railing-stairs" class="hero-toc-link"><span class="hero-toc-bullet"></span>5. Railing and Stairs</a>
+                <a href="#toc-joist-spans" class="hero-toc-link"><span class="hero-toc-bullet"></span>6. Joist Spans &amp; Code Notes</a>
+                <a href="#toc-diy-vs-pro" class="hero-toc-link"><span class="hero-toc-bullet"></span>7. DIY Versus Contractor</a>
+                <a href="#toc-faqs" class="hero-toc-link"><span class="hero-toc-bullet"></span>8. Frequently Asked Questions</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Deck Calculator Card -->
+          <div class="calc-card" id="deckCalculatorCard">
+            <!-- Visual Trust Badges -->
+            <div class="calc-trust-badges">
+              <span class="calc-badge"><span class="calc-badge-dot"></span>Free</span>
+              <span class="calc-badge"><span class="calc-badge-dot"></span>No sign-up</span>
+              <span class="calc-badge"><span class="calc-badge-dot"></span>Instant results</span>
+            </div>
+
+            <!-- Dimensions -->
+            <div class="form-row-3">
+              <div class="form-group">
+                <label class="form-label" for="deckLength">Deck Length <span>(Span)</span></label>
+                <div class="input-with-unit">
+                  <input type="number" id="deckLength" class="form-input" value="12" min="4" max="60" step="0.5">
+                  <span class="unit-tag">FT</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="deckWidth">Deck Width <span>(Run)</span></label>
+                <div class="input-with-unit">
+                  <input type="number" id="deckWidth" class="form-input" value="16" min="4" max="60" step="0.5">
+                  <span class="unit-tag">FT</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="deckHeight">Height <span>(Above Grade)</span></label>
+                <div class="input-with-unit">
+                  <input type="number" id="deckHeight" class="form-input" value="4" min="0" max="20" step="0.5">
+                  <span class="unit-tag">FT</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Board Configuration -->
+            <div class="form-row-3">
+              <div class="form-group">
+                <label class="form-label" for="boardWidth">Board Width</label>
+                <select id="boardWidth" class="form-select">
+                  <option value="3.5">3.5" (2x4 nominal)</option>
+                  <option value="5.5" selected>5.5" (5/4x6 or 2x6 standard)</option>
+                  <option value="7.25">7.25" (2x8 wide plank)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="boardLength">Lumber Length</label>
+                <select id="boardLength" class="form-select">
+                  <option value="8">8 FT Boards</option>
+                  <option value="12">12 FT Boards</option>
+                  <option value="16" selected>16 FT Boards</option>
+                  <option value="20">20 FT Boards</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="boardGap">Board Gap</label>
+                <div class="input-with-unit">
+                  <input type="number" id="boardGap" class="form-input" value="0.25" min="0" max="0.5" step="0.0625">
+                  <span class="unit-tag">IN</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Framing & Material -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="joistSpacing">Joist Spacing (On-Center)</label>
+                <select id="joistSpacing" class="form-select">
+                  <option value="12">12" OC (Heavy Duty / Diagonal)</option>
+                  <option value="16" selected>16" OC (Standard Residential)</option>
+                  <option value="24">24" OC (2x6 Wood Only)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="deckMaterial">Decking Material</label>
+                <select id="deckMaterial" class="form-select">
+                  <option value="pt" selected>Pressure-Treated Pine ($12 - $18/sq ft)</option>
+                  <option value="cedar">Western Red Cedar ($18 - $28/sq ft)</option>
+                  <option value="composite">Capped Composite ($28 - $45/sq ft)</option>
+                  <option value="pvc">Cellular PVC ($35 - $55/sq ft)</option>
+                  <option value="hardwood">Ipe Exotic Hardwood ($40 - $70/sq ft)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Foundation & Fasteners -->
+            <div class="form-row-3">
+              <div class="form-group">
+                <label class="form-label" for="footingDia">Footing Diameter</label>
+                <select id="footingDia" class="form-select">
+                  <option value="10">10" Pier Tube</option>
+                  <option value="12" selected>12" Standard Pier</option>
+                  <option value="16">16" Heavy Pier</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="footingDepth">Footing Depth</label>
+                <div class="input-with-unit">
+                  <input type="number" id="footingDepth" class="form-input" value="36" min="12" max="60" step="6">
+                  <span class="unit-tag">IN</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fastenerType">Fastener Style</label>
+                <select id="fastenerType" class="form-select">
+                  <option value="screws" selected>Face Screws (2 per crossing)</option>
+                  <option value="clips">Hidden Clips (1 per crossing)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Railing, Stairs & Custom Price -->
+            <div class="form-row-3">
+              <div class="form-group">
+                <label class="form-label" for="railingLength">Railing Length</label>
+                <div class="input-with-unit">
+                  <input type="number" id="railingLength" class="form-input" value="36" min="0" max="200" step="1">
+                  <span class="unit-tag">LF</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="stairWidth">Stair Width</label>
+                <div class="input-with-unit">
+                  <input type="number" id="stairWidth" class="form-input" value="36" min="24" max="96" step="6">
+                  <span class="unit-tag">IN</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="priceSqFt">Custom Price / Sq Ft <span>(Opt)</span></label>
+                <div class="input-with-unit">
+                  <input type="number" id="priceSqFt" class="form-input" value="0" min="0" max="300" step="1" placeholder="Auto">
+                  <span class="unit-tag">USD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Waste Factors -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="wasteBoards">Board Waste Buffer</label>
+                <div class="input-with-unit">
+                  <input type="number" id="wasteBoards" class="form-input" value="10" min="0" max="25" step="1">
+                  <span class="unit-tag">%</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="wasteFraming">Framing Lumber Waste</label>
+                <div class="input-with-unit">
+                  <input type="number" id="wasteFraming" class="form-input" value="5" min="0" max="25" step="1">
+                  <span class="unit-tag">%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==============================================================
+                 ZONE 3: LIVE 2D BLUEPRINT VISUALIZER
+                 ============================================================== -->
+            <div class="blueprint-wrapper">
+              <div class="blueprint-header">
+                <span>Top-Down Framing Blueprint</span>
+                <span id="blueprintDimensions">12' Span x 16' Width (192 Sq Ft)</span>
+              </div>
+              <svg id="blueprintSvg" viewBox="0 0 500 200" preserveAspectRatio="xMidYMid meet"></svg>
+              <div class="blueprint-legend">
+                <div class="legend-item"><span class="legend-color" style="background:#F97316;"></span><span>House Ledger / Rim</span></div>
+                <div class="legend-item"><span class="legend-color" style="background:#00F0FF;"></span><span>Field Joists</span></div>
+                <div class="legend-item"><span class="legend-color" style="background:#8B5CF6;"></span><span>Drop Beam</span></div>
+                <div class="legend-item"><span class="legend-color" style="background:#10B981;"></span><span>Footing Piers</span></div>
+              </div>
+            </div>
+
+            <!-- ==============================================================
+                 ZONE 4: RESULTS & COST TAKEOFF DASHBOARD
+                 ============================================================== -->
+            <div class="results-section">
+              <div class="results-title">
+                <span>Material Takeoff Summary</span>
+                <span style="font-size:0.8rem;color:var(--brand-primary);font-weight:600;">Updated in Real-Time</span>
+              </div>
+
+              <div class="results-grid">
+                <div class="takeoff-card highlight">
+                  <span class="takeoff-label">Total Deck Area</span>
+                  <span class="takeoff-val" id="outDeckArea">192</span>
+                  <span class="takeoff-sub">Square Feet Total</span>
+                </div>
+                <div class="takeoff-card">
+                  <span class="takeoff-label">Decking Linear Feet</span>
+                  <span class="takeoff-val" id="outDeckingLinFt">401</span>
+                  <span class="takeoff-sub">5.5" Planks + 1/4" Gap</span>
+                </div>
+                <div class="takeoff-card highlight">
+                  <span class="takeoff-label">Deck Boards Count</span>
+                  <span class="takeoff-val" id="outBoardCount">29</span>
+                  <span class="takeoff-sub" id="outBoardRawCallout">16 FT Planks (26 + 10% Waste)</span>
+                </div>
+                <div class="takeoff-card">
+                  <span class="takeoff-label">Field Joists (16" OC)</span>
+                  <span class="takeoff-val" id="outJoistCount">13</span>
+                  <span class="takeoff-sub" id="outJoistSub">12 FT Spanning Joists</span>
+                </div>
+                <div class="takeoff-card">
+                  <span class="takeoff-label">Beam &amp; Rim Boards</span>
+                  <span class="takeoff-val" id="outBeamLinearFt">48</span>
+                  <span class="takeoff-sub">16 FT Beam + Rim Joists</span>
+                </div>
+                <div class="takeoff-card highlight">
+                  <span class="takeoff-label">Footing Concrete (60 lb)</span>
+                  <span class="takeoff-val" id="outBags60">18</span>
+                  <span class="takeoff-sub" id="outBagsCallout">6 Bags / Footing (3 Piers)</span>
+                </div>
+                <div class="takeoff-card">
+                  <span class="takeoff-label">Fasteners Count</span>
+                  <span class="takeoff-val" id="outFasteners">884</span>
+                  <span class="takeoff-sub" id="outFastenerSub">Face Screws (34 Rows x 13)</span>
+                </div>
+                <div class="takeoff-card">
+                  <span class="takeoff-label">Perimeter Railing</span>
+                  <span class="takeoff-val" id="outRailingLf">36</span>
+                  <span class="takeoff-sub">Linear Feet Guardrail</span>
+                </div>
+                <div class="takeoff-card accent">
+                  <span class="takeoff-label">Stair Components</span>
+                  <span class="takeoff-val" id="outStairRisers">7</span>
+                  <span class="takeoff-sub" id="outStairSub">7 Risers, 6 Treads, 3 Stringers</span>
+                </div>
+              </div>
+
+              <!-- Cost Estimation Box -->
+              <div class="cost-estimation-box">
+                <div class="cost-total-display">
+                  <span class="label">Estimated 2026 Material Cost Range</span>
+                  <span class="number" id="outCostMaterials">$2,300 - $3,450</span>
+                </div>
+                <button type="button" class="btn-toggle-costs" id="btnToggleCosts">Show Cost Breakdown &#9662;</button>
+
+                <div class="cost-breakdown-details" id="costBreakdownDetails">
+                  <table class="cost-table">
+                    <tr><td>Decking Surface Boards</td><td class="cost-num" id="costRowDecking">$750 - $1,150</td></tr>
+                    <tr><td>Framing Joists, Rim &amp; Beams</td><td class="cost-num" id="costRowFraming">$650 - $950</td></tr>
+                    <tr><td>Footing Concrete Mix &amp; Posts</td><td class="cost-num" id="costRowConcrete">$420 - $550</td></tr>
+                    <tr><td>Fasteners, Brackets &amp; Hangers</td><td class="cost-num" id="costRowHardware">$200 - $300</td></tr>
+                    <tr><td>Perimeter Railing Materials</td><td class="cost-num" id="costRowRailing">$540 - $900</td></tr>
+                    <tr style="border-top:1px solid var(--border-color);font-weight:700;"><td>Turnkey Contractor Installed Total</td><td class="cost-num" id="costRowInstalled" style="color:var(--brand-primary);">$4,800 - $9,600</td></tr>
+                  </table>
+                </div>
+              </div>
+
+              <div class="results-note">
+                <strong>Planning Disclaimer:</strong> Planning estimate only, not structural design. Check local code and permit requirements, and confirm joist spans and footing depth with the local code official or a licensed professional before building.
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="action-buttons">
+                <button type="button" class="btn-primary" id="btnCopyTakeoff">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copy Material List</span>
+                </button>
+                <button type="button" class="btn-secondary" id="btnPrintPdf">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                  </svg>
+                  <span>Print Takeoff</span>
+                </button>
+              </div>
+
+              <!-- Visual Results Summary Panel -->
+              <div class="visual-summary-panel" id="visualSummaryPanel">
+                <div class="summary-title">
+                  <span>Material Takeoff Split</span>
+                  <span id="summaryBoardTypeBadge">Pressure-Treated Wood</span>
+                </div>
+                <div class="split-bar-container">
+                  <div class="split-bar">
+                    <div class="split-seg-decking" id="splitDecking" style="width:45%;" title="Decking Surface Share"></div>
+                    <div class="split-seg-framing" id="splitFraming" style="width:35%;" title="Substructure Framing Share"></div>
+                    <div class="split-seg-concrete" id="splitConcrete" style="width:20%;" title="Footing Foundation Share"></div>
+                  </div>
+                  <div class="split-legend">
+                    <span><strong style="color:#00F0FF;">&#9632; Decking Surface:</strong> <span id="splitPctDecking">45%</span></span>
+                    <span><strong style="color:#8B5CF6;">&#9632; Framing Lumber:</strong> <span id="splitPctFraming">35%</span></span>
+                    <span><strong style="color:#F59E0B;">&#9632; Foundation &amp; Footings:</strong> <span id="splitPctConcrete">20%</span></span>
+                  </div>
+                </div>
+                <div class="summary-callouts">
+                  <div class="callout-item">
+                    <span class="callout-val" id="calloutBoards">29 Boards</span>
+                    <span class="callout-lbl">16' Planks Ordered</span>
+                  </div>
+                  <div class="callout-item">
+                    <span class="callout-val" id="calloutFootings">3 Footings</span>
+                    <span class="callout-lbl">Pier Holes Required</span>
+                  </div>
+                  <div class="callout-item">
+                    <span class="callout-val" id="calloutBags">18 Bags</span>
+                    <span class="callout-lbl">60-lb Concrete Mix</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ZONE 5: THE FRAMING & MASONRY SUITE (ALL 7 TOOLS)
+         ========================================================================== -->
+    <section class="suite-section" id="suite-tools">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Professional Construction Suite</span>
+          <h2 class="section-title">Contractor Takeoff Tools</h2>
+          <p class="section-subtitle">Precision calculation engines designed for residential framing carpenters, masonry masons, and landscape contractors.</p>
+        </div>
+
+        <div class="tools-grid">
+          <a href="/" class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Wall Framing Calculator</h3>
+            <p class="tool-card-desc">All-in-one wall framing, plate lumber, gypsum drywall sheets, joint compound mud, and fastener estimator with 2D CAD elevation blueprints.</p>
+            <span class="tool-card-link">Launch Estimator &rarr;</span>
+          </a>
+
+          <a href="/wall-stud-calculator" class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="21" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="3"></line>
+                <line x1="1" y1="3" x2="23" y2="3"></line>
+                <line x1="1" y1="21" x2="23" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Wall Stud Calculator</h3>
+            <p class="tool-card-desc">Dedicated 2x4 and 2x6 stud framing tool with 16" and 24" on-center spacing, top and sole plates, king studs, jack studs, and headers.</p>
+            <span class="tool-card-link">Calculate Wall Studs &rarr;</span>
+          </a>
+
+          <a href="/drywall-calculator" class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="12" y1="3" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Drywall Calculator</h3>
+            <p class="tool-card-desc">Determine 4x8 and 4x12 drywall panel quantities, joint compound buckets, paper tape rolls, and drywall screws with room layout modes.</p>
+            <span class="tool-card-link">Estimate Drywall Sheets &rarr;</span>
+          </a>
+
+          <a href="/retaining-wall-calculator" class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18"></path>
+                <path d="M5 21V7l8-4v18"></path>
+                <path d="M19 21V11l-6-4"></path>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Retaining Wall Calculator</h3>
+            <p class="tool-card-desc">Calculate segmental concrete retaining blocks, drainage gravel tons, geogrid reinforcement, and capstones based on slope and height.</p>
+            <span class="tool-card-link">Estimate Retaining Walls &rarr;</span>
+          </a>
+
+          <a href="/cinder-block-calculator" class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="7" rx="1"></rect>
+                <rect x="2" y="13" width="20" height="7" rx="1"></rect>
+                <line x1="8" y1="4" x2="8" y2="11"></line>
+                <line x1="16" y1="4" x2="16" y2="11"></line>
+                <line x1="12" y1="13" x2="12" y2="20"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Cinder Block Calculator</h3>
+            <p class="tool-card-desc">Calculate standard 8x8x16 CMU concrete blocks, mortar bags, core-fill grout volume, and horizontal bond beam rebar.</p>
+            <span class="tool-card-link">Calculate CMU Blocks &rarr;</span>
+          </a>
+
+          <a href="/concrete-slab-calculator" class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Concrete Slab Calculator</h3>
+            <p class="tool-card-desc">Estimate cubic yards of ready-mix concrete and 60-lb/80-lb pre-mix bags for patios, slabs, driveways, and equipment pads.</p>
+            <span class="tool-card-link">Calculate Concrete Slab &rarr;</span>
+          </a>
+
+          <a href="/deck-calculator" class="tool-card" style="border-color:var(--brand-primary);">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="4" rx="1"></rect>
+                <rect x="2" y="10" width="20" height="4" rx="1"></rect>
+                <rect x="2" y="17" width="20" height="4" rx="1"></rect>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Deck Material Calculator</h3>
+            <p class="tool-card-desc">Calculate deck boards, field joists, ledger lumber, support beams, concrete pier footings, railing, and fasteners.</p>
+            <span class="tool-card-link" style="color:var(--brand-primary);">Current Tool &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ZONE 6: SEMANTIC EDUCATIONAL ARTICLE & TECHNICAL GUIDE
+         ========================================================================== -->
+    <article class="article-section" id="guide-article">
+      <div class="container">
+        <div class="prose-content">
+
+          <!-- AEO Direct Answer Box -->
+          <div class="aeo-direct-box">
+            <div class="aeo-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Quick Answer: How Many Boards and Joists Do You Need for a Deck?</span>
+            </div>
+            <p class="aeo-text">
+              To calculate surface decking boards, multiply deck length by width to find total square footage, divide by the effective board width in feet (nominal width plus gap spacing), and divide by your chosen board length. For a standard 12x16 foot deck (192 sq ft) using 5.5-inch boards with a 1/4-inch gap, you need <strong>401 linear feet</strong>, which equals <strong>26 sixteen-foot boards</strong> or <strong>29 boards</strong> with a recommended 10 percent waste buffer. Substructure framing requires <strong>13 field joists</strong> spaced 16 inches on-center spanning 12 feet, 1 rim joist, 1 ledger board, and 3 concrete footings requiring <strong>18 bags of 60 lb concrete mix</strong>.
+            </p>
+          </div>
+
+          <!-- SECTION 1 -->
+          <h2 id="toc-calculate-boards">How to Calculate Decking Boards with a Deck Material Calculator</h2>
+          <p>
+            Accurate lumber estimating begins with the surface geometry of the deck platform. Professional deck framing carpenters calculate surface lumber based on coverage width rather than nominal dimensions. A standard nominal 5/4x6 or 2x6 deck board measures exactly 5.5 inches across its top face. When installed with a required 0.25-inch expansion gap, each course covers 5.75 inches of deck run.
+          </p>
+          <p>
+            When utilizing a <a href="/deck-calculator">free deck calculator</a>, the algorithm converts dimensions into fractional feet to prevent under-ordering. To convert effective board width to feet, divide 5.75 inches by 12 inches per foot, yielding 0.4792 feet. Dividing total square footage by this factor produces the exact linear footage of decking required before waste.
+          </p>
+
+          <div class="formula-card">
+            <span class="takeoff-label">Mathematical Decking Formulas</span>
+            <code class="formula-code">Effective Width (ft) = (Board Width in Inches + Gap in Inches) / 12</code>
+            <code class="formula-code">Decking Linear Feet = Deck Area (sq ft) / Effective Width (ft)</code>
+            <code class="formula-code">Raw Board Count = Math.ceil(Decking Linear Feet / Board Length in Feet)</code>
+            <code class="formula-code">Total Ordered Boards = Math.ceil(Raw Board Count * (1 + Waste Percentage / 100))</code>
+          </div>
+
+          <p>
+            Consider a practical 12x16 foot platform deck where decking boards run parallel to the 12-foot side across a 16-foot width. The deck area is 12 multiplied by 16, resulting in 192 square feet. Applying this formula:
+          </p>
+          <ul>
+            <li><strong>Total Deck Area:</strong> 12 ft x 16 ft = 192 sq ft</li>
+            <li><strong>Effective Width:</strong> 5.5 in + 0.25 in gap = 5.75 in (0.479167 ft)</li>
+            <li><strong>Linear Feet Required:</strong> 192 / 0.479167 = 400.7 linear feet (rounded up to <strong>401 linear feet</strong>)</li>
+            <li><strong>Total Course Rows:</strong> 16 ft x 12 in = 192 in / 5.75 in = 33.39 courses (rounded up to <strong>34 rows</strong>)</li>
+            <li><strong>16-Foot Board Count (Raw):</strong> 400.7 / 16 = 25.04 boards (rounded up to <strong>26 boards</strong>)</li>
+            <li><strong>16-Foot Board Count (10% Waste):</strong> 26 x 1.10 = 28.6 boards (rounded up to <strong>29 boards</strong>)</li>
+          </ul>
+          <p>
+            Using a dedicated <a href="/deck-calculator">deck lumber calculator</a> eliminates field calculation rounding mistakes, ensuring that every board course has adequate material for squaring cuts, butt joint stagger, and overhang trimming.
+          </p>
+
+          <!-- SECTION 2 -->
+          <h2 id="toc-joist-estimates">Joist, Beam, Post and Footing Estimates</h2>
+          <p>
+            The substructure framing carries the full structural live and dead loads of the deck. A sound framing layout requires coordination between the ledger board anchored to the house, exterior rim joists, interior field joists, drop beams, support posts, and concrete pier foundations.
+          </p>
+
+          <h3>Field Joist Quantity Calculation</h3>
+          <p>
+            Field joists run perpendicular to the ledger board and are spaced at predetermined on-center (OC) intervals. To calculate joist quantities across a given width, convert the deck width to inches, divide by the on-center spacing, round down to the nearest whole interval, and add 1 joist for the starting end:
+          </p>
+          <div class="formula-card">
+            <span class="takeoff-label">Field Joist Formula</span>
+            <code class="formula-code">Joist Count = Math.floor((Deck Width in Feet * 12) / Joist Spacing in Inches) + 1</code>
+          </div>
+          <p>
+            For a 16-foot deck width with standard 16-inch on-center spacing, 192 inches divided by 16 equals 12 intervals, plus 1 starting joist, equaling exactly <strong>13 joists</strong>. These joists span the 12-foot direction between the house ledger board and the outer beam assembly. If your outdoor layout connects directly to building partitions, review the companion <a href="/wall-stud-calculator">wall stud calculator</a> for stud spacing guidelines.
+          </p>
+
+          <h3>Beams, Posts, and Footing Concrete Math</h3>
+          <p>
+            A beam collects joist loads and transfers weight downward into vertical posts and concrete footings. On attached decks, a drop beam or flush beam spans the outer width. In residential construction, beam post spacing rarely exceeds 8 feet without requiring substantially larger multi-ply lumber.
+          </p>
+          <p>
+            For a 16-foot wide deck, dividing 16 feet by 8 feet yields 2 spans, requiring <strong>3 support posts and 3 concrete footings</strong>. Footing holes must extend beneath the local frost line to prevent seasonal ground heave. A typical 12-inch diameter pier drilled 36 inches deep has the following cylindrical volume:
+          </p>
+          <div class="formula-card">
+            <span class="takeoff-label">Footing Cylinder Volume Formula</span>
+            <code class="formula-code">Radius (ft) = (Diameter in Inches / 2) / 12 = (12 / 2) / 12 = 0.50 ft</code>
+            <code class="formula-code">Depth (ft) = Depth in Inches / 12 = 36 / 12 = 3.00 ft</code>
+            <code class="formula-code">Volume = Pi * Radius^2 * Depth = 3.14159 * 0.25 * 3 = 2.36 cu ft</code>
+          </div>
+          <p>
+            Standard pre-mixed 60 lb concrete bags yield approximately 0.45 cubic feet of mixed concrete. Dividing 2.36 cubic feet by 0.45 yields 5.24 bags, rounded up to <strong>6 bags of 60 lb mix per footing</strong> (or 4 bags of 80 lb mix yielding 0.60 cu ft per bag). For all 3 footings combined, order 18 bags of 60 lb mix. If pouring large monolithic grade beams or adjacent patio pads, use the specialized <a href="/concrete-slab-calculator">concrete slab calculator</a> to determine exact bulk cubic yardage.
+          </p>
+
+          
+          <h3>Ledger Attachment, Flashing and Tension Ties</h3>
+          <p>
+            Structural failure investigations indicate that over 85 percent of catastrophic deck collapses stem from improper ledger board connections. A deck ledger must be fastened directly into the house rim joist using code-approved 1/2-inch hot-dip galvanized lag screws or structural wood screws staggered in a calibrated high-low pattern. Never attach a deck ledger over vinyl siding, stucco, brick veneer, or masonry siding, as hollow claddings prevent direct shear load transfer.
+          </p>
+          <p>
+            Flashing is critical to protect the residential envelope from moisture intrusion and fungal rot. Install a continuous Z-flashing membrane tucked under the home water-resistive barrier, running over the top edge of the ledger board, and cascading over the face. IRC Table R507.9.2 mandates hold-down tension ties installed at a minimum of two locations per deck, each providing at least 1,500 pounds of lateral restraint connected directly to interior floor joists.
+          </p>
+
+          <!-- SECTION 3 -->
+          <h2 id="toc-cost-guide">Deck Cost Guide 2026</h2>
+          <p>
+            Deck construction costs vary based on lumber species, composite branding, elevation height, soil conditions, and regional contractor labor rates. Industry pricing data compiled from RemodelCalculators, HomeGuide, and TradeCalc 2026 reports provide reliable baseline expectations for both DIY materials and turnkey professional installations.
+          </p>
+
+          <h3>Materials-Only Cost per Square Foot</h3>
+          <p>
+            When purchasing materials directly from lumberyards or home centers, expect the following material ranges per square foot of deck surface, covering decking boards, framing substructure, concrete, and basic fasteners:
+          </p>
+          <ul>
+            <li><strong>Pressure-Treated Pine:</strong> $12 to $18 per square foot. Highly economical, chemical treatment resists decay and insects, requires periodic staining.</li>
+            <li><strong>Western Red Cedar:</strong> $18 to $28 per square foot. Naturally rot-resistant, aromatic, stays cooler under foot, requires annual sealing.</li>
+            <li><strong>Capped Composite:</strong> $28 to $45 per square foot. Recycled wood-plastic core with protective polymer cap, zero splinters, 25 to 30 year warranties.</li>
+            <li><strong>Cellular PVC:</strong> $35 to $55 per square foot. 100% synthetic polymer, superior moisture resistance around pools, resists chalking and scratching.</li>
+            <li><strong>Ipe Exotic Hardwood:</strong> $40 to $70 per square foot. Extremely dense Brazilian hardwood, class A fire rating, 40+ year natural lifespan.</li>
+          </ul>
+
+          <h3>Turnkey Installed Contractor Cost Ranges</h3>
+          <p>
+            Professional turnkey installation ranges between <strong>$25 and $50 per square foot</strong> for pressure-treated wood decks, and between <strong>$35 and $80 per square foot</strong> for capped composite and PVC decking systems. Turnkey pricing includes professional architectural plans, building permits, excavation, structural framing, board installation, and job site cleanup.
+          </p>
+
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Deck Size</th>
+                  <th>Square Footage</th>
+                  <th>Pressure-Treated Installed</th>
+                  <th>Composite Installed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>12 x 12 Feet</strong></td>
+                  <td>144 sq ft</td>
+                  <td>$3,500 to $8,000</td>
+                  <td>$5,000 to $11,500</td>
+                </tr>
+                <tr>
+                  <td><strong>12 x 16 Feet</strong></td>
+                  <td>192 sq ft</td>
+                  <td>$4,800 to $9,600</td>
+                  <td>$6,700 to $15,300</td>
+                </tr>
+                <tr>
+                  <td><strong>16 x 20 Feet</strong></td>
+                  <td>320 sq ft</td>
+                  <td>$8,000 to $17,500</td>
+                  <td>$14,500 to $25,500</td>
+                </tr>
+                <tr>
+                  <td><strong>20 x 20 Feet</strong></td>
+                  <td>400 sq ft</td>
+                  <td>$10,000 to $20,000</td>
+                  <td>$16,000 to $32,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Essential Adders and Accessory Expenses</h3>
+          <p>
+            Complete project budgets must incorporate peripheral construction elements that significantly impact the total investment:
+          </p>
+          <ul>
+            <li><strong>Building Permits &amp; Plan Reviews:</strong> $150 to $1,200 depending on municipal fee structures and deck height.</li>
+            <li><strong>Demolition &amp; Haul Away:</strong> $5 to $8 per square foot to dismantle, load, and dispose of an existing deteriorated deck.</li>
+            <li><strong>Perimeter Railing Systems (per linear foot):</strong>
+              <ul>
+                <li>Wood Baluster Railing: $15 to $25 per LF</li>
+                <li>Composite Post &amp; Rail: $25 to $50 per LF</li>
+                <li>Horizontal Stainless Cable: $40 to $70 per LF</li>
+                <li>Tempered Glass Panels: $60 to $120 per LF</li>
+              </ul>
+            </li>
+            <li><strong>Elevation Height Adders:</strong> Elevated ground decks (4 to 8 feet high) add $5 to $10 per square foot for diagonal bracing and heavier posts. Second-story walkout decks add $10 to $20 per square foot due to scaffolding and elevated framing labor.</li>
+          </ul>
+
+          <!-- SECTION 4 -->
+          <h2 id="toc-materials">Decking Material Comparison</h2>
+          <p>
+            Choosing the right decking material balance requires evaluating initial purchase price against long-term maintenance labor and durability. Selecting between a <a href="/deck-calculator">wood deck material calculator</a> option and a <a href="/deck-calculator">composite deck material calculator</a> workflow fundamentally shifts your multi-year ownership costs.
+          </p>
+
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Material Type</th>
+                  <th>Avg Material Cost</th>
+                  <th>Expected Lifespan</th>
+                  <th>Annual Maintenance</th>
+                  <th>Fastener Preference</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Pressure-Treated Pine</strong></td>
+                  <td>$12 - $18 / sq ft</td>
+                  <td>15 to 20 Years</td>
+                  <td>High (Wash, Stain, Seal every 2 yrs)</td>
+                  <td>Corrosion-resistant coated screws</td>
+                </tr>
+                <tr>
+                  <td><strong>Western Red Cedar</strong></td>
+                  <td>$18 - $28 / sq ft</td>
+                  <td>20 to 25 Years</td>
+                  <td>Moderate (Stain or oil every 2 yrs)</td>
+                  <td>Stainless steel screws</td>
+                </tr>
+                <tr>
+                  <td><strong>Capped Composite</strong></td>
+                  <td>$28 - $45 / sq ft</td>
+                  <td>25 to 30 Years</td>
+                  <td>Low (Soap &amp; water wash annually)</td>
+                  <td>Hidden clip systems or color screws</td>
+                </tr>
+                <tr>
+                  <td><strong>Cellular PVC</strong></td>
+                  <td>$35 - $55 / sq ft</td>
+                  <td>30 to 40+ Years</td>
+                  <td>Minimal (Occasional rinse down)</td>
+                  <td>Hidden clip systems or plug systems</td>
+                </tr>
+                <tr>
+                  <td><strong>Ipe Hardwood</strong></td>
+                  <td>$40 - $70 / sq ft</td>
+                  <td>40 to 50+ Years</td>
+                  <td>Moderate (Annual UV oil treatment)</td>
+                  <td>Pre-drilled stainless screws / clips</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            While pressure-treated lumber presents the lowest initial hurdle, long-term costs accumulate through biennial pressure washing, premium exterior sealers, and board warping replacements. High-performance composite boards eliminate splinters and sanding, justifying higher material costs over a 15-year period.
+          </p>
+
+          <!-- SECTION 5 -->
+          <h2 id="toc-railing-stairs">Railing and Stairs</h2>
+          <p>
+            Safety features like guardrails and staircases are strictly governed by building codes to protect occupants from fall hazards. Any residential platform elevated more than 30 inches above surrounding grade requires a continuous guardrail at least 36 inches in height.
+          </p>
+
+          <h3>Railing Calculation Method</h3>
+          <p>
+            To calculate guardrail linear footage, compute the three exposed perimeter edges of the deck (excluding the side anchored to the house), and subtract the width of the stair opening.
+          </p>
+          <p>
+            For a standard 12x16 foot deck with the 16-foot side attached to the house:
+          </p>
+          <ul>
+            <li><strong>Two 12-Foot Sides:</strong> 12 ft + 12 ft = 24 linear feet</li>
+            <li><strong>One 16-Foot Outer Face:</strong> 16 linear feet</li>
+            <li><strong>Total Gross Perimeter:</strong> 24 ft + 16 ft = 40 linear feet</li>
+            <li><strong>Stair Opening Deduction:</strong> Subtract 4 feet for the stair entryway</li>
+            <li><strong>Net Railing Required:</strong> 40 ft - 4 ft = <strong>36 linear feet</strong></li>
+          </ul>
+          <p>
+            Building codes require that balusters be spaced so that a 4-inch rigid sphere cannot pass through any point of the railing assembly. For standard 6-foot railing sections, plan on 1 structural 4x4 support post every 6 to 8 feet, with 14 to 16 balusters per section.
+          </p>
+
+          <h3>Stair Geometry and Stringer Rules</h3>
+          <p>
+            Deck stairs translate vertical elevation into safe, ergonomic steps. International Residential Code stipulates a maximum step riser height of 7.75 inches and a minimum tread depth of 10 inches.
+          </p>
+          <div class="formula-card">
+            <span class="takeoff-label">Stair Calculation Formulas</span>
+            <code class="formula-code">Total Rise (in) = Deck Height in Feet * 12</code>
+            <code class="formula-code">Risers Count = Math.ceil(Total Rise / 7)</code>
+            <code class="formula-code">Treads Count = Risers Count - 1</code>
+            <code class="formula-code">Stringer Count = Math.max(3, Math.ceil(Stair Width in Inches / 16) + 1)</code>
+          </div>
+          <p>
+            For a deck 4 feet (48 inches) above ground:
+          </p>
+          <ul>
+            <li><strong>Risers:</strong> 48 / 7 = 6.86, rounded up to <strong>7 risers</strong> (each exactly 6.86 inches high).</li>
+            <li><strong>Treads:</strong> 7 risers - 1 = <strong>6 steps</strong>.</li>
+            <li><strong>Stringers:</strong> For a 36-inch wide stair, 36 / 16 = 2.25 + 1 = 3.25, requiring a minimum of <strong>3 stringers</strong> (center stringer prevents tread bounce). When using composite treads, stringers must be spaced 12 inches on-center, requiring 4 stringers for a 36-inch staircase.</li>
+          </ul>
+
+          <!-- SECTION 6 -->
+          <h2 id="toc-joist-spans">Joist Span and Code Notes</h2>
+          <p>
+            Deck substructure safety is codified under International Residential Code (IRC Section R507 - Exterior Decks). Permissible joist spans depend on the wood species, grade, lumber dimensions (2x6, 2x8, 2x10, or 2x12), on-center spacing, and whether the joists overhang a supporting drop beam.
+          </p>
+
+          <div class="diagram-container">
+            <svg viewBox="0 0 720 220" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .diag-bg{fill:rgba(14,18,41,0.6);stroke:rgba(139,92,246,0.3);stroke-width:1;}
+                .diag-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;fill:#F8FAFC;}
+                .diag-sub{font-family:'Inter',sans-serif;font-size:10px;fill:#94A3B8;}
+                .diag-beam{fill:#F97316;}
+                .diag-joist{fill:#00F0FF;}
+                .diag-badge{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;fill:#00F0FF;}
+              </style>
+              
+              <!-- Panel 1: 12" OC -->
+              <rect x="10" y="10" width="220" height="200" rx="8" class="diag-bg"/>
+              <text x="25" y="35" class="diag-title">12" On-Center Spacing</text>
+              <text x="25" y="52" class="diag-sub">Heavy duty, diagonal boards &amp; PVC</text>
+              <rect x="25" y="65" width="190" height="6" class="diag-beam" rx="1"/>
+              <rect x="25" y="150" width="190" height="6" class="diag-beam" rx="1"/>
+              <!-- 9 Joists across run -->
+              <rect x="25" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="48" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="72" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="96" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="120" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="144" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="168" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="191" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="212" y="71" width="3" height="79" class="diag-joist"/>
+              <text x="25" y="178" class="diag-badge">9 Joists / 8 FT Run</text>
+              <text x="25" y="194" class="diag-sub">Max stiffness, zero deck bounce</text>
+
+              <!-- Panel 2: 16" OC -->
+              <rect x="250" y="10" width="220" height="200" rx="8" class="diag-bg"/>
+              <text x="265" y="35" class="diag-title">16" On-Center Spacing</text>
+              <text x="265" y="52" class="diag-sub">Standard residential wood &amp; composite</text>
+              <rect x="265" y="65" width="190" height="6" class="diag-beam" rx="1"/>
+              <rect x="265" y="150" width="190" height="6" class="diag-beam" rx="1"/>
+              <!-- 7 Joists across run -->
+              <rect x="265" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="296" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="328" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="360" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="391" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="423" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="452" y="71" width="3" height="79" class="diag-joist"/>
+              <text x="265" y="178" class="diag-badge" style="fill:#8B5CF6;">7 Joists / 8 FT Run</text>
+              <text x="265" y="194" class="diag-sub">Code standard for 5/4x6 decking</text>
+
+              <!-- Panel 3: 24" OC -->
+              <rect x="490" y="10" width="220" height="200" rx="8" class="diag-bg"/>
+              <text x="505" y="35" class="diag-title">24" On-Center Spacing</text>
+              <text x="505" y="52" class="diag-sub">Heavy 2x6 timber planking only</text>
+              <rect x="505" y="65" width="190" height="6" class="diag-beam" rx="1"/>
+              <rect x="505" y="150" width="190" height="6" class="diag-beam" rx="1"/>
+              <!-- 5 Joists across run -->
+              <rect x="505" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="552" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="600" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="647" y="71" width="3" height="79" class="diag-joist"/>
+              <rect x="692" y="71" width="3" height="79" class="diag-joist"/>
+              <text x="505" y="178" class="diag-badge" style="fill:#F59E0B;">5 Joists / 8 FT Run</text>
+              <text x="505" y="194" class="diag-sub">Not permitted for composite planks</text>
+            </svg>
+          </div>
+
+          <p>
+            For comprehensive, engineer-approved connection schedules and beam span tables, builders should consult the official <a href="https://awc.org/codes-standards/publications/dca6" target="_blank" rel="noopener">American Wood Council (AWC) Prescriptive Residential Wood Deck Construction Guide (DCA 6)</a>. This document outlines ledger fastener schedules, lateral tension tie requirements, beam cantilever limits, and post-to-beam connection details.
+          </p>
+          <p>
+            <strong>Structural Limitation Notice:</strong> This interactive calculator provides preliminary material estimations for estimating and budget planning purposes only. It does not calculate site-specific wind uplift, seismic bracing, or continuous load paths. Always submit formal plans to your local municipal building department and consult a licensed structural engineer for complex multi-level deck structures.
+          </p>
+
+          
+          <h3>Joist Cantilevers and Allowable Span Deflection</h3>
+          <p>
+            When deck field joists extend past a support drop beam, the overhanging portion is classified as a joist cantilever. Under prescriptive AWC DCA 6 rules, the maximum joist cantilever cannot exceed one-fourth of the actual adjacent joist span, provided joist depth matches or exceeds structural requirements. For instance, joists spanning 12 feet from ledger to beam may cantilever up to 3 feet past the beam centerline if engineered for uniform snow or live loading.
+          </p>
+          <p>
+            Deflection limits dictate the perceived stiffness of the outdoor floor. Residential deck codes enforce a maximum live load deflection limit of L/360, meaning that a 12-foot joist span (144 inches) cannot deflect more than 0.40 inches under full live occupancy (40 pounds per square foot live load plus 10 pounds dead load). Tightening joist spacing from 16 inches on-center to 12 inches on-center increases floor rigidity by over 30 percent, eliminating noticeable spring and bounce.
+          </p>
+
+          <!-- SECTION 7 -->
+          <h2 id="toc-diy-vs-pro">DIY Versus Contractor</h2>
+          <p>
+            Homeowners frequently debate whether to self-build or hire a general contractor. A comprehensive material breakdown clarifies the economic trade-offs. Using a standard 12x16 foot pressure-treated deck model (192 sq ft), here is how the real-world costs compare:
+          </p>
+
+          <h3>DIY Material Breakdown (Approximately $2,870)</h3>
+          <ul>
+            <li><strong>Surface Decking Boards:</strong> $750 (29 sixteen-foot pressure-treated 5/4x6 boards)</li>
+            <li><strong>Joists, Ledger &amp; Beams:</strong> $650 (2x8 joists, 2x10 beams, and rim boards)</li>
+            <li><strong>Support Posts &amp; Hardware:</strong> $300 (6x6 posts, post bases, joist hangers, lag screws)</li>
+            <li><strong>Footing Pier Concrete:</strong> $120 (18 bags of 60 lb concrete mix plus Sonotube forms)</li>
+            <li><strong>Deck Screws &amp; Fasteners:</strong> $200 (884 coated deck screws plus structural ledger fasteners)</li>
+            <li><strong>Perimeter Railing Assembly:</strong> $850 (36 linear feet of pressure-treated rails and balusters)</li>
+          </ul>
+
+          <h3>Professional Contractor Turnkey Installation (Approximately $7,070)</h3>
+          <p>
+            A licensed deck builder typically bills between $6,000 and $8,500 for this exact build, averaging roughly <strong>$7,070 turnkey</strong> ($36.80 per square foot). The contractor pricing encompasses:
+          </p>
+          <ul>
+            <li><strong>Skilled Carpentry Labor:</strong> Approximately $3,900 (labor generally represents <strong>45% to 55%</strong> of the total project price).</li>
+            <li><strong>Materials &amp; Delivery Logistics:</strong> $2,870 (often secured with trade bulk discounts).</li>
+            <li><strong>Permit Filing, Inspections &amp; Structural Warranty:</strong> $300 to $500.</li>
+          </ul>
+
+          <p>
+            DIY construction saves thousands of dollars in exchange for 40 to 80 hours of intensive physical labor, hole excavation, and precise framing carpentry. For homeowners considering additional structural work, review the <a href="/">wall calculator suite</a> to coordinate interior partitions, siding, and foundation takeoffs under one umbrella.
+          </p>
+
+          <!-- CONCLUSION BOX -->
+          <div class="conclusion-box">
+            <h2 style="margin-top:0;font-size:1.5rem;color:var(--text-main);">Conclusion: Streamline Projects with a Deck Material Calculator</h2>
+            <p style="margin-bottom:0;">
+              Planning an outdoor deck build requires coordinating interdependent structural systems, from concrete foundation piers and framing spans to surface board courses and guardrail fasteners. Using an online <strong>deck material calculator</strong> prevents costly job site delays, eliminates lumber waste, and delivers actionable material lists for your local building supplier. Measure your project footprint, configure your preferred board dimensions, and generate an instant, contractor-grade material takeoff today.
+            </p>
+          </div>
+
+          <!-- SECTION 8: FAQS -->
+          <h2 id="toc-faqs" style="margin-top:3.5rem;">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How much is material for a 20x20 deck?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Materials for a 20x20 foot deck (400 square feet) range from $4,800 to $7,200 for standard pressure-treated wood ($12 to $18 per square foot). Cedar lumber materials cost $7,200 to $11,200, while composite decking materials average $11,200 to $18,000 including framing, fasteners, footings, and railings.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How to calculate deck sheet?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Calculate deck surface boards by dividing the total deck area by the effective board width in feet (nominal board width plus gap). For 5.5-inch boards with a 0.25-inch gap (5.75 inches or 0.4792 feet), multiply deck square footage by 2.087 to get total linear feet, then divide by standard board lengths (12, 16, or 20 feet) and add a 10 percent waste buffer.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How do I calculate how much decking I need?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Determine total deck area by multiplying length by width. Divide the square footage by the coverage width of your selected board plus spacing gap. Convert the result into linear feet of decking, divide by your chosen lumber length, and add 10 percent for trimming, end squaring, and defect cuts.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>What should a 12x24 deck cost?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>A 12x24 foot deck (288 square feet) costs between $3,450 and $5,200 for DIY pressure-treated materials. Professional turnkey installation ranges from $7,200 to $14,400 for pressure-treated wood ($25 to $50 per square foot) and $10,000 to $23,000 for composite decking ($35 to $80 per square foot).</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How to calculate deck material?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Calculate deck materials across four main systems: foundation (footings and concrete bags), framing (ledger, rim joists, field joists, and support beams), decking surface (linear feet of boards plus fasteners), and accessories (perimeter railing posts, balusters, and stair stringers). Using an interactive deck material calculator simplifies these interconnected calculations instantly.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How much will a 12x12 deck cost?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>A 12x12 foot deck (144 square feet) costs roughly $1,750 to $2,600 for DIY pressure-treated lumber and hardware. Turnkey contractor installation runs between $3,500 and $8,000 for pressure-treated wood, or $5,000 to $11,500 for composite decking depending on height, railing choice, and site grading.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>What is the cost of a 12x16 deck?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>A 12x16 foot deck (192 square feet) costs approximately $2,870 in DIY materials for pressure-treated lumber, framing, fasteners, concrete, and railing. Professional turnkey construction averages $7,070 (ranging from $4,800 to $9,600 for wood, or $6,700 to $15,300 for composite).</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>What materials are needed to build a 12x12 deck?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>A standard 12x12 foot deck attached to a house requires: 1 ledger board (2x8x12), 1 outer rim joist (2x8x12), 2 side rims (2x8x12), 10 field joists (2x8x12 at 16 inches on-center), 2 beam boards (2x10x12), 3 support posts (4x4 or 6x6), 3 concrete footings with 18 bags of 60 lb concrete, 23 deck boards (5/4x6x16 with 10 percent waste), structural lag screws, joist hangers, and approximately 660 deck screws.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How many boards do I need for a 12x16 deck?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>For a 12x16 foot deck (192 square feet) using standard 5.5-inch boards with a 0.25-inch gap running the 12-foot length, you need 401 linear feet of decking. When ordering 16-foot boards, this requires 26 boards before waste and 29 boards with a standard 10 percent waste buffer.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Should joist spacing be 12, 16 or 24 inches?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Use 16 inches on-center for standard perpendicular wood decking and most residential composite planks. Use 12 inches on-center if installing deck boards diagonally (45 degrees), using thinner composite boards, or building for commercial loads. Reserve 24 inches on-center strictly for heavy 2x6 wood decking installed perpendicularly.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How deep should deck footings be?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Deck footings must extend at least 12 inches below the local frost depth established by municipal building codes to prevent frost heave. In warm southern climates, footings are typically 12 to 18 inches deep, while northern regions require depths of 36 to 48 inches or more.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Do I need a permit to build a deck?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Most jurisdictions require a building permit if the deck is attached to the house, exceeds 200 square feet in area, or is elevated more than 30 inches above grade. Freestanding ground-level platforms under 200 square feet and under 30 inches high are frequently exempt, but property setbacks and zoning rules still apply.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- ==========================================================================
+       ZONE 7: SITE FOOTER (4-COLUMN UNIFIED STRUCTURE)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="brand-logo" aria-label="WallCalculator.app Home">
+            <svg viewBox="0 0 48 48" width="32" height="32" fill="none">
+              <rect width="48" height="48" rx="10" fill="#0B0F19"/>
+              <rect x="6" y="8" width="36" height="4" rx="1" fill="#F97316"/>
+              <rect x="6" y="36" width="36" height="4" rx="1" fill="#F97316"/>
+              <rect x="8" y="12" width="3" height="24" fill="#38BDF8"/>
+              <rect x="18" y="12" width="3" height="24" fill="#38BDF8"/>
+              <rect x="28" y="12" width="3" height="24" fill="#38BDF8"/>
+              <rect x="37" y="12" width="3" height="24" fill="#38BDF8"/>
+            </svg>
+            <span>Wall<span class="accent">Calculator</span></span>
+          </a>
+          <p>Contractor-grade framing, drywall, masonry block, concrete slab, and deck estimating tools engineered for professional builders, remodelers, and DIY homeowners.</p>
+          <!-- Social Media Placeholder Slot (hidden until used) -->
+          <div class="footer-social-slot" aria-hidden="true" style="display:none;"><!-- Future social media links --></div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="/">Wall Framing Calculator</a></li>
+            <li><a href="/wall-stud-calculator">Wall Stud Calculator</a></li>
+            <li><a href="/drywall-calculator">Drywall Calculator</a></li>
+            <li><a href="/retaining-wall-calculator">Retaining Wall Calculator</a></li>
+            <li><a href="/cinder-block-calculator">Cinder Block Calculator</a></li>
+            <li><a href="/concrete-slab-calculator">Concrete Slab Calculator</a></li>
+            <li><a href="/deck-calculator">Deck Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Building Guides</h4>
+          <ul>
+            <li><a href="/wall-stud-calculator#toc-spacing">16 vs 24 OC Stud Spacing</a></li>
+            <li><a href="/drywall-calculator#toc-sizes">4x8 vs 4x12 Drywall Sheets</a></li>
+            <li><a href="/retaining-wall-calculator#toc-drainage">Retaining Wall Drainage</a></li>
+            <li><a href="/cinder-block-calculator#toc-cmu-vs-cinder">CMU vs Cinder Blocks</a></li>
+            <li><a href="/concrete-slab-calculator#toc-thickness-guide">Concrete Slab Thickness</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal &amp; About</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+            <li><a href="/cookie-policy">Cookie Policy</a></li>
+            <li><a href="/disclaimer">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 WallCalculator.app. All rights reserved. Precision construction takeoff suite.</span>
+        <span>Deck calculations are based on International Residential Code (IRC Section R507) and American Wood Council DCA 6 guidelines. Estimates are for preliminary material planning only. Always confirm structural engineering and load calculations with local municipal building departments.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       CLIENT-SIDE JAVASCRIPT: ENGINE & VISUALIZERS
+       ========================================================================== -->
+  <script>
+  (function() {
+    'use strict';
+
+    // Back to top button
+    var bttBtn = document.getElementById('backToTopBtn');
+    if (bttBtn) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+          bttBtn.classList.add('visible');
+        } else {
+          bttBtn.classList.remove('visible');
+        }
+      }, { passive: true });
+      bttBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Theme Toggle
+    var themeBtn = document.getElementById('themeToggleBtn');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme') || 'dark';
+        var next = (current === 'dark') ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('wc_theme', next); } catch(e) {}
+      });
+    }
+
+    // Mobile Navigation Menu Toggle
+    var mobileBtn = document.getElementById('mobileMenuBtn');
+    var navLinks = document.getElementById('navLinks');
+    if (mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', function() {
+        var isOpen = navLinks.classList.toggle('mobile-open');
+        mobileBtn.setAttribute('aria-expanded', isOpen);
+      });
+    }
+
+    // Hero TOC Toggle
+    var heroTocCard = document.getElementById('heroTocCard');
+    var heroTocToggle = document.getElementById('heroTocToggle');
+    if (heroTocToggle && heroTocCard) {
+      heroTocToggle.addEventListener('click', function() {
+        var isOpen = heroTocCard.classList.toggle('open');
+        heroTocToggle.setAttribute('aria-expanded', isOpen);
+      });
+      heroTocCard.querySelectorAll('.hero-toc-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 768) {
+            heroTocCard.classList.remove('open');
+            heroTocToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }
+
+    // FAQ Accordion
+    var faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+
+        // Close others
+        document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            var a = openItem.querySelector('.faq-answer');
+            if (a) a.style.maxHeight = '0px';
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          if (answer) answer.style.maxHeight = '0px';
+        } else {
+          item.classList.add('open');
+          if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Cost Breakdown Toggle
+    var btnToggleCosts = document.getElementById('btnToggleCosts');
+    var costBreakdownDetails = document.getElementById('costBreakdownDetails');
+    if (btnToggleCosts && costBreakdownDetails) {
+      btnToggleCosts.addEventListener('click', function() {
+        var isOpen = costBreakdownDetails.classList.toggle('open');
+        btnToggleCosts.innerHTML = isOpen ? 'Hide Cost Breakdown &#9652;' : 'Show Cost Breakdown &#9662;';
+      });
+    }
+
+    // Material Cost Presets ($/sq ft)
+    var materialCosts = {
+      pt: { matLow: 12, matHigh: 18, instLow: 25, instHigh: 50, label: 'Pressure-Treated Wood' },
+      cedar: { matLow: 18, matHigh: 28, instLow: 30, instHigh: 60, label: 'Western Red Cedar' },
+      composite: { matLow: 28, matHigh: 45, instLow: 35, instHigh: 80, label: 'Capped Composite' },
+      pvc: { matLow: 35, matHigh: 55, instLow: 45, instHigh: 95, label: 'Cellular PVC' },
+      hardwood: { matLow: 40, matHigh: 70, instLow: 55, instHigh: 120, label: 'Ipe Hardwood' }
+    };
+
+    // DOM Elements
+    var inLength = document.getElementById('deckLength');
+    var inWidth = document.getElementById('deckWidth');
+    var inHeight = document.getElementById('deckHeight');
+    var selBoardWidth = document.getElementById('boardWidth');
+    var selBoardLength = document.getElementById('boardLength');
+    var inBoardGap = document.getElementById('boardGap');
+    var selJoistSpacing = document.getElementById('joistSpacing');
+    var selMaterial = document.getElementById('deckMaterial');
+    var selFootingDia = document.getElementById('footingDia');
+    var inFootingDepth = document.getElementById('footingDepth');
+    var selFastener = document.getElementById('fastenerType');
+    var inRailing = document.getElementById('railingLength');
+    var inStairWidth = document.getElementById('stairWidth');
+    var inPriceSqFt = document.getElementById('priceSqFt');
+    var inWasteBoards = document.getElementById('wasteBoards');
+    var inWasteFraming = document.getElementById('wasteFraming');
+
+    // Outputs
+    var outDeckArea = document.getElementById('outDeckArea');
+    var outDeckingLinFt = document.getElementById('outDeckingLinFt');
+    var outBoardCount = document.getElementById('outBoardCount');
+    var outBoardRawCallout = document.getElementById('outBoardRawCallout');
+    var outJoistCount = document.getElementById('outJoistCount');
+    var outJoistSub = document.getElementById('outJoistSub');
+    var outBeamLinearFt = document.getElementById('outBeamLinearFt');
+    var outBags60 = document.getElementById('outBags60');
+    var outBagsCallout = document.getElementById('outBagsCallout');
+    var outFasteners = document.getElementById('outFasteners');
+    var outFastenerSub = document.getElementById('outFastenerSub');
+    var outRailingLf = document.getElementById('outRailingLf');
+    var outStairRisers = document.getElementById('outStairRisers');
+    var outStairSub = document.getElementById('outStairSub');
+    var outCostMaterials = document.getElementById('outCostMaterials');
+
+    var costRowDecking = document.getElementById('costRowDecking');
+    var costRowFraming = document.getElementById('costRowFraming');
+    var costRowConcrete = document.getElementById('costRowConcrete');
+    var costRowHardware = document.getElementById('costRowHardware');
+    var costRowRailing = document.getElementById('costRowRailing');
+    var costRowInstalled = document.getElementById('costRowInstalled');
+
+    var blueprintSvg = document.getElementById('blueprintSvg');
+    var blueprintDimensions = document.getElementById('blueprintDimensions');
+    var splitDecking = document.getElementById('splitDecking');
+    var splitFraming = document.getElementById('splitFraming');
+    var splitConcrete = document.getElementById('splitConcrete');
+    var splitPctDecking = document.getElementById('splitPctDecking');
+    var splitPctFraming = document.getElementById('splitPctFraming');
+    var splitPctConcrete = document.getElementById('splitPctConcrete');
+    var calloutBoards = document.getElementById('calloutBoards');
+    var calloutFootings = document.getElementById('calloutFootings');
+    var calloutBags = document.getElementById('calloutBags');
+    var summaryBoardTypeBadge = document.getElementById('summaryBoardTypeBadge');
+
+    // Auto update railing & stairs when main dimensions change
+    var userModifiedRailing = false;
+    if (inRailing) {
+      inRailing.addEventListener('input', function() { userModifiedRailing = true; });
+    }
+
+    function calculateDeck() {
+      var L = parseFloat(inLength.value) || 0;
+      var W = parseFloat(inWidth.value) || 0;
+      var H = parseFloat(inHeight.value) || 0;
+
+      // Validation bounds
+      L = Math.max(4, Math.min(60, L));
+      W = Math.max(4, Math.min(60, W));
+      H = Math.max(0, Math.min(20, H));
+
+      var bWidthIn = parseFloat(selBoardWidth.value) || 5.5;
+      var bLenFt = parseFloat(selBoardLength.value) || 16;
+      var bGapIn = parseFloat(inBoardGap.value) || 0;
+      var spacingIn = parseFloat(selJoistSpacing.value) || 16;
+      var fDiaIn = parseFloat(selFootingDia.value) || 12;
+      var fDepthIn = parseFloat(inFootingDepth.value) || 36;
+      var fastType = selFastener.value;
+      var matKey = selMaterial.value;
+      var userPrice = parseFloat(inPriceSqFt.value) || 0;
+      var wBoardsPct = parseFloat(inWasteBoards.value) || 0;
+      var wFramingPct = parseFloat(inWasteFraming.value) || 0;
+      var sWidthIn = parseFloat(inStairWidth.value) || 36;
+
+      wBoardsPct = Math.max(0, Math.min(25, wBoardsPct));
+      wFramingPct = Math.max(0, Math.min(25, wFramingPct));
+
+      // 1. Deck Area
+      var area = L * W;
+
+      // 2. Decking Linear Feet & Board Count
+      var effWidthIn = bWidthIn + bGapIn;
+      var effWidthFt = effWidthIn / 12.0;
+      var deckingLinearFt = Math.ceil(area / effWidthFt);
+      var rawBoards = Math.ceil(deckingLinearFt / bLenFt);
+      var boardsWithWaste = Math.ceil(rawBoards * (1 + wBoardsPct / 100.0));
+      var rowsCount = Math.ceil((W * 12.0) / effWidthIn);
+
+      // 3. Joists & Framing
+      // Joist count = floor(width across in inches / spacing) + 1
+      var joistCount = Math.floor((W * 12.0) / spacingIn) + 1;
+      var rimJoistLf = Math.ceil((2 * W) * (1 + wFramingPct / 100.0));
+      var beamLinearFt = Math.ceil(W * (1 + wFramingPct / 100.0));
+
+      // 4. Posts & Footings
+      var postCount = Math.max(2, Math.ceil(W / 8.0) + 1);
+      var footingCount = postCount;
+      var radiusFt = (fDiaIn / 2.0) / 12.0;
+      var depthFt = fDepthIn / 12.0;
+      var volPerFootingCuFt = Math.PI * Math.pow(radiusFt, 2) * depthFt;
+      var bags60PerFooting = Math.ceil(volPerFootingCuFt / 0.45);
+      var totalConcreteVol = volPerFootingCuFt * footingCount;
+      var totalBags60 = Math.ceil(totalConcreteVol / 0.45);
+
+      // 5. Fasteners
+      var fastenerCount = (fastType === 'clips') ? (rowsCount * joistCount * 1) : (rowsCount * joistCount * 2);
+
+      // 6. Railing
+      if (!userModifiedRailing) {
+        var autoRailing = Math.max(0, Math.round((2 * L + W) - 4));
+        inRailing.value = autoRailing;
+      }
+      var railingLf = parseFloat(inRailing.value) || 0;
+
+      // 7. Stairs
+      var totalRiseIn = H * 12.0;
+      var stairRisers = (H > 0) ? Math.ceil(totalRiseIn / 7.0) : 0;
+      var stairTreads = Math.max(0, stairRisers - 1);
+      var stairStringers = (H > 0) ? Math.max(3, Math.ceil(sWidthIn / 16.0) + 1) : 0;
+
+      // 8. Costing
+      var matPreset = materialCosts[matKey] || materialCosts.pt;
+      var costLow = 0;
+      var costHigh = 0;
+      var instLow = 0;
+      var instHigh = 0;
+
+      if (userPrice > 0) {
+        costLow = Math.round(area * userPrice);
+        costHigh = Math.round(area * userPrice * 1.15);
+        instLow = Math.round(area * userPrice * 1.8);
+        instHigh = Math.round(area * userPrice * 2.5);
+      } else {
+        costLow = Math.round(area * matPreset.matLow);
+        costHigh = Math.round(area * matPreset.matHigh);
+        instLow = Math.round(area * matPreset.instLow);
+        instHigh = Math.round(area * matPreset.instHigh);
+      }
+
+      // Update DOM Text
+      outDeckArea.textContent = area.toLocaleString();
+      outDeckingLinFt.textContent = deckingLinearFt.toLocaleString();
+      outBoardCount.textContent = boardsWithWaste.toLocaleString();
+      outBoardRawCallout.textContent = bLenFt + ' FT Planks (' + rawBoards + ' + ' + wBoardsPct + '% Waste)';
+      outJoistCount.textContent = joistCount.toLocaleString();
+      outJoistSub.textContent = L + ' FT Spanning Joists (' + spacingIn + '" OC)';
+      outBeamLinearFt.textContent = (beamLinearFt + rimJoistLf).toLocaleString();
+      outBags60.textContent = totalBags60.toLocaleString();
+      outBagsCallout.textContent = bags60PerFooting + ' Bags / Footing (' + footingCount + ' Piers)';
+      outFasteners.textContent = fastenerCount.toLocaleString();
+      outFastenerSub = document.getElementById('outFastenerSub');
+      if (outFastenerSub) {
+        outFastenerSub.textContent = (fastType === 'clips' ? 'Hidden Clips' : 'Face Screws') + ' (' + rowsCount + ' Rows x ' + joistCount + ')';
+      }
+      outRailingLf.textContent = railingLf.toLocaleString();
+      outStairRisers.textContent = stairRisers;
+      outStairSub.textContent = stairRisers + ' Risers, ' + stairTreads + ' Treads, ' + stairStringers + ' Stringers';
+      outCostMaterials.textContent = '$' + costLow.toLocaleString() + ' - $' + costHigh.toLocaleString();
+
+      // Cost Table
+      costRowDecking.textContent = '$' + Math.round(costLow * 0.45).toLocaleString() + ' - $' + Math.round(costHigh * 0.45).toLocaleString();
+      costRowFraming.textContent = '$' + Math.round(costLow * 0.30).toLocaleString() + ' - $' + Math.round(costHigh * 0.30).toLocaleString();
+      costRowConcrete.textContent = '$' + Math.round(costLow * 0.12).toLocaleString() + ' - $' + Math.round(costHigh * 0.12).toLocaleString();
+      costRowHardware.textContent = '$' + Math.round(costLow * 0.08).toLocaleString() + ' - $' + Math.round(costHigh * 0.08).toLocaleString();
+      costRowRailing.textContent = '$' + Math.round(costLow * 0.15).toLocaleString() + ' - $' + Math.round(costHigh * 0.15).toLocaleString();
+      costRowInstalled.textContent = '$' + instLow.toLocaleString() + ' - $' + instHigh.toLocaleString();
+
+      // Visual Summary Panel Callouts
+      calloutBoards.textContent = boardsWithWaste + ' Boards';
+      calloutFootings.textContent = footingCount + ' Footings';
+      calloutBags.textContent = totalBags60 + ' Bags';
+      summaryBoardTypeBadge.textContent = matPreset.label;
+
+      // Split bar updates
+      var splitMat = 45;
+      var splitFrm = 35;
+      var splitCon = 20;
+      splitDecking.style.width = splitMat + '%';
+      splitFraming.style.width = splitFrm + '%';
+      splitConcrete.style.width = splitCon + '%';
+      splitPctDecking.textContent = splitMat + '%';
+      splitPctFraming.textContent = splitFrm + '%';
+      splitPctConcrete.textContent = splitCon + '%';
+
+      // Blueprint Dimensions Text
+      blueprintDimensions.textContent = L + "' Span x " + W + "' Width (" + area + " Sq Ft)";
+
+      // Draw Blueprint SVG
+      drawBlueprint(L, W, joistCount, postCount);
+    }
+
+    // 2D Blueprint Renderer
+    function drawBlueprint(L, W, joists, posts) {
+      if (!blueprintSvg) return;
+      while (blueprintSvg.firstChild) {
+        blueprintSvg.removeChild(blueprintSvg.firstChild);
+      }
+
+      var svgW = 500;
+      var svgH = 200;
+      var padX = 40;
+      var padY = 30;
+      var drawW = svgW - padX * 2;
+      var drawH = svgH - padY * 2;
+
+      // Scale to fit
+      var scaleX = drawW / W;
+      var scaleY = drawH / L;
+      var scale = Math.min(scaleX, scaleY);
+
+      var boxW = W * scale;
+      var boxH = L * scale;
+      var x0 = padX + (drawW - boxW) / 2;
+      var y0 = padY + (drawH - boxH) / 2;
+
+      var ns = "http://www.w3.org/2000/svg";
+
+      // 1. Deck Perimeter Box
+      var rect = document.createElementNS(ns, "rect");
+      rect.setAttribute("x", x0);
+      rect.setAttribute("y", y0);
+      rect.setAttribute("width", boxW);
+      rect.setAttribute("height", boxH);
+      rect.setAttribute("fill", "rgba(0,240,255,0.03)");
+      rect.setAttribute("stroke", "#38BDF8");
+      rect.setAttribute("stroke-width", "2");
+      rect.setAttribute("rx", "2");
+      blueprintSvg.appendChild(rect);
+
+      // 2. House Ledger (Top Edge - bold orange)
+      var ledger = document.createElementNS(ns, "line");
+      ledger.setAttribute("x1", x0);
+      ledger.setAttribute("y1", y0);
+      ledger.setAttribute("x2", x0 + boxW);
+      ledger.setAttribute("y2", y0);
+      ledger.setAttribute("stroke", "#F97316");
+      ledger.setAttribute("stroke-width", "5");
+      blueprintSvg.appendChild(ledger);
+
+      var ledgerText = document.createElementNS(ns, "text");
+      ledgerText.setAttribute("x", x0 + boxW / 2);
+      ledgerText.setAttribute("y", y0 - 8);
+      ledgerText.setAttribute("text-anchor", "middle");
+      ledgerText.setAttribute("fill", "#F97316");
+      ledgerText.setAttribute("font-size", "10");
+      ledgerText.setAttribute("font-weight", "700");
+      ledgerText.textContent = "HOUSE / LEDGER BOARD";
+      blueprintSvg.appendChild(ledgerText);
+
+      // 3. Field Joists (vertical lines from ledger down to rim)
+      if (joists > 1) {
+        var jStep = boxW / (joists - 1);
+        for (var i = 0; i < joists; i++) {
+          var jx = x0 + i * jStep;
+          var jLine = document.createElementNS(ns, "line");
+          jLine.setAttribute("x1", jx);
+          jLine.setAttribute("y1", y0);
+          jLine.setAttribute("x2", jx);
+          jLine.setAttribute("y2", y0 + boxH);
+          jLine.setAttribute("stroke", "#00F0FF");
+          jLine.setAttribute("stroke-width", (i === 0 || i === joists - 1) ? "2.5" : "1.2");
+          jLine.setAttribute("stroke-opacity", "0.85");
+          blueprintSvg.appendChild(jLine);
+        }
+      }
+
+      // 4. Drop Beam (horizontal line near bottom, 75% down)
+      var beamY = y0 + boxH * 0.75;
+      var beam = document.createElementNS(ns, "line");
+      beam.setAttribute("x1", x0);
+      beam.setAttribute("y1", beamY);
+      beam.setAttribute("x2", x0 + boxW);
+      beam.setAttribute("y2", beamY);
+      beam.setAttribute("stroke", "#8B5CF6");
+      beam.setAttribute("stroke-width", "3.5");
+      beam.setAttribute("stroke-dasharray", "6 3");
+      blueprintSvg.appendChild(beam);
+
+      // 5. Post & Footing Piers (dots along beam)
+      if (posts > 1) {
+        var pStep = boxW / (posts - 1);
+        for (var p = 0; p < posts; p++) {
+          var px = x0 + p * pStep;
+          // Footing circle
+          var circle = document.createElementNS(ns, "circle");
+          circle.setAttribute("cx", px);
+          circle.setAttribute("cy", beamY);
+          circle.setAttribute("r", "7");
+          circle.setAttribute("fill", "#10B981");
+          circle.setAttribute("stroke", "#FFFFFF");
+          circle.setAttribute("stroke-width", "1.5");
+          blueprintSvg.appendChild(circle);
+
+          // Center crosshair
+          var cross = document.createElementNS(ns, "line");
+          cross.setAttribute("x1", px - 3);
+          cross.setAttribute("y1", beamY);
+          cross.setAttribute("x2", px + 3);
+          cross.setAttribute("y2", beamY);
+          cross.setAttribute("stroke", "#060714");
+          cross.setAttribute("stroke-width", "1");
+          blueprintSvg.appendChild(cross);
+        }
+      }
+
+      // 6. Dimension Annotations
+      var dimW = document.createElementNS(ns, "text");
+      dimW.setAttribute("x", x0 + boxW / 2);
+      dimW.setAttribute("y", y0 + boxH + 18);
+      dimW.setAttribute("text-anchor", "middle");
+      dimW.setAttribute("fill", "var(--text-main)");
+      dimW.setAttribute("font-size", "11");
+      dimW.setAttribute("font-weight", "600");
+      dimW.textContent = W + " FT WIDTH";
+      blueprintSvg.appendChild(dimW);
+
+      var dimL = document.createElementNS(ns, "text");
+      dimL.setAttribute("x", x0 - 10);
+      dimL.setAttribute("y", y0 + boxH / 2);
+      dimL.setAttribute("text-anchor", "end");
+      dimL.setAttribute("fill", "var(--text-main)");
+      dimL.setAttribute("font-size", "11");
+      dimL.setAttribute("font-weight", "600");
+      dimL.textContent = L + " FT";
+      blueprintSvg.appendChild(dimL);
+    }
+
+    // Attach listeners on input, change, and keyup (Real-time calculation)
+    var allInputs = [
+      inLength, inWidth, inHeight, selBoardWidth, selBoardLength, inBoardGap,
+      selJoistSpacing, selMaterial, selFootingDia, inFootingDepth, selFastener,
+      inRailing, inStairWidth, inPriceSqFt, inWasteBoards, inWasteFraming
+    ];
+
+    allInputs.forEach(function(el) {
+      if (el) {
+        el.addEventListener('input', calculateDeck);
+        el.addEventListener('change', calculateDeck);
+        el.addEventListener('keyup', calculateDeck);
+      }
+    });
+
+    // Copy Material Takeoff Button
+    var btnCopyTakeoff = document.getElementById('btnCopyTakeoff');
+    if (btnCopyTakeoff) {
+      btnCopyTakeoff.addEventListener('click', function() {
+        var text = [
+          'WallCalculator.app - Deck Material Takeoff',
+          '========================================',
+          'Deck Dimensions: ' + inLength.value + ' FT (Span) x ' + inWidth.value + ' FT (Width) = ' + outDeckArea.textContent + ' Sq Ft',
+          'Decking Material: ' + (materialCosts[selMaterial.value] ? materialCosts[selMaterial.value].label : selMaterial.value),
+          'Surface Boards: ' + outBoardCount.textContent + ' boards (' + selBoardLength.value + ' FT, ' + selBoardWidth.value + ' in wide)',
+          'Decking Linear Feet: ' + outDeckingLinFt.textContent + ' LF',
+          'Field Joists: ' + outJoistCount.textContent + ' joists (' + selJoistSpacing.value + ' in OC, ' + inLength.value + ' FT long)',
+          'Beams & Rim Lumber: ' + outBeamLinearFt.textContent + ' LF',
+          'Foundation Footings: ' + calloutFootings.textContent + ' (' + selFootingDia.value + ' in dia x ' + inFootingDepth.value + ' in deep)',
+          'Concrete Required: ' + outBags60.textContent + ' bags (60-lb pre-mix)',
+          'Fasteners Required: ' + outFasteners.textContent + ' (' + (selFastener.value === 'clips' ? 'Hidden Clips' : 'Face Screws') + ')',
+          'Perimeter Railing: ' + outRailingLf.textContent + ' LF',
+          'Stairs: ' + outStairRisers.textContent + ' risers, ' + outStairSub.textContent,
+          'Estimated Material Cost: ' + outCostMaterials.textContent,
+          'Generated on https://wallcalculator.app/deck-calculator'
+        ].join('\n');
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function() {
+            var orig = btnCopyTakeoff.querySelector('span').textContent;
+            btnCopyTakeoff.querySelector('span').textContent = 'Copied to Clipboard!';
+            setTimeout(function() { btnCopyTakeoff.querySelector('span').textContent = orig; }, 2000);
+          });
+        }
+      });
+    }
+
+    // Print PDF Button
+    var btnPrintPdf = document.getElementById('btnPrintPdf');
+    if (btnPrintPdf) {
+      btnPrintPdf.addEventListener('click', function() {
+        window.print();
+      });
+    }
+
+    // Initial calculation on page load
+    calculateDeck();
+
+  })();
+  </script>
+
+  <!-- Google tag (gtag.js) - Non-Blocking Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNPHPE8S2V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VNPHPE8S2V');
+  </script>
+</body>
+</html>

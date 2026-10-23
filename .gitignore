@@ -21,3 +21,8 @@ verify_new_og.py
 # OS files
 .DS_Store
 Thumbs.db
+
+scratch/
+*.csv
+*.xlsx
+analyze_all_data.py
