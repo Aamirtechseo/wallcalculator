@@ -144,3 +144,9 @@ Every page on `wallcalculator.app` MUST include **exactly one high-authority, no
   * Material industry standards: Gypsum Association (`gypsum.org`), National Concrete Masonry Association (`ncma.org`), The Masonry Society (`masonrysociety.org`)
 * **Strict Prohibition:** NEVER link to competing commercial calculator tools or affiliate blogs (e.g., Calculator.net, Omni Calculator, HomeAdvisor, BobVila).
 * **Placement:** Weave organically into the technical educational guide when referencing building codes, standard span limits, or material specs.
+
+---
+
+### 12. Permanent rules - do not remove
+PERMANENT RULE: The Google Search Console verification meta tag (<meta name="google-site-verification" content="uwycXcCau8QxGhGAJXw8MdhRhaqfwocgm-C9AI3S3YY" />) must remain in the <head> of the homepage and every page of wallcalculator.app forever. No future edit, rewrite, redesign, nav or footer unification, migration, or cleanup may remove, change, or move this tag. Any task that rewrites a page head must carry this tag into the new head. Before reporting any future build as done, verify this tag is still present on the live homepage.
+
