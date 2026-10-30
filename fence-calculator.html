@@ -470,9 +470,9 @@ a{color:inherit;text-decoration:none}
   <!-- 1. Header Zone -->
   <header class="header-nav">
     <div class="container">
-      <div class="nav-inner">
+      <nav class="nav-inner" aria-label="Main Navigation">
         <a href="/" class="brand-logo" aria-label="WallCalculator.app Home">
-          <svg viewBox="0 0 48 48" fill="none">
+          <svg viewBox="0 0 48 48" width="32" height="32" fill="none">
             <rect width="48" height="48" rx="10" fill="#0B0F19"/>
             <rect x="6" y="8" width="36" height="4" rx="1" fill="#F97316"/>
             <rect x="6" y="36" width="36" height="4" rx="1" fill="#F97316"/>
@@ -484,40 +484,25 @@ a{color:inherit;text-decoration:none}
           <span>Wall<span class="accent">Calculator</span></span>
         </a>
 
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/">Wall Framing</a></li>
-          <li><a href="/wall-stud-calculator">Studs</a></li>
-          <li><a href="/drywall-calculator">Drywall</a></li>
+        <ul class="nav-links" role="list">
+          <li><a href="/" class="active" aria-current="page">Wall Estimator</a></li>
+          <li><a href="/wall-stud-calculator">Stud Calculator</a></li>
+          <li><a href="/drywall-calculator">Drywall Sheets</a></li>
           <li><a href="/retaining-wall-calculator">Retaining Wall</a></li>
           <li><a href="/cinder-block-calculator">Cinder Block</a></li>
-          <li><a href="/concrete-slab-calculator">Concrete Slab</a></li>
-          <li><a href="/deck-calculator">Deck</a></li>
-          <li><a href="/fence-calculator" class="active">Fence</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
-          <button class="btn-icon" id="themeToggleBtn" type="button" aria-label="Toggle visual theme">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
+          <button class="btn-icon" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+            🌓
           </button>
-          <button class="btn-icon mobile-menu-toggle" id="mobileMenuBtn" type="button" aria-label="Open navigation menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+          <button class="btn-icon mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu" title="Open Navigation Menu" aria-expanded="false">
+            <span class="hamburger-icon">☰</span>
           </button>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 
@@ -1655,7 +1640,7 @@ a{color:inherit;text-decoration:none}
     'use strict';
 
     // Theme Switcher
-    var themeBtn = document.getElementById('themeToggleBtn');
+    var themeBtn = document.getElementById('theme-toggle-btn') || document.getElementById('themeToggleBtn');
     if (themeBtn) {
       themeBtn.addEventListener('click', function() {
         var current = document.documentElement.getAttribute('data-theme') || 'dark';
@@ -1666,8 +1651,8 @@ a{color:inherit;text-decoration:none}
     }
 
     // Mobile Menu Toggle
-    var mobileBtn = document.getElementById('mobileMenuBtn');
-    var navLinks = document.getElementById('navLinks');
+    var mobileBtn = document.getElementById('mobile-menu-btn') || document.getElementById('mobileMenuBtn');
+    var navLinks = document.querySelector('.nav-links') || document.getElementById('navLinks');
     if (mobileBtn && navLinks) {
       mobileBtn.addEventListener('click', function() {
         navLinks.classList.toggle('mobile-open');

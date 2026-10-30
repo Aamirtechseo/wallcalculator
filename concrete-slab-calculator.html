@@ -464,8 +464,8 @@ a{color:inherit;text-decoration:none}
           <span>Wall<span class="accent">Calculator</span></span>
         </a>
 
-        <ul class="nav-links" id="navLinks" role="list">
-          <li><a href="/">Wall Estimator</a></li>
+        <ul class="nav-links" role="list">
+          <li><a href="/" class="active" aria-current="page">Wall Estimator</a></li>
           <li><a href="/wall-stud-calculator">Stud Calculator</a></li>
           <li><a href="/drywall-calculator">Drywall Sheets</a></li>
           <li><a href="/retaining-wall-calculator">Retaining Wall</a></li>
@@ -475,8 +475,12 @@ a{color:inherit;text-decoration:none}
         </ul>
 
         <div class="nav-actions">
-          <button class="btn-icon" id="themeToggleBtn" aria-label="Toggle light or dark theme">&#9788;</button>
-          <button class="btn-icon mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle mobile menu">&#9776;</button>
+          <button class="btn-icon" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+            🌓
+          </button>
+          <button class="btn-icon mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu" title="Open Navigation Menu" aria-expanded="false">
+            <span class="hamburger-icon">☰</span>
+          </button>
         </div>
       </nav>
     </div>
@@ -1392,7 +1396,7 @@ a{color:inherit;text-decoration:none}
     }
 
     // Theme Toggle
-    var themeBtn = document.getElementById('themeToggleBtn');
+    var themeBtn = document.getElementById('theme-toggle-btn') || document.getElementById('themeToggleBtn');
     if (themeBtn) {
       themeBtn.addEventListener('click', function() {
         var current = document.documentElement.getAttribute('data-theme') || 'dark';
@@ -1403,8 +1407,8 @@ a{color:inherit;text-decoration:none}
     }
 
     // Mobile Navigation Menu Toggle
-    var mobileBtn = document.getElementById('mobileMenuBtn');
-    var navLinks = document.getElementById('navLinks');
+    var mobileBtn = document.getElementById('mobile-menu-btn') || document.getElementById('mobileMenuBtn');
+    var navLinks = document.querySelector('.nav-links') || document.getElementById('navLinks');
     if (mobileBtn && navLinks) {
       mobileBtn.addEventListener('click', function() {
         navLinks.classList.toggle('mobile-open');
