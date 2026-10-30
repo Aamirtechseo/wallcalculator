@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('wc_theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1639,6 +1647,14 @@ a{color:inherit;text-decoration:none}
   (function() {
     'use strict';
 
+    // Restore Saved Theme on Load
+    try {
+      var savedTheme = localStorage.getItem('wc_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch(e) {}
+
     // Theme Switcher
     var themeBtn = document.getElementById('theme-toggle-btn') || document.getElementById('themeToggleBtn');
     if (themeBtn) {
@@ -1918,7 +1934,7 @@ a{color:inherit;text-decoration:none}
       dimText.setAttribute("font-size", "14");
       dimText.setAttribute("font-weight", "700");
       dimText.setAttribute("text-anchor", "middle");
-      dimText.textContent = length + "'-0" Total Fence Span (" + sections + " Sections @ " + spacing + "'-0" O.C.)";
+      dimText.textContent = length + "'-0\" Total Fence Span (" + sections + " Sections @ " + spacing + "'-0\" O.C.)";
       svg.appendChild(dimText);
 
       // 2. Continuous Rails Baseline (Fence Line)
@@ -2078,7 +2094,7 @@ a{color:inherit;text-decoration:none}
         spText.setAttribute("font-size", "11");
         spText.setAttribute("font-weight", "600");
         spText.setAttribute("text-anchor", "middle");
-        spText.textContent = spacing + "'-0" O.C.";
+        spText.textContent = spacing + "'-0\" O.C.";
         svg.appendChild(spText);
       }
     }
