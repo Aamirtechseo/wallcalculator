@@ -170,52 +170,108 @@
 
   <!-- JSON-LD Schema: FAQPage -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How many studs are needed for a 12-foot wall at 16 inches OC?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For a 12-foot wall at 16 inches on-center, you need 10 vertical field studs, plus 5 studs for horizontal plates (a double top plate and single bottom plate), and 4 studs for corner posts. Including a standard 10% waste buffer, you should order 21 studs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the general contractor rule of thumb for calculating wall studs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The traditional contractor rule of thumb is one stud for every linear foot of wall. While this provides a safe rough estimate for ordering, professional takeoffs must account for top double-plates, bottom plates, corners, and window or door headers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why do framing walls require a double top plate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "According to IRC Section R602.3, bearing walls require a double top plate to distribute concentrated overhead loads from roof rafters and floor joists that do not align directly above vertical studs, as well as to overlap and tie wall intersections together for structural stability."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many extra studs are needed for a door or window opening?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Each standard door or window rough opening requires 4 additional studs: two full-height king studs on the outside and two trimmer or jack studs on the inside supporting the structural header, plus short cripple studs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should exterior walls use 2x4 or 2x6 studs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Modern residential energy codes often require 2x6 framing for exterior walls to accommodate thicker R-20 or R-21 fiberglass batt or rockwool insulation. 2x4 framing remains common in mild climate zones and for interior non-load-bearing walls."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the standard spacing for wall studs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard spacing for residential wall studs is 16 inches on center (OC). This spacing applies to all exterior load-bearing walls, multi-story framing, and walls supporting roof loads because it provides maximum vertical strength and rigid backing for drywall and exterior siding."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "When can I use 24-inch on-center spacing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can use 24-inch on-center spacing on interior non-load-bearing partition walls, such as closet enclosures and room dividers. On exterior walls, 24-inch spacing is generally permitted only on single-story structures using 2x6 studs and engineered shear bracing where approved by local building codes. 16-inch spacing remains the safest default for structural framing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use 2x4 or 2x6 studs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use 2x4 studs for interior non-load-bearing partition walls where wall depth and lumber costs are prioritized. Use 2x6 studs for exterior walls and heavy load-bearing assemblies because the deeper 5.5-inch cavity accommodates R-19 to R-21 energy-code insulation batts and provides greater resistance to wind and axial loads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate how many studs I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate studs for a wall, convert the total wall length into inches, divide by the on-center spacing (16 or 24 inches), round up, and add 1 for the end stud. Then add 2 to 3 studs for each corner, 2 studs for each T-intersection, and 4 studs for each door or window rough opening. Finally, add a 5% to 10% waste buffer to account for lumber defects and bowing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you frame a wall corner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wall corners are framed using a three-stud corner assembly, commonly called a California corner or drywall corner. This configuration fastens two full-length studs together with a third stud or blocking spacers turned perpendicular, creating solid structural bearing on the outside while leaving a 1.5-inch nailer edge on the inside for drywall fastening."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are cripple studs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cripple studs are shortened vertical framing members installed above a door or window header and below a window rough sill. They do not carry primary roof or floor loads, but they maintain the uniform 16-inch or 24-inch on-center spacing across the opening, providing crucial fastening backing for drywall, exterior sheathing, and siding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you frame a window opening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A window opening is framed with two full-height king studs on the outer edges and two shortened jack (trimmer) studs on the inside supporting a solid horizontal header beam. Beneath the opening sits a horizontal rough sill, while vertical cripple studs spaced 16 inches on center fill the spaces above the header and below the sill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size header do I need over a door or window?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Header sizing depends on the opening width, wall placement, and roof or floor load per International Residential Code (IRC) span tables. As a rule of thumb, doubled 2x6 headers work for openings up to 3 feet, doubled 2x8 headers handle spans up to 4.5 feet, doubled 2x10 headers support 5 to 6-foot spans, and spans over 6 feet require doubled 2x12s or engineered LVL beams. Always verify sizes against local building code tables."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do load-bearing walls need double top plates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, load-bearing walls require double top plates per the International Residential Code (IRC Section R602.3.2). The double plate distributes concentrated loads from roof rafters and floor joists that do not align directly over studs, and overlapping the top plates at corners and partition intersections ties the entire building structure together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a king stud and a jack stud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A king stud runs continuously from the bottom sole plate to the top double plate, nailed to the outer side of an opening to maintain wall alignment and resist lateral wind pressure. A jack stud (or trimmer stud) sits directly inside the king stud and runs from the bottom plate only up to the underside of the header, acting as a bearing column to transfer header loads directly downward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you frame a basement wall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To frame a basement wall, always use a pressure-treated 2x4 bottom sole plate anchored to the concrete floor to prevent moisture rot. Leave a 1-inch capillary air gap between the timber studs and the concrete foundation wall, install continuous rigid XPS foam board against the concrete for moisture and thermal protection, and frame vertical studs at 16 inches on center. Professional basement framing labor averages $6 to $9 per linear foot, citing HomeGuide 2026 data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to frame a wall per linear foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional wall framing costs between $11 and $32 per linear foot for labor and materials combined, according to HomeGuide 2026 construction estimates. For DIY builders purchasing materials only, standard 2x4 timber studs, plates, and fasteners average $4 to $9 per linear foot, with 2x6 exterior lumber running roughly 30% to 45% higher."
+      }
+    }
+  ]
+}
   </script>
 
   <!-- JSON-LD Schema: Organization -->
@@ -331,29 +387,41 @@
                   <span class="hero-toc-bullet"></span>
                   <span>Quick Summary: Studs &amp; Plates</span>
                 </a>
-                <a href="#guide-heading" class="hero-toc-link">
-                  <span class="hero-toc-bullet"></span>
-                  <span>Eliminating Framing Waste</span>
-                </a>
                 <a href="#toc-stud-spacing" class="hero-toc-link">
                   <span class="hero-toc-bullet"></span>
                   <span>Stud Spacing: 16" vs 24" OC</span>
                 </a>
-                <a href="#toc-plates" class="hero-toc-link">
+                <a href="#toc-stud-sizes" class="hero-toc-link">
                   <span class="hero-toc-bullet"></span>
-                  <span>Top &amp; Bottom Wall Plates</span>
+                  <span>2x4 vs 2x6 Studs Guide</span>
+                </a>
+                <a href="#toc-stud-formula" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>How to Calculate Studs: Formula</span>
+                </a>
+                <a href="#toc-corners-intersections" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>Corners &amp; Intersections</span>
                 </a>
                 <a href="#toc-openings" class="hero-toc-link">
                   <span class="hero-toc-bullet"></span>
-                  <span>Rough Openings: Headers &amp; Trimmers</span>
+                  <span>Window &amp; Door Rough Openings</span>
                 </a>
-                <a href="#toc-corners" class="hero-toc-link">
+                <a href="#toc-header-sizes" class="hero-toc-link">
                   <span class="hero-toc-bullet"></span>
-                  <span>Corner Posts &amp; Intersections</span>
+                  <span>Structural Header Sizing</span>
                 </a>
-                <a href="#toc-irc-codes" class="hero-toc-link">
+                <a href="#toc-cripple-studs" class="hero-toc-link">
                   <span class="hero-toc-bullet"></span>
-                  <span>IRC R602 Spacing Limits</span>
+                  <span>Cripple Studs Explained</span>
+                </a>
+                <a href="#toc-basement-walls" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>Framing a Basement Wall</span>
+                </a>
+                <a href="#suite-tools" class="hero-toc-link">
+                  <span class="hero-toc-bullet"></span>
+                  <span>Construction Toolkit</span>
                 </a>
                 <a href="#toc-conclusion" class="hero-toc-link">
                   <span class="hero-toc-bullet"></span>
@@ -639,7 +707,7 @@
           <span class="section-eyebrow">The Framing &amp; Masonry Suite</span>
           <h2 class="section-title">Complete Construction Calculator Toolkit</h2>
           <p class="section-subtitle">
-            Specialized takeoff calculators for wood framing, drywall installation, masonry blocks, and concrete foundations. Accurate, instant, and mobile-ready for any construction site.
+            Specialized takeoff calculators for wood framing, drywall installation, masonry blocks, concrete slabs, retaining walls, decks, and wood privacy fences. Accurate, instant, and mobile-ready for any construction site.
           </p>
         </div>
 
@@ -656,7 +724,7 @@
             </div>
             <h3 class="tool-card-title">Stud Framing Estimator</h3>
             <p class="tool-card-desc">Calculate exact 2x4 and 2x6 framing studs for interior partitions, exterior walls, corners, and continuous plates.</p>
-            <span class="tool-card-link">Active on this page →</span>
+            <a href="/wall-stud-calculator" class="tool-card-link">Use Stud Calculator &rarr;</a>
           </div>
 
           <div class="tool-card">
@@ -664,13 +732,31 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2"></rect>
                 <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="12" y1="3" x2="12" y2="12"></line>
+                <line x1="12" y1="3" x2="12" y2="21"></line>
                 <line x1="12" y1="12" x2="12" y2="21"></line>
               </svg>
             </div>
             <h3 class="tool-card-title">Drywall Calculator</h3>
             <p class="tool-card-desc">Determine 4x8 and 4x12 drywall sheets, joint compound mud buckets, screws, and tape with 2D staggered layout visualizer.</p>
-            <a href="/drywall-calculator" class="tool-card-link">Launch Estimator →</a>
+            <a href="/drywall-calculator" class="tool-card-link">Launch Drywall Estimator &rarr;</a>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="18" rx="2"></rect>
+                <line x1="2" y1="9" x2="22" y2="9"></line>
+                <line x1="2" y1="15" x2="22" y2="15"></line>
+                <line x1="8" y1="3" x2="8" y2="9"></line>
+                <line x1="16" y1="3" x2="16" y2="9"></line>
+                <line x1="12" y1="9" x2="12" y2="15"></line>
+                <line x1="8" y1="15" x2="8" y2="21"></line>
+                <line x1="16" y1="15" x2="16" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Cinder Block Calculator</h3>
+            <p class="tool-card-desc">Calculate standard 8x8x16 CMU cinder blocks, mortar bags, core fill grout, and horizontal rebar courses for structural masonry.</p>
+            <a href="/cinder-block-calculator" class="tool-card-link">Calculate Cinder Blocks &rarr;</a>
           </div>
 
           <div class="tool-card">
@@ -690,7 +776,7 @@
             </div>
             <h3 class="tool-card-title">Retaining Wall Estimator</h3>
             <p class="tool-card-desc">Calculate retaining wall concrete blocks, gravel drainage backfill tonnage, and capstones based on height and slope.</p>
-            <a href="/retaining-wall-calculator" class="tool-card-link">Calculate retaining wall &#8594;</a>
+            <a href="/retaining-wall-calculator" class="tool-card-link">Calculate Retaining Wall &rarr;</a>
           </div>
 
           <div class="tool-card">
@@ -703,7 +789,20 @@
             </div>
             <h3 class="tool-card-title">Concrete Slab Calculator</h3>
             <p class="tool-card-desc">Estimate cubic yards of ready-mix concrete and pre-mix bags for slab footings, garage pads, and patio foundations.</p>
-            <a href="https://wallcalculator.app/concrete-slab-calculator" class="tool-card-link">Calculate concrete slab &#8594;</a>
+            <a href="/concrete-slab-calculator" class="tool-card-link">Calculate Concrete Slab &rarr;</a>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="4" rx="1"></rect>
+                <rect x="2" y="10" width="20" height="4" rx="1"></rect>
+                <rect x="2" y="17" width="20" height="4" rx="1"></rect>
+              </svg>
+            </div>
+            <h3 class="tool-card-title">Deck Material Calculator</h3>
+            <p class="tool-card-desc">Estimate deck ledger boards, 2x8 joist spacing (12" or 16" OC), composite deck boards, and structural fastener hardware.</p>
+            <a href="/deck-calculator" class="tool-card-link">Calculate Deck Materials &rarr;</a>
           </div>
 
           <div class="tool-card">
@@ -718,20 +817,7 @@
             </div>
             <h3 class="tool-card-title">Fence Material Calculator</h3>
             <p class="tool-card-desc">Calculate privacy fence pickets, 4x4 posts, 2x4 rails, and concrete post mix bags for wood privacy fences.</p>
-            <a href="/fence-calculator" class="tool-card-link">Calculate fence materials &rarr;</a>
-          </div>
-
-          <div class="tool-card">
-            <div class="tool-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="4" rx="1"></rect>
-                <rect x="2" y="10" width="20" height="4" rx="1"></rect>
-                <rect x="2" y="17" width="20" height="4" rx="1"></rect>
-              </svg>
-            </div>
-            <h3 class="tool-card-title">Deck Joist &amp; Joist Spacing Estimator</h3>
-            <p class="tool-card-desc">Estimate deck ledger boards, 2x8 joist spacing (12" or 16" OC), composite deck boards, and structural fastener hardware.</p>
-            <a href="/deck-calculator" class="tool-card-link">Calculate deck materials &#8594;</a>
+            <a href="/fence-calculator" class="tool-card-link">Calculate Fence Materials &rarr;</a>
           </div>
         </div>
       </div>
@@ -740,7 +826,7 @@
     <!-- ==========================================================================
          ZONE 6: SEMANTIC EDUCATIONAL GUIDE & AEO ARTICLE
          ========================================================================== -->
-    <article class="article-section" id="guide-article" aria-labelledby="guide-heading">
+    <article class="article-section" id="guide-article" aria-labelledby="toc-stud-spacing">
       <div class="container">
         <div class="prose-content">
           
@@ -750,32 +836,18 @@
               <span>&#9889;</span> Quick Summary: How to Calculate Framing Studs &amp; Plates
             </h2>
             <p class="aeo-text">
-              To calculate framing studs accurately, start with the rule of thumb: <strong>One stud per linear foot of wall</strong>. For a 16-foot wall framed at 16 inches on-center (OC), you need 13 vertical field studs, plus 6 studs for horizontal plates (a double top plate and single bottom sole plate), 4 studs for corner tie-ins, and 4 studs per door or window opening. Accounting for a standard 10% job site waste factor, order <strong>26 to 27 total studs</strong>.
+              To calculate framing lumber accurately with a wall stud calculator, apply the baseline standard: <strong>one stud per linear foot of wall</strong>. For a standard 16-foot wall framed at 16 inches on center (OC), you need 13 vertical field studs, 6 studs for horizontal plates (double top plate and single bottom plate), 4 studs for corner tie-ins, and 4 studs per door or window opening. Adding a standard 10% waste buffer yields <strong>26 to 27 total studs</strong>.
             </p>
           </div>
 
-          <h2 id="guide-heading">How an Interactive Wall Stud Calculator Eliminates Lumber Waste</h2>
+          <!-- Section 2a: Stud Spacing Guide -->
+          <h2 id="toc-stud-spacing">Stud Spacing Guide: 16 vs 24 Inches On Center</h2>
           <p>
-            Accurately estimating lumber for wood framing projects requires understanding structural spacing rules, wall plate requirements, and building code specifications outlined in the International Residential Code. Underestimating studs leads to paused work, extra trips to the lumberyard, and wasted labor hours, while overestimating ties up cash in warped lumber that cannot be returned. Using a dedicated digital estimator bridges the gap between rough architectural plans and practical framing execution.
+            On-center (OC) stud spacing defines the distance from the centerline of one framing stud to the centerline of the next. In North American residential framing governed by the <a href="https://codes.iccsafe.org" target="_blank" rel="noopener">International Code Council (ICC)</a> building codes, <strong>16 inches on center</strong> is the benchmark for all exterior walls, multi-story load-bearing partitions, and assemblies supporting roof trusses or floor joists. Standard 16-inch OC spacing provides maximum vertical compressive strength, resists wind deflection, and ensures rigid backing for drywall and siding.
           </p>
-
-          <h3 id="toc-stud-spacing">1. Calculating Studs: 16" OC vs 24" OC Framing Rules</h3>
           <p>
-            On-center (OC) spacing measures the distance from the center of one vertical stud to the center of the next stud. Utilizing an accurate wall stud calculator ensures you order the exact count for your chosen spacing, as on-center layout dictates both load-bearing capacity and the attachment grid for wall sheathing:
+            In contrast, <strong>24 inches on center</strong> spacing applies primarily to interior non-load-bearing partition walls, such as closet returns and room dividers carrying zero structural loads. Under advanced framing techniques, 24-inch OC framing is permitted on single-story exterior walls when paired with 2x6 studs and approved shear sheathing. Switching to 24-inch spacing reduces vertical field studs by approximately <strong>30%</strong>, lowering lumber purchase expenses while opening larger cavities for continuous insulation.
           </p>
-          <ul>
-            <li><strong>16 Inches On-Center (Universal Building Standard):</strong> Mandatory for exterior load-bearing walls supporting upper floors or roof rafters. It provides superior stiffness, eliminates drywall flex, and provides solid backing for kitchen cabinets, heavy shelving, and tile backer boards.</li>
-            <li><strong>24 Inches On-Center (Advanced Framing / Non-Bearing):</strong> Permitted by residential building codes for non-load-bearing interior partition walls and engineered Advanced Framing (Optimum Value Engineering - OVE). It reduces lumber requirements by up to 25% and expands insulation cavity depth, but requires 5/8-inch drywall or sag-resistant panels to avoid surface deflection.</li>
-            <li><strong>12 Inches On-Center (Heavy Commercial &amp; Tile Support):</strong> Utilized behind commercial bathroom walls, heavy stone veneers, or tall walls exceeding 12 feet in height that face extreme wind loads.</li>
-          </ul>
-
-          <div class="formula-card">
-            <h4>Mathematical Formula for Vertical Field Studs:</h4>
-            <span class="formula-code">Field Studs = ⌈(Wall Length in Feet × 12) ÷ OC Spacing in Inches⌉ + 1 (Starter Stud)</span>
-            <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 0.5rem;">
-              <em>Example:</em> For a 20-foot wall at 16" OC: (20 × 12 ÷ 16) + 1 = 15 field studs.
-            </p>
-          </div>
 
           <!-- Spacing Comparison Diagram: 16" OC vs 24" OC -->
           <div class="spacing-diagram-wrapper" role="region" aria-label="Stud Spacing Comparison: 16-inch OC vs 24-inch OC">
@@ -844,155 +916,352 @@
             </div>
           </div>
 
-          <h3 id="toc-plates">2. Top Double Plates and Bottom Sole Plates</h3>
+          <!-- Section 2b: 2x4 vs 2x6 Studs -->
+          <h2 id="toc-stud-sizes">2x4 vs 2x6 Studs: Which Size Do You Need?</h2>
           <p>
-            A framing wall consists of far more than vertical members. Horizontal plate lumber runs continuously along the top and bottom of the wall assembly:
+            Selecting between 2x4 and 2x6 framing lumber depends on structural loads, wall insulation depth, and utility routing. Standard 2x4 lumber measures 1.5 by 3.5 inches, while 2x6 lumber measures 1.5 by 5.5 inches. Utilizing an interactive 2x4 wall calculator or dedicated 2x6 calculator ensures exact material takeoffs for plates, studs, and corner backers.
           </p>
-          <ul>
-            <li><strong>Bottom Sole Plate (1 Layer):</strong> Anchored directly to the concrete slab (using pressure-treated lumber and sill sealer) or nailed into the subfloor joists.</li>
-            <li><strong>Double Top Plate (2 Layers):</strong> Standard framing calls for two layers of top plates. The upper plate overlaps the lower plate at corners and partition intersections, locking the entire building perimeter into a rigid structural diaphragm.</li>
-          </ul>
           <p>
-            To compute plate requirements, multiply the total linear wall length by 3 (for exterior and bearing walls), then divide by standard stud lengths (8 ft or 10 ft) and round up to the next full piece. For complete room takeoffs that include wallboard panels, pair your lumber figures with an <a href="/" title="All-In-One Wall Calculator">all-in-one wall calculator</a>.
+            <strong>2x4 Studs</strong> suit interior non-load-bearing partitions, minimizing lumber costs and maximizing floor space. <strong>2x6 Studs</strong> are required for exterior envelopes and load-bearing walls: the deeper 5.5-inch cavity accommodates R-19 to R-21 insulation batts, provides 2.5 times higher bending stiffness against wind loads, and easily houses 3-inch plumbing drain stacks.
           </p>
 
-          <h3 id="toc-openings">3. Rough Openings: King Studs, Jack Studs, and Headers</h3>
-          <p>
-            Whenever a wall incorporates a doorway or window opening, studs cannot simply be subtracted. Framing a rough opening requires additional structural members to distribute overhead loads safely:
-          </p>
-          <ol>
-            <li><strong>King Studs:</strong> Full-length vertical studs running uninterrupted from the bottom sole plate to the upper top plate on each side of the opening.</li>
-            <li><strong>Jack Studs (Trimmers):</strong> Shorter vertical studs nailed directly against the inside face of the king studs to support the weight of the structural header beam.</li>
-            <li><strong>Structural Header:</strong> A horizontal beam composed of doubled 2x6, 2x8, or 2x10 lumber with 1/2" plywood spacers spanning across the opening.</li>
-            <li><strong>Cripple Studs:</strong> Short studs placed above the header and below window sills on 16" centers to maintain drywall fastening spacing.</li>
-          </ol>
-
-          <h3 id="toc-corners">4. Corner Posts and Partition Wall Intersections</h3>
-          <p>
-            Exterior corners and interior wall intersections require specialized framing assemblies so drywall hanging crews have adequate nailing backing on inside corners. Traditional three-stud corners and modern "California corners" (two studs separated by blocking or a drywall clip) require adding <strong>2 extra studs per corner or wall tee-intersection</strong> beyond normal field layout counts. If you are also estimating gypsum panels for your project, consult the all-in-one <a href="/#suite-tools" title="Drywall Sheet Estimator">drywall sheet calculator</a> for panel dimensions.
-          </p>
-
-          <!-- IRC Building Code Table with Authoritative Outbound Link -->
-          <h3 id="toc-irc-codes">5. International Residential Code (IRC R602) Spacing Limits</h3>
-          <p>
-            According to the official <a href="https://codes.iccsafe.org/content/IRC2021P2/chapter-6-wall-construction#IRC2021P2_Pt03_Ch06_SecR602" target="_blank" rel="noopener">International Code Council (ICC) IRC Section R602</a> guidelines, stud dimensions, maximum wall heights, and on-center spacing are governed by load conditions:
-          </p>
-          <div class="data-table-wrapper">
+          <!-- Visual Table: 2x4 vs 2x6 Comparison -->
+          <div class="data-table-wrapper" role="region" aria-label="Comparison Table: 2x4 vs 2x6 Stud Framing">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>Lumber Size</th>
-                  <th>Maximum Wall Height</th>
-                  <th>Bearing Wall Spacing</th>
-                  <th>Non-Bearing Wall Spacing</th>
-                  <th>Supported Overhead Load</th>
+                  <th>Framing Property</th>
+                  <th>2x4 Dimensional Studs</th>
+                  <th>2x6 Dimensional Studs</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>2 × 4 inches</strong></td>
-                  <td>10 feet</td>
-                  <td>16 inches OC</td>
-                  <td>24 inches OC</td>
-                  <td>Roof &amp; Ceiling only</td>
+                  <td><strong>Actual Size</strong></td>
+                  <td>1.5 in &times; 3.5 in</td>
+                  <td>1.5 in &times; 5.5 in</td>
                 </tr>
                 <tr>
-                  <td><strong>2 × 4 inches</strong></td>
-                  <td>10 feet</td>
-                  <td>16 inches OC</td>
-                  <td>24 inches OC</td>
-                  <td>One Story + Roof</td>
+                  <td><strong>Primary Application</strong></td>
+                  <td>Interior non-bearing walls, closet dividers</td>
+                  <td>Exterior walls, load-bearing walls, tall walls (&gt;10 ft)</td>
                 </tr>
                 <tr>
-                  <td><strong>2 × 6 inches</strong></td>
-                  <td>14 feet</td>
-                  <td>16 inches OC</td>
-                  <td>24 inches OC</td>
-                  <td>Two Stories + Roof</td>
+                  <td><strong>Insulation Cavity</strong></td>
+                  <td>3.5 inches (R-13 to R-15 batts)</td>
+                  <td>5.5 inches (R-19 to R-21+ batts or spray foam)</td>
                 </tr>
                 <tr>
-                  <td><strong>2 × 6 inches</strong></td>
-                  <td>18 feet</td>
-                  <td>12 inches OC</td>
-                  <td>16 inches OC</td>
-                  <td>Heavy Snow / High Wind Zone</td>
+                  <td><strong>Structural Capacity</strong></td>
+                  <td>Standard single-story load bearing</td>
+                  <td>2.5&times; higher bending resistance for wind and multi-story</td>
+                </tr>
+                <tr>
+                  <td><strong>Plumbing Clearance</strong></td>
+                  <td>Limited to 1.5-inch supply and vent lines</td>
+                  <td>Fits full 3-inch DWV sanitary waste pipes</td>
+                </tr>
+                <tr>
+                  <td><strong>Lumber Cost Ratio</strong></td>
+                  <td>Baseline material cost per linear foot</td>
+                  <td>Roughly 35% to 50% higher cost per board</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <!-- Conclusion Section -->
-          <section class="conclusion-box" id="toc-conclusion" style="margin-top: 3rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
-            <h2 style="margin-top: 0; font-size: 1.45rem;">Conclusion: Simplify Framing with a Wall Stud Calculator</h2>
-            <p style="margin-bottom: 0.75rem;">
-              Planning a structural framing buildout with a wall stud calculator guarantees that your material order accounts for continuous horizontal plates, rough openings, and corner backing according to IRC building codes. By verifying exact lumber counts and factoring in cutting waste before purchasing, contractors and home builders save money and keep job site schedules running smoothly. For exterior retaining walls or grade changes, calculate concrete blocks and gravel with the interactive <a href="/retaining-wall-calculator">retaining wall calculator</a>.
+          <!-- Section 2c: How to Calculate Studs Formula -->
+          <h2 id="toc-stud-formula">How to Calculate Studs: The Formula</h2>
+          <p>
+            To calculate vertical field studs across any wall run, use this mathematical formula:
+          </p>
+          <div class="formula-card">
+            <div style="font-weight:700;color:var(--text-main);margin-bottom:0.5rem;">Field Stud Calculation Formula:</div>
+            <div class="formula-code" style="font-family:monospace;font-size:1.05rem;padding:0.75rem;background:var(--bg-input);border-radius:var(--radius-sm);color:var(--brand-primary);margin-bottom:0.75rem;">
+              Field Studs = Math.ceil((Wall Length in Inches) / (On-Center Spacing in Inches)) + 1
+            </div>
+            <p style="margin-bottom:0;font-size:0.88rem;color:var(--text-muted);">
+              Dividing length by spacing determines spacing bays; adding 1 supplies the starting stud at the wall origin.
             </p>
-          </section>
+          </div>
+          <p>
+            Beyond field studs, factor in horizontal plates (wall length multiplied by 3 for a bottom plate and double top plate), 2 to 3 studs per corner, 2 studs per T-intersection, 4 studs per opening side, and a <strong>5% to 10% waste buffer</strong> for warped timber.
+          </p>
 
-          <!-- FAQ Accordion -->
-          <h2 id="toc-faq" style="margin-top: 3rem;">Frequently Asked Questions</h2>
+          <!-- Worked Example Card -->
+          <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.5rem;margin:1.75rem 0;box-shadow:var(--shadow-md);">
+            <h3 style="margin-top:0;font-size:1.2rem;color:var(--text-main);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:var(--brand-primary);font-size:1.3rem;">&#9654;</span> Worked Example: Estimating a 100-Foot Wall at 16" OC
+            </h3>
+            <ol style="margin-bottom:1rem;padding-left:1.25rem;color:var(--text-muted);line-height:1.7;">
+              <li><strong>Convert Length to Inches:</strong> 100 ft &times; 12 in/ft = 1,200 inches.</li>
+              <li><strong>Calculate Field Studs:</strong> (1,200 / 16) + 1 = 75 + 1 = <strong>76 vertical field studs</strong>.</li>
+              <li><strong>Calculate Plate Lumber:</strong> 100 ft &times; 3 plates = 300 linear feet (38 eight-foot boards).</li>
+              <li><strong>Add Corners &amp; Openings:</strong> 2 corners &times; 3 studs (6) + 2 openings &times; 4 studs (8) = <strong>14 studs</strong>.</li>
+              <li><strong>Subtotal &amp; 10% Waste Buffer:</strong> (76 + 38 + 14) = 128 studs; Math.ceil(128 &times; 1.10) = <strong>141 total studs to order</strong>.</li>
+            </ol>
+            <p style="margin-bottom:0;font-size:0.9rem;color:var(--brand-primary);font-weight:600;">
+              Using a dedicated 2x4 framing calculator guarantees instant takeoffs that prevent job site shortages.
+            </p>
+          </div>
+
+          <!-- Section 2d: Framing Corners and Intersections -->
+          <h2 id="toc-corners-intersections">Framing Corners and Intersections</h2>
+          <p>
+            Framing wall corners and partition intersections correctly ensures structural strength and provides drywall nailers. A basic two-stud corner leaves the adjacent interior wall without fastening support. Professional framing carpenters construct a <strong>three-stud corner assembly</strong> (California corner). This assembly pairs two vertical studs with a third stud turned perpendicular, establishing solid exterior nailing while providing a continuous 1.5-inch interior nailer edge for drywall screws.
+          </p>
+          <p>
+            The three-stud California corner also keeps the stud bay open to the interior, allowing insulation to fill the corner cavity and eliminating cold spots. Where an interior partition wall butts into a through wall (a T-intersection), carpenters install partition backing using two studs with spacer blocks or ladder blocking, guaranteeing rigid backing for interior gypsum board.
+          </p>
+
+          <!-- Section 2e: Framing Window and Door Openings -->
+          <h2 id="toc-openings">Framing Window and Door Openings</h2>
+          <p>
+            Rough openings interrupt vertical stud layout, requiring a structural framing package to transfer overhead loads around the opening:
+          </p>
+          <ul>
+            <li><strong>King Studs:</strong> Full-height studs extending from the bottom plate to the top double plate, keeping the frame plumb and resisting lateral wind pressures.</li>
+            <li><strong>Jack Studs (Trimmers):</strong> Shortened vertical studs inside king studs that support the horizontal header beam and transfer loads to the foundation.</li>
+            <li><strong>Structural Header:</strong> A heavy horizontal beam spanning above the opening to route overhead roof and ceiling loads into the supporting jack studs.</li>
+            <li><strong>Window Rough Sill:</strong> A horizontal member nailed between jack studs at the bottom of the opening to support the window unit.</li>
+            <li><strong>Cripple Studs:</strong> Short vertical studs installed above the header and below the sill that maintain uniform 16-inch or 24-inch on-center layout across the opening.</li>
+          </ul>
+
+          <!-- Component Callout Card -->
+          <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.5rem;margin:1.75rem 0;box-shadow:var(--shadow-md);">
+            <h3 style="margin-top:0;font-size:1.2rem;color:var(--text-main);">Summary: Rough Opening Lumber Takeoff</h3>
+            <p style="margin-bottom:1rem;color:var(--text-muted);">
+              When budgeting materials with a wall stud spacing calculator, budget <strong>4 full studs per door or window opening</strong> (2 king studs and 2 jack studs), plus header lumber, 1 sill member, and 1 to 2 cut studs for cripples.
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;font-size:0.9rem;">
+              <div style="background:var(--bg-input);padding:0.75rem;border-radius:var(--radius-sm);border-left:3px solid var(--brand-primary);">
+                <strong style="color:var(--text-main);">King &amp; Jack Studs:</strong> 4 full vertical studs
+              </div>
+              <div style="background:var(--bg-input);padding:0.75rem;border-radius:var(--radius-sm);border-left:3px solid #F97316;">
+                <strong style="color:var(--text-main);">Header Beam:</strong> 2 doubled beams + spacer
+              </div>
+              <div style="background:var(--bg-input);padding:0.75rem;border-radius:var(--radius-sm);border-left:3px solid #10B981;">
+                <strong style="color:var(--text-main);">Sill &amp; Cripples:</strong> Cut from 2 scrap studs
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2f: Header Size Guide -->
+          <h2 id="toc-header-sizes">Header Size Guide</h2>
+          <p>
+            Correctly sizing structural headers prevents sagging above doors and windows. An undersized header bends under roof or floor loads, causing doors and window sashes to bind. Sizing is governed by International Residential Code (IRC Tables R602.7(1) and R602.7(2)) span tables based on opening width and supported loads. Headers for 2x4 exterior walls sandwich two pieces of dimensional lumber with a 1/2-inch plywood or OSB spacer, producing a 3.5-inch beam flush with framing studs.
+          </p>
+
+          <!-- Visual Table: Header Size Reference Table -->
+          <div class="data-table-wrapper" role="region" aria-label="Header Sizing Reference Table">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Rough Opening Span</th>
+                  <th>Typical Application</th>
+                  <th>Interior Non-Bearing Header</th>
+                  <th>Exterior Load-Bearing Header</th>
+                  <th>Jack Studs Required</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Up to 3 ft 0 in</strong></td>
+                  <td>Standard interior door (2'6" - 2'8")</td>
+                  <td>Flat 2x4 or doubled 2x4</td>
+                  <td>Doubled 2x6 + 1/2" spacer</td>
+                  <td>1 Jack per side</td>
+                </tr>
+                <tr>
+                  <td><strong>3 ft 1 in to 4 ft 6 in</strong></td>
+                  <td>Single window, 3'0" entry door</td>
+                  <td>Doubled 2x4 or doubled 2x6</td>
+                  <td>Doubled 2x8 + 1/2" spacer</td>
+                  <td>1 Jack per side</td>
+                </tr>
+                <tr>
+                  <td><strong>4 ft 7 in to 6 ft 0 in</strong></td>
+                  <td>Double window unit, 5'0" closet</td>
+                  <td>Doubled 2x6 or doubled 2x8</td>
+                  <td>Doubled 2x10 + 1/2" spacer</td>
+                  <td>2 Jacks per side</td>
+                </tr>
+                <tr>
+                  <td><strong>6 ft 1 in to 8 ft 0 in</strong></td>
+                  <td>6'0" - 8'0" sliding patio glass door</td>
+                  <td>Doubled 2x8 or doubled 2x10</td>
+                  <td>Doubled 2x12 or engineered LVL</td>
+                  <td>2 Jacks per side</td>
+                </tr>
+                <tr>
+                  <td><strong>8 ft 1 in to 16 ft 0 in</strong></td>
+                  <td>Double garage doors, wide picture windows</td>
+                  <td>Engineered LVL / Glulam beam</td>
+                  <td>Engineered LVL / Steel I-beam</td>
+                  <td>2 to 3 Jacks per side</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-muted);margin-top:0.5rem;">
+            Always verify header sizing with local municipal building departments, as snow loads and multi-story floor spans may dictate deeper engineered lumber beams.
+          </p>
+
+          <!-- Section 2g: Cripple Studs Explained -->
+          <h2 id="toc-cripple-studs">Cripple Studs Explained</h2>
+          <p>
+            Cripple studs are non-continuous vertical studs cut shorter than standard wall height to frame above headers and below rough sills. Although king and jack studs carry header loads, cripple studs preserve the wall's continuous 16-inch or 24-inch on-center layout geometry.
+          </p>
+          <p>
+            <strong>Top Cripples</strong> span the gap between the header top and the underside of the double top plate, transferring ceiling loads and providing drywall and sheathing backing. <strong>Bottom Cripples</strong> sit between the bottom sole plate and window sill, supporting the sill plate against downward loads. Maintaining this on-center rhythm ensures standard 4x8 drywall panels break directly over wood studs, eliminating floating seams and joint cracks.
+          </p>
+
+          <!-- Section 2h: Framing a Basement Wall -->
+          <h2 id="toc-basement-walls">Framing a Basement Wall</h2>
+          <p>
+            Finishing a basement requires moisture-conscious framing because concrete foundation walls continually transmit cold and subterranean moisture. Framing timber directly against damp masonry leads to wood decay and mold growth. Using an accurate basement wall framing calculator helps account for pressure-treated lumber, moisture barriers, and layout setbacks.
+          </p>
+
+          <!-- Checklist Callout Box: Basement Best Practices -->
+          <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.5rem;margin:1.75rem 0;box-shadow:var(--shadow-md);">
+            <h3 style="margin-top:0;font-size:1.25rem;color:var(--text-main);display:flex;align-items:center;gap:0.5rem;">
+              <span style="color:var(--brand-primary);font-size:1.3rem;">&#9745;</span> Basement Wall Framing Checklist &amp; 2026 Cost Data
+            </h3>
+            <ul style="margin:1rem 0 1.25rem 1.25rem;color:var(--text-muted);line-height:1.7;">
+              <li><strong>Pressure-Treated Bottom Plate:</strong> Use PT 2x4 lumber for all concrete contact, anchored every 32 to 48 inches with concrete fasteners (IRC Section R317).</li>
+              <li><strong>1-Inch Capillary Air Gap:</strong> Maintain a 1-inch clearance between framing studs and raw foundation masonry to prevent moisture transfer.</li>
+              <li><strong>Continuous XPS Rigid Foam:</strong> Fasten 1.5-inch to 2-inch XPS foam panels directly to concrete before framing to provide thermal and vapor protection.</li>
+              <li><strong>Fireblocking Protection:</strong> Install horizontal 2x4 fireblocking at the top plate per IRC R302.11.</li>
+              <li><strong>Labor &amp; Material Costs (HomeGuide 2026):</strong> Professional basement framing labor averages <strong>$6 to $9 per linear foot</strong>, while total framing costs range between <strong>$11 and $32 per linear foot</strong> including labor and materials.</li>
+            </ul>
+            <div style="background:var(--bg-input);padding:0.85rem 1rem;border-radius:var(--radius-sm);font-size:0.9rem;color:var(--brand-primary);font-weight:600;">
+              Planning a full basement renovation? Combine your stud estimates with the companion <a href="/drywall-calculator" style="text-decoration:underline;">drywall sheet calculator</a> for complete wall and ceiling finish takeoffs.
+            </div>
+          </div>
+
+          <!-- Section 4: Conclusion Box with Primary Keyword -->
+          <div class="conclusion-box" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.75rem;margin:2.5rem 0;box-shadow:var(--shadow-lg);">
+            <h2 id="toc-conclusion" style="margin-top:0;font-size:1.5rem;color:var(--text-main);line-height:1.3;">Conclusion: Simplify Framing with a Wall Stud Calculator</h2>
+            <p style="margin-bottom:1rem;color:var(--text-muted);">
+              Framing straight, code-compliant wood walls requires precise planning across vertical stud spacing, continuous plate runs, three-stud corner assemblies, and reinforced window and door headers. Utilizing an accurate <strong>wall stud calculator</strong> eliminates material shortages, prevents costly extra supply runs, and ensures sufficient reserves with calibrated waste contingency buffers.
+            </p>
+            <p style="margin-bottom:0;color:var(--text-muted);">
+              Whether estimating a home addition with 2x6 exterior lumber or planning interior partition walls and basement buildouts with economical 2x4 studs, following prescriptive International Residential Code standards ensures structural integrity, thermal efficiency, and dependable long-term performance.
+            </p>
+          </div>
+
+          <!-- Section 5: FAQs H2 -->
+          <h2 id="toc-faq" style="font-size:2rem;margin:3.5rem 0 1.5rem;color:var(--text-main);line-height:1.3;">Frequently Asked Questions</h2>
+
           <div class="faq-list">
-            
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>How many studs are needed for a 12-foot wall at 16 inches OC?</span>
-                <span class="faq-icon">+</span>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>What is the standard spacing for wall studs?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
               </button>
-              <div class="faq-answer">
-                <p>
-                  For a 12-foot wall framed at 16 inches on-center, you will need <strong>10 vertical field studs</strong> (144 inches ÷ 16 + 1 starter). Adding 5 studs for continuous top double plates and bottom sole plates, plus 4 corner studs and a 10% waste factor, brings the total lumber order to <strong>21 studs</strong>.
-                </p>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>The standard spacing for residential wall studs is 16 inches on center (OC). This spacing applies to all exterior load-bearing walls, multi-story framing, and walls supporting roof loads because it provides maximum vertical strength and rigid backing for drywall and exterior siding.</p>
               </div>
             </div>
-
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>What is the contractor rule of thumb for calculating wall studs?</span>
-                <span class="faq-icon">+</span>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>When can I use 24-inch on-center spacing?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
               </button>
-              <div class="faq-answer">
-                <p>
-                  The time-tested general contractor rule of thumb is <strong>one stud for every linear foot of wall length</strong>. For example, a 20-foot wall will typically require approximately 20 to 22 studs once field studs, plates, and corners are combined.
-                </p>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>You can use 24-inch on-center spacing on interior non-load-bearing partition walls, such as closet enclosures and room dividers. On exterior walls, 24-inch spacing is generally permitted only on single-story structures using 2x6 studs and engineered shear bracing where approved by local building codes. 16-inch spacing remains the safest default for structural framing.</p>
               </div>
             </div>
-
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>Why do framing walls require a double top plate?</span>
-                <span class="faq-icon">+</span>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>Should I use 2x4 or 2x6 studs?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
               </button>
-              <div class="faq-answer">
-                <p>
-                  Per IRC Section R602.3, bearing walls require a <strong>double top plate</strong> to distribute loads from rafters and floor joists that do not sit directly over vertical studs. The upper plate also laps over adjoining wall corners, tying perpendicular walls into a unified structural shell.
-                </p>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>Use 2x4 studs for interior non-load-bearing partition walls where wall depth and lumber costs are prioritized. Use 2x6 studs for exterior walls and heavy load-bearing assemblies because the deeper 5.5-inch cavity accommodates R-19 to R-21 energy-code insulation batts and provides greater resistance to wind and axial loads.</p>
               </div>
             </div>
-
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>How many extra studs are needed for a door or window opening?</span>
-                <span class="faq-icon">+</span>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>How do I calculate how many studs I need?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
               </button>
-              <div class="faq-answer">
-                <p>
-                  Plan on <strong>4 additional studs per rough opening</strong>. This covers two full-height king studs on the outside of the framing pocket and two shortened jack (trimmer) studs that directly support the header beam, plus scrap lumber for sill plates and cripple studs.
-                </p>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>To calculate studs for a wall, convert the total wall length into inches, divide by the on-center spacing (16 or 24 inches), round up, and add 1 for the end stud. Then add 2 to 3 studs for each corner, 2 studs for each T-intersection, and 4 studs for each door or window rough opening. Finally, add a 5% to 10% waste buffer to account for lumber defects and bowing.</p>
               </div>
             </div>
-
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>Should exterior walls use 2x4 or 2x6 studs?</span>
-                <span class="faq-icon">+</span>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>How do you frame a wall corner?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
               </button>
-              <div class="faq-answer">
-                <p>
-                  Most modern residential building and energy codes specify <strong>2x6 studs</strong> for exterior walls because the deeper 5.5-inch wall cavity accommodates R-20 or R-21 insulation batts. <strong>2x4 studs</strong> remain standard for interior non-bearing partition walls.
-                </p>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>Wall corners are framed using a three-stud corner assembly, commonly called a California corner or drywall corner. This configuration fastens two full-length studs together with a third stud or blocking spacers turned perpendicular, creating solid structural bearing on the outside while leaving a 1.5-inch nailer edge on the inside for drywall fastening.</p>
               </div>
             </div>
-
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>What are cripple studs?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
+              </button>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>Cripple studs are shortened vertical framing members installed above a door or window header and below a window rough sill. They do not carry primary roof or floor loads, but they maintain the uniform 16-inch or 24-inch on-center spacing across the opening, providing crucial fastening backing for drywall, exterior sheathing, and siding.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>How do you frame a window opening?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
+              </button>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>A window opening is framed with two full-height king studs on the outer edges and two shortened jack (trimmer) studs on the inside supporting a solid horizontal header beam. Beneath the opening sits a horizontal rough sill, while vertical cripple studs spaced 16 inches on center fill the spaces above the header and below the sill.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>What size header do I need over a door or window?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
+              </button>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>Header sizing depends on the opening width, wall placement, and roof or floor load per International Residential Code (IRC) span tables. As a rule of thumb, doubled 2x6 headers work for openings up to 3 feet, doubled 2x8 headers handle spans up to 4.5 feet, doubled 2x10 headers support 5 to 6-foot spans, and spans over 6 feet require doubled 2x12s or engineered LVL beams. Always verify sizes against local building code tables.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>Do load-bearing walls need double top plates?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
+              </button>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>Yes, load-bearing walls require double top plates per the International Residential Code (IRC Section R602.3.2). The double plate distributes concentrated loads from roof rafters and floor joists that do not align directly over studs, and overlapping the top plates at corners and partition intersections ties the entire building structure together.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>What is the difference between a king stud and a jack stud?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
+              </button>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>A king stud runs continuously from the bottom sole plate to the top double plate, nailed to the outer side of an opening to maintain wall alignment and resist lateral wind pressure. A jack stud (or trimmer stud) sits directly inside the king stud and runs from the bottom plate only up to the underside of the header, acting as a bearing column to transfer header loads directly downward.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>How do you frame a basement wall?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
+              </button>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>To frame a basement wall, always use a pressure-treated 2x4 bottom sole plate anchored to the concrete floor to prevent moisture rot. Leave a 1-inch capillary air gap between the timber studs and the concrete foundation wall, install continuous rigid XPS foam board against the concrete for moisture and thermal protection, and frame vertical studs at 16 inches on center. Professional basement framing labor averages $6 to $9 per linear foot, citing HomeGuide 2026 data.</p>
+              </div>
+            </div>
+            <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;">
+              <button class="faq-question" type="button" style="width:100%;text-align:left;padding:1.15rem 1.25rem;background:none;border:none;color:var(--text-main);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                <span>How much does it cost to frame a wall per linear foot?</span>
+                <span class="faq-icon" style="font-size:1.25rem;color:var(--brand-primary);transition:transform 0.2s;">+</span>
+              </button>
+              <div class="faq-answer" style="padding:0 1.25rem 1.25rem;color:var(--text-muted);display:none;line-height:1.7;">
+                <p>Professional wall framing costs between $11 and $32 per linear foot for labor and materials combined, according to HomeGuide 2026 construction estimates. For DIY builders purchasing materials only, standard 2x4 timber studs, plates, and fasteners average $4 to $9 per linear foot, with 2x6 exterior lumber running roughly 30% to 45% higher.</p>
+              </div>
+            </div>
           </div>
 
         </div>
