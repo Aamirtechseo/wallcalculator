@@ -16,7 +16,6 @@
 
   <!-- Primary Meta Tags -->
   <title>Concrete Slab Calculator - Volume, Bags &amp; Cost Takeoff</title>
-  <meta name="title" content="Concrete Slab Calculator - Volume, Bags &amp; Cost Takeoff">
   <meta name="description" content="Pour with confidence using this concrete slab calculator for 2026: volume in yards, bag counts, thickness guide and installed cost per square foot.">
   <meta name="keywords" content="concrete slab calculator, concrete volume calculator, how many bags of concrete, concrete slab cost, yard of concrete">
   <link rel="canonical" href="https://wallcalculator.app/concrete-slab-calculator">
@@ -451,6 +450,11 @@ a{color:inherit;text-decoration:none}
 .thickness-diagram-svg-container{width:100%;overflow-x:auto}
 .thickness-diagram-svg{width:100%;min-width:550px;height:180px}
 
+.crumbs{padding:1rem 0 0;font-size:0.825rem;color:var(--text-dim)}
+.crumbs a{color:var(--text-muted);text-decoration:none}
+.crumbs a:hover{color:var(--brand-primary);text-decoration:underline}
+.crumbs-sep{margin:0 0.45rem;color:var(--text-dim)}
+.crumbs-current{color:var(--text-muted);font-weight:600}
 </style>
 </head>
 <body>
@@ -495,7 +499,16 @@ a{color:inherit;text-decoration:none}
   </header>
 
   <!-- ZONE 2: HERO & INTERACTIVE CALCULATOR -->
-  <section class="hero-section">
+      <!-- Breadcrumb trail (matches BreadcrumbList schema) -->
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/">Home</a>
+        <span class="crumbs-sep" aria-hidden="true">/</span>
+        <span class="crumbs-current" aria-current="page">Concrete Slab Calculator</span>
+      </div>
+    </nav>
+
+<section class="hero-section">
     <div class="container">
       <div class="hero-grid">
 
@@ -775,15 +788,6 @@ a{color:inherit;text-decoration:none}
       <div class="tools-grid">
         <div class="tool-card">
           <div class="tool-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="16" y2="21"/></svg>
-          </div>
-          <h3 class="tool-card-title">Wall Framing Calculator</h3>
-          <p class="tool-card-desc">Calculate studs, top and bottom plates, drywall panels, and fasteners with a real-time 2D framing blueprint.</p>
-          <a href="/" class="tool-card-link">Launch wall calculator &rarr;</a>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <h3 class="tool-card-title">Wall Stud Calculator</h3>
@@ -817,6 +821,27 @@ a{color:inherit;text-decoration:none}
           <p class="tool-card-desc">Calculate standard 8x8x16 CMU blocks, Type S mortar bags, and core grout volume for structural masonry.</p>
           <a href="/cinder-block-calculator" class="tool-card-link">Calculate cinder blocks &rarr;</a>
         </div>
+
+        <div class="tool-card" style="border-color: var(--brand-primary);">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+          <h3 class="tool-card-title">Concrete Slab Estimator</h3>
+          <p class="tool-card-desc">Estimate cubic yards of ready-mix concrete and 60-lb/80-lb pre-mix bags for driveways, patios, and footings.</p>
+          <span class="tool-card-link">Current Tool &rarr;</span>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2-3 2 3v15H4V6z"/><path d="M10 6l2-3 2 3v15h-4V6z"/><path d="M16 6l2-3 2 3v15h-4V6z"/><line x1="2" y1="8" x2="22" y2="8"/><line x1="2" y1="16" x2="22" y2="16"/></svg></div>
+          <h3 class="tool-card-title">Fence Material Calculator</h3>
+          <p class="tool-card-desc">Calculate fence pickets, 4x4 posts, 2x4 stringer rails, and concrete post bags for wood privacy and perimeter fences.</p>
+          <a href="/fence-calculator" class="tool-card-link">Calculate fence materials &rarr;</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="4" rx="1"/><rect x="2" y="10" width="20" height="4" rx="1"/><rect x="2" y="17" width="20" height="4" rx="1"/></svg></div>
+          <h3 class="tool-card-title">Deck Joist &amp; Board Calculator</h3>
+          <p class="tool-card-desc">Estimate deck ledger boards, 2x8 joist spacing (12" or 16" OC), composite deck boards, and structural fastener hardware.</p>
+          <a href="/deck-calculator" class="tool-card-link">Calculate deck materials &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
@@ -828,7 +853,7 @@ a{color:inherit;text-decoration:none}
 
         <!-- Quick Answer Direct Box -->
         <div class="aeo-direct-box">
-          <div class="aeo-label">&#9889; Quick Answer</div>
+          <h2 class="aeo-label">&#9889; Quick Answer: How to Calculate Concrete Slab Volume</h2>
           <p class="aeo-text">
             To calculate concrete slab volume, multiply <strong>Length (ft) &times; Width (ft) &times; Thickness (in) &divide; 12</strong> to find total cubic feet, then divide by <strong>27</strong> to get cubic yards. A standard 10&times;10 foot patio poured 4 inches thick requires <strong>33.33 cubic feet (1.23 cubic yards)</strong> of concrete, which equals <strong>56 bags of 80 lb mix</strong> or 75 bags of 60 lb mix. Always add a <strong>5% to 10% waste buffer</strong> to accommodate grade fluctuations and subgrade settling.
           </p>

@@ -16,8 +16,7 @@
 
   <!-- Primary Meta Tags -->
   <title>Deck Material Calculator - Boards, Joists, Footings & Cost</title>
-  <meta name="title" content="Deck Material Calculator - Boards, Joists, Footings & Cost">
-  <meta name="description" content="Count boards, joists, posts and footing concrete bags with this free deck material calculator, plus railing, stairs and 2026 material cost ranges.">
+  <meta name="description" content="Count boards, joists, posts and footing concrete bags with this interactive deck material calculator, plus railing, stairs and 2026 material cost ranges.">
   <meta name="keywords" content="deck material calculator, free deck calculator, deck lumber calculator, wood deck material calculator, composite deck material calculator, deck material calculator square feet">
   <link rel="canonical" href="https://wallcalculator.app/deck-calculator">
 
@@ -454,7 +453,12 @@ a{color:inherit;text-decoration:none}
 [data-theme="light"] .back-to-top:hover{background:#F8FAFC;border-color:#0284C7;color:#0369A1}
 @media (max-width:640px){.back-to-top{bottom:1.15rem;right:1.15rem;width:40px;height:40px}}
 @media print{.back-to-top{display:none !important}}
-  </style>
+  .crumbs{padding:1rem 0 0;font-size:0.825rem;color:var(--text-dim)}
+.crumbs a{color:var(--text-muted);text-decoration:none}
+.crumbs a:hover{color:var(--brand-primary);text-decoration:underline}
+.crumbs-sep{margin:0 0.45rem;color:var(--text-dim)}
+.crumbs-current{color:var(--text-muted);font-weight:600}
+</style>
 </head>
 <body>
 
@@ -503,7 +507,16 @@ a{color:inherit;text-decoration:none}
        ZONE 2: HERO & INTERACTIVE DECK CALCULATOR
        ========================================================================== -->
   <main>
-    <section class="hero-section">
+        <!-- Breadcrumb trail (matches BreadcrumbList schema) -->
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/">Home</a>
+        <span class="crumbs-sep" aria-hidden="true">/</span>
+        <span class="crumbs-current" aria-current="page">Deck Material Calculator</span>
+      </div>
+    </nav>
+
+<section class="hero-section">
       <div class="container">
         <div class="hero-grid">
           <!-- Left Column: Copy & Trust & TOC -->
@@ -983,7 +996,7 @@ a{color:inherit;text-decoration:none}
                 <rect x="2" y="17" width="20" height="4" rx="1"></rect>
               </svg>
             </div>
-            <h3 class="tool-card-title">Deck Material Calculator</h3>
+            <h3 class="tool-card-title">Deck Material Estimator</h3>
             <p class="tool-card-desc">Calculate deck boards, field joists, ledger lumber, support beams, concrete pier footings, railing, and fasteners.</p>
             <span class="tool-card-link" style="color:var(--brand-primary);">Current Tool &rarr;</span>
           </a>
@@ -1000,14 +1013,14 @@ a{color:inherit;text-decoration:none}
 
           <!-- AEO Direct Answer Box -->
           <div class="aeo-direct-box">
-            <div class="aeo-title">
+            <h2 class="aeo-title">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="12" y1="16" x2="12" y2="12"></line>
                 <line x1="12" y1="8" x2="12.01" y2="8"></line>
               </svg>
               <span>Quick Answer: How Many Boards and Joists Do You Need for a Deck?</span>
-            </div>
+            </h2>
             <p class="aeo-text">
               To calculate surface decking boards, multiply deck length by width to find total square footage, divide by the effective board width in feet (nominal width plus gap spacing), and divide by your chosen board length. For a standard 12x16 foot deck (192 sq ft) using 5.5-inch boards with a 1/4-inch gap, you need <strong>401 linear feet</strong>, which equals <strong>26 sixteen-foot boards</strong> or <strong>29 boards</strong> with a recommended 10 percent waste buffer. Substructure framing requires <strong>13 field joists</strong> spaced 16 inches on-center spanning 12 feet, 1 rim joist, 1 ledger board, and 3 concrete footings requiring <strong>18 bags of 60 lb concrete mix</strong>.
             </p>

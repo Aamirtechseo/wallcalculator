@@ -18,8 +18,7 @@
   
   <!-- Primary Meta Tags -->
   <title>Wall Stud Calculator - Instant Framing Takeoff</title>
-  <meta name="title" content="Wall Stud Calculator - Instant Framing Takeoff">
-  <meta name="description" content="Estimate 2x4 and 2x6 studs, plates, and rough openings with this free wall stud calculator. Generate accurate framing takeoffs in seconds. Try it now!">
+  <meta name="description" content="Estimate 2x4 and 2x6 studs, plates, and rough openings with this wall stud calculator. Generate accurate framing takeoffs in seconds. Try it now!">
   <meta name="keywords" content="wall stud calculator, stud calculator, stud wall calculator, 16 on center stud calculator, framing stud calculator, lumber takeoff">
   <link rel="canonical" href="https://wallcalculator.app/wall-stud-calculator">
   
@@ -125,7 +124,12 @@
 .spacing-desc{font-family:'Inter',sans-serif;font-size:9.5px;font-weight:500;fill:var(--text-muted)}
 .spacing-dim{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;fill:var(--brand-primary)}
 [data-theme="light"] .spacing-dim{fill:#0284C7}
-  </style>
+  .crumbs{padding:1rem 0 0;font-size:0.825rem;color:var(--text-dim)}
+.crumbs a{color:var(--text-muted);text-decoration:none}
+.crumbs a:hover{color:var(--brand-primary);text-decoration:underline}
+.crumbs-sep{margin:0 0.45rem;color:var(--text-dim)}
+.crumbs-current{color:var(--text-muted);font-weight:600}
+</style>
 
   <!-- JSON-LD Schema: WebApplication -->
   <script type="application/ld+json">
@@ -341,7 +345,16 @@
     <!-- ==========================================================================
          ZONE 2: HERO SECTION & INTERACTIVE CALCULATOR TOOL
          ========================================================================== -->
-    <section class="hero-section">
+        <!-- Breadcrumb trail (matches BreadcrumbList schema) -->
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/">Home</a>
+        <span class="crumbs-sep" aria-hidden="true">/</span>
+        <span class="crumbs-current" aria-current="page">Wall Stud Calculator</span>
+      </div>
+    </nav>
+
+<section class="hero-section">
       <div class="container">
         <div class="hero-grid">
           
@@ -979,7 +992,7 @@
           </div>
 
           <!-- Section 2c: How to Calculate Studs Formula -->
-          <h2 id="toc-stud-formula">How to Calculate Studs: The Formula</h2>
+          <h2 id="toc-stud-formula">How to Calculate Studs with a Wall Stud Calculator</h2>
           <p>
             To calculate vertical field studs across any wall run, use this mathematical formula:
           </p>

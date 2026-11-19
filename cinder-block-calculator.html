@@ -16,7 +16,6 @@
 
   <!-- Primary Meta Tags -->
   <title>Cinder Block Calculator - Block Wall, CMU &amp; Cost</title>
-  <meta name="title" content="Cinder Block Calculator - Block Wall, CMU &amp; Cost">
   <meta name="description" content="Estimate 8x8x16 CMU blocks, mortar bags, core fill grout, and rebar with this cinder block calculator. Plan block wall materials and costs in seconds.">
   <meta name="keywords" content="cinder block calculator, block wall calculator, CMU calculator, concrete block calculator, cinder block calculator for wall">
   <link rel="canonical" href="https://wallcalculator.app/cinder-block-calculator">
@@ -100,7 +99,7 @@
 
   <!-- JSON-LD: FAQPage -->
   <script type="application/ld+json">
-  {
+    {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -109,12 +108,12 @@
         "name": "How many cinder blocks do I need for a wall?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To find how many cinder blocks you need for a wall, multiply the wall length by the wall height in feet to calculate total square footage, then multiply by 1.125 blocks per square foot. For example, a 20-foot long and 6-foot high wall equals 120 square feet. Multiplying 120 by 1.125 gives 135 blocks. Adding a standard 8 percent waste factor yields 146 blocks total."
+          "text": "To calculate how many cinder blocks you need for a wall, multiply the wall length by the wall height in feet to get the total square footage, then multiply by 1.125 blocks per square foot. For example, a 20-foot long by 6-foot high wall has 120 square feet of face area. Multiplying 120 by 1.125 equals 135 blocks. Adding an 8 percent cutting and breakage waste factor brings your order total to 146 blocks."
         }
       },
       {
         "@type": "Question",
-        "name": "Can I use this as a block wall calculator?",
+        "name": "Can I use this tool as a block wall calculator and cinder block calculator?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. This tool functions comprehensively as a block wall calculator for all standard concrete masonry unit (CMU) construction. It calculates blocks, bed and head mortar joints, core fill grout, rebar reinforcement, and rough opening deductions for privacy walls, garage partitions, stem walls, and perimeter fences."
@@ -266,7 +265,12 @@
 .anatomy-desc{font-family:'Inter',sans-serif;font-size:9px;font-weight:500;fill:var(--text-muted)}
 .anatomy-dim{font-family:'Inter',sans-serif;font-size:8.5px;font-weight:700;fill:var(--brand-primary)}
 [data-theme="light"] .anatomy-dim{fill:#0284C7}
-  </style>
+  .crumbs{padding:1rem 0 0;font-size:0.825rem;color:var(--text-dim)}
+.crumbs a{color:var(--text-muted);text-decoration:none}
+.crumbs a:hover{color:var(--brand-primary);text-decoration:underline}
+.crumbs-sep{margin:0 0.45rem;color:var(--text-dim)}
+.crumbs-current{color:var(--text-muted);font-weight:600}
+</style>
 </head>
 <body>
 
@@ -312,7 +316,16 @@
 
   <!-- Main Content -->
   <main id="main-content">
-    <section class="hero-section">
+        <!-- Breadcrumb trail (matches BreadcrumbList schema) -->
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/">Home</a>
+        <span class="crumbs-sep" aria-hidden="true">/</span>
+        <span class="crumbs-current" aria-current="page">Cinder Block Calculator</span>
+      </div>
+    </nav>
+
+<section class="hero-section">
       <div class="container">
         <div class="hero-grid">
 
@@ -727,21 +740,6 @@
         </div>
 
         <div class="tools-grid">
-          <!-- Wall Framing Tool -->
-          <div class="tool-card">
-            <div class="tool-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/>
-              </svg>
-            </div>
-            <h3 class="tool-card-title">Wall Estimator</h3>
-            <p class="tool-card-desc">
-              All-in-one timber wall framing, drywall sheet count, and fastening estimator with 2D elevation CAD visualizers.
-            </p>
-            <a href="/" class="tool-card-link">Launch Estimator &rarr;</a>
-          </div>
-
-          <!-- Wall Stud Tool -->
           <div class="tool-card">
             <div class="tool-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -757,7 +755,6 @@
             <a href="/wall-stud-calculator" class="tool-card-link">Use Stud Calculator &rarr;</a>
           </div>
 
-          <!-- Drywall Tool -->
           <div class="tool-card">
             <div class="tool-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -773,7 +770,6 @@
             <a href="/drywall-calculator" class="tool-card-link">Calculate Drywall &rarr;</a>
           </div>
 
-          <!-- Retaining Wall Tool -->
           <div class="tool-card">
             <div class="tool-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -786,6 +782,60 @@
             </p>
             <a href="/retaining-wall-calculator" class="tool-card-link">Calculate Retaining Wall &rarr;</a>
           </div>
+
+          <div class="tool-card" style="border-color: var(--brand-primary);">
+            <div class="tool-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="5" width="20" height="14" rx="1"></rect>
+                          <line x1="8" y1="5" x2="8" y2="19"></line>
+                          <line x1="16" y1="5" x2="16" y2="19"></line>
+                        </svg>
+            </div>
+            <h3 class="tool-card-title">Cinder Block Estimator</h3>
+            <p class="tool-card-desc">Estimate standard 8x8x16 CMU cinder blocks, mortar bags, and grout cores for foundation, garden, and structural block walls.</p>
+            <span class="tool-card-link">Current Tool &rarr;</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                          <polyline points="2 17 12 22 22 17"></polyline>
+                          <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+            </div>
+            <h3 class="tool-card-title">Concrete Slab Calculator</h3>
+            <p class="tool-card-desc">Estimate cubic yards of ready-mix concrete and 60-lb/80-lb pre-mix bags for driveways, patios, and footings.</p>
+            <a href="/concrete-slab-calculator" class="tool-card-link">Calculate concrete slab &rarr;</a>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M4 6l2-3 2 3v15H4V6z"></path>
+                          <path d="M10 6l2-3 2 3v15h-4V6z"></path>
+                          <path d="M16 6l2-3 2 3v15h-4V6z"></path>
+                          <line x1="2" y1="8" x2="22" y2="8"></line>
+                          <line x1="2" y1="16" x2="22" y2="16"></line>
+                        </svg>
+            </div>
+            <h3 class="tool-card-title">Fence Material Calculator</h3>
+            <p class="tool-card-desc">Calculate fence pickets, 4x4 posts, 2x4 stringer rails, and concrete post bags for wood privacy and perimeter fences.</p>
+            <a href="/fence-calculator" class="tool-card-link">Calculate fence materials &rarr;</a>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="3" width="20" height="4" rx="1"></rect>
+                          <rect x="2" y="10" width="20" height="4" rx="1"></rect>
+                          <rect x="2" y="17" width="20" height="4" rx="1"></rect>
+                        </svg>
+            </div>
+            <h3 class="tool-card-title">Deck Joist &amp; Board Calculator</h3>
+            <p class="tool-card-desc">Estimate deck ledger boards, 2x8 joist spacing (12" or 16" OC), composite deck boards, and structural fastener hardware.</p>
+            <a href="/deck-calculator" class="tool-card-link">Calculate deck materials &rarr;</a>
+          </div>
         </div>
       </div>
     </section>
@@ -797,9 +847,9 @@
 
           <!-- AEO Direct Answer Box -->
           <div class="aeo-direct-box" id="quick-answer">
-            <div class="aeo-title">
+            <h2 class="aeo-title">
               <span>&#x26A1;</span> Quick Direct Answer: How to Calculate Cinder Blocks for Any Wall
-            </div>
+            </h2>
             <div class="aeo-text">
               To calculate the number of cinder blocks for any wall, determine the total face area in square feet (Length &times; Height) and multiply by <strong>1.125 blocks per square foot</strong> for standard 8x8x16 CMU blocks with 3/8-inch mortar joints. Then add an 8 percent allowance for cuts and half-blocks. For mortar, plan on one 80-pound bag of Type S mortar for every 30 to 33 blocks. For grouted vertical cores, every 100 fully grouted 8-inch blocks requires approximately 0.85 cubic yards (or 38 eighty-pound bags) of masonry grout.
             </div>
@@ -811,7 +861,7 @@
             Masonry projects carry narrow financial margins and zero tolerance for dimensional guesswork. Underestimating concrete masonry units results in work stoppages, added delivery freight charges, and color batch variations. Conversely, over-ordering heavy concrete blocks congests job sites and requires expensive restocking fees. Utilizing a professional cinder block calculator eliminates guesswork by bridging modular masonry dimensions with real-world architectural openings and building code reinforcement schedules.
           </p>
           <p>
-            Unlike light-frame wood walls that can be shimmed or trimmed, concrete masonry relies on strict modular increments. Standard CMU construction is engineered on an 8-inch volumetric grid. When planning a boundary privacy wall, garage foundation, or structural stem wall, the interactive calculator accurately translates linear measurements into whole blocks, corner units, lintels, and bags of bonding agent, ensuring clean running bond lines from footing to capstone.
+            Unlike <a href="/">light-frame wood walls</a> that can be shimmed or trimmed, concrete masonry relies on strict modular increments. Standard CMU construction is engineered on an 8-inch volumetric grid. When planning a boundary privacy wall, garage foundation, or structural stem wall, the interactive calculator accurately translates linear measurements into whole blocks, corner units, lintels, and bags of bonding agent, ensuring clean running bond lines from footing to capstone.
           </p>
 
           <!-- Section 2: Supporting Keyword H2 -->
@@ -965,7 +1015,7 @@
             Original cinder blocks were produced in the early twentieth century using industrial coal cinders and bottom ash as lightweight aggregate. While inexpensive and easy to cut, they possessed variable compressive strength, high water absorption, and vulnerability to acid degradation from residual coal sulfur.
           </p>
           <p>
-            Modern construction relies exclusively on Concrete Masonry Units (CMUs), which are manufactured under strict standards established by the <a href="https://ncma.org" target="_blank" rel="noopener">National Concrete Masonry Association (NCMA)</a> and ASTM C90 (Standard Specification for Loadbearing Concrete Masonry Units). Modern CMUs are formulated from a uniform mix of Portland cement, graded sand, fine aggregate, and water. They deliver minimum net compressive strengths of 1,900 to 2,800 pounds per square inch (psi), providing predictable structural performance under seismic, wind, and axial loads.
+            Modern construction relies exclusively on Concrete Masonry Units (CMUs), which are manufactured under strict standards established by the <a href="https://www.cmha.org/" target="_blank" rel="noopener">National Concrete Masonry Association (NCMA)</a> and ASTM C90 (Standard Specification for Loadbearing Concrete Masonry Units). Modern CMUs are formulated from a uniform mix of Portland cement, graded sand, fine aggregate, and water. They deliver minimum net compressive strengths of 1,900 to 2,800 pounds per square inch (psi), providing predictable structural performance under seismic, wind, and axial loads.
           </p>
 
           <!-- Section 4: Foundation Walls H2 -->
@@ -1023,7 +1073,7 @@
             Temperature fluctuations and moisture expansion cause tensile stresses that can crack long masonry walls. To control cracking, building codes require horizontal joint reinforcement (prefabricated 9-gauge or 3/16-inch galvanized ladder wire or truss wire) embedded continuously inside the horizontal bed mortar joints. Joint reinforcement is standardly installed at every second course (16 inches vertically) per TMS 402/602 specifications.
           </p>
           <p>
-            Vertical rebar (typically #4 or #5 grade 60 steel) must extend continuously from the concrete footing upward through the grouted cores. Splice laps must overlap by at least 48 bar diameters (24 inches for #4 rebar) and be securely tied with steel wire before grout is consolidated.
+            Vertical rebar (typically #4 or #5 grade 60 steel) must extend continuously from the <a href="/concrete-slab-calculator">concrete footing</a> upward through the grouted cores. Splice laps must overlap by at least 48 bar diameters (24 inches for #4 rebar) and be securely tied with steel wire before grout is consolidated.
           </p>
 
           <h3>Rough Openings and Structural Lintel Sizing</h3>
@@ -1049,7 +1099,7 @@
           <!-- Section 5: Surface Bonding Cement H2 -->
           <h2 id="surface-bonding">Surface Bonding Cement vs Traditional Mortar: Methods and Material Quantities</h2>
           <p>
-            An increasingly popular alternative for non-commercial structures, retaining borders, and detached workshops is dry-stack construction coated with structural surface bonding cement (SBC). Whether opting for traditional mortar or dry-stack assembly, this cinder block calculator provides tailored material takeoffs for both construction techniques. In this system, standard CMU blocks are stacked dry without any mortar in the head or bed joints.
+            An increasingly popular alternative for non-commercial structures, <a href="/retaining-wall-calculator">retaining borders</a>, and detached workshops is dry-stack construction coated with structural surface bonding cement (SBC). Whether opting for traditional mortar or dry-stack assembly, this cinder block calculator provides tailored material takeoffs for both construction techniques. In this system, standard CMU blocks are stacked dry without any mortar in the head or bed joints.
           </p>
           <p>
             Once the dry blocks are stacked plumb and shimmed, a 1/8-inch thick layer of fiberglass-reinforced surface bonding cement (ASTM C887) is troweled across both the interior and exterior faces of the wall. As the glass fibers bridge across the block seams, the coating cures into an impermeable shell with flexural tensile strength exceeding that of conventionally mortared walls.

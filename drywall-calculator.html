@@ -18,7 +18,6 @@
   
   <!-- Primary Meta Tags -->
   <title>Drywall Calculator - Instant Sheet &amp; Mud Takeoff</title>
-  <meta name="title" content="Drywall Calculator - Instant Sheet &amp; Mud Takeoff">
   <meta name="description" content="Calculate 4x8 and 4x12 panels, joint compound mud, and screws with this interactive drywall calculator. Get instant takeoffs and blueprints. Try it now!">
   <meta name="keywords" content="drywall calculator, drywall sheet calculator, sheetrock calculator, drywall mud calculator, drywall screws calculator, gypsum board takeoff">
   <link rel="canonical" href="https://wallcalculator.app/drywall-calculator">
@@ -126,7 +125,12 @@
 .sheet-size-desc{font-family:'Inter',sans-serif;font-size:9px;font-weight:500;fill:var(--text-muted)}
 .sheet-size-dim{font-family:'Inter',sans-serif;font-size:8.5px;font-weight:700;fill:var(--brand-primary)}
 [data-theme="light"] .sheet-size-dim{fill:#0284C7}
-  </style>
+  .crumbs{padding:1rem 0 0;font-size:0.825rem;color:var(--text-dim)}
+.crumbs a{color:var(--text-muted);text-decoration:none}
+.crumbs a:hover{color:var(--brand-primary);text-decoration:underline}
+.crumbs-sep{margin:0 0.45rem;color:var(--text-dim)}
+.crumbs-current{color:var(--text-muted);font-weight:600}
+</style>
 
   <!-- JSON-LD Schema: WebApplication -->
   <script type="application/ld+json">
@@ -179,7 +183,7 @@
 
   <!-- JSON-LD Schema: FAQPage -->
   <script type="application/ld+json">
-  {
+    {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -188,7 +192,7 @@
         "name": "How many sheets of drywall do I need for a 12x12 room?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A standard 12x12 foot room with 8-foot ceilings has 384 square feet of wall area and 144 square feet of ceiling area (total 528 sq ft). With standard 4x8 drywall panels (32 sq ft per sheet) and a 10% waste factor, you will need approximately 13 to 14 sheets for the walls, plus 5 sheets for the ceiling, totaling 18 to 19 sheets."
+          "text": "A standard 12x12 foot room with 8-foot ceilings has 384 sq ft of wall area and 144 sq ft of ceiling area (total 528 sq ft). With standard 4x8 drywall panels (32 sq ft per sheet) and a 10% waste allowance, you will need approximately 14 sheets for the walls and 5 sheets for the ceiling, totaling 19 sheets."
         }
       },
       {
@@ -196,7 +200,7 @@
         "name": "Should drywall be hung horizontally or vertically on walls?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In residential construction, hanging drywall horizontally is the professional standard. Horizontal hanging creates up to 25% fewer total seam feet, places the tapered edge at a comfortable 48-inch working height for taping, and ties multiple studs together for increased shear wall strength."
+          "text": "In residential framing, hanging drywall horizontally is standard practice. Horizontal hanging creates up to 25% fewer seam feet, places the tapered joint at an ergonomic 48-inch working height, and bridges minor stud misalignments for flatter walls."
         }
       },
       {
@@ -204,7 +208,7 @@
         "name": "How many buckets of drywall mud do I need per sheet?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "One standard 4.5-gallon bucket of all-purpose joint compound finishes approximately 9 to 10 sheets of 4x8 drywall (roughly 300 square feet) through all three required coats: embedding tape, fill coat, and final skim coat."
+          "text": "One standard 4.5-gallon bucket of all-purpose joint compound finishes roughly 9 to 10 sheets of 4x8 drywall (about 300 square feet) across all three coats: embedding tape, fill coat, and thin finish skim."
         }
       },
       {
@@ -212,7 +216,7 @@
         "name": "What size screws should I use for 1/2-inch drywall?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Use 1-1/4 inch Type W coarse-thread drywall screws for wood stud framing. Screws should be spaced every 12 inches along edges and every 16 inches in the field of the board. For 5/8-inch drywall, use 1-5/8 inch screws."
+          "text": "Use 1-1/4 inch Type W coarse-thread drywall screws for wood framing studs. Fasteners should be placed every 12 inches along edges and every 16 inches in the field of the board. For 5/8-inch fire-rated drywall, use 1-5/8 inch screws."
         }
       },
       {
@@ -220,7 +224,7 @@
         "name": "When should I choose 4x12 drywall sheets instead of 4x8?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Choose 4x12 drywall sheets for walls longer than 12 feet to eliminate vertical butt joints completely. While 4x12 panels weigh about 78 lbs and generally require two people or a drywall lift to handle, they significantly reduce taping labor and produce flatter, seamless finished walls."
+          "text": "Choose 4x12 sheets for walls longer than 12 feet to eliminate vertical butt joints completely. While 4x12 boards weigh about 78 lbs and require two people to handle safely, they dramatically reduce taping labor and produce superior seamless wall finishes."
         }
       },
       {
@@ -228,7 +232,7 @@
         "name": "How do I calculate how much drywall I need?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To calculate how much drywall you need, measure total room wall length and multiply by wall height to get gross wall square footage, then add ceiling square footage (room length multiplied by width). Subtract the area of doors and windows, then divide the net square footage by 32 for standard 4x8 sheets (or by 48 for 4x12 sheets). Finally, add a 10 percent waste buffer for cuts."
+          "text": "To calculate how much drywall you need, measure total room wall length and multiply by wall height to get gross wall square footage, then add ceiling square footage (room length multiplied by width). Subtract the area of doors and windows, then divide the net square footage by 32 for standard 4x8 sheets (or by 48 for 4x12 sheets). Finally, add a 10 percent waste buffer for cuts. You can verify total panel orders instantly with this drywall calculator."
         }
       },
       {
@@ -268,7 +272,7 @@
         "name": "How many sheets of drywall do I need for a 1000 sq ft house?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A typical 1,000 square foot single-story house has approximately 3,200 to 3,600 square feet of total wall and ceiling surface area (roughly 3 to 3.5 times the floor footprint). Dividing 3,400 sq ft by 32 sq ft per sheet equals 106 sheets. Adding a 10 percent waste allowance requires ordering approximately 115 to 120 sheets of 4x8 drywall, along with 12 to 14 buckets of joint compound."
+          "text": "A typical 1,000 square foot single-story house has approximately 3,200 to 3,600 square feet of total wall and ceiling surface area (roughly 3 to 3.5 times the floor footprint). Dividing 3,400 sq ft by 32 sq ft per sheet equals 106 sheets. Adding a 10 percent waste allowance requires ordering approximately 115 to 120 sheets of 4x8 drywall, along with 12 to 14 buckets of joint compound. Entering floor plans into an interactive drywall calculator gives project-specific estimates."
         }
       },
       {
@@ -342,7 +346,16 @@
     <!-- ==========================================================================
          ZONE 2: HERO SECTION & INTERACTIVE CALCULATOR TOOL
          ========================================================================== -->
-    <section class="hero-section">
+        <!-- Breadcrumb trail (matches BreadcrumbList schema) -->
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/">Home</a>
+        <span class="crumbs-sep" aria-hidden="true">/</span>
+        <span class="crumbs-current" aria-current="page">Drywall Calculator</span>
+      </div>
+    </nav>
+
+<section class="hero-section">
       <div class="container">
         <div class="hero-grid">
           
@@ -777,6 +790,19 @@
             <h3 class="tool-card-title">Retaining Wall Estimator</h3>
             <p class="tool-card-desc">Calculate retaining wall concrete blocks, gravel drainage backfill tonnage, and capstones based on height and slope.</p>
             <a href="/retaining-wall-calculator" class="tool-card-link">Calculate retaining wall &#8594;</a>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="5" width="20" height="14" rx="1"></rect>
+                          <line x1="8" y1="5" x2="8" y2="19"></line>
+                          <line x1="16" y1="5" x2="16" y2="19"></line>
+                        </svg>
+            </div>
+            <h3 class="tool-card-title">Cinder Block Calculator</h3>
+            <p class="tool-card-desc">Estimate standard 8x8x16 CMU cinder blocks, mortar bags, and grout cores for foundation, garden, and structural block walls.</p>
+            <a href="/cinder-block-calculator" class="tool-card-link">Calculate cinder blocks &rarr;</a>
           </div>
 
           <div class="tool-card">

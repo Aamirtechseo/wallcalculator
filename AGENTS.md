@@ -141,7 +141,7 @@ Every page on `wallcalculator.app` MUST include **exactly one high-authority, no
 * **Eligible Authority Domains (Strict Non-Competitor Rule):**
   * Official building code bodies: International Code Council (`codes.iccsafe.org`)
   * Engineering & lumber councils: American Wood Council (`awc.org`), US Forest Service (`fs.usda.gov`)
-  * Material industry standards: Gypsum Association (`gypsum.org`), National Concrete Masonry Association (`ncma.org`), The Masonry Society (`masonrysociety.org`)
+  * Material industry standards: Gypsum Association (`gypsum.org`), Concrete Masonry and Hardscapes Association (`cmha.org`, successor to the National Concrete Masonry Association, `ncma.org`, which merged into CMHA), The Masonry Society (`masonrysociety.org`), American Concrete Institute (`concrete.org`)
 * **Strict Prohibition:** NEVER link to competing commercial calculator tools or affiliate blogs (e.g., Calculator.net, Omni Calculator, HomeAdvisor, BobVila).
 * **Placement:** Weave organically into the technical educational guide when referencing building codes, standard span limits, or material specs.
 
