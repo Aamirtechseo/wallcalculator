@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -205,12 +213,12 @@
   <!-- Interactive Script (Theme Toggle + Mobile Drawer) -->
   <script>
     (function () {
-      var savedTheme = localStorage.getItem('theme') || 'dark';
+      var savedTheme = localStorage.getItem('theme') || 'light';
       document.documentElement.setAttribute('data-theme', savedTheme);
       var themeBtn = document.getElementById('theme-toggle-btn');
       if (themeBtn) {
         themeBtn.addEventListener('click', function () {
-          var cur = document.documentElement.getAttribute('data-theme') || 'dark';
+          var cur = document.documentElement.getAttribute('data-theme') || 'light';
           var next = cur === 'dark' ? 'light' : 'dark';
           document.documentElement.setAttribute('data-theme', next);
           localStorage.setItem('theme', next);

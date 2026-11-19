@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1399,10 +1407,10 @@ a{color:inherit;text-decoration:none}
     var themeBtn = document.getElementById('theme-toggle-btn') || document.getElementById('themeToggleBtn');
     if (themeBtn) {
       themeBtn.addEventListener('click', function() {
-        var current = document.documentElement.getAttribute('data-theme') || 'dark';
+        var current = document.documentElement.getAttribute('data-theme') || 'light';
         var next = (current === 'dark') ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
-        try { localStorage.setItem('wc_theme', next); } catch(e) {}
+        try { localStorage.setItem('theme', next); } catch(e) {}
       });
     }
 
