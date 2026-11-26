@@ -485,6 +485,27 @@
                 </div>
               </div>
 
+              <!-- Lumber Size Pills -->
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <span class="form-label">Lumber Size</span>
+                <div class="pill-group" role="radiogroup">
+                  <div class="pill-option">
+                    <input type="radio" id="lumber-2x4" name="lumber-size" value="2x4" checked>
+                    <label for="lumber-2x4" class="pill-label">
+                      <span>2×4 Wood</span>
+                      <span class="pill-desc">Standard Wall</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="lumber-2x6" name="lumber-size" value="2x6">
+                    <label for="lumber-2x6" class="pill-label">
+                      <span>2×6 Wood</span>
+                      <span class="pill-desc">Exterior / Insulated Wall</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
               <!-- Drywall Sheet Size -->
               <div class="form-group" style="margin-bottom: 1.25rem;">
                 <span class="form-label">Drywall Panel Size</span>
@@ -501,6 +522,27 @@
                     <label for="sheet-4x12" class="pill-label">
                       <span>4 × 12 ft Panel</span>
                       <span class="pill-desc">48 sq ft (Pro / 25% fewer seams)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Drywall Coverage (Sides) -->
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <span class="form-label">Drywall Coverage</span>
+                <div class="pill-group" role="radiogroup">
+                  <div class="pill-option">
+                    <input type="radio" id="sides-1" name="drywall-sides" value="1" checked>
+                    <label for="sides-1" class="pill-label">
+                      <span>1 Side of Wall</span>
+                      <span class="pill-desc">Garage &amp; Single-Face Walls</span>
+                    </label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="radio" id="sides-2" name="drywall-sides" value="2">
+                    <label for="sides-2" class="pill-label">
+                      <span>2 Sides of Wall</span>
+                      <span class="pill-desc">Standard Interior Partitions</span>
                     </label>
                   </div>
                 </div>
@@ -569,7 +611,7 @@
                   <div class="takeoff-card accent">
                     <span class="takeoff-label">Drywall Sheets</span>
                     <span class="takeoff-val" id="takeoff-sheets">4</span>
-                    <span class="takeoff-sub">Panels (+10% waste)</span>
+                    <span class="takeoff-sub" id="takeoff-sheets-sub">Panels (+10% waste)</span>
                   </div>
 
                   <div class="takeoff-card">
@@ -1223,7 +1265,7 @@
   </button>
 
   <!-- Master JavaScript Execution -->
-  <script src="/js/calculator.js?v=3" defer></script>
+  <script src="/js/calculator.js?v=4" defer></script>
   <script>
     (function() {
       // Back to top button

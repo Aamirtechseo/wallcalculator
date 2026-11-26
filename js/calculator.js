@@ -16,6 +16,7 @@
     lumberSize: '2x4',
     drywallSize: '4x8', // 32 sq ft or '4x12' (48 sq ft)
     drywallThickness: '1/2',
+    drywallSides: 1,  // wall faces covered with drywall (1 or 2)
     wastePct: 10,     // 10%
     doors: 1,
     windows: 1,
@@ -36,7 +37,9 @@
     wallLengthInput: document.getElementById('wall-length'),
     wallHeightInput: document.getElementById('wall-height'),
     spacingInputs: document.querySelectorAll('input[name="stud-spacing"]'),
+    lumberInputs: document.querySelectorAll('input[name="lumber-size"]'),
     sheetSizeInputs: document.querySelectorAll('input[name="sheet-size"]'),
+    sidesInputs: document.querySelectorAll('input[name="drywall-sides"]'),
     doorsInput: document.getElementById('door-count'),
     windowsInput: document.getElementById('window-count'),
     wasteSlider: document.getElementById('waste-slider'),
@@ -48,6 +51,7 @@
     // Outputs
     valStuds: document.getElementById('takeoff-studs'),
     valSheets: document.getElementById('takeoff-sheets'),
+    valSheetsSub: document.getElementById('takeoff-sheets-sub'),
     valArea: document.getElementById('takeoff-area'),
     valScrews: document.getElementById('takeoff-screws'),
     valMud: document.getElementById('takeoff-mud'),
@@ -97,8 +101,10 @@
 
     // 3. Drywall Sheets Takeoff
     const sheetSqFt = state.drywallSize === '4x12' ? 48 : 32;
+    // Drywall covers 1 or 2 faces of the wall; board area scales with sides
+    const drywallAreaSqFt = netAreaSqFt * state.drywallSides;
     // For walls, sheets are hung horizontally with staggered seams
-    const rawSheets = netAreaSqFt / sheetSqFt;
+    const rawSheets = drywallAreaSqFt / sheetSqFt;
     const totalSheetsWithWaste = Math.ceil(rawSheets * wasteFactor);
 
     // 4. Drywall Fasteners & Accessories
@@ -107,13 +113,15 @@
     const lbsScrews = Math.max(1, Math.ceil(totalScrews / 290)); // ~290 screws per 1-1/4" lb
 
     // Joint Compound (All-Purpose Mud): ~0.05 gallons per sq ft of finished board
-    const galMud = Math.max(1, Math.ceil(netAreaSqFt * 0.053));
+    const galMud = Math.max(1, Math.ceil(drywallAreaSqFt * 0.053));
 
     // Drywall Joint Tape: ~0.37 linear feet of tape per sq ft of board
-    const linearFtTape = Math.ceil(netAreaSqFt * 0.38);
+    const linearFtTape = Math.ceil(drywallAreaSqFt * 0.38);
 
     // 5. Cost Estimation
-    const costStuds = totalStudsWithWaste * state.prices.stud;
+    // 2x6 lumber carries the same unit price as the stud calculator ($7.25)
+    const studUnitPrice = state.lumberSize === '2x6' ? 7.25 : state.prices.stud;
+    const costStuds = totalStudsWithWaste * studUnitPrice;
     const costDrywall = totalSheetsWithWaste * state.prices.drywallSheet;
     const costScrews = lbsScrews * state.prices.screwsPerLb;
     const costMud = galMud * state.prices.compoundPerGal;
@@ -140,6 +148,8 @@
       galMud,
       linearFtTape,
       grandTotalCost: Math.round(grandTotalCost),
+      studUnitPrice,
+      drywallSides: state.drywallSides,
       costs: {
         studs: costStuds,
         drywall: costDrywall,
@@ -445,6 +455,7 @@
     // Numbers display
     if (el.valStuds) el.valStuds.textContent = data.totalStuds;
     if (el.valSheets) el.valSheets.textContent = data.totalSheets;
+    if (el.valSheetsSub) el.valSheetsSub.textContent = data.drywallSides === 2 ? `Panels for 2 sides (+${state.wastePct}% waste)` : `Panels (+${state.wastePct}% waste)`;
     if (el.valArea) el.valArea.textContent = `${data.netAreaSqFt} sq ft`;
     if (el.valScrews) el.valScrews.textContent = `${data.lbsScrews} lbs`;
     if (el.valMud) el.valMud.textContent = `${data.galMud} gal`;
@@ -454,7 +465,7 @@
     // Cost Breakdown Table
     if (el.costTableBody) {
       el.costTableBody.innerHTML = `
-        <tr><td>Lumber Studs (${data.totalStuds} pcs @ $${state.prices.stud.toFixed(2)})</td><td class="cost-num">$${data.costs.studs.toFixed(2)}</td></tr>
+        <tr><td>Lumber Studs ${state.lumberSize} (${data.totalStuds} pcs @ $${data.studUnitPrice.toFixed(2)})</td><td class="cost-num">$${data.costs.studs.toFixed(2)}</td></tr>
         <tr><td>Drywall Sheets (${data.totalSheets} sheets @ $${state.prices.drywallSheet.toFixed(2)})</td><td class="cost-num">$${data.costs.drywall.toFixed(2)}</td></tr>
         <tr><td>Drywall Screws (${data.lbsScrews} lbs @ $${state.prices.screwsPerLb.toFixed(2)})</td><td class="cost-num">$${data.costs.screws.toFixed(2)}</td></tr>
         <tr><td>Joint Compound Mud (${data.galMud} gal @ $${state.prices.compoundPerGal.toFixed(2)})</td><td class="cost-num">$${data.costs.mud.toFixed(2)}</td></tr>
@@ -512,6 +523,20 @@
     el.sheetSizeInputs.forEach(input => {
       input.addEventListener('change', (e) => {
         state.drywallSize = e.target.value;
+        updateUI();
+      });
+    });
+
+    el.lumberInputs.forEach(input => {
+      input.addEventListener('change', (e) => {
+        state.lumberSize = e.target.value;
+        updateUI();
+      });
+    });
+
+    el.sidesInputs.forEach(input => {
+      input.addEventListener('change', (e) => {
+        state.drywallSides = parseInt(e.target.value, 10) || 1;
         updateUI();
       });
     });
@@ -576,11 +601,11 @@
         const summary = `
 === WallCalculator.app Takeoff Report ===
 Wall Span: ${data.lengthFt} ft × ${data.heightFt} ft (Net: ${data.netAreaSqFt} sq ft)
-Stud Spacing: ${state.studSpacing}" On-Center | Waste: ${state.wastePct}%
+Stud Spacing: ${state.studSpacing}" On-Center | Lumber: ${state.lumberSize} | Waste: ${state.wastePct}%
 
 MATERIAL REQUIREMENTS:
 - Wood Studs: ${data.totalStuds} pieces (incl. top/bottom plates & corners)
-- Drywall Sheets (${state.drywallSize} ft): ${data.totalSheets} sheets
+- Drywall Sheets (${state.drywallSize} ft, ${state.drywallSides} side${state.drywallSides === 2 ? 's' : ''}): ${data.totalSheets} sheets
 - Drywall Screws: ${data.lbsScrews} lbs (1-1/4")
 - Joint Compound: ${data.galMud} gallons
 - Joint Tape: ${data.linearFtTape} linear feet
